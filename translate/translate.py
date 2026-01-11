@@ -62,7 +62,7 @@ def send_lines(line_count, *plines):
 prompt = f"Please translate each line literally into {option.language}."
 
 if do_init:
-    # --init が指定された場合：init.xml を作成して終了
+    # If --init is specified: create init.xml and exit
     print(f"making {option.init}...")
     gemini.init(option.model, system=SYSTEM_PROMPT, think=option.think)
     option.directory = option.directories[0]
@@ -81,10 +81,10 @@ if do_init:
     print(f"{option.init} created successfully.")
     sys.exit(0)
 elif os.path.exists(option.init):
-    # init.xml が存在する場合：読み込む
+    # If init.xml exists: load it
     init_qs = common.read_queries(option.init)
 else:
-    # init.xml が存在せず --init も指定されていない場合：エラー
+    # If init.xml does not exist and --init is not specified: error
     print(f"Error: {option.init} not found. Please run with --init first.", file=sys.stderr)
     sys.exit(1)
 
