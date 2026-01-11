@@ -1,8 +1,8 @@
-TOPDIR    ?= ../..
-TRANSLATE  = ..
-SRCDIR     = $(TOPDIR)/it
-DIRSM      = {inferno,purgatorio,paradiso}
-OPTIONS   ?=
+TOPDIR  ?= ../..
+SUBDIR   = ..
+SRCDIR   = $(TOPDIR)/it
+DIRSM    = {inferno,purgatorio,paradiso}
+OPTIONS ?=
 
 
 # Basic workflow
@@ -12,16 +12,16 @@ all: run check
 
 ## Create init.xml
 init:
-	uv run $(TRANSLATE)/translate.py $(OPTIONS) -m $(MODEL) --init "$(LANG)" $(SRCDIR) .
+	uv run $(SUBDIR)/translate.py $(OPTIONS) -m $(MODEL) --init "$(LANG)" $(SRCDIR) .
 
 ## Run translation only
 run:
-	uv run $(TRANSLATE)/translate.py $(OPTIONS) -m $(MODEL) "$(LANG)" $(SRCDIR) .
+	uv run $(SUBDIR)/translate.py $(OPTIONS) -m $(MODEL) "$(LANG)" $(SRCDIR) .
 
 ## Validate and extract errors
 check:
 	rm -f 1-error-{ok,ng}.xml
-	uv run $(TRANSLATE)/split.py -c 2 $(DIRSM)/*.xml
+	uv run $(SUBDIR)/split.py -c 2 $(DIRSM)/*.xml
 	uv run dantetool pickup 1-error.xml $(DIRSM)/*.xml
 
 
@@ -29,7 +29,7 @@ check:
 
 ## Retry errors (1-error.xml)
 redo:
-	uv run dantetool redo $(OPTIONS) -s $(TRANSLATE)/system.txt -m $(MODEL) 1-error.xml
+	uv run dantetool redo $(OPTIONS) -s $(SUBDIR)/system.txt -m $(MODEL) 1-error.xml
 
 ## Apply fixes (1-error-ok.xml) to source
 replace:
@@ -64,12 +64,12 @@ redo-loop:
 
 ## Restructure source into 3-line units
 split:
-	uv run $(TRANSLATE)/split.py $(DIRSM)/*.xml
+	uv run $(SUBDIR)/split.py $(DIRSM)/*.xml
 
 ## Force 1-line-at-a-time retry
 redo1:
-	uv run dantetool redo $(OPTIONS) -s $(TRANSLATE)/system.txt -m $(MODEL) -1 1-error.xml
+	uv run dantetool redo $(OPTIONS) -s $(SUBDIR)/system.txt -m $(MODEL) -1 1-error.xml
 
 ## Check fixes without applying
 redo-fix:
-	uv run $(TRANSLATE)/split.py -c 2 1-error-ok.xml
+	uv run $(SUBDIR)/split.py -c 2 1-error-ok.xml
