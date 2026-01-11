@@ -14,6 +14,10 @@ This project provides tools for translating Dante's Divine Comedy using various 
 - **Gemma 3 27B** (via Gemini API)
 - **GPT-OSS 120B** (via Ollama API)
 
+Side-by-side comparison documents showing the original Italian text alongside translations from all models are available:
+
+- [translate/comparison](translate/comparison) - All 100 cantos (Inferno 34 + Purgatorio 33 + Paradiso 33)
+
 This project is a rewrite of code from the Gemini 1.0 Pro era. The generated outputs labeled as "gemini1" are sourced from the following project:
 
 - [dante-gemini](https://github.com/7shi/dante-gemini) - A multilingual exploration of Dante's Divine Comedy using Gemini 1.0 Pro, featuring detailed linguistic analysis of the opening lines in Italian, English, Hindi, Chinese, Ancient Greek, Arabic, Bengali and other languages with word-by-word breakdowns, grammatical details, and etymologies.
