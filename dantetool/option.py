@@ -1,4 +1,5 @@
-import sys, os, re, common
+import sys, os, re
+from . import common
 
 args = sys.argv[1:]
 

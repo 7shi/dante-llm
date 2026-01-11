@@ -1,4 +1,5 @@
-import sys, os, re, common, option
+import sys, os, re
+from dantetool import common, option
 
 needsp  = False
 always3 = False
@@ -21,7 +22,7 @@ if not option.parse(parse) or option.args:
 
 checklen = 6 if " and " in option.language else 3
 
-import gemini
+from dantetool import gemini
 
 text = []
 current = 0

@@ -11,7 +11,7 @@ if not args:
     print(f"usage: python {sys.argv[0]} [-c type] xml1 [xml2 ...]", file=sys.stderr)
     sys.exit(1)
 
-import common
+from dantetool import common
 
 def split_lines(text):
     if not text:
@@ -23,7 +23,7 @@ def split_lines(text):
             s1 = i
     s2 = -1
     for i in range(s1, len(lines)):
-        if re.match("\d+ [^ ]", lines[i]):
+        if re.match(r"\d+ [^ ]", lines[i]):
             s2 = i
             break
     if s2 < 0:
@@ -33,7 +33,7 @@ def split_lines(text):
     texts = []
     text  = []
     for i in range(s2, len(lines)):
-        if m := re.match("(\d+) [^ ]", lines[i]):
+        if m := re.match(r"(\d+) [^ ]", lines[i]):
             lnum.append(int(m.group(1)))
             text.append(lines[i])
         elif lnum:

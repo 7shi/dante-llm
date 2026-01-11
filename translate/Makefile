@@ -6,5 +6,5 @@ check:
 	grep count */1-error.xml | grep -v '"0"'
 
 _done:
-	$(SCRIPT) en English
-	$(SCRIPT) ja Japanese
+	$(SCRIPT) gemini1-en English
+	$(SCRIPT) gemini1-ja Japanese
