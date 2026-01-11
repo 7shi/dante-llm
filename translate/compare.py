@@ -157,13 +157,13 @@ def process_one(rel_path_input, script_dir):
         return False
 
     cantica = parts[0]  # inferno, purgatorio, paradiso
-    canto_num = parts[1]  # 01
+    canto_num = parts[1]  # 01, ...
 
     # Validate cantica
     if cantica not in directories:
         print(f"Error: Unknown cantica '{cantica}'. Must be one of: {', '.join(directories)}")
         return False
-    title = f"{cantica.title()} - Canto {canto_num}"
+    title = f"{cantica.title()} - Canto {int(canto_num)}"
 
     # Add .xml extension for accessing files
     rel_path = f"{cantica}/{canto_num}.xml"
