@@ -1,39 +1,43 @@
 import sys
+import argparse
 
-args = sys.argv[1:]
+parser = argparse.ArgumentParser(
+    description="Initialize word table generation using Gemini",
+    formatter_class=argparse.RawDescriptionHelpFormatter)
 
-testonly = False
-crasis = True
-columns = "Word, Lemma, Part of Speech, Gender, Number, Person, Tense, Mood and Note"
-init_xml = "init.xml"
-subdir = "inferno"
+parser.add_argument("-t", dest="testonly", action="store_true",
+                    help="test only (use existing init.xml)")
+parser.add_argument("-n", dest="crasis", action="store_false", default=True,
+                    help="disable crasis (contractions) prompt")
+parser.add_argument("-c", dest="columns",
+                    default="Word, Lemma, Part of Speech, Gender, Number, Person, Tense, Mood and Note",
+                    help="specify table columns")
+parser.add_argument("-i", dest="init_xml", default="init.xml",
+                    help="init.xml file path")
+parser.add_argument("-d", dest="subdir", default="inferno",
+                    help="subdirectory to process")
+parser.add_argument("-m", dest="model", required=True,
+                    help="model to use")
+parser.add_argument("--no-think", dest="think", action="store_false", default=None,
+                    help="don't include thoughts in response")
+parser.add_argument("language", help="target language")
+parser.add_argument("srcdir", help="source directory")
 
-while args:
-    if args[0] == "-t":
-        testonly = True
-        args = args[1:]
-    elif args[0] == "-n":
-        crasis = False
-        args = args[1:]
-    elif args[0] == "-c" and len(args) > 1:
-        columns = args[1]
-        args = args[2:]
-    elif args[0] == "-i" and len(args) > 1:
-        init_xml = args[1]
-        args = args[2:]
-    elif args[0] == "-d" and len(args) > 1:
-        subdir = args[1].split()[0]
-        args = args[2:]
-    else:
-        break
+args = parser.parse_args()
 
-if len(args) != 2:
-    print(f"usage: python {sys.argv[0]} [-t] [-n] [-c columns] [-i init] [-d dir] language src-dir", file=sys.stderr)
-    sys.exit(1)
+testonly = args.testonly
+crasis = args.crasis
+columns = args.columns
+init_xml = args.init_xml
+subdir = args.subdir.split()[0]
+model = args.model
+think = args.think
+language = args.language
+srcdir = args.srcdir
 
-language, srcdir = args
+from dantetool import gemini, common
 
-import gemini, common
+gemini.generation_config["max_length"] = 8192
 
 def query(prompt):
     return gemini.query(prompt, show=True, retry=False)
@@ -57,7 +61,7 @@ The entries in the table are {columns}.
 
 if not testonly:
     qs = []
-    gemini.init()
+    gemini.init(model, think=think)
     if crasis:
         prompt = " ".join([
             f"Show contractions of preposition and article in {language}.",
@@ -79,7 +83,7 @@ if not testonly:
 else:
     init_qs = common.read_queries(init_xml)
 
-gemini.init(common.unzip(init_qs))
+gemini.init(model, common.unzip(init_qs), think=think)
 
 qs = []
 if init_qs[0].prompt[:8] in ["This tex", "Create a"]:

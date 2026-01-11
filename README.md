@@ -126,9 +126,10 @@ Example:
 uv run dantetool replace 1-error-ok.xml inferno/*.xml purgatorio/*.xml paradiso/*.xml
 ```
 
-## Translation Tool
+## Workflows
 
-For detailed information about the translation workflow, see [translate/README.md](translate/README.md).
+- [translate/](translate/): Translation workflow. Provides `translate.py` for translating Italian text into various target languages with automated error recovery and retry mechanisms.
+- [word/](word/): Word table generation workflow. Provides `init.py` and `word.py` for creating linguistic analysis tables with lemmas, parts of speech, and grammatical information for Italian text.
 
 ## License
 
