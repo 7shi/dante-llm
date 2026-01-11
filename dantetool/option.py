@@ -1,5 +1,4 @@
-import sys, os, re
-from dantetool import common
+import sys, os
 
 directories = ["inferno", "purgatorio", "paradiso"]
 init = "init.xml"

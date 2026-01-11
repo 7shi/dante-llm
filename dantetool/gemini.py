@@ -1,9 +1,3 @@
-"""
-At the command line, only need to run once to install the package via pip:
-
-$ pip install google-generativeai
-"""
-
 import sys, time
 from llm7shi.compat import generate_with_schema
 from dantetool import common

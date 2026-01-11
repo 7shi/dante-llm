@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-"""dantetool - Tools for Dante's Divine Comedy translation project"""
-
 import sys
 import argparse
 from dantetool import pickup, redo, replace
