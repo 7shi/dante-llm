@@ -11,10 +11,18 @@ This project uses the following Italian text source:
 This project provides tools for translating Dante's Divine Comedy using various Large Language Models. Specifically, this project uses:
 
 - **Gemini 1.0 Pro** (copied from previous project; model now discontinued)
+- **Gemma 3 27B** (via Gemini API)
+- **GPT-OSS 120B** (via Ollama API)
 
 This project is a rewrite of code from the Gemini 1.0 Pro era. The generated outputs labeled as "gemini1" are sourced from the following project:
 
 - [dante-gemini](https://github.com/7shi/dante-gemini) - A multilingual exploration of Dante's Divine Comedy using Gemini 1.0 Pro, featuring detailed linguistic analysis of the opening lines in Italian, English, Hindi, Chinese, Ancient Greek, Arabic, Bengali and other languages with word-by-word breakdowns, grammatical details, and etymologies.
+
+This project aims to verify that locally-runnable models like Gemma 3 27B and GPT-OSS 120B can match the quality of Gemini 1.0 Pro, which was SOTA (state-of-the-art) at the time. The outputs will be formatted for comparison.
+
+The Gemini API and Ollama API are abstracted through the following library, making model switching straightforward.
+
+- [llm7shi](https://github.com/7shi/llm7shi) - A simplified Python library for interacting with large language models (Gemini, OpenAI, Ollama)
 
 ## XML Format
 
@@ -47,6 +55,95 @@ Files like `1-error.xml`, `1-error-ok.xml`, and `1-error-ng.xml` follow this for
 This project uses the following library for XML parsing:
 
 - [xml7shi](https://github.com/7shi/xml7shi) - A pull-based simple and permissive XML parser for Python
+
+## dantetool
+
+`dantetool` is a Python package that provides command-line tools for managing translation queries and handling errors.
+
+### Installation
+
+```bash
+# Install in development mode
+uv pip install -e .
+```
+
+### Commands
+
+#### pickup - Extract Error Queries
+
+Extract failed or incomplete queries from translation XML files:
+
+```bash
+uv run dantetool pickup <output.xml> <input-files...>
+```
+
+Options:
+- `-t` - Check table format
+
+Example:
+```bash
+uv run dantetool pickup 1-error.xml inferno/*.xml purgatorio/*.xml paradiso/*.xml
+```
+
+#### redo - Retry Failed Queries
+
+Retry error queries with the LLM:
+
+```bash
+uv run dantetool redo -m <model> [-s <system-prompt-file>] <input.xml>
+```
+
+Options:
+- `-i INIT_XML` - Specify init.xml file (default: init.xml)
+- `-m MODEL` - Specify model name (required)
+- `-s SYSTEM_PROMPT` - Specify system prompt file
+- `-1` - Split 3-line queries into separate 1-line queries
+- `--no-think` - Don't include thoughts in response
+
+Example:
+```bash
+uv run dantetool redo -s translate/system.txt -m gemini-2.0-flash-exp 1-error.xml
+```
+
+Output:
+- `1-error-ok.xml` - Successfully retried queries
+- `1-error-ng.xml` - Queries that still failed
+
+#### replace - Apply Fixes
+
+Replace queries in target files with fixed versions:
+
+```bash
+uv run dantetool replace <fix.xml> <target-files...>
+```
+
+Example:
+```bash
+uv run dantetool replace 1-error-ok.xml inferno/*.xml purgatorio/*.xml paradiso/*.xml
+```
+
+### Using with Makefile
+
+Translation projects typically use a Makefile that includes `common.mk`:
+
+```makefile
+MODEL = gemini-2.0-flash-exp
+LANG  = English
+
+include ../common.mk
+```
+
+Available targets:
+- `make init` - Create init.xml
+- `make run` - Run translation
+- `make check` - Extract error queries
+- `make redo` - Retry failed queries
+- `make replace` - Apply fixes
+- `make split` - Split queries into smaller units
+
+## Translation Tool
+
+For detailed information about the translation workflow, see [translate/README.md](translate/README.md).
 
 ## License
 

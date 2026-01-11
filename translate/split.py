@@ -1,17 +1,15 @@
 import sys, re
-
-args = sys.argv[1:]
-check_type = 0
-
-if len(args) > 1 and args[0] == "-c":
-    check_type = int(args[1])
-    args = args[2:]
-
-if not args:
-    print(f"usage: python {sys.argv[0]} [-c type] xml1 [xml2 ...]", file=sys.stderr)
-    sys.exit(1)
-
+import argparse
 from dantetool import common
+
+parser = argparse.ArgumentParser(description="Split or check XML query files")
+parser.add_argument("-c", dest="check_type", type=int, default=0,
+                    help="check type (0=split3, 1=check_lines1, 2=check_lines2)")
+parser.add_argument("files", nargs="+", type=str,
+                    help="XML files to process")
+
+args = parser.parse_args()
+check_type = args.check_type
 
 def split_lines(text):
     if not text:
@@ -23,7 +21,7 @@ def split_lines(text):
             s1 = i
     s2 = -1
     for i in range(s1, len(lines)):
-        if re.match(r"\d+ [^ ]", lines[i]):
+        if re.match("\d+ [^ ]", lines[i]):
             s2 = i
             break
     if s2 < 0:
@@ -33,7 +31,7 @@ def split_lines(text):
     texts = []
     text  = []
     for i in range(s2, len(lines)):
-        if m := re.match(r"(\d+) [^ ]", lines[i]):
+        if m := re.match("(\d+) [^ ]", lines[i]):
             lnum.append(int(m.group(1)))
             text.append(lines[i])
         elif lnum:
@@ -212,7 +210,7 @@ def check_lines2(arg):
         dst.append(q)
     save_result(arg, dst)
 
-for arg in args:
+for arg in args.files:
     if check_type == 1:
         check_lines1(arg)
     elif check_type == 2:

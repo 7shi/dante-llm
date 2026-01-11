@@ -1,10 +1,9 @@
-SCRIPT = echo
+SCRIPT = make -C
+MODELS = gemma3 gptoss
+LANGUAGES = en ja
 
 all:
+	@for m in $(MODELS); do for l in $(LANGUAGES); do $(SCRIPT) $$m-$$l; done; done
 
 check:
 	grep count */1-error.xml | grep -v '"0"'
-
-_done:
-	$(SCRIPT) gemini1-en English
-	$(SCRIPT) gemini1-ja Japanese

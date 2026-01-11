@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""dantetool - Tools for Dante's Divine Comedy translation project"""
+
+import sys
+import argparse
+from dantetool import pickup, redo, replace
+
+def main():
+    parser = argparse.ArgumentParser(
+        prog="dantetool",
+        description="Tools for Dante's Divine Comedy translation project"
+    )
+
+    subparsers = parser.add_subparsers(dest="command", help="Available commands")
+
+    # pickup subcommand
+    pickup_parser = subparsers.add_parser("pickup", help="Pick up error queries from XML files")
+    pickup.add_args(pickup_parser)
+    pickup_parser.set_defaults(func=pickup.main_func)
+
+    # redo subcommand
+    redo_parser = subparsers.add_parser("redo", help="Redo error queries")
+    redo.add_args(redo_parser)
+    redo_parser.set_defaults(func=redo.main_func)
+
+    # replace subcommand
+    replace_parser = subparsers.add_parser("replace", help="Replace queries in target files with fixes")
+    replace.add_args(replace_parser)
+    replace_parser.set_defaults(func=replace.main_func)
+
+    args = parser.parse_args()
+
+    if hasattr(args, "func"):
+        return args.func(args)
+    else:
+        parser.print_help()
+        return 1
+
+if __name__ == "__main__":
+    sys.exit(main())

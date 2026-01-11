@@ -1,7 +1,5 @@
 import sys, os, re
-from . import common
-
-args = sys.argv[1:]
+from dantetool import common
 
 directories = ["inferno", "purgatorio", "paradiso"]
 init = "init.xml"
@@ -10,60 +8,57 @@ rangemax = 35
 once  = False
 retry = True
 show  = True
+think = None
+model = None
+language = None
+srcdir = None
+outdir = None
 
-def parse(f=None):
-    global args, directories, init, interval, rangemax, once, retry, show, language, srcdir, outdir
-    i = 0
-    while i < len(args):
-        length = len(args)
-        if f:
-            f(i, args)
-        if len(args) != length:
-            continue
-        arg = args[i]
-        if arg == "-d" and len(args) > i + 1:
-            args.pop(i)
-            directories = args.pop(i).split()
-        elif arg == "-i" and len(args) > i + 1:
-            args.pop(i)
-            init = args.pop(i)
-        elif arg == "-n" and len(args) > i + 1:
-            args.pop(i)
-            interval = int(args.pop(i))
-        elif arg == "-r" and len(args) > i + 1:
-            args.pop(i)
-            rangemax = int(args.pop(i))
-        elif arg == "-1":
-            args.pop(i)
-            once = True
-        elif arg == "--no-retry":
-            args.pop(i)
-            retry = False
-        elif arg == "--no-show":
-            args.pop(i)
-            show = False
-        elif arg.startswith("-"):
-            print(f"unknown option: {arg}", file=sys.stderr)
-            return False
-        else:
-            i += 1
-    if len(args) < 3:
-        return False
-    language = args.pop(0)
-    srcdir = args.pop(0)
-    outdir = args.pop(0)
+def parse(parser):
+    parser.add_argument("-d", dest="directories", type=str,
+                        help="specify sub directory (space-separated)")
+    parser.add_argument("-i", dest="init", type=str, default="init.xml",
+                        help="specify init.xml (default: init.xml)")
+    parser.add_argument("-m", dest="model", type=str, required=True,
+                        help="specify model name (required)")
+    parser.add_argument("-n", dest="interval", type=int, default=10,
+                        help="specify interval (default: 10)")
+    parser.add_argument("-r", dest="rangemax", type=int, default=35,
+                        help="specify range (default: 35)")
+    parser.add_argument("-1", dest="once", action="store_true",
+                        help="just do one canto")
+    parser.add_argument("--no-retry", dest="retry", action="store_false", default=True,
+                        help="don't retry queries")
+    parser.add_argument("--no-show", dest="show", action="store_false", default=True,
+                        help="don't show queries and responses")
+    parser.add_argument("--no-think", dest="think", action="store_false", default=None,
+                        help="don't include thoughts in response")
+    parser.add_argument("language", type=str,
+                        help="target language")
+    parser.add_argument("srcdir", type=str,
+                        help="source directory")
+    parser.add_argument("outdir", type=str,
+                        help="output directory")
+
+def apply(args):
+    global directories, init, interval, rangemax, once, retry, show, think, model, language, srcdir, outdir
+
+    if args.directories:
+        directories = args.directories.split()
+    init = args.init
+    interval = args.interval
+    rangemax = args.rangemax
+    once = args.once
+    retry = args.retry
+    show = args.show
+    think = args.think
+    model = args.model
+    language = args.language
+    srcdir = args.srcdir
+    outdir = args.outdir
+
     if not os.path.exists(outdir):
         os.mkdir(outdir)
-    return True
-
-def show():
-    print("  -d dir: specify sub directory", file=sys.stderr)
-    print("  -i file: specify init.xml", file=sys.stderr)
-    print("  -n num: specify interval (default 10)", file=sys.stderr)
-    print("  -r num: specify range (default 35)", file=sys.stderr)
-    print("  -1: just do one canto", file=sys.stderr)
-    print("  --no-retry: don't retry queries", file=sys.stderr)
-    print("  --no-show: don't show queries and responses", file=sys.stderr)
 
 def proc(f):
     global directory, canto, info

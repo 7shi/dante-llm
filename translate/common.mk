@@ -1,33 +1,75 @@
 TOPDIR    ?= ../..
 TRANSLATE  = ..
-SCRIPTS    = $(TOPDIR)/dantetool
 SRCDIR     = $(TOPDIR)/it
 DIRSM      = {inferno,purgatorio,paradiso}
 OPTIONS   ?=
 
+
+# Basic workflow
+
+## Run translation + check (default)
 all: run check
 
+## Create init.xml
+init:
+	uv run $(TRANSLATE)/translate.py $(OPTIONS) -m $(MODEL) --init "$(LANG)" $(SRCDIR) .
+
+## Run translation only
 run:
-	uv run $(TRANSLATE)/translate.py $(OPTIONS) "$(LANG)" $(SRCDIR) .
+	uv run $(TRANSLATE)/translate.py $(OPTIONS) -m $(MODEL) "$(LANG)" $(SRCDIR) .
 
+## Validate and extract errors
 check:
-	uv run $(SCRIPTS)/pickup.py 1-error.xml $(DIRSM)/*.xml
+	rm -f 1-error-{ok,ng}.xml
+	uv run $(TRANSLATE)/split.py -c 2 $(DIRSM)/*.xml
+	uv run dantetool pickup 1-error.xml $(DIRSM)/*.xml
 
+
+# Error recovery
+
+## Retry errors (1-error.xml)
+redo:
+	uv run dantetool redo $(OPTIONS) -s $(TRANSLATE)/system.txt -m $(MODEL) 1-error.xml
+
+## Apply fixes (1-error-ok.xml) to source
+replace:
+	uv run dantetool replace 1-error-ok.xml $(DIRSM)/*.xml
+
+## Automatically retry with increasing temperature (0.1 to 1.0)
+redo-sweep:
+	@for t in 0.{1..9} 1.0; do \
+		echo "Retrying with temperature $$t..."; \
+		$(MAKE) redo OPTIONS="-t $$t" || exit 1; \
+		$(MAKE) replace check; \
+		if grep -q 'count="0"' 1-error.xml; then \
+			echo "No errors remaining at temperature $$t"; \
+			break; \
+		fi; \
+	done
+
+## Retry up to 10 times with temperature 1.0
+redo-loop:
+	@for i in {1..10}; do \
+		echo "Retry attempt $$i/10 (temperature 1.0)..."; \
+		$(MAKE) redo OPTIONS="-t 1.0" || exit 1; \
+		$(MAKE) replace check; \
+		if grep -q 'count="0"' 1-error.xml; then \
+			echo "No errors remaining after $$i attempt(s)"; \
+			break; \
+		fi; \
+	done
+
+
+# Advanced (for persistent errors)
+
+## Restructure source into 3-line units
 split:
 	uv run $(TRANSLATE)/split.py $(DIRSM)/*.xml
 
-redo:
-	uv run $(SCRIPTS)/redo.py 1-error.xml
-
+## Force 1-line-at-a-time retry
 redo1:
-	uv run $(SCRIPTS)/redo.py -1 1-error.xml
+	uv run dantetool redo $(OPTIONS) -s $(TRANSLATE)/system.txt -m $(MODEL) -1 1-error.xml
 
+## Check fixes without applying
 redo-fix:
 	uv run $(TRANSLATE)/split.py -c 2 1-error-ok.xml
-
-replace:
-	uv run $(SCRIPTS)/replace.py 1-error-ok.xml $(DIRSM)/*.xml
-
-split3:
-	uv run $(TRANSLATE)/split.py -c 2 $(DIRSM)/*.xml
-	uv run $(TRANSLATE)/split.py $(DIRSM)/*.xml

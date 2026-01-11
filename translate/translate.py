@@ -1,28 +1,37 @@
 import sys, os, re
+import argparse
 from dantetool import common, option
 
 needsp  = False
 always3 = False
 
-def parse(i, args):
-    global needsp, always3
-    if args[i] == "--need-space":
-        args.pop(i)
-        needsp = True
-    elif args[i] == "-3":
-        args.pop(i)
-        always3 = True
+parser = argparse.ArgumentParser(
+    description="Translate text using Gemini",
+    formatter_class=argparse.RawDescriptionHelpFormatter)
 
-if not option.parse(parse) or option.args:
-    print(f"Usage: python {sys.argv[0]} language src-dir output-dir", file=sys.stderr)
-    print("  --need-space: require at least one space in each line", file=sys.stderr)
-    print("  -3: always send 3 lines", file=sys.stderr)
-    option.show()
-    sys.exit(1)
+option.parse(parser)
+parser.add_argument("--need-space", dest="needsp", action="store_true",
+                    help="require at least one space in each line")
+parser.add_argument("-3", dest="always3", action="store_true",
+                    help="always send 3 lines")
+parser.add_argument("--init", dest="do_init", action="store_true",
+                    help="create init.xml and exit")
+
+args = parser.parse_args()
+
+option.apply(args)
+needsp = args.needsp
+always3 = args.always3
+do_init = args.do_init
 
 checklen = 6 if " and " in option.language else 3
 
 from dantetool import gemini
+
+# Read system prompt from system.txt
+script_dir = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(script_dir, "system.txt"), "r", encoding="utf-8") as f:
+    SYSTEM_PROMPT = f.read().strip()
 
 text = []
 current = 0
@@ -51,11 +60,11 @@ def send_lines(line_count, *plines):
     return gemini.query(prompt, info, option.show, option.retry, check)
 
 prompt = f"Please translate each line literally into {option.language}."
-if os.path.exists(option.init):
-    init_qs = common.read_queries(option.init)
-else:
+
+if do_init:
+    # --init が指定された場合：init.xml を作成して終了
     print(f"making {option.init}...")
-    gemini.init()
+    gemini.init(option.model, system=SYSTEM_PROMPT, think=option.think)
     option.directory = option.directories[0]
     option.canto = 1
     file = os.path.join(option.srcdir, option.directory, f"01.txt")
@@ -69,8 +78,17 @@ else:
             sys.exit(1)
         init_qs.append(q)
     common.write_queries(option.init, init_qs, count=len(init_qs))
+    print(f"{option.init} created successfully.")
+    sys.exit(0)
+elif os.path.exists(option.init):
+    # init.xml が存在する場合：読み込む
+    init_qs = common.read_queries(option.init)
+else:
+    # init.xml が存在せず --init も指定されていない場合：エラー
+    print(f"Error: {option.init} not found. Please run with --init first.", file=sys.stderr)
+    sys.exit(1)
+
 history = common.unzip(init_qs)
-init_ps = history[:1] if option.interval == 1 else None
 
 @option.proc
 def proc(src, xml):
@@ -81,7 +99,7 @@ def proc(src, xml):
     qs = []
     while current < len(text):
         if not (0 <= gemini.chat_count < option.interval):
-            gemini.init(history, init_ps)
+            gemini.init(option.model, history, system=SYSTEM_PROMPT, think=option.think)
         length = min(3, len(text) - current)
         if not always3:
             while current + length < len(text) and not text[current + length - 1].endswith("."):

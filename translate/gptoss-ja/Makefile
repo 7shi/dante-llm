@@ -1,4 +1,4 @@
-MODEL   = google:gemini-pro --no-think
+MODEL   = ollama:gpt-oss:120b
 LANG    = Japanese
 LCODE   = ja
 

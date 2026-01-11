@@ -1,29 +1,40 @@
-import sys, common
+import sys
+import argparse
+from dantetool import common
 
-args = sys.argv[1:]
+def add_args(parser):
+    parser.add_argument("-t", dest="check_table", action="store_true",
+                        help="check table format")
+    parser.add_argument("output", type=str,
+                        help="output XML file")
+    parser.add_argument("files", nargs="+", type=str,
+                        help="input XML files")
 
-check_table = False
-if args and args[0] == "-t":
-    check_table = True
-    args.pop(0)
+def main_func(args):
+    output = args.output
+    check_table = args.check_table
 
-if len(args) < 2:
-    print(f"Usage: python {sys.argv[0]} [-t] output file1 [file2 ...]", file=sys.stderr)
-    sys.exit(1)
+    whole = 0
+    queries = []
+    for f in args.files:
+        for q in common.read_queries(f):
+            whole += 1
+            if check_table:
+                if q.result:
+                    if "||---" in q.result or not common.read_table(q.result):
+                        queries.append(q)
+            elif not q.result:
+                queries.append(q)
 
-output = args.pop(0)
+    print(f"error {len(queries)}/{whole}", file=sys.stderr)
+    common.write_queries(output, queries, count=len(queries), whole=whole)
+    return 0
 
-whole = 0
-queries = []
-for f in args:
-    for q in common.read_queries(f):
-        whole += 1
-        if check_table:
-            if q.result:
-                if "||---" in q.result or not common.read_table(q.result):
-                    queries.append(q)
-        elif not q.result:
-            queries.append(q)
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Pick up error queries from XML files")
+    add_args(parser)
+    args = parser.parse_args(argv)
+    return main_func(args)
 
-print(f"error {len(queries)}/{whole}", file=sys.stderr)
-common.write_queries(output, queries, count=len(queries), whole=whole)
+if __name__ == "__main__":
+    sys.exit(main())
