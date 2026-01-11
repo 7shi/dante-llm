@@ -68,7 +68,7 @@ This project uses the following library for XML parsing:
 
 ```bash
 # Install in development mode
-uv pip install -e .
+uv sync
 ```
 
 ### Commands
@@ -125,25 +125,6 @@ Example:
 ```bash
 uv run dantetool replace 1-error-ok.xml inferno/*.xml purgatorio/*.xml paradiso/*.xml
 ```
-
-### Using with Makefile
-
-Translation projects typically use a Makefile that includes `common.mk`:
-
-```makefile
-MODEL = gemini-2.0-flash-exp
-LANG  = English
-
-include ../common.mk
-```
-
-Available targets:
-- `make init` - Create init.xml
-- `make run` - Run translation
-- `make check` - Extract error queries
-- `make redo` - Retry failed queries
-- `make replace` - Apply fixes
-- `make split` - Split queries into smaller units
 
 ## Translation Tool
 
