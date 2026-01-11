@@ -11,12 +11,12 @@ The main translation script that uses the Gemini API to translate Italian text i
 Before running translations, create an `init.xml` file with example translations:
 
 ```bash
-uv run translate/translate.py -m <model> --init "<language>" <srcdir> <outdir>
+uv run translate.py -m <model> --init "<language>" <srcdir> <outdir>
 ```
 
 Example:
 ```bash
-uv run translate/translate.py -m gemini-2.0-flash-exp --init "English" it .
+uv run translate.py -m gemini-2.0-flash-exp --init "English" it .
 ```
 
 ### Running Translations
@@ -24,7 +24,7 @@ uv run translate/translate.py -m gemini-2.0-flash-exp --init "English" it .
 Once `init.xml` exists:
 
 ```bash
-uv run translate/translate.py -m <model> "<language>" <srcdir> <outdir>
+uv run translate.py -m <model> "<language>" <srcdir> <outdir>
 ```
 
 ### Options
@@ -58,7 +58,7 @@ A utility script for splitting queries and checking line number consistency in t
 ### Usage
 
 ```bash
-uv run translate/split.py [-c <check-type>] <files...>
+uv run split.py [-c <check-type>] <files...>
 ```
 
 ### Check Types
@@ -71,11 +71,47 @@ uv run translate/split.py [-c <check-type>] <files...>
 
 ```bash
 # Split queries into 3-line units
-uv run translate/split.py inferno/*.xml
+uv run split.py inferno/*.xml
 
 # Check line number consistency
-uv run translate/split.py -c 2 inferno/*.xml
+uv run split.py -c 2 inferno/*.xml
 ```
+
+## compare.py
+
+A utility script for generating comparison documents that show the original Italian text alongside translations from multiple models.
+
+### Usage
+
+```bash
+uv run compare.py <path> [<path> ...]
+```
+
+The path should be specified without extension (e.g., `inferno/01` instead of `inferno/01.xml`).
+
+### Output
+
+Generates markdown files in `comparison/` with HTML tables comparing:
+1. Original Italian text (Dante)
+2. English translations (*-en models)
+3. Japanese translations (*-ja models)
+
+Lines are grouped by 3 for easier comparison.
+
+### Examples
+
+```bash
+# Single canto
+uv run compare.py inferno/01
+
+# Multiple cantos
+uv run compare.py inferno/01 inferno/02 purgatorio/01
+
+# All cantos (via Makefile)
+make compare
+```
+
+Output: `comparison/inferno/01.md`, etc.
 
 ## Overview
 
