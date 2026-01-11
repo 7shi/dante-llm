@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries count="4">
+<query>
+<prompt>
+This text is written in Italian.
+Create a word table showing the Lemma for each word.
+The entries in the table are Word, Lemma, Part of Speech, Gender, Number, Person, Tense, Mood and Note.
+
+* Decompose the contraction in Lemma.
+* Leave blank if not applicable.
+* Words linked by an apostrophe should be separated.
+* The Note should be writtern in brief, e.g. archaic.
+* Quotation marks should be excluded. Apostrophes in contractions are not quotation marks.
+* If the verb and the other word are combined, they should be separated by Lemma.
+  In such cases, only the verb information should be written in the other columns.
+
+1 Nel mezzo del cammin di nostra vita
+9 dirò de l’altre cose ch’i’ v’ho scorte.
+28 Poi ch’èi posato un poco il corpo lasso,
+67 Rispuosemi: «Non omo, omo già fui,
+</prompt>
+<result>
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Nel | in + il | preposition | m. | sg. |  |  |  |  |
+| mezzo | mezzo | noun | m. | sg. |  |  |  |  |
+| del | di + il | preposition | m. | sg. |  |  |  |  |
+| cammin | cammino | noun | m. | sg. |  |  |  |  |
+| di | di | preposition |  |  |  |  |  |  |
+| nostra | nostro | adjective | f. | sg. |  |  |  |  |
+| vita | vita | noun | f. | sg. |  |  |  |  |
+| dirò | dire | verb |  | sg. | 1 | future | indicative |  |
+| de | di | preposition |  |  |  |  |  |  |
+| l’ | il | definite article | m. | sg. |  |  |  |  |
+| altre | altro | adjective | f. | pl. |  |  |  |  |
+| cose | cosa | noun | f. | pl. |  |  |  |  |
+| ch’ | che | conjunction |  |  |  |  |  |  |
+| i’ | io | pronoun |  | sg. | 1 |  |  | archaic |
+| v’ | vi | pronoun |  | pl. | 2 |  |  | archaic |
+| ho | avere | verb |  | sg. | 1 | present | indicative |  |
+| scorte | scorgere | verb |  | sg. | 1 | past participle |  |  |
+| Poi | poi | adverb |  |  |  |  |  |  |
+| ch’ | che | conjunction |  |  |  |  |  |  |
+| èi | essere | verb |  | sg. | 1 | past remote | indicative | archaic |
+| posato | posare | verb |  | sg. | 1 | past participle |  |  |
+| un | uno | indefinite article | m. | sg. |  |  |  |  |
+| poco | poco | adjective |  |  |  |  |  |  |
+| il | il | definite article | m. | sg. |  |  |  |  |
+| corpo | corpo | noun | m. | sg. |  |  |  |  |
+| lasso | lasso | adjective | m. | sg. |  |  |  |  |
+| Rispuosemi | rispondere | verb |  | sg. | 3 | past remote | indicative |  |
+| Non | non | adverb |  |  |  |  |  |  |
+| omo | uomo | noun | m. | sg. |  |  |  |  |
+| omo | uomo | noun | m. | sg. |  |  |  |  |
+| già | già | adverb |  |  |  |  |  |  |
+| fui | essere | verb |  | sg. | 1 | past remote | indicative |  |
+</result>
+</query>
+<query>
+<prompt>
+Create a word table.
+
+1 Nel mezzo del cammin di nostra vita
+2 mi ritrovai per una selva oscura,
+3 ché la diritta via era smarrita.
+</prompt>
+<result>
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Nel | in + il | preposition | m. | sg. |  |  |  |  |
+| mezzo | mezzo | noun | m. | sg. |  |  |  |  |
+| del | di + il | preposition | m. | sg. |  |  |  |  |
+| cammin | cammino | noun | m. | sg. |  |  |  |  |
+| di | di | preposition |  |  |  |  |  |  |
+| nostra | nostro | adjective | f. | sg. |  |  |  |  |
+| vita | vita | noun | f. | sg. |  |  |  |  |
+| mi | io | pronoun |  | sg. | 1 |  |  |  |
+| ritrovai | ritrovare | verb |  | sg. | 1 | past remote | indicative |  |
+| per | per | preposition |  |  |  |  |  |  |
+| una | uno | indefinite article | f. | sg. |  |  |  |  |
+| selva | selva | noun | f. | sg. |  |  |  |  |
+| oscura | oscuro | adjective | f. | sg. |  |  |  |  |
+| ché | che | conjunction |  |  |  |  |  |  |
+| la | il | definite article | f. | sg. |  |  |  |  |
+| diritta | diritto | adjective | f. | sg. |  |  |  |  |
+| via | via | noun | f. | sg. |  |  |  |  |
+| era | essere | verb |  | sg. | 3 | past remote | indicative |  |
+| smarrita | smarrire | verb |  | sg. | 3 | past participle |  |  |
+</result>
+</query>
+<query>
+<prompt>
+Create a word table.
+
+4 Ahi quanto a dir qual era è cosa dura
+5 esta selva selvaggia e aspra e forte
+6 che nel pensier rinova la paura!
+</prompt>
+<result>
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Ahi | ahi | interjection |  |  |  |  |  |  |
+| quanto | quanto | adverb |  |  |  |  |  |  |
+| a | a | preposition |  |  |  |  |  |  |
+| dir | dire | verb |  |  |  | infinitive |  |  |
+| qual | quale | adjective |  | sg. |  |  |  |  |
+| era | essere | verb |  | sg. | 3 | past remote | indicative |  |
+| è | essere | verb |  | sg. | 3 | present | indicative |  |
+| cosa | cosa | noun | f. | sg. |  |  |  |  |
+| dura | duro | adjective | f. | sg. |  |  |  |  |
+| esta | questo | demonstrative adjective | f. | sg. |  |  |  |  |
+| selva | selva | noun | f. | sg. |  |  |  |  |
+| selvaggia | selvatico | adjective | f. | sg. |  |  |  |  |
+| e | e | conjunction |  |  |  |  |  |  |
+| aspra | aspro | adjective | f. | sg. |  |  |  |  |
+| e | e | conjunction |  |  |  |  |  |  |
+| forte | forte | adjective | f. | sg. |  |  |  |  |
+| che | che | conjunction |  |  |  |  |  |  |
+| nel | in + il | preposition | m. | sg. |  |  |  |  |
+| pensier | pensiero | noun | m. | sg. |  |  |  |  |
+| rinova | rinnovare | verb |  | sg. | 3 | present | indicative |  |
+| la | il | definite article | f. | sg. |  |  |  |  |
+| paura | paura | noun | f. | sg. |  |  |  |  |
+</result>
+</query>
+<query>
+<prompt>
+Create a word table.
+
+7 Tant’ è amara che poco è più morte;
+8 ma per trattar del ben ch’i’ vi trovai,
+9 dirò de l’altre cose ch’i’ v’ho scorte.
+</prompt>
+<result>
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Tant’ | tanto | adverb |  |  |  |  |  |  |
+| è | essere | verb |  | sg. | 3 | present | indicative |  |
+| amara | amaro | adjective | f. | sg. |  |  |  |  |
+| che | che | conjunction |  |  |  |  |  |  |
+| poco | poco | adjective |  |  |  |  |  |  |
+| è | essere | verb |  | sg. | 3 | present | indicative |  |
+| più | più | adverb |  |  |  |  |  |  |
+| morte | morte | noun | f. | sg. |  |  |  |  |
+| ma | ma | conjunction |  |  |  |  |  |  |
+| per | per | preposition |  |  |  |  |  |  |
+| trattar | trattare | verb |  |  |  | infinitive |  |  |
+| del | di + il | preposition | m. | sg. |  |  |  |  |
+| ben | bene | noun | m. | sg. |  |  |  |  |
+| ch’ | che | conjunction |  |  |  |  |  |  |
+| i’ | io | pronoun |  | sg. | 1 |  |  | archaic |
+| vi | vi | pronoun |  | pl. | 2 |  |  | archaic |
+| trovai | trovare | verb |  | sg. | 1 | past remote | indicative |  |
+| dirò | dire | verb |  | sg. | 1 | future | indicative |  |
+| de | di | preposition |  |  |  |  |  |  |
+| l’ | il | definite article | m. | sg. |  |  |  |  |
+| altre | altro | adjective | f. | pl. |  |  |  |  |
+| cose | cosa | noun | f. | pl. |  |  |  |  |
+| ch’ | che | conjunction |  |  |  |  |  |  |
+| i’ | io | pronoun |  | sg. | 1 |  |  | archaic |
+| v’ | vi | pronoun |  | pl. | 2 |  |  | archaic |
+| ho | avere | verb |  | sg. | 1 | present | indicative |  |
+| scorte | scorgere | verb |  | sg. | 1 | past participle |  |  |
+</result>
+</query>
+</queries>

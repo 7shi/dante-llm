@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries count="2">
+<query>
+<prompt>
+Show contractions of preposition and article in Italian. No examples are needed.
+</prompt>
+<result>
+* del = di + il
+* dello = di + lo
+* della = di + la
+* dei = di + i
+* degli = di + gli
+* delle = di + le
+* al = a + il
+* allo = a + lo
+* alla = a + la
+* ai = a + i
+* agli = a + gli
+* alle = a + le
+* dal = da + il
+* dallo = da + lo
+* dalla = da + la
+* dai = da + i
+* dagli = da + gli
+* dalle = da + le
+* nel = in + il
+* nello = in + lo
+* nella = in + la
+* nei = in + i
+* negli = in + gli
+* nelle = in + le
+* sul = su + il
+* sullo = su + lo
+* sulla = su + la
+* sui = su + i
+* sugli = su + gli
+* sulle = su + le
+* col = con + il
+* collo = con + lo
+* colla = con + la
+* coi = con + i
+* cogli = con + gli
+* colle = con + le
+</result>
+</query>
+<query>
+<prompt>
+This text is written in Italian.
+Create a word table showing the Lemma for each word.
+The entries in the table are Word, Lemma, Part of Speech, Gender, Number, Person, Tense, Mood and Note.
+
+* Decompose the contraction in Lemma.
+* Leave blank if not applicable.
+* Words linked by an apostrophe should be separated.
+* The Note should be writtern in brief, e.g. archaic.
+* Quotation marks should be excluded. Apostrophes in contractions are not quotation marks.
+* If the verb and the other word are combined, they should be separated by Lemma.
+  In such cases, only the verb information should be written in the other columns.
+
+1 Nel mezzo del cammin di nostra vita
+9 dirò de l’altre cose ch’i’ v’ho scorte.
+28 Poi ch’èi posato un poco il corpo lasso,
+67 Rispuosemi: «Non omo, omo già fui,
+</prompt>
+<result>
+|Word|Lemma|Part of Speech|Gender|Number|Person|Tense|Mood|Note|
+|---|---|---|---|---|---|---|---|---|
+|Nel|in + il|preposition|m.|sg.|||||
+|mezzo|mezzo|noun|m.|sg.|||||
+|del|di + il|preposition|m.|sg.|||||
+|cammin|cammino|noun|m.|sg.|||||
+|di|di|preposition|||||||
+|nostra|nostro|adjective|f.|sg.|||||
+|vita|vita|noun|f.|sg.|||||
+|dirò|dire|verb||sg.|1|future|indicative||
+|de|di|preposition|||||||
+|l’|il|definite article|m.|sg.|||||
+|altre|altro|adjective|f.|pl.|||||
+|cose|cosa|noun|f.|pl.|||||
+|ch’|che|conjunction|||||||
+|i’|io|pronoun||sg.|1|||archaic|
+|v’|vi|pronoun||pl.|2|||archaic|
+|ho|avere|verb||sg.|1|present|indicative||
+|scorte|scorgere|verb||sg.|1|past participle|||
+|Poi|poi|adverb|||||||
+|ch’|che|conjunction|||||||
+|èi|essere|verb||sg.|1|past remote|indicative|archaic|
+|posato|posare|verb||sg.|1|past participle|||
+|un|uno|indefinite article|m.|sg.|||||
+|poco|poco|adjective|||||||
+|il|il|definite article|m.|sg.|||||
+|corpo|corpo|noun|m.|sg.|||||
+|lasso|lasso|adjective|m.|sg.|||||
+|Rispuosemi|rispondere|verb||sg.|3|past remote|indicative||
+|Non|non|adverb|||||||
+|omo|uomo|noun|m.|sg.|||||
+|omo|uomo|noun|m.|sg.|||||
+|già|già|adverb|||||||
+|fui|essere|verb||sg.|1|past remote|indicative||
+</result>
+</query>
+</queries>
