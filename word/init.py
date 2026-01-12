@@ -1,4 +1,3 @@
-import sys
 import argparse
 
 parser = argparse.ArgumentParser(
@@ -56,6 +55,7 @@ The entries in the table are {columns}.
 * Quotation marks should be excluded. Apostrophes in contractions are not quotation marks.
 * If the verb and the other word are combined, they should be separated by Lemma.
   In such cases, only the verb information should be written in the other columns.
+* Provide only the word table without any additional explanations or commentary outside the table.
 
 """.lstrip()
 
