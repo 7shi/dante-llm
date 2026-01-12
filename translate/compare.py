@@ -6,90 +6,36 @@ Output: translate/comparison/inferno/01.md
 
 import sys
 import argparse
-import re
 from pathlib import Path
 from dantetool import common
 from dantetool.option import directories
-
-def extract_lines(result):
-    """Extract line number and text from result"""
-    if not result:
-        return []
-    lines = []
-    for line in result.strip().split("\n"):
-        line = line.strip()
-        if not line:
-            continue
-        # Match line number at start: "123 text" or "123"
-        m = re.match(r"(\d+)\s*(.*)", line)
-        if m:
-            num = int(m.group(1))
-            text = m.group(2)
-            lines.append((num, text))
-    return lines
-
-def group_by_three(lines):
-    """Group lines by 3"""
-    groups = {}
-    for num, text in lines:
-        group_num = ((num - 1) // 3) * 3 + 1
-        if group_num not in groups:
-            groups[group_num] = {}
-        groups[group_num][num] = text
-    return groups
 
 def collect_translations(base_dir, rel_path, it_dir):
     """Collect translations from all subdirectories"""
     translations = {}
 
     # First, collect original Italian text from it/
-    # Convert .xml to .txt for it directory
-    it_path = Path(rel_path)
-    it_rel_path = it_path.parent / (it_path.stem + ".txt")
-    it_file = it_dir / it_rel_path
-    if it_file.exists():
-        try:
-            with open(it_file, "r", encoding="utf-8") as f:
-                all_lines = []
-                line_num = 1
-                for line in f:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    # Italian text doesn't have line numbers, so we add them
-                    all_lines.append((line_num, line))
-                    line_num += 1
-                if all_lines:
-                    translations["Dante"] = group_by_three(all_lines)
-        except Exception as e:
-            print(f"Warning: Failed to read {it_file}: {e}", file=sys.stderr)
+    it_file = str(it_dir / rel_path) + ".txt"
+    srcs, _ = common.read_source(it_file)
+    translations["Dante"] = srcs
+    srcs_len = len(srcs)
 
     # Then collect translations from subdirectories
+    ok = True
     for subdir in sorted(base_dir.iterdir()):
-        if not subdir.is_dir():
-            continue
-        if subdir.name in ["comparison"]:
-            continue
+        if subdir.is_dir() and subdir.name != "comparison":
+            file = str(subdir / rel_path) + ".xml"
+            srcs, _ = common.read_source(file)
+            translations[subdir.name] = srcs
+            if len(srcs) != srcs_len:
+                ok = False
+    if ok:
+        return translations
+    
+    print("Error:", rel_path, {k: len(v) for k, v in translations.items()}, file=sys.stderr)
+    return None
 
-        xml_file = subdir / rel_path
-        if not xml_file.exists():
-            continue
-
-        try:
-            queries = common.read_queries(str(xml_file))
-            all_lines = []
-            for q in queries:
-                if q.result:
-                    all_lines.extend(extract_lines(q.result))
-
-            if all_lines:
-                translations[subdir.name] = group_by_three(all_lines)
-        except Exception as e:
-            print(f"Warning: Failed to read {xml_file}: {e}", file=sys.stderr)
-
-    return translations
-
-def format_table(translations, group_num):
+def format_table(translations, group_index):
     """Format a single 3-line group as HTML table rows"""
     rows = []
 
@@ -105,12 +51,23 @@ def format_table(translations, group_num):
             return (3, model)
 
     for model in sorted(translations.keys(), key=sort_key):
-        group = translations[model].get(group_num, {})
+        srcs = translations[model]
+        if group_index >= len(srcs):
+            continue
+
+        group = srcs[group_index]
         if not group:
             continue
 
-        # Get line numbers and texts
-        line_nums = sorted(group.keys())
+        # Parse line numbers and texts from lines like "123 text"
+        line_nums = []
+        text_lines = []
+        for line in group:
+            parts = line.split(" ", 1)
+            if len(parts) == 2:
+                line_nums.append(int(parts[0]))
+                text_lines.append(parts[1].strip())
+
         if not line_nums:
             continue
 
@@ -118,7 +75,6 @@ def format_table(translations, group_num):
         line_num_str = "<br>".join(str(n) for n in line_nums)
 
         # Format text lines
-        text_lines = [group[n] for n in line_nums]
         text_str = "<br>\n".join(text_lines)
 
         rows.append(f'<tr><td>{model}</td><td align="right">{line_num_str}</td><td>\n{text_str}\n</td></tr>')
@@ -132,17 +88,15 @@ def write_comparison(output_file, translations, title):
     """Write comparison markdown file"""
     output_file.parent.mkdir(parents=True, exist_ok=True)
 
-    # Get all group numbers
-    all_groups = set()
-    for model_groups in translations.values():
-        all_groups.update(model_groups.keys())
+    # Get maximum number of groups
+    max_groups = max(len(srcs) for srcs in translations.values())
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(f"# {title}\n\n")
         f.write("<table>\n")
 
-        for group_num in sorted(all_groups):
-            rows = format_table(translations, group_num)
+        for group_index in range(max_groups):
+            rows = format_table(translations, group_index)
             for row in rows:
                 f.write(row + "\n")
 
@@ -166,7 +120,7 @@ def process_one(rel_path_input, script_dir):
     title = f"{cantica.title()} - Canto {int(canto_num)}"
 
     # Add .xml extension for accessing files
-    rel_path = f"{cantica}/{canto_num}.xml"
+    rel_path = f"{cantica}/{canto_num}"
 
     # Paths
     base_dir = script_dir
@@ -175,9 +129,7 @@ def process_one(rel_path_input, script_dir):
 
     # Collect translations
     translations = collect_translations(base_dir, rel_path, it_dir)
-
     if not translations:
-        print(f"No translations found for {rel_path}")
         return False
 
     # Write output

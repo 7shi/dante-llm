@@ -113,50 +113,55 @@ def fix_table(lines):
 # source
 
 def read_source(path, language=None):
-    srcs = []
     src_lines = {}
 
-    file = path
-    if path.endswith(".txt") or os.path.exists(file := f"{path}.txt"):
+    if (file := path).endswith(".txt") or os.path.exists(file := f"{path}.txt"):
+        # Build src_lines from .txt file
         with open(file, "r", encoding="utf-8") as f:
-            ln = 1
-            lines = []
+            ln = 0
             for line in f:
                 line = line.strip()
                 if line:
-                    line = f"{ln} {line}"
-                    src_lines[ln] = line
                     ln += 1
-                    lines.append(line)
-                    if len(lines) == 3:
-                        srcs.append(lines)
-                        lines = []
-            if lines:
-                srcs.append(lines)
-        return srcs, src_lines
-
-    file = path
-    if path.endswith(".xml") or os.path.exists(file := f"{path}.xml"):
+                    src_lines[ln] = f"{ln} {line}"
+            last = ln
+    elif (file := path).endswith(".xml") or os.path.exists(file := f"{path}.xml"):
+        # Build src_lines from .xml file
+        last = 0
         qs = read_queries(file)
-        if qs and (m := re.search(r"/(\d+)", qs[0].info)):
-            src_lines = {int(m.group(1)): None}
         for q in qs:
             if not q.result:
                 continue
             r = q.result
             if language and language in r:
                 r = r[r.find("\n", r.find(language)):]
-            lines = []
-            for line in (r.strip() + "\n").split("\n"):
-                if m := re.match(r"(\d+)", line):
-                    src_lines[int(m.group(1))] = line
-                if line:
-                    lines.append(line)
-                if lines and (len(lines) == 3 or not line):
-                    srcs.append(lines)
-                    lines = []
+            for line in r.strip().split("\n"):
+                if line and (m := re.match(r"(\d+)", line)):
+                    lnstr = m.group(1)
+                    ln = int(lnstr)
+                    if line == lnstr:
+                        line += " "
+                    src_lines[ln] = line
+                    if last < ln:
+                        last = ln
+        if qs and (m := re.search(r"/(\d+)", qs[0].info)):
+            last = int(m.group(1))
     else:
         print(f"no source files found in {path}", file=sys.stderr)
+        return [], {}
+
+    # Build srcs from src_lines (group by 3)
+    srcs = []
+    lines = []
+    for ln in range(1, last + 1):
+        line = src_lines.setdefault(ln, f"{ln} ")
+        lines.append(line)
+        if len(lines) == 3:
+            srcs.append(lines)
+            lines = []
+    if lines:
+        srcs.append(lines)
+
     return srcs, src_lines
 
 # fix
