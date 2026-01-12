@@ -1,4 +1,4 @@
-import sys, re
+import re
 import argparse
 from dantetool import common, option
 
@@ -6,6 +6,7 @@ parser = argparse.ArgumentParser(
     description="Create word tables using Gemini",
     formatter_class=argparse.RawDescriptionHelpFormatter)
 
+option.interval = 5
 option.parse(parser)
 args = parser.parse_args()
 option.apply(args)

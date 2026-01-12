@@ -16,14 +16,14 @@ outdir = None
 def parse(parser):
     parser.add_argument("-d", dest="directories", type=str,
                         help="specify sub directory (space-separated)")
-    parser.add_argument("-i", dest="init", type=str, default="init.xml",
-                        help="specify init.xml (default: init.xml)")
+    parser.add_argument("-i", dest="init", type=str, default=init,
+                        help=f"specify init.xml (default: {init})")
     parser.add_argument("-m", dest="model", type=str, required=True,
                         help="specify model name (required)")
-    parser.add_argument("-n", dest="interval", type=int, default=10,
-                        help="specify interval (default: 10)")
-    parser.add_argument("-r", dest="rangemax", type=int, default=35,
-                        help="specify range (default: 35)")
+    parser.add_argument("-n", dest="interval", type=int, default=interval,
+                        help=f"specify interval (default: {interval})")
+    parser.add_argument("-r", dest="rangemax", type=int, default=rangemax,
+                        help=f"specify range (default: {rangemax})")
     parser.add_argument("-1", dest="once", action="store_true",
                         help="just do one canto")
     parser.add_argument("--no-retry", dest="retry", action="store_false", default=True,
