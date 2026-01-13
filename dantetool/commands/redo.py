@@ -79,6 +79,13 @@ def main_func(args):
         queries.append([q])
         q = next(it, None)
 
+    fn = os.path.splitext(args.input)[0]
+    def save_ok():
+        common.write_queries(f"{fn}-ok.xml", qs_ok, count=len(qs_ok))
+    def save_ng():
+        error = sum(1 for q in qs_ng if not q.result)
+        common.write_queries(f"{fn}-ng.xml", qs_ng, error=error, count=len(qs_ng))
+
     qs_ok = []
     qs_ng = []
     i = 0
@@ -125,20 +132,17 @@ def main_func(args):
                         q.result += "\n"
                     q.result += line
             qs_ok.append(q)
+            save_ok()
         elif ok == len(qs2):
             qs_ok += qs2
+            save_ok()
         else:
             qs_ng += qs2
+            save_ng()
 
     all = sum(map(len, queries))
     print("OK:", len(qs_ok), ", NG:", len(qs_ng), ", ALL:", all, file=sys.stderr)
 
-    fn = os.path.splitext(args.input)[0]
-    if qs_ok:
-        common.write_queries(f"{fn}-ok.xml", qs_ok, count=len(qs_ok))
-    if qs_ng:
-        error = sum(1 for q in qs_ng if not q.result)
-        common.write_queries(f"{fn}-ng.xml", qs_ng, error=error, count=len(qs_ng))
     return 0
 
 def main(argv=None):
