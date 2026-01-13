@@ -3,6 +3,7 @@ import sys, os
 directories = ["inferno", "purgatorio", "paradiso"]
 init = "init.xml"
 interval = 10
+rangemin = 1
 rangemax = 35
 once  = False
 retry = True
@@ -22,8 +23,10 @@ def parse(parser):
                         help="specify model name (required)")
     parser.add_argument("-n", dest="interval", type=int, default=interval,
                         help=f"specify interval (default: {interval})")
+    parser.add_argument("-a", dest="rangemin", type=int, default=rangemin,
+                        help=f"specify range min (default: {rangemin})")
     parser.add_argument("-r", dest="rangemax", type=int, default=rangemax,
-                        help=f"specify range (default: {rangemax})")
+                        help=f"specify range max (default: {rangemax})")
     parser.add_argument("-1", dest="once", action="store_true",
                         help="just do one canto")
     parser.add_argument("--no-retry", dest="retry", action="store_false", default=True,
@@ -40,12 +43,13 @@ def parse(parser):
                         help="output directory")
 
 def apply(args):
-    global directories, init, interval, rangemax, once, retry, show, think, model, language, srcdir, outdir
+    global directories, init, interval, rangemin, rangemax, once, retry, show, think, model, language, srcdir, outdir
 
     if args.directories:
         directories = args.directories.split()
     init = args.init
     interval = args.interval
+    rangemin = args.rangemin
     rangemax = args.rangemax
     once = args.once
     retry = args.retry
@@ -63,19 +67,19 @@ def proc(f):
     global directory, canto, info
     for directory in directories:
         diru = directory[0].upper() + directory[1:]
-        path_s = os.path.join(srcdir, directory)
-        if not os.path.exists(path_s):
+        srcpath = os.path.join(srcdir, directory)
+        if not os.path.exists(srcpath):
             continue
-        path_o = os.path.join(outdir, directory)
-        if not os.path.exists(path_o):
-            os.mkdir(path_o)
-        for canto in range(1, rangemax + 1):
-            src = os.path.join(path_s, f"{canto:02}.xml")
+        outpath = os.path.join(outdir, directory)
+        if not os.path.exists(outpath):
+            os.mkdir(outpath)
+        for canto in range(rangemin, rangemax + 1):
+            src = os.path.join(srcpath, f"{canto:02}.xml")
             if not os.path.exists(src):
                 src = src[:-3] + "txt"
             if not os.path.exists(src):
                 break
-            xml = os.path.join(path_o, f"{canto:02}.xml")
+            xml = os.path.join(outpath, f"{canto:02}.xml")
             if os.path.exists(xml):
                 continue
             print()
