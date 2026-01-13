@@ -47,18 +47,6 @@ redo-sweep:
 		fi; \
 	done
 
-## Retry up to 10 times with temperature 1.0
-redo-loop:
-	@for i in {1..10}; do \
-		echo "Retry attempt $$i/10 (temperature 1.0)..."; \
-		$(MAKE) redo OPTIONS="-t 1.0" || exit 1; \
-		$(MAKE) replace check; \
-		if grep -q 'count="0"' 1-error.xml; then \
-			echo "No errors remaining after $$i attempt(s)"; \
-			break; \
-		fi; \
-	done
-
 
 # Advanced (for persistent errors)
 

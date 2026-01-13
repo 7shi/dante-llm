@@ -196,6 +196,23 @@ make redo OPTIONS="-t 1.0" MODEL=model-name
 
 Higher temperature values make the LLM output more varied but potentially less consistent.
 
+#### Automated Temperature Sweeping
+
+For stubborn errors that persist across multiple manual retries, use automated retry strategies:
+
+**Temperature Sweep (redo-sweep):**
+```bash
+make redo-sweep MODEL=model-name
+```
+
+Automatically retries with gradually increasing temperature from 0.1 to 1.0:
+- Starts at 0.1 (reproducible, consistent)
+- Increments by 0.1 each iteration
+- Stops when all errors are resolved (`count="0"`)
+- Useful when you're unsure what temperature will work
+
+This command automatically runs the `redo → replace → check` cycle and stops as soon as errors are cleared.
+
 ## Differences from Translation Workflow
 
 The word table generation workflow differs from translation in several ways:
@@ -204,25 +221,3 @@ The word table generation workflow differs from translation in several ways:
 2. **Output Format**: Structured tables with grammatical information
 3. **Processing Units**: Uses pre-segmented text units from source files
 4. **Training Data**: Requires language-specific examples for lemma and grammar rules
-
-## Example Usage
-
-Complete example workflow for Italian:
-
-```bash
-# Navigate to the target directory
-cd word/gemini1-it
-
-# Initialize with examples
-make init MODEL=gemini-2.0-flash-exp LANG="Italian"
-
-# Generate word tables for all cantos
-make MODEL=gemini-2.0-flash-exp
-
-# If there are errors, retry them
-make redo MODEL=gemini-2.0-flash-exp
-make replace
-make check
-
-# Repeat until no errors remain
-```

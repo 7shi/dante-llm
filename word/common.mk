@@ -40,3 +40,15 @@ redo:
 ## Apply fixes (1-error-ok.xml) to source
 replace:
 	uv run dantetool replace 1-error-ok.xml */*.xml
+
+## Automatically retry with increasing temperature (0.1 to 1.0)
+redo-sweep:
+	@for t in 0.{1..9} 1.0; do \
+		echo "Retrying with temperature $$t..."; \
+		$(MAKE) redo OPTIONS="-t $$t" || exit 1; \
+		$(MAKE) replace check; \
+		if grep -q 'count="0"' 1-error.xml; then \
+			echo "No errors remaining at temperature $$t"; \
+			break; \
+		fi; \
+	done

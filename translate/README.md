@@ -245,7 +245,6 @@ make check
 | `make redo` | Retry errors | Preserves sentence boundaries |
 | `make replace` | Apply fixes to source files | Writes back `1-error-ok.xml` |
 | `make redo-sweep` | Auto-retry with increasing temperature | 0.1→1.0, stops when errors clear |
-| `make redo-loop` | Auto-retry up to 10 times at temp 1.0 | High variation, stops when errors clear |
 | `make split` | **Restructure source files** into 3-line units | Higher success rate, potential context issues |
 | `make redo1` | **Split error processing** into 1-line units | Does not restructure source files |
 | `make redo-fix` | Check fixes without writing back | Validates `1-error-ok.xml` only |
@@ -292,15 +291,4 @@ Automatically retries with gradually increasing temperature from 0.1 to 1.0:
 - Stops when all errors are resolved (`count="0"`)
 - Useful when you're unsure what temperature will work
 
-**High-Temperature Loop (redo-loop):**
-```bash
-make redo-loop MODEL=model-name
-```
-
-Retries up to 10 times with temperature fixed at 1.0:
-- Maximum variation to escape repetitive error patterns
-- Each iteration may produce different results
-- Stops when all errors are resolved
-- Useful when errors persist even at high temperatures
-
-Both commands automatically run the `redo → replace → check` cycle and stop as soon as errors are cleared.
+This command automatically runs the `redo → replace → check` cycle and stops as soon as errors are cleared.
