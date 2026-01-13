@@ -7,6 +7,8 @@ def add_args(parser):
                         help="specify init.xml file (default: init.xml)")
     parser.add_argument("-m", dest="model", type=str, required=True,
                         help="specify model name (required)")
+    parser.add_argument("-n", dest="interval", type=int, default=5,
+                        help=f"specify interval (default: 5)")
     parser.add_argument("-s", dest="system_prompt", type=str,
                         help="specify system prompt file")
     parser.add_argument("-t", dest="temperature", type=float,
@@ -18,14 +20,24 @@ def add_args(parser):
     parser.add_argument("input", type=str,
                         help="input XML file (e.g., 1-error.xml)")
 
+def separate(result):
+    lines = [line.strip() for line in result.strip().split("\n")]
+    ret = []
+    for line in lines:
+        if re.match(r"\*\*.+\*\*$", line):
+            ret.append([line, ""])
+        elif ret and line and re.match(r"\d+ [^ ]", line):
+            if ret[-1][1]:
+                ret[-1][1] += "\n"
+            ret[-1][1] += line
+    return ret
+
+def is_skip(q):
+    return q.result or (q.error and q.error == "(skip)")
+
 def main_func(args):
     if args.temperature is not None:
         gemini.generation_config["temperature"] = args.temperature
-
-    init_xml = args.init_xml
-    model = args.model
-    per1 = args.per1
-    think = args.think
 
     # Read system prompt if specified
     if args.system_prompt:
@@ -34,7 +46,7 @@ def main_func(args):
     else:
         system_prompt = None
 
-    init_qs = common.read_queries(init_xml)
+    init_qs = common.read_queries(args.init_xml)
     history = common.unzip(init_qs)
     input_qs = common.read_queries(args.input)
 
@@ -52,7 +64,7 @@ def main_func(args):
                     break
             queries.append(qs)
             continue
-        if per1:
+        if args.per1:
             lines = q.prompt.strip().split("\n")
             if len(lines) == 5 and not lines[1]:
                 qs = []
@@ -67,26 +79,6 @@ def main_func(args):
         queries.append([q])
         q = next(it, None)
 
-    def separate(result):
-        lines = [line.strip() for line in result.strip().split("\n")]
-        ret = []
-        for line in lines:
-            if re.match(r"\*\*.+\*\*$", line):
-                ret.append([line, ""])
-            elif ret and line and re.match(r"\d+ [^ ]", line):
-                if ret[-1][1]:
-                    ret[-1][1] += "\n"
-                ret[-1][1] += line
-        return ret
-
-    def query_func(prompt, info):
-        if not (0 <= gemini.chat_count < 5):
-            gemini.init(model, history, system=system_prompt, think=think)
-        return gemini.query(prompt, info, show=True, retry=False)
-
-    def is_skip(q):
-        return q.result or (q.error and q.error == "(skip)")
-
     qs_ok = []
     qs_ng = []
     i = 0
@@ -99,8 +91,12 @@ def main_func(args):
                 qq = q
             else:
                 i += 1
-                print(f"{i}/{count}", file=sys.stderr)
-                qq = query_func(q.prompt, q.info)
+                if i > 1:
+                    print()
+                print(f"==== {i}/{count} ====", file=sys.stderr)
+                if not (0 <= gemini.chat_count < args.interval):
+                    gemini.init(args.model, history, system=system_prompt, think=args.think)
+                qq = gemini.query(q.prompt, q.info, show=True, retry=False)
             qs2.append(qq)
             if qq.result:
                 ok += 1

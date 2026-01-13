@@ -12,6 +12,9 @@ chat_history = None
 chat_count = -1
 roles = ["user", "assistant"]
 
+MAX_CONSECUTIVE_ERRORS = 3
+error_count = 0
+
 def init(model, history=None, system=None, think=None):
     global chat_history, chat_count
     generation_config["model"] = model
@@ -30,7 +33,7 @@ def init(model, history=None, system=None, think=None):
     chat_count = 0
 
 def query(prompt, info=None, show=False, retry=True, check=None):
-    global chat_history, chat_count
+    global chat_history, chat_count, error_count
     q = common.query()
     q.prompt = prompt.replace("\r\n", "\n").rstrip()
     history = chat_history + [{"role": roles[0], "content": q.prompt}]
@@ -74,4 +77,10 @@ def query(prompt, info=None, show=False, retry=True, check=None):
             if not retry:
                 break
             q.retry = True
+    if q.result:
+        error_count = 0
+    else:
+        error_count += 1
+        if 0 < MAX_CONSECUTIVE_ERRORS <= error_count:
+            raise Exception(f"Maximum consecutive errors reached: {MAX_CONSECUTIVE_ERRORS}")
     return q
