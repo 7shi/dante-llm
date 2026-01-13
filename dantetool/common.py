@@ -55,13 +55,15 @@ def write(f, text="", end="\n"):
     f.write((str(text) + end).encode("utf_8"))
 
 def write_queries(file, qs, **root_attrs):
-    with open(file, "wb") as f:
+    tmp_file = file + ".tmp"
+    with open(tmp_file, "wb") as f:
         write(f, xml7shi.declaration)
         attrs = "".join(f' {k}="{v}"' for k, v in root_attrs.items())
         write(f, f"<queries{attrs}>")
         for q in qs:
             write(f, q, end="")
         write(f, "</queries>")
+    os.replace(tmp_file, file)
 
 def unzip(qs):
     ret = []
