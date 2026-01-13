@@ -1,6 +1,6 @@
 import sys
 import argparse
-from dantetool import pickup, redo, replace, strip
+from dantetool import concat, pickup, redo, replace, strip
 
 def main():
     parser = argparse.ArgumentParser(
@@ -9,6 +9,11 @@ def main():
     )
 
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
+
+    # concat subcommand
+    concat_parser = subparsers.add_parser("concat", help="Concatenate XML query files")
+    concat.add_args(concat_parser)
+    concat_parser.set_defaults(func=concat.main_func)
 
     # pickup subcommand
     pickup_parser = subparsers.add_parser("pickup", help="Pick up error queries from XML files")

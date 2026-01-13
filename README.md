@@ -73,6 +73,19 @@ uv sync
 
 ### Commands
 
+#### concat - Concatenate XML Files
+
+Concatenate multiple XML query files into a single output file:
+
+```bash
+uv run dantetool concat -o <output.xml> <input-files...>
+```
+
+Example:
+```bash
+uv run dantetool concat -o combined.xml file1.xml file2.xml file3.xml
+```
+
 #### pickup - Extract Error Queries
 
 Extract failed or incomplete queries from translation XML files:
@@ -125,6 +138,23 @@ Example:
 ```bash
 uv run dantetool replace 1-error-ok.xml inferno/*.xml purgatorio/*.xml paradiso/*.xml
 ```
+
+#### strip - Clean Up and Validate Word Tables
+
+Strip and validate table content from XML files. This command parses table results, validates their format, and cleans up any malformed entries:
+
+```bash
+uv run dantetool strip <target-files...>
+```
+
+Example:
+```bash
+uv run dantetool strip word/gemma3-it/*.xml
+```
+
+The command processes each file in-place:
+- Valid tables are preserved in the `result` field
+- Invalid tables are moved to the `error` field with an error message
 
 ## Workflows
 
