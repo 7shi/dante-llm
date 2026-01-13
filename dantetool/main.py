@@ -1,6 +1,6 @@
 import sys
 import argparse
-from dantetool import concat, pickup, redo, replace, strip
+from .commands import concat, pickup, redo, replace, strip
 
 def main():
     parser = argparse.ArgumentParser(

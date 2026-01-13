@@ -1,6 +1,6 @@
 import sys, time
 from llm7shi.compat import generate_with_schema
-from dantetool import common
+from . import common
 
 # Set up the model
 generation_config = {
