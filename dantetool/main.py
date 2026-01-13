@@ -1,6 +1,6 @@
 import sys
 import argparse
-from dantetool import pickup, redo, replace
+from dantetool import pickup, redo, replace, strip
 
 def main():
     parser = argparse.ArgumentParser(
@@ -24,6 +24,11 @@ def main():
     replace_parser = subparsers.add_parser("replace", help="Replace queries in target files with fixes")
     replace.add_args(replace_parser)
     replace_parser.set_defaults(func=replace.main_func)
+
+    # strip subcommand
+    strip_parser = subparsers.add_parser("strip", help="Strip table content from XML files")
+    strip.add_args(strip_parser)
+    strip_parser.set_defaults(func=strip.main_func)
 
     args = parser.parse_args()
 

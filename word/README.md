@@ -102,7 +102,9 @@ After generation, check for errors and collect failed queries:
 make check
 ```
 
-This extracts all failed queries into `1-error.xml`.
+This command performs two steps:
+1. **Strip**: Cleans up word tables by removing extraneous content after table ends and marking broken tables (those containing `||---`)
+2. **Pickup**: Extracts all failed queries into `1-error.xml`
 
 ### 3. Retry Errors (redo)
 
@@ -163,7 +165,7 @@ Repeat this cycle until errors are minimized.
 | `make test` | Test init.xml | Validates initialization |
 | `make` | Generate word tables + check errors | Same as `make run check` |
 | `make run` | Generate word tables | Initial generation |
-| `make check` | Validate and extract errors | Creates `1-error.xml` |
+| `make check` | Strip tables and extract errors | Cleans up tables, creates `1-error.xml` |
 | `make redo` | Retry errors | Regenerates failed queries |
 | `make replace` | Apply fixes to source files | Writes back `1-error-ok.xml` |
 

@@ -74,13 +74,32 @@ def unzip(qs):
 
 def read_table(src):
     ret = []
-    for line in src.split("\n"):
+    rowlen = 0
+    for line in src.splitlines():
         if line.startswith("|"):
-            ret.append([t.strip() for t in line.split("|")[1:-1]])
+            row = [t.strip() for t in line.split("|")[1:-1]]
+            if not ret:
+                rowlen = len(row)
+            elif rowlen > len(row):
+                row += [""] * (rowlen - len(row))
+            elif rowlen < len(row):
+                if all(cell == "" for cell in row[rowlen:]):
+                    row = row[:rowlen]
+                else:
+                    return None
+            ret.append(row)
         elif ret:
             break
-    if len(ret) > 1 and not re.match(r"-+$", ret[1][0]):
-        ret.insert(1, ["---"] * len(ret[0]))
+    if len(ret) < 3:
+        return None
+
+    ret1 = []
+    for cell in ret[1]:
+        if "---" in cell:
+            ret1.append(re.sub(r"-+", "---", cell))
+        else:
+            return None
+    ret[1] = ret1
     return ret
 
 abbrevs = {
@@ -97,18 +116,27 @@ def fix_cell(cell):
     ab = abbrevs.get(cell.lower())
     if ab:
         return ab
+    if m := re.fullmatch(r"([^*]+)\*", cell):
+        return m.group(1).strip()
+    if m := re.fullmatch(r"\*\*([^*]+)\*\*", cell):
+        return m.group(1).strip()
     return cell
 
-def fix_table(lines):
-    output = ""
-    for line in lines.split("\n"):
-        if line.endswith("\r"):
-            line = line[:-1]
-        if line.startswith("|"):
-            data = [fix_cell(cell) for cell in line.split("|")]
-            line = "|".join(data)
-        output += line + "\n"
-    return output.rstrip()
+def fix_table(src):
+    table = read_table(src)
+    if not table:
+        return None
+
+    output = []
+    for i, row in enumerate(table):
+        if i == 1:
+            # Keep separator row as is
+            output.append("|" + "|".join(row) + "|")
+        else:
+            # Apply fix_cell to non-separator rows
+            fixed_row = [fix_cell(cell) for cell in row]
+            output.append("|" + "|".join(fixed_row) + "|")
+    return "\n".join(output)
 
 # source
 
