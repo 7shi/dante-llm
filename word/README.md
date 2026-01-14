@@ -86,15 +86,24 @@ The word table generation process follows a similar workflow to translation, but
 
 ## Processing Flow
 
-### 1. Initial Word Table Generation (word.py)
+### 1. Initialization (init)
 
-`word.py` processes the source text and generates word tables for each text unit.
+`make init` creates training examples for the LLM by generating example word tables.
+
+- Reads the first canto from the source directory
+- Creates example word tables for selected lines
+- Saves training examples to `init.xml`
+- **Important**: Manually review and correct `init.xml` after generation, as these examples guide all subsequent word table generation
+
+### 2. Initial Word Table Generation (run)
+
+`make run` processes the source text and generates word tables for each text unit.
 
 - Reads text units from the source files
 - For each unit, creates a detailed word table with lemmas and grammatical information
 - Saves results to XML files in the output directory
 
-### 2. Error Checking (check)
+### 3. Error Checking (check)
 
 After generation, check for errors and collect failed queries:
 
@@ -106,7 +115,7 @@ This command performs two steps:
 1. **Strip**: Cleans up word tables by removing extraneous content after table ends and marking broken tables (those containing `||---`)
 2. **Pickup**: Extracts all failed queries into `1-error.xml`
 
-### 3. Retry Errors (redo)
+### 4. Retry Errors (redo)
 
 Retry the failed queries:
 
@@ -116,7 +125,7 @@ make redo MODEL=model-name
 
 Results are saved to `1-error-ok.xml` (successful) and `1-error-ng.xml` (still failed).
 
-### 4. Replace Fixed Queries (replace)
+### 5. Replace Fixed Queries (replace)
 
 Apply the successfully retried queries back to the original files:
 
@@ -172,9 +181,10 @@ Repeat this cycle until errors are minimized.
 ### Best Practices
 
 1. Start with `make init` to create training examples
-2. Use `make` for initial word table generation
-3. Use `make redo` → `make replace` cycles for error recovery
-4. Monitor the quality of word tables, especially lemma decomposition
+2. **Important**: After running `make init`, carefully review the generated `init.xml` file and manually correct any errors in the example word tables. The quality of these training examples directly affects the accuracy of all subsequent word table generation.
+3. Use `make` for initial word table generation
+4. Use `make redo` → `make replace` cycles for error recovery
+5. Monitor the quality of word tables, especially lemma decomposition
 
 ### Advanced Tips
 
