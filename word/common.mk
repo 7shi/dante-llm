@@ -1,6 +1,7 @@
 TOPDIR  ?= ../..
-SUBDIR   = ..
+SUBDIR  ?= ..
 SRCDIR  ?= $(TOPDIR)/translate/$(LCODE)
+DIRSM   ?= {inferno,purgatorio,paradiso}
 INITOPT ?=
 OPTIONS ?=
 
@@ -27,8 +28,8 @@ run: init.xml
 ## Validate and extract errors
 check:
 	rm -f 1-error-{ok,ng}.xml
-	uv run dantetool strip */*.xml
-	uv run dantetool pickup 1-error.xml */*.xml
+	uv run dantetool strip $(DIRSM)/*.xml
+	uv run dantetool pickup 1-error.xml $(DIRSM)/*.xml
 
 
 # Error recovery
@@ -39,7 +40,7 @@ redo:
 
 ## Apply fixes (1-error-ok.xml) to source
 replace:
-	uv run dantetool replace 1-error-ok.xml */*.xml
+	uv run dantetool replace 1-error-ok.xml $(DIRSM)/*.xml
 
 ## Automatically retry with increasing temperature (0.1 to 1.0)
 redo-sweep:

@@ -1,7 +1,7 @@
 TOPDIR  ?= ../..
-SUBDIR   = ..
-SRCDIR   = $(TOPDIR)/it
-DIRSM    = {inferno,purgatorio,paradiso}
+SUBDIR  ?= ..
+SRCDIR  ?= $(TOPDIR)/translate/$(LCODE)
+DIRSM   ?= {inferno,purgatorio,paradiso}
 OPTIONS ?=
 
 
