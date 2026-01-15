@@ -289,37 +289,94 @@ def read_tables(word, word_tr, etymology, index=0):
         lines = [line for line in q0.prompt.split("\n")[1:] if line]
         yield q0.info, lines, table
 
+def check_skip(text):
+    """
+    Check if the text contains any alphabetic characters.
+    """
+    return any(c.isalpha() for c in text)
+
 def split_table(info, lines, table):
+    """
+    Split table rows into buckets based on which line in 'lines' each row's word belongs to.
+
+    Algorithm:
+        For each row in the table, use the first column as a search word 'w'.
+        Scan through 'lines' from left to right using two pointers (ln, start).
+        If 'w' is found in the current or next line, assign the row to that line's bucket.
+
+    Example:
+        lines = ["Nel mezzo del cammin di nostra vita", "mi ritrovai per una selva oscura"]
+        table = [
+            ["cammin", "walk"],
+            ["vita", "life"],
+            ["selva", "forest"]
+        ]
+        
+        # Process:
+        # - "cammin": found at lines[0] -> bucket 0
+        # - "vita": found at lines[0] -> bucket 0
+        # - "selva": found at lines[1] -> bucket 1
+        
+        # Result:
+        # [[["cammin","walk"], ["vita","life"]], [["selva","forest"]]]
+
+    Args:
+        info (str): Identifier for error messages.
+        lines (list of str): List of text lines to search in.
+        table (list of list): 2D list where table[0] is header.
+
+    Returns:
+        list of list: A list where ret[i] contains table rows assigned to lines[i].
+    """
     ret = [[] for _ in lines]
-    data = table[1:]
-    if data[0][0].startswith("---"):
-        data = data[1:]
+    
+    # Skip the table header
+    rows = table[1:]
+    
+    # Skip the separator row (e.g., starts with "---") if it exists
+    if rows and rows[0][0].startswith("---"):
+        rows = rows[1:]
+
     ln = 0
     start = 0
-    for rows in data:
-        w = rows[0]
-        bak = ln, start
-        i = -1
-        if len(lines[ln]) - start < len(w):
-            ln += 1
-            start = 0
-        if ln == len(lines):
-            left = ""
-        else:
-            left = " " + repr(lines[ln][start:])
-            while i < 0:
-                i = lines[ln].find(w, start)
-                if i < 0:
-                    start = 0
+
+    for row in rows:
+        w = row[0]
+        i = -1  # Found index (initialized to -1)
+
+        # Main search logic
+        if ln < len(lines):
+            # Try searching in the current line starting from 'start'
+            i = lines[ln].find(w, start)
+            
+            # If not found, try searching in the next line from the beginning (lookahead)
+            if i < 0 and ln + 1 < len(lines):
+                i = lines[ln + 1].find(w, 0)
+                if i >= 0:
+                    # Check for skipped content at the end of the previous line
+                    skipped_at_end = lines[ln][start:]
+                    if check_skip(skipped_at_end):
+                        print(f"{info} | possible skip (line end): {repr(skipped_at_end)} before {repr(w)}", file=sys.stderr)
+                    
+                    # Move pointer to the next line since the word was found there
                     ln += 1
-                    if ln == len(lines):
-                        break
-                else:
-                    start = i + len(w)
-        if i < 0:
+                    start = 0
+
+        if i >= 0:
+            # Check for skipped alphabetic characters between the last match and current match
+            skipped_text = lines[ln][start:i]
+            if check_skip(skipped_text):
+                print(f"{info} | possible skip: {repr(skipped_text)} before {repr(w)}", file=sys.stderr)
+            # Word successfully found: add row to the corresponding bucket
+            ret[ln].append(row)
+            # Update the start position for the next word search
+            start = i + len(w)
+        else:
+            # Word not found: output error details to stderr
+            # 'left' captures the remaining text in the current line for debugging
+            left = " " + repr(lines[ln][start:]) if ln < len(lines) else ""
             print(f"{info} | word not found: {w}{left}", file=sys.stderr)
-            ln, start = bak
-        ret[ln].append(rows)
+
     return ret
 
 def write_md(line, header, table):
