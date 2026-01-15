@@ -137,7 +137,9 @@ def fix_table(src):
         else:
             # Apply fix_cell to non-separator rows
             fixed_row = [fix_cell(cell) for cell in row]
-            output.append("|" + "|".join(fixed_row) + "|")
+            row = "| " + " | ".join(fixed_row) + " |"
+            row = row.replace("|  ", "| ")
+            output.append(row)
     return "\n".join(output)
 
 # source
