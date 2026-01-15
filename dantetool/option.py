@@ -16,7 +16,7 @@ outdir = None
 
 def parse(parser):
     parser.add_argument("-d", dest="directories", type=str,
-                        help="specify sub directory (space-separated)")
+                        help="specify sub directory (comma-separated)")
     parser.add_argument("-i", dest="init", type=str, default=init,
                         help=f"specify init.xml (default: {init})")
     parser.add_argument("-m", dest="model", type=str, required=True,
@@ -46,7 +46,7 @@ def apply(args):
     global directories, init, interval, rangemin, rangemax, once, retry, show, think, model, language, srcdir, outdir
 
     if args.directories:
-        directories = args.directories.split()
+        directories = args.directories.split(',')
     init = args.init
     interval = args.interval
     rangemin = args.rangemin
