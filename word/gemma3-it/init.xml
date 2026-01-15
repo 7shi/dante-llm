@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries count="2">
+<query>
+<prompt>
+Show contractions of preposition and article in Italian. No examples are needed.
+</prompt>
+<result>
+Here's a list of the contractions of prepositions and articles in Italian:
+
+*   **di+il = del**
+*   **di+lo = dello**
+*   **di+la = della**
+*   **di+i = dei**
+*   **di+gli = degli**
+*   **di+le = delle**
+*   **a+il = al**
+*   **a+lo = allo**
+*   **a+la = alla**
+*   **a+i = ai**
+*   **a+gli = agli**
+*   **a+le = alle**
+*   **da+il = dal**
+*   **da+lo = dallo**
+*   **da+la = dalla**
+*   **da+i = dai**
+*   **da+gli = dagli**
+*   **da+le = dalle**
+*   **in+il = nel**
+*   **in+lo = nello**
+*   **in+la = nella**
+*   **in+i = nei**
+*   **in+gli = negli**
+*   **in+le = nelle**
+*   **con+il = col**
+*   **con+lo = collo**
+*   **con+la = colla**
+*   **con+i = coi**
+*   **con+gli = coi** (same as with 'i')
+*   **con+le = colle**
+*   **su+il = sul**
+*   **su+lo = sullo**
+*   **su+la = sulla**
+*   **su+i = sui**
+*   **su+gli = sugli**
+*   **su+le = sulle**
+*   **per+il = pel**
+*   **per+lo = pelo**
+*   **per+la = pela**
+*   **per+i = pei**
+*   **per+gli = pei** (same as with 'i')
+*   **per+le = pele**
+*   **tra/fra+il = tra/fra l’** (no contraction, apostrophe used)
+*   **tra/fra+lo = tra/fra lo** (no contraction)
+*   **tra/fra+la = tra/fra la** (no contraction)
+
+
+
+**Important Notes:**
+
+*   Contractions are *obligatory* when the preposition and article would appear consecutively.
+*   "Tra" and "fra" (meaning "between" or "among") generally do *not* contract with articles, except for "il" which becomes "l'" with an apostrophe.
+*   The contractions "col," "pel," and "nei/gli/sui/pei" are becoming less common in modern usage, and the separate forms ("con il," "per il," "in gli," etc.) are often preferred, especially in more formal writing. However, they are still perfectly correct.
+</result>
+</query>
+<query>
+<prompt>
+This text is written in Italian.
+Create a word table showing the Lemma for each word.
+The entries in the table are Word, Lemma, Part of Speech, Gender, Number, Person, Tense, Mood and Note.
+
+* Decompose the contraction in Lemma.
+* Leave blank if not applicable.
+* Words linked by an apostrophe should be separated.
+* The Note should be writtern in brief, e.g. archaic.
+* Quotation marks should be excluded. Apostrophes in contractions are not quotation marks.
+* If the verb and the other word are combined, they should be separated by Lemma.
+  In such cases, only the verb information should be written in the other columns.
+* Provide only the word table without any additional explanations or commentary outside the table.
+
+1 Nel mezzo del cammin di nostra vita
+9 dirò de l’altre cose ch’i’ v’ho scorte.
+28 Poi ch’èi posato un poco il corpo lasso,
+67 Rispuosemi: «Non omo, omo già fui,
+</prompt>
+<result>
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Nel | in+il | preposition+article | m. | sg. | | | | contraction |
+| mezzo | mezzo | noun | m. | sg. | | | | |
+| del | di+il | preposition+article | m. | sg. | | | | contraction |
+| cammin | cammino | noun | m. | sg. | | | | apocope |
+| di | di | preposition | | | | | | |
+| nostra | nostro | adjective | f. | sg. | | | | possessive |
+| vita | vita | noun | f. | sg. | | | | |
+| dirò | dire | verb | | sg. | 1 | future | indicative | |
+| de | di | preposition | | | | | | archaic |
+| l’ | il | article | f. | pl. | | | | elision |
+| altre | altro | adjective | f. | pl. | | | | |
+| cose | cosa | noun | f. | pl. | | | | |
+| ch’ | che | pronoun | | | | | | relative, elision |
+| i’ | io | pronoun | | sg. | 1 | | | elision |
+| v’ | vi | adverb | | | | | | elision |
+| ho | avere | verb | | sg. | 1 | present | indicative | auxiliary |
+| scorte | scorgere | verb | f. | pl. | | past | participle | |
+| Poi | poi | adverb | | | | | | |
+| ch’ | che | conjunction | | | | | | elision |
+| èi | egli | pronoun | m. | sg. | 3 | | | archaic |
+| posato | posare | verb | m. | sg. | | past | participle | |
+| un | uno | article | m. | sg. | | | | indefinite |
+| poco | poco | adverb | | | | | | |
+| il | il | article | m. | sg. | | | | |
+| corpo | corpo | noun | m. | sg. | | | | |
+| lasso | lasso | adjective | m. | sg. | | | | |
+| Rispuosemi | rispondere+mi | verb+pronoun | | sg. | 3 | remote past | indicative | enclitic pronoun |
+| Non | non | adverb | | | | | | |
+| omo | uomo | noun | m. | sg. | | | | archaic |
+| omo | uomo | noun | m. | sg. | | | | archaic |
+| già | già | adverb | | | | | | |
+| fui | essere | verb | | sg. | 1 | remote past | indicative | |
+</result>
+</query>
+</queries>
