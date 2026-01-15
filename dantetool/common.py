@@ -124,8 +124,9 @@ def fix_cell(cell):
         return m.group(1).strip()
     return cell
 
-def fix_table(src):
-    table = read_table(src)
+def fix_table(text=None, table=None):
+    if not table:
+        table = read_table(text)
     if not table:
         return None
 
@@ -295,7 +296,7 @@ def check_skip(text):
     """
     return any(c.isalpha() for c in text)
 
-def split_table(info, lines, table):
+def split_table(info, lines, table, errors=None):
     """
     Split table rows into buckets based on which line in 'lines' each row's word belongs to.
 
@@ -311,12 +312,12 @@ def split_table(info, lines, table):
             ["vita", "life"],
             ["selva", "forest"]
         ]
-        
+
         # Process:
         # - "cammin": found at lines[0] -> bucket 0
         # - "vita": found at lines[0] -> bucket 0
         # - "selva": found at lines[1] -> bucket 1
-        
+
         # Result:
         # [[["cammin","walk"], ["vita","life"]], [["selva","forest"]]]
 
@@ -324,15 +325,17 @@ def split_table(info, lines, table):
         info (str): Identifier for error messages.
         lines (list of str): List of text lines to search in.
         table (list of list): 2D list where table[0] is header.
+        errors (list, optional): If provided, error tuples are appended here.
+            Each tuple: (type, row_index, word, skipped_or_remaining)
 
     Returns:
         list of list: A list where ret[i] contains table rows assigned to lines[i].
     """
     ret = [[] for _ in lines]
-    
+
     # Skip the table header
     rows = table[1:]
-    
+
     # Skip the separator row (e.g., starts with "---") if it exists
     if rows and rows[0][0].startswith("---"):
         rows = rows[1:]
@@ -340,7 +343,15 @@ def split_table(info, lines, table):
     ln = 0
     start = 0
 
-    for row in rows:
+    def report_error(err_type, row_idx, word, text):
+        if err_type == "not_found":
+            print(f"{info} | word not found: {repr(word)} in {repr(text)}", file=sys.stderr)
+        else:
+            print(f"{info} | possible skip: {repr(text)} before {repr(word)}", file=sys.stderr)
+        if errors is not None:
+            errors.append((err_type, row_idx, word, text))
+
+    for row_idx, row in enumerate(rows):
         w = row[0]
         i = -1  # Found index (initialized to -1)
 
@@ -348,7 +359,7 @@ def split_table(info, lines, table):
         if ln < len(lines):
             # Try searching in the current line starting from 'start'
             i = lines[ln].find(w, start)
-            
+
             # If not found, try searching in the next line from the beginning (lookahead)
             if i < 0 and ln + 1 < len(lines):
                 i = lines[ln + 1].find(w, 0)
@@ -356,8 +367,8 @@ def split_table(info, lines, table):
                     # Check for skipped content at the end of the previous line
                     skipped_at_end = lines[ln][start:]
                     if check_skip(skipped_at_end):
-                        print(f"{info} | possible skip (line end): {repr(skipped_at_end)} before {repr(w)}", file=sys.stderr)
-                    
+                        report_error("skip_line_end", row_idx, w, skipped_at_end)
+
                     # Move pointer to the next line since the word was found there
                     ln += 1
                     start = 0
@@ -366,16 +377,15 @@ def split_table(info, lines, table):
             # Check for skipped alphabetic characters between the last match and current match
             skipped_text = lines[ln][start:i]
             if check_skip(skipped_text):
-                print(f"{info} | possible skip: {repr(skipped_text)} before {repr(w)}", file=sys.stderr)
+                report_error("skip", row_idx, w, skipped_text)
             # Word successfully found: add row to the corresponding bucket
             ret[ln].append(row)
             # Update the start position for the next word search
             start = i + len(w)
         else:
-            # Word not found: output error details to stderr
-            # 'left' captures the remaining text in the current line for debugging
-            left = " " + repr(lines[ln][start:]) if ln < len(lines) else ""
-            print(f"{info} | word not found: {w}{left}", file=sys.stderr)
+            # Word not found
+            remaining = lines[ln][start:] if ln < len(lines) else ""
+            report_error("not_found", row_idx, w, remaining)
 
     return ret
 
