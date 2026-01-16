@@ -290,7 +290,7 @@ def read_tables(word, word_tr, etymology, index=0):
         lines = [line for line in q0.prompt.split("\n")[1:] if line]
         yield q0.info, lines, table
 
-def check_skip(text):
+def has_alpha(text):
     """
     Check if the text contains any alphabetic characters.
     """
@@ -366,7 +366,7 @@ def split_table(info, lines, table, errors=None):
                 if i >= 0:
                     # Check for skipped content at the end of the previous line
                     skipped_at_end = lines[ln][start:]
-                    if check_skip(skipped_at_end):
+                    if has_alpha(skipped_at_end):
                         report_error("skip_line_end", row_idx, w, skipped_at_end)
 
                     # Move pointer to the next line since the word was found there
@@ -376,7 +376,7 @@ def split_table(info, lines, table, errors=None):
         if i >= 0:
             # Check for skipped alphabetic characters between the last match and current match
             skipped_text = lines[ln][start:i]
-            if check_skip(skipped_text):
+            if has_alpha(skipped_text):
                 report_error("skip", row_idx, w, skipped_text)
             # Word successfully found: add row to the corresponding bucket
             ret[ln].append(row)

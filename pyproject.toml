@@ -22,3 +22,8 @@ packages = ["dantetool"]
 
 [tool.uv.sources]
 llm7shi = { git = "https://github.com/7shi/llm7shi.git" }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
