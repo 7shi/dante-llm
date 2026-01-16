@@ -159,6 +159,7 @@ The command processes each file in-place:
 ## Workflows
 
 - [translate/](translate/): Translation workflow. Provides `translate.py` for translating Italian text into various target languages with automated error recovery and retry mechanisms.
+- [tokenize/](tokenize/): Italian tokenizer and pre-tokenized corpus. Provides apostrophe-aware tokenization with U+2019 normalization for accurate word table validation.
 - [word/](word/): Word table generation workflow. Provides `init.py` and `word.py` for creating linguistic analysis tables with lemmas, parts of speech, and grammatical information for Italian text.
 
 ## License

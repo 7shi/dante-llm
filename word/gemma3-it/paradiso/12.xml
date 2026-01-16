@@ -15,7 +15,7 @@ Create a word table.
 | Sì | sì | adverb | | | | | | |
 | tosto | tosto | adverb | | | | | | |
 | come | come | conjunction | | | | | | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | ultima | ultimo | adjective | f. | sg. | | | | |
 | parola | parola | noun | f. | sg. | | | | |
 | la | la | article | f. | sg. | | | | |
@@ -53,8 +53,8 @@ Create a word table.
 | si | si | pronoun | | | | | | reflexive |
 | volse | volgere | verb | | sg. | 3 | remote past | indicative | |
 | prima | prima | adverb | | | | | | |
-| ch’ | che | conjunction | | | | | | elision |
-| un’ | uno | article | f. | sg. | | | | indefinite, elision |
+| ch' | che | conjunction | | | | | | elision |
+| un' | uno | article | f. | sg. | | | | indefinite, elision |
 | altra | altro | adjective | f. | sg. | | | | |
 | di | di | preposition | | | | | | |
 | cerchio | cerchio | noun | m. | sg. | | | | |
@@ -99,40 +99,62 @@ Create a word table.
 | primo | primo | adjective | m. | sg. | | | | |
 | splendor | splendore | noun | m. | sg. | | | | |
 | quel | quello | adjective | m. | sg. | | | | demonstrative |
-| ch’ | che | pronoun | | | | | | relative, elision |
-| e’ | essere | verb | | sg. | 3 | present | indicative | auxiliary, elision |
+| ch' | che | pronoun | | | | | | relative, elision |
+| e' | essere | verb | | sg. | 3 | present | indicative | auxiliary, elision |
 | refuse | rifiutare | verb | | sg. | 3 | present | indicative | |
 </result>
 </query>
 <query>
 <info>[Paradiso Canto 12] 10/145</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 10 Come si volgon per tenera nube
 11 due archi paralelli e concolori,
 12 quando Iunone a sua ancella iube,
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Come | | | | | | | | |
+| si | | | | | | | | |
+| volgon | | | | | | | | |
+| per | | | | | | | | |
+| tenera | | | | | | | | |
+| nube | | | | | | | | |
+| due | | | | | | | | |
+| archi | | | | | | | | |
+| paralelli | | | | | | | | |
+| e | | | | | | | | |
+| concolori | | | | | | | | |
+| quando | | | | | | | | |
+| Iunone | | | | | | | | |
+| a | | | | | | | | |
+| sua | | | | | | | | |
+| ancella | | | | | | | | |
+| iube | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
 | Come | come | adverb | | | | | | |
 | si | si | pronoun | | | | | | reflexive |
-| volgon | volgere | verb | | sg. | 3 | present | indicative | |
+| volgon | volgere | verb | | pl. | 3 | present | indicative | |
 | per | per | preposition | | | | | | |
 | tenera | tenero | adjective | f. | sg. | | | | |
 | nube | nube | noun | f. | sg. | | | | |
-| due | due | adjective | | pl. | | | | numeral |
+| due | due | numeral | | | | | | |
 | archi | arco | noun | m. | pl. | | | | |
-| paralleli | parallelo | adjective | m. | pl. | | | | |
+| paralelli | parallelo | adjective | m. | pl. | | | | |
 | e | e | conjunction | | | | | | |
-| concolori | concolorare | adjective | m. | pl. | | | | |
+| concolori | concolore | adjective | m. | pl. | | | | |
 | quando | quando | adverb | | | | | | |
 | Iunone | Iunone | noun | f. | sg. | | | | proper noun |
 | a | a | preposition | | | | | | |
 | sua | suo | adjective | f. | sg. | | | | possessive |
 | ancella | ancella | noun | f. | sg. | | | | |
-| iube | iubere | verb | | sg. | 3 | present | indicative | archaic |
+| iube | iubere | verb | | sg. | 3 | present | indicative | |
 </result>
 </query>
 <query>
@@ -150,7 +172,7 @@ Create a word table.
 | nascendo | nascere | verb | | | | present | participle | |
 | di | di | preposition | | | | | | |
 | quel | quello | adjective | m. | sg. | | | | demonstrative |
-| d’ | di | preposition | | | | | | elision |
+| d' | di | preposition | | | | | | elision |
 | entro | entro | adverb | | | | | | |
 | quel | quello | adjective | m. | sg. | | | | demonstrative |
 | di | di | preposition | | | | | | |
@@ -162,7 +184,7 @@ Create a word table.
 | di | di | preposition | | | | | | |
 | quella | quello | adjective | f. | sg. | | | | demonstrative |
 | vaga | vago | adjective | f. | sg. | | | | |
-| ch’ | che | pronoun | | | | | | relative, elision |
+| ch' | che | pronoun | | | | | | relative, elision |
 | amor | amore | noun | m. | sg. | | | | |
 | consunse | consumare | verb | | sg. | 3 | remote past | indicative | |
 | come | come | conjunction | | | | | | |
@@ -204,7 +226,7 @@ Create a word table.
 | mai | mai | adverb | | | | | | |
 | più | più | adverb | | | | | | |
 | non | non | adverb | | | | | | |
-| s’ | si | pronoun | | | | | | reflexive |
+| s' | si | pronoun | | | | | | reflexive |
 | allaga | allagare | verb | m. | sg. | 3 | present | subjunctive | |
 </result>
 </query>
@@ -233,10 +255,10 @@ Create a word table.
 | ghirlande | ghirlanda | noun | f. | pl. | | | | |
 | e | e | conjunction | | | | | | |
 | sì | sì | adverb | | | | | | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | estrema | estremo | adjective | f. | sg. | | | | |
 | a | a | preposition | | | | | | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | intima | intimo | adjective | f. | sg. | | | | |
 | rispuose | rispondere | verb | | 3 | sg. | remote past | indicative | |
 </result>
@@ -244,31 +266,58 @@ Create a word table.
 <query>
 <info>[Paradiso Canto 12] 22/145</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 22 Poi che ’l tripudio e l’altra festa grande,
 23 sì del cantare e sì del fiammeggiarsi
 24 luce con luce gaudïose e blande,
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Poi | | | | | | | | |
+| che | | | | | | | | |
+| 'l | | | | | | | | |
+| tripudio | | | | | | | | |
+| e | | | | | | | | |
+| l' | | | | | | | | |
+| altra | | | | | | | | |
+| festa | | | | | | | | |
+| grande | | | | | | | | |
+| sì | | | | | | | | |
+| del | | | | | | | | |
+| cantare | | | | | | | | |
+| e | | | | | | | | |
+| sì | | | | | | | | |
+| del | | | | | | | | |
+| fiammeggiarsi | | | | | | | | |
+| luce | | | | | | | | |
+| con | | | | | | | | |
+| luce | | | | | | | | |
+| gaudïose | | | | | | | | |
+| e | | | | | | | | |
+| blande | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
 | Poi | poi | adverb | | | | | | |
 | che | che | conjunction | | | | | | |
-| l’ | il | article | m. | sg. | | | | elision |
+| 'l | il | article | m. | sg. | | | | elision |
 | tripudio | tripudio | noun | m. | sg. | | | | |
 | e | e | conjunction | | | | | | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | altra | altro | adjective | f. | sg. | | | | |
 | festa | festa | noun | f. | sg. | | | | |
 | grande | grande | adjective | f. | sg. | | | | |
 | sì | sì | adverb | | | | | | |
 | del | di+il | preposition+article | m. | sg. | | | | contraction |
-| cantare | cantare | verb | | | | infinitive | | |
+| cantare | cantare | noun | m. | sg. | | | | gerund |
 | e | e | conjunction | | | | | | |
 | sì | sì | adverb | | | | | | |
 | del | di+il | preposition+article | m. | sg. | | | | contraction |
-| fiammeggiarsi | fiammeggiare | verb | | | | infinitive | | reflexive |
+| fiammeggiarsi | fiammeggiare | verb | m. | sg. | | infinitive | | reflexive |
 | luce | luce | noun | f. | sg. | | | | |
 | con | con | preposition | | | | | | |
 | luce | luce | noun | f. | sg. | | | | |
@@ -300,7 +349,7 @@ Create a word table.
 | come | come | conjunction | | | | | | |
 | li | gli | article | m. | pl. | | | | contraction |
 | occhi | occhio | noun | m. | pl. | | | | |
-| ch’ | che | pronoun | | | | | | relative, elision |
+| ch' | che | pronoun | | | | | | relative, elision |
 | al | a+il | preposition+article | m. | sg. | | | | contraction |
 | piacer | piacere | noun | m. | sg. | | | | |
 | che | che | pronoun | | | | | | relative |
@@ -328,7 +377,7 @@ Create a word table.
 | del | di+il | preposition+article | m. | sg. | | | | contraction |
 | cor | cuore | noun | m. | sg. | | | | |
 | de | di | preposition | | | | | | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | una | uno | adjective | f. | sg. | | | | indefinite |
 | de | di | preposition | | | | | | |
 | le | la | article | f. | pl. | | | | |
@@ -338,7 +387,7 @@ Create a word table.
 | mosse | muovere | verb | | 3 | sg. | remote past | indicative | |
 | voce | voce | noun | f. | sg. | | | | |
 | che | che | pronoun | | | | | | relative |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | ago | ago | noun | m. | sg. | | | | |
 | a | a | preposition | | | | | | |
 | la | la | article | f. | sg. | | | | |
@@ -367,7 +416,7 @@ Create a word table.
 |---|---|---|---|---|---|---|---|---|
 | e | e | conjunction | | | | | | |
 | cominciò | cominciare | verb | | sg. | 3 | remote past | indicative | |
-| L’ | il | article | m. | sg. | | | | elision |
+| L' | il | article | m. | sg. | | | | elision |
 | amor | amore | noun | m. | sg. | | | | |
 | che | che | pronoun | | | | | | relative |
 | mi | io | pronoun | | sg. | 1 | | | clitic |
@@ -378,7 +427,7 @@ Create a word table.
 | a | a | preposition | | | | | | |
 | ragionar | ragionare | verb | | | | infinitive | | |
 | de | di | preposition | | | | | | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | altro | altro | adjective | m. | sg. | | | | |
 | duca | duca | noun | m. | sg. | | | | |
 | per | per | preposition | | | | | | |
@@ -395,11 +444,40 @@ Create a word table.
 <query>
 <info>[Paradiso Canto 12] 34/145</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 34 Degno è che, dov’ è l’un, l’altro s’induca:
 35 sì che, com’ elli ad una militaro,
 36 così la gloria loro insieme luca.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Degno | | | | | | | | |
+| è | | | | | | | | |
+| che | | | | | | | | |
+| dov' | | | | | | | | |
+| è | | | | | | | | |
+| l' | | | | | | | | |
+| un | | | | | | | | |
+| l' | | | | | | | | |
+| altro | | | | | | | | |
+| s' | | | | | | | | |
+| induca | | | | | | | | |
+| sì | | | | | | | | |
+| che | | | | | | | | |
+| com' | | | | | | | | |
+| elli | | | | | | | | |
+| ad | | | | | | | | |
+| una | | | | | | | | |
+| militaro | | | | | | | | |
+| così | | | | | | | | |
+| la | | | | | | | | |
+| gloria | | | | | | | | |
+| loro | | | | | | | | |
+| insieme | | | | | | | | |
+| luca | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
@@ -407,24 +485,25 @@ Create a word table.
 | Degno | degno | adjective | m. | sg. | | | | |
 | è | essere | verb | | sg. | 3 | present | indicative | |
 | che | che | conjunction | | | | | | |
-| dov’ | dove | adverb | | | | | | elision |
+| dov' | dove | adverb | | | | | | elision |
 | è | essere | verb | | sg. | 3 | present | indicative | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | un | uno | article | m. | sg. | | | | indefinite |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | altro | altro | adjective | m. | sg. | | | | |
-| s’induca | indursi | verb | | sg. | 3 | present | subjunctive | reflexive |
+| s' | sé | pronoun | | | | | | reflexive |
+| induca | indurre | verb | | sg. | 3 | present | subjunctive | |
 | sì | sì | adverb | | | | | | |
 | che | che | conjunction | | | | | | |
-| com’ | come | adverb | | | | | | elision |
+| com' | come | adverb | | | | | | elision |
 | elli | egli | pronoun | m. | pl. | 3 | | | archaic |
 | ad | a | preposition | | | | | | |
 | una | uno | article | f. | sg. | | | | indefinite |
-| militaro | militare | noun | f. | sg. | | | | |
+| militaro | militare | noun | | | | | | |
 | così | così | adverb | | | | | | |
 | la | la | article | f. | sg. | | | | |
 | gloria | gloria | noun | f. | sg. | | | | |
-| loro | loro | pronoun | | pl. | | | | possessive |
+| loro | loro | pronoun | | pl. | 3 | | | possessive |
 | insieme | insieme | adverb | | | | | | |
 | luca | lucere | verb | | sg. | 3 | present | indicative | |
 </result>
@@ -441,7 +520,7 @@ Create a word table.
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| L’ | il | article | m. | sg. | | | | elision |
+| L' | il | article | m. | sg. | | | | elision |
 | essercito | esercito | noun | m. | sg. | | | | |
 | di | di | preposition | | | | | | |
 | Cristo | Cristo | noun | m. | sg. | | | | |
@@ -454,7 +533,7 @@ Create a word table.
 | dietro | dietro | adverb | | | | | | |
 | a | a | preposition | | | | | | |
 | la | la | article | f. | sg. | | | | |
-| ’nsegna | insegna | noun | f. | sg. | | | | elision, archaic spelling |
+| 'nsegna | insegna | noun | f. | sg. | | | | elision, archaic spelling |
 | si | si | pronoun | | | | | | reflexive |
 | movea | muovere | verb | | sg. | 3 | imperfect | indicative | |
 | tardo | tardo | adjective | m. | sg. | | | | |
@@ -477,7 +556,7 @@ Create a word table.
 |---|---|---|---|---|---|---|---|---|
 | quando | quando | adverb | | | | | | |
 | lo | il | article | m. | sg. | | | | |
-| ’mperador | imperatore | noun | m. | sg. | | | | elision, archaic spelling |
+| 'mperador | imperatore | noun | m. | sg. | | | | elision, archaic spelling |
 | che | che | pronoun | | | | | | relative |
 | sempre | sempre | adverb | | | | | | |
 | regna | regnare | verb | | sg. | 3 | present | indicative | |
@@ -485,7 +564,7 @@ Create a word table.
 | a | a | preposition | | | | | | |
 | la | la | article | f. | sg. | | | | |
 | milizia | milizia | noun | f. | sg. | | | | |
-| ch’ | che | pronoun | | | | | | relative, elision |
+| ch' | che | pronoun | | | | | | relative, elision |
 | era | essere | verb | | sg. | 3 | imperfect | indicative | |
 | in | in | preposition | | | | | | |
 | forse | forse | adverb | | | | | | |
@@ -584,7 +663,7 @@ Create a word table.
 | al | a+il | preposition+article | m. | sg. | | | | contraction |
 | percuoter | percuotere | verb | | | | infinitive | | |
 | de | di | preposition | | | | | | archaic |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | onde | onda | noun | f. | pl. | | | | |
 | dietro | dietro | adverb | | | | | | |
 | a | a | preposition | | | | | | |
@@ -650,7 +729,7 @@ Create a word table.
 | dentro | dentro | adverb | | | | | | |
 | vi | vi | pronoun | | | | | | |
 | nacque | nascere | verb | | sg. | 3 | remote past | indicative | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | amoroso | amoroso | adjective | m. | sg. | | | | |
 | drudo | drudo | noun | m. | sg. | | | | |
 | de | di | preposition | | | | | | archaic |
@@ -661,10 +740,10 @@ Create a word table.
 | santo | santo | adjective | m. | sg. | | | | |
 | atleta | atleta | noun | m. | sg. | | | | |
 | benigno | benigno | adjective | | | | | | |
-| a’ | a+i | preposition+article | m. | pl. | | | | contraction, archaic |
+| a' | a+i | preposition+article | m. | pl. | | | | contraction, archaic |
 | suoi | suo | pronoun | m. | pl. | | | | possessive |
 | e | e | conjunction | | | | | | |
-| a’ | a+i | preposition+article | m. | pl. | | | | contraction, archaic |
+| a' | a+i | preposition+article | m. | pl. | | | | contraction, archaic |
 | nemici | nemico | noun | m. | pl. | | | | |
 | crudo | crudo | adjective | | | | | | |
 </result>
@@ -729,7 +808,7 @@ Create a word table.
 | e | e | conjunction | | | | | | |
 | la | la | article | f. | sg. | | | | |
 | Fede | fede | noun | f. | sg. | | | | proper noun |
-| u’ | dove | adverb | | | | | | elision |
+| u' | dove | adverb | | | | | | elision |
 | si | si | pronoun | | | | | | reflexive |
 | dotar | dotare | verb | | sg. | 3 | present | subjunctive | |
 | di | di | preposition | | | | | | |
@@ -740,11 +819,39 @@ Create a word table.
 <query>
 <info>[Paradiso Canto 12] 64/145</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 64 la donna che per lui l’assenso diede,
 65 vide nel sonno il mirabile frutto
 66 ch’uscir dovea di lui e de le rede;
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| la | | | | | | | | |
+| donna | | | | | | | | |
+| che | | | | | | | | |
+| per | | | | | | | | |
+| lui | | | | | | | | |
+| l' | | | | | | | | |
+| assenso | | | | | | | | |
+| diede | | | | | | | | |
+| vide | | | | | | | | |
+| nel | | | | | | | | |
+| sonno | | | | | | | | |
+| il | | | | | | | | |
+| mirabile | | | | | | | | |
+| frutto | | | | | | | | |
+| ch' | | | | | | | | |
+| uscir | | | | | | | | |
+| dovea | | | | | | | | |
+| di | | | | | | | | |
+| lui | | | | | | | | |
+| e | | | | | | | | |
+| de | | | | | | | | |
+| le | | | | | | | | |
+| rede | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
@@ -754,7 +861,7 @@ Create a word table.
 | che | che | pronoun | | | | | | relative |
 | per | per | preposition | | | | | | |
 | lui | lui | pronoun | m. | sg. | 3 | | | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | assenso | assenso | noun | m. | sg. | | | | |
 | diede | dare | verb | | sg. | 3 | past | indicative | |
 | vide | vedere | verb | | sg. | 3 | past | indicative | |
@@ -763,15 +870,15 @@ Create a word table.
 | il | il | article | m. | sg. | | | | |
 | mirabile | mirabile | adjective | m. | sg. | | | | |
 | frutto | frutto | noun | m. | sg. | | | | |
-| ch’ | che | pronoun | | | | | | relative, elision |
-| uscìr | uscire | verb | | sg. | 3 | future | subjunctive | |
+| ch' | che | pronoun | | | | | | relative, elision |
+| uscir | uscire | verb | | | | | | infinitive |
 | dovea | dovere | verb | | sg. | 3 | imperfect | indicative | auxiliary |
 | di | di | preposition | | | | | | |
 | lui | lui | pronoun | m. | sg. | 3 | | | |
 | e | e | conjunction | | | | | | |
 | de | di | preposition | | | | | | archaic |
-| le | la | article | f. | pl. | | | | contraction |
-| rede | redo | noun | f. | pl. | | | | archaic |
+| le | la | article | f. | pl. | | | | |
+| rede | redo | noun | f. | pl. | | | | |
 </result>
 </query>
 <query>
@@ -829,13 +936,13 @@ Create a word table.
 | sì | sì | adverb | | | | | | |
 | come | come | adverb | | | | | | |
 | de | di | preposition | | | | | | archaic |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | agricola | agricola | noun | m. | sg. | | | | |
 | che | che | pronoun | | | | | | relative |
 | Cristo | Cristo | noun | m. | sg. | | | | proper noun |
 | elesse | eleggere | verb | | sg. | 3 | past | indicative | |
 | a | a | preposition | | | | | | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | orto | orto | noun | m. | sg. | | | | |
 | suo | suo | adjective | m. | sg. | | | | possessive |
 | per | per | preposition | | | | | | |
@@ -862,11 +969,11 @@ Create a word table.
 | di | di | preposition | | | | | | |
 | Cristo | Cristo | noun | m. | sg. | | | | proper noun |
 | che | che | pronoun | | | | | | relative |
-| ’l | il | article | m. | sg. | | | | elision |
+| 'l | il | article | m. | sg. | | | | elision |
 | primo | primo | adjective | m. | sg. | | | | |
 | amor | amore | noun | m. | sg. | | | | |
 | che | che | pronoun | | | | | | relative |
-| ’n | in | preposition | | | | | | archaic, elision |
+| 'n | in | preposition | | | | | | archaic, elision |
 | lui | lui | pronoun | m. | sg. | 3 | | | |
 | fu | essere | verb | | sg. | 3 | past | indicative | |
 | manifesto | manifesto | adjective | m. | sg. | | | | |
@@ -962,7 +1069,7 @@ Create a word table.
 | per | per | preposition | | | | | | |
 | cui | che | pronoun | m. | sg. | | | | relative |
 | mo | ora | adverb | | | | | | archaic |
-| s’ | si | pronoun | | | | | | reflexive |
+| s' | si | pronoun | | | | | | reflexive |
 | affanna | affannare | verb | | sg. | 3 | present | indicative | |
 | di | di | preposition | | | | | | |
 | retro | retro | adverb | | | | | | |
@@ -1011,7 +1118,7 @@ Create a word table.
 | tosto | tosto | adverb | | | | | | |
 | imbianca | imbiancare | verb | | sg. | 3 | present | indicative | |
 | se | se | pronoun | | | | | | |
-| ’l | il | article | m. | sg. | | | | contraction, elision |
+| 'l | il | article | m. | sg. | | | | contraction, elision |
 | vignaio | vignaio | noun | m. | sg. | | | | |
 | è | essere | verb | | sg. | 3 | present | indicative | |
 | reo | reo | adjective | m. | sg. | | | | |
@@ -1038,7 +1145,7 @@ Create a word table.
 | già | già | adverb | | | | | | |
 | benigna | benigno | adjective | f. | sg. | | | | |
 | più | più | adverb | | | | | | |
-| a’ | a+i | preposition+article | m. | pl. | | | | contraction |
+| a' | a+i | preposition+article | m. | pl. | | | | contraction |
 | poveri | povero | adjective | m. | pl. | | | | |
 | giusti | giusto | adjective | m. | pl. | | | | |
 | non | non | adverb | | | | | | |
@@ -1139,14 +1246,14 @@ Create a word table.
 | volere | volere | noun | m. | sg. | | | | |
 | insieme | insieme | adverb | | | | | | |
 | con | con | preposition | | | | | | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | officio | ufficio | noun | m. | sg. | | | | |
 | appostolico | apostolico | adjective | m. | sg. | | | | |
 | si | si | pronoun | | | | | | reflexive |
 | mosse | muovere | verb | | sg. | 3 | remote past | indicative | |
 | quasi | quasi | adverb | | | | | | |
 | torrente | torrente | noun | m. | sg. | | | | |
-| ch’ | che | pronoun | | | | | | relative, elision |
+| ch' | che | pronoun | | | | | | relative, elision |
 | alta | alto | adjective | f. | sg. | | | | |
 | vena | vena | noun | f. | sg. | | | | |
 | preme | premere | verb | | | 3 | present | indicative | |
@@ -1170,7 +1277,7 @@ Create a word table.
 | sterpi | sterpo | noun | m. | pl. | | | | |
 | eretici | eretico | adjective | m. | pl. | | | | |
 | percosse | percuotere | verb | | sg. | 3 | remote past | indicative | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | impeto | impeto | noun | m. | sg. | | | | |
 | suo | suo | adjective | m./f. | sg. | | | | possessive |
 | più | più | adverb | | | | | | |
@@ -1204,7 +1311,7 @@ Create a word table.
 | diversi | diverso | adjective | m. | pl. | | | | |
 | rivi | rivo | noun | m. | pl. | | | | |
 | onde | onde | conjunction | | | | | | |
-| l’ | il | article | m. | sg. | | | | elision |
+| l' | il | article | m. | sg. | | | | elision |
 | orto | orto | noun | m. | sg. | | | | |
 | catolico | cattolico | adjective | m. | sg. | | | | |
 | si | si | pronoun | | | | | | reflexive |
@@ -1234,7 +1341,7 @@ Create a word table.
 | Se | se | conjunction | | | | | | |
 | tal | tale | adjective | | | | | | |
 | fu | essere | verb | | sg. | 3 | remote past | indicative | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | una | uno | article | f. | sg. | | | | indefinite |
 | rota | rota | noun | f. | sg. | | | | |
 | de | di | preposition | | | | | | |
@@ -1275,10 +1382,10 @@ Create a word table.
 | assai | assai | adverb | | | | | | |
 | esser | essere | verb | | | | | | infinitive |
 | palese | palese | adjective | | | | | | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | eccellenza | eccellenza | noun | f. | sg. | | | | |
 | de | di | preposition | | | | | | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | altra | altro | adjective | f. | sg. | | | | |
 | di | di | preposition | | | | | | |
 | cui | che | pronoun | | | | | | relative |
@@ -1305,7 +1412,7 @@ Create a word table.
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
 | Ma | ma | conjunction | | | | | | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | orbita | orbita | noun | f. | sg. | | | | |
 | che | che | pronoun | | | | | | relative |
 | fé | fare | verb | | sg. | 3 | remote past | indicative | |
@@ -1318,11 +1425,11 @@ Create a word table.
 | è | essere | verb | | sg. | 3 | present | indicative | |
 | derelitta | derelitto | adjective | f. | sg. | | | | |
 | sì | sì | adverb | | | | | | |
-| ch’ | che | conjunction | | | | | | elision |
+| ch' | che | conjunction | | | | | | elision |
 | è | essere | verb | | sg. | 3 | present | indicative | |
 | la | la | article | f. | sg. | | | | |
 | muffa | muffa | noun | f. | sg. | | | | |
-| dov’ | dove | adverb | | | | | | elision |
+| dov' | dove | adverb | | | | | | elision |
 | era | essere | verb | | sg. | 3 | imperfect | indicative | |
 | la | la | article | f. | sg. | | | | |
 | gromma | gromma | noun | f. | sg. | | | | |
@@ -1395,7 +1502,7 @@ Create a word table.
 | si | si | pronoun | | | | | | reflexive |
 | lagnerà | lamentare | verb | | sg. | 3 | future | indicative | |
 | che | che | conjunction | | | | | | |
-| l’ | il | article | f. | sg. | | | | elision |
+| l' | il | article | f. | sg. | | | | elision |
 | arca | arca | noun | f. | sg. | | | | |
 | li | a+li | preposition+article | m. | pl. | | | | contraction |
 | sia | essere | verb | | sg. | 3 | subjunctive | present | |
@@ -1427,14 +1534,14 @@ Create a word table.
 | ancor | ancora | adverb | | | | | | |
 | troveria | trovare | verb | | sg. | 3 | conditional | indicative | |
 | carta | carta | noun | f. | sg. | | | | |
-| u’ | o | conjunction | | | | | | elision |
+| u' | o | conjunction | | | | | | elision |
 | leggerebbe | leggere | verb | | sg. | 3 | conditional | indicative | |
-| I’ | io | pronoun | | sg. | 1 | | | elision |
+| I' | io | pronoun | | sg. | 1 | | | elision |
 | mi | mi | pronoun | | sg. | 1 | | | reflexive |
 | son | essere | verb | | sg. | 1 | present | indicative | auxiliary |
 | quel | quello | pronoun | m. | sg. | | | | demonstrative |
-| ch’ | che | pronoun | | | | | | relative, elision |
-| i’ | io | pronoun | | sg. | 1 | | | elision |
+| ch' | che | pronoun | | | | | | relative, elision |
+| i' | io | pronoun | | sg. | 1 | | | elision |
 | soglio | soglio | verb | | sg. | 1 | present | indicative | |
 </result>
 </query>
@@ -1456,7 +1563,7 @@ Create a word table.
 | da | da | preposition | | | | | | |
 | Casal | Casal | noun | m. | sg. | | | | proper noun |
 | né | né | conjunction | | | | | | |
-| d’ | di | preposition | | | | | | contraction |
+| d' | di | preposition | | | | | | contraction |
 | Acquasparta | Acquasparta | noun | f. | sg. | | | | proper noun |
 | là | là | adverb | | | | | | |
 | onde | onde | adverb | | | | | | relative |
@@ -1465,7 +1572,7 @@ Create a word table.
 | a | a | preposition | | | | | | |
 | la | la | article | f. | sg. | | | | |
 | scrittura | scrittura | noun | f. | sg. | | | | |
-| ch’ | che | pronoun | | | | | | relative, elision |
+| ch' | che | pronoun | | | | | | relative, elision |
 | uno | uno | article | m. | sg. | | | | indefinite |
 | la | la | article | f. | sg. | | | | |
 | fugge | fuggire | verb | | sg. | 3 | present | indicative | |
@@ -1496,7 +1603,7 @@ Create a word table.
 | da | da | preposition | | | | | | |
 | Bagnoregio | Bagnoregio | noun | f. | sg. | | | | proper noun |
 | che | che | pronoun | | | | | | relative |
-| ne’ | in+le | preposition+article | f. | pl. | | | | contraction |
+| ne' | in+le | preposition+article | f. | pl. | | | | contraction |
 | grandi | grande | adjective | m. | pl. | | | | |
 | offici | officio | noun | m. | pl. | | | | |
 | sempre | sempre | adverb | | | | | | |
@@ -1525,7 +1632,7 @@ Create a word table.
 | quici | qui | adverb | | | | | | archaic |
 | che | che | pronoun | | | | | | relative |
 | fuor | fuori | adverb | | | | | | |
-| de’ | di+le | preposition+article | f. | pl. | | | | contraction |
+| de' | di+le | preposition+article | f. | pl. | | | | contraction |
 | primi | primo | adjective | m. | pl. | | | | |
 | scalzi | scalzo | adjective | m. | pl. | | | | |
 | poverelli | poverello | noun | m. | pl. | | | | diminutive |
@@ -1577,33 +1684,57 @@ Create a word table.
 <query>
 <info>[Paradiso Canto 12] 136/145</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 136 Natàn profeta e ’l metropolitano
 137 Crisostomo e Anselmo e quel Donato
 138 ch’a la prim’ arte degnò porre mano.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Natàn | | | | | | | | |
+| profeta | | | | | | | | |
+| e | | | | | | | | |
+| 'l | | | | | | | | |
+| metropolitano | | | | | | | | |
+| Crisostomo | | | | | | | | |
+| e | | | | | | | | |
+| Anselmo | | | | | | | | |
+| e | | | | | | | | |
+| quel | | | | | | | | |
+| Donato | | | | | | | | |
+| ch' | | | | | | | | |
+| a | | | | | | | | |
+| la | | | | | | | | |
+| prim' | | | | | | | | |
+| arte | | | | | | | | |
+| degnò | | | | | | | | |
+| porre | | | | | | | | |
+| mano | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Natàn | Natàn | noun | m. | sg. | | | | proper noun |
+| Natàn | Natàn | noun | m. | sg. | | | | |
 | profeta | profeta | noun | m. | sg. | | | | |
 | e | e | conjunction | | | | | | |
-| l’ | il | article | m. | sg. | | | | elision |
-| metropolitano | metropolitano | adjective | m. | sg. | | | | |
-| Crisostomo | Crisostomo | noun | m. | sg. | | | | proper noun |
+| 'l | il | article | m. | sg. | | | | elision |
+| metropolitano | metropolitano | noun | m. | sg. | | | | |
+| Crisostomo | Crisostomo | noun | m. | sg. | | | | |
 | e | e | conjunction | | | | | | |
-| Anselmo | Anselmo | noun | m. | sg. | | | | proper noun |
+| Anselmo | Anselmo | noun | m. | sg. | | | | |
 | e | e | conjunction | | | | | | |
-| quel | quello | adjective | m. | sg. | | | | demonstrative |
-| Donato | Donato | noun | m. | sg. | | | | proper noun |
-| ch’ | che | pronoun | | | | | | relative, elision |
+| quel | quel | adjective | m. | sg. | | | | demonstrative |
+| Donato | Donato | noun | m. | sg. | | | | |
+| ch' | che | pronoun | | | | | | relative, elision |
 | a | a | preposition | | | | | | |
 | la | la | article | f. | sg. | | | | |
-| prim’ | primo | adjective | f. | sg. | | | | elision |
+| prim' | primo | adjective | f. | sg. | | | | elision |
 | arte | arte | noun | f. | sg. | | | | |
-| degnò | degnare | verb | | sg. | 3 | remote past | subjunctive | |
-| porre | porre | verb | | | | infinitive | | |
+| degnò | degnare | verb | | sg. | 3 | past | indicative | |
+| porre | porre | verb | | | | | | infinitive |
 | mano | mano | noun | f. | sg. | | | | |
 </result>
 </query>
@@ -1638,31 +1769,52 @@ Create a word table.
 <query>
 <info>[Paradiso Canto 12] 142/145</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 142 Ad inveggiar cotanto paladino
 143 mi mosse l’infiammata cortesia
 144 di fra Tommaso e ’l discreto latino;
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Ad | | | | | | | | |
+| inveggiar | | | | | | | | |
+| cotanto | | | | | | | | |
+| paladino | | | | | | | | |
+| mi | | | | | | | | |
+| mosse | | | | | | | | |
+| l' | | | | | | | | |
+| infiammata | | | | | | | | |
+| cortesia | | | | | | | | |
+| di | | | | | | | | |
+| fra | | | | | | | | |
+| Tommaso | | | | | | | | |
+| e | | | | | | | | |
+| 'l | | | | | | | | |
+| discreto | | | | | | | | |
+| latino | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
 | Ad | a | preposition | | | | | | |
-| inveggiar | inveggiare | verb | | infinitive | | | | |
+| inveggiar | inveggiare | verb | | | | | | infinitive |
 | cotanto | cotanto | adjective | m. | sg. | | | | |
 | paladino | paladino | noun | m. | sg. | | | | |
-| mi | io | pronoun | | sg. | 1 | | | enclitic pronoun |
-| mosse | muovere | verb | | sg. | 3 | remote past | indicative | |
-| l’ | la | article | f. | sg. | | | | elision |
-| infiammata | infiammare | verb | f. | sg. | | past | participle | |
+| mi | io | pronoun | | sg. | 1 | | | |
+| mosse | muovere | verb | | sg. | 3 | past | indicative | |
+| l' | il | article | m. | sg. | | | | elision |
+| infiammata | infiammato | adjective | f. | sg. | | | | past participle |
 | cortesia | cortesia | noun | f. | sg. | | | | |
 | di | di | preposition | | | | | | |
 | fra | fra | preposition | | | | | | |
-| Tommaso | Tommaso | noun | m. | sg. | | | | proper noun |
+| Tommaso | Tommaso | noun | m. | sg. | | | | |
 | e | e | conjunction | | | | | | |
-| l’ | il | article | m. | sg. | | | | elision |
+| 'l | il | article | m. | sg. | | | | elision |
 | discreto | discreto | adjective | m. | sg. | | | | |
-| latino | latino | adjective | m. | sg. | | | | |
+| latino | latino | noun | m. | sg. | | | | |
 </result>
 </query>
 <query>

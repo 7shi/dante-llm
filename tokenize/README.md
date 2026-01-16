@@ -66,6 +66,10 @@ than to build a complex heuristic auto-fixer.
    (table-level re-generation; do not attempt row-level patching)
 3. Re-validate with the tokenizer-based checker and iterate until clean
 
+**Status**: Completed.
+- Re-generated all token-mismatched word tables for gemma3-it and gptoss-it models.
+- All word tables now pass tokenizer-based validation.
+
 Note:
     A heuristic auto-fixer can still be added later, but it should be treated as
     an optional optimization rather than the primary recovery path.
