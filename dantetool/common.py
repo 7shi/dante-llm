@@ -104,6 +104,16 @@ def read_table(src):
     ret[1] = ret1
     return ret
 
+def table_to_string(table):
+    output = []
+    for i, row in enumerate(table):
+        if i == 1:
+            output.append("|" + "|".join(row) + "|")
+        else:
+            row_s = "| " + " | ".join(row) + " |"
+            output.append(row_s.replace("|  ", "| "))
+    return "\n".join(output)
+
 abbrevs = {
     "singular": "sg.", "plural": "pl.",
     "masculine": "m.", "feminine": "f.", "neuter": "n.",
@@ -124,24 +134,23 @@ def fix_cell(cell):
         return m.group(1).strip()
     return cell
 
-def fix_table(text=None, table=None):
-    if not table:
-        table = read_table(text)
-    if not table:
-        return None
-
-    output = []
+def fix_table_rows(table):
+    rows = []
     for i, row in enumerate(table):
         if i == 1:
             # Keep separator row as is
-            output.append("|" + "|".join(row) + "|")
+            rows.append(row)
         else:
             # Apply fix_cell to non-separator rows
-            fixed_row = [fix_cell(cell) for cell in row]
-            row = "| " + " | ".join(fixed_row) + " |"
-            row = row.replace("|  ", "| ")
-            output.append(row)
-    return "\n".join(output)
+            rows.append([fix_cell(cell) for cell in row])
+    return rows
+
+def fix_table(text):
+    table = read_table(text)
+    if table:
+        return table_to_string(fix_table_rows(table))
+    else:
+        return None
 
 # source
 
@@ -196,6 +205,26 @@ def read_source(path, language=None):
         srcs.append(lines)
 
     return srcs, src_lines
+
+def read_tokenized_source(path: str) -> list[list[str]]:
+    """Read one tokenized source file.
+
+    The tokenized files are produced by tokenize/tokenizer.py.
+
+    Line format:
+        original_line|token1|token2|...
+
+    Args:
+        path:
+            Path to a single tokenized file.
+
+    Returns:
+        list[list[str]]:
+            Each line split by '|':
+                [original_line, token1, token2, ...]
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        return [line.rstrip().split("|") for line in f]
 
 # fix
 

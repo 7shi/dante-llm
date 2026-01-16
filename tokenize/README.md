@@ -48,11 +48,27 @@ Analyze each line of the Italian sources in `it/` from a tokenization perspectiv
    - Exact match
    - Partial match (for elisions)
 
-### Phase 4: Auto-correction
+**Status**: Completed.
+- Implemented in `word/check.py` (token-level validation against `tokenize/<cantica>/<canto:02d>.txt`).
+- Measured mismatch rates (table-level failures):
+   - gemma3-it: 934 / 4811 (19.4%)
+   - gptoss-it: 1395 / 4811 (29.0%)
 
-1. Classify mismatch patterns
-2. Generate correction candidates
-3. Auto-correct based on confidence
+### Phase 4: Table Re-run (Regeneration)
+
+When the mismatch rate is relatively low (e.g. well below 1/3 of rows), it is
+often more effective to re-run the LLM with a stricter, table-in-prompt format
+than to build a complex heuristic auto-fixer.
+
+1. Re-run failed queries by embedding the expected output table format in the prompt
+   (similar to how word-tr/word-tr.py includes a markdown table in the prompt)
+2. Constrain the model to output the full table in the exact same structure/format
+   (table-level re-generation; do not attempt row-level patching)
+3. Re-validate with the tokenizer-based checker and iterate until clean
+
+Note:
+    A heuristic auto-fixer can still be added later, but it should be treated as
+    an optional optimization rather than the primary recovery path.
 
 ## File Structure
 
