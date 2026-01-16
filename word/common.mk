@@ -36,7 +36,7 @@ check:
 
 ## Retry errors (1-error.xml)
 redo:
-	uv run dantetool redo $(OPTIONS) -m $(MODEL) 1-error.xml
+	uv run $(SUBDIR)/fix.py $(OPTIONS) -m $(MODEL) 1-error.xml
 
 ## Apply fixes (1-error-ok.xml) to source
 replace:

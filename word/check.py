@@ -3,7 +3,7 @@ import re
 import argparse
 from pathlib import Path
 from typing import Literal, Sequence, TypeAlias
-from dantetool import common, option
+from dantetool import common
 
 NumberedLine: TypeAlias = tuple[int, str, str]
 TokenizedLine: TypeAlias = list[str]
@@ -14,21 +14,6 @@ LenMismatchError: TypeAlias = tuple[Literal["len_mismatch"], int, int]
 MismatchError: TypeAlias = tuple[Literal["mismatch"], int, str, str]
 TokenError: TypeAlias = LenMismatchError | MismatchError
 CheckError: TypeAlias = tuple[str, list[TokenError]]
-
-def extract_numbered_lines(prompt: str) -> list[NumberedLine]:
-    """Extract numbered lines from a prompt.
-
-    The prompt format is expected to include lines like:
-        "67 Qualche testo..."
-
-    Returns:
-        List of (line_no, text, raw_line).
-    """
-    ret = []
-    for raw in prompt.split("\n"):
-        if m := re.match(r"(\d+)\s+(.*)", raw):
-            ret.append((int(m.group(1)), m.group(2), raw))
-    return ret
 
 def fix_token(token: str) -> str:
     """Normalize token text for comparison.
@@ -135,7 +120,7 @@ def check_file(target: str, canto: TokenizedCanto) -> list[CheckError]:
             continue
 
         # Check: validate word positions using tokenized reference data (Phase 3)
-        numbered_lines = extract_numbered_lines(q.prompt)
+        numbered_lines = common.extract_numbered_lines(q.prompt)
         if not numbered_lines:
             error(q, "no numbered lines found in prompt for")
             continue

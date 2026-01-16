@@ -72,6 +72,15 @@ def unzip(qs):
         ret.append(q.result)
     return ret
 
+def parse_cantica_and_canto(info: str) -> tuple[str, int] | None:
+    """Parse something like: "[Inferno Canto 7] 1/136"."""
+    m = re.search(r"\[(Inferno|Purgatorio|Paradiso)\s+Canto\s+(\d+)\]", info)
+    if not m:
+        return None
+    cantica = m.group(1).lower()
+    canto_no = int(m.group(2))
+    return cantica, canto_no
+
 # table
 
 def read_table(src):
@@ -115,17 +124,16 @@ def table_to_string(table):
     return "\n".join(output)
 
 abbrevs = {
-    "singular": "sg.", "plural": "pl.",
-    "masculine": "m.", "feminine": "f.", "neuter": "n.",
-    "first": "1", "second": "2", "third": "3",
-    "1st": "1", "2nd": "2", "3rd": "3",
+    "number": {"singular": "sg.", "plural": "pl."},
+    "gender": {"masculine": "m.", "feminine": "f.", "neuter": "n."},
+    "person": {"first": "1", "1st": "1", "second": "2", "2nd": "2", "third": "3", "3rd": "3"},
 }
 
-def fix_cell(cell):
+def fix_cell(header, cell):
     cell = cell.strip()
     if cell in ["-", "n/a", "N/A"]:
         return ""
-    ab = abbrevs.get(cell.lower())
+    ab = abbrevs.get(header.lower(), {}).get(cell.lower())
     if ab:
         return ab
     if m := re.fullmatch(r"([^*]+)\*", cell):
@@ -136,13 +144,14 @@ def fix_cell(cell):
 
 def fix_table_rows(table):
     rows = []
+    header = table[0]
     for i, row in enumerate(table):
         if i == 1:
             # Keep separator row as is
             rows.append(row)
         else:
             # Apply fix_cell to non-separator rows
-            rows.append([fix_cell(cell) for cell in row])
+            rows.append([fix_cell(header[j], cell) for j, cell in enumerate(row)])
     return rows
 
 def fix_table(text):
@@ -225,6 +234,21 @@ def read_tokenized_source(path: str) -> list[list[str]]:
     """
     with open(path, "r", encoding="utf-8") as f:
         return [line.rstrip().split("|") for line in f]
+
+def extract_numbered_lines(prompt: str) -> list[tuple[int, str, str]]:
+    """Extract numbered lines from a prompt.
+
+    The prompt format is expected to include lines like:
+        "67 Qualche testo..."
+
+    Returns:
+        List of (line_no, text, raw_line).
+    """
+    ret = []
+    for raw in prompt.split("\n"):
+        if m := re.match(r"(\d+)\s+(.*)", raw):
+            ret.append((int(m.group(1)), m.group(2), raw))
+    return ret
 
 # fix
 
