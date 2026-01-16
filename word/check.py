@@ -120,10 +120,29 @@ def check_file(target: str, canto: TokenizedCanto) -> list[CheckError]:
             continue
 
         # Check: validate word positions using tokenized reference data (Phase 3)
-        numbered_lines = common.extract_numbered_lines(q.prompt)
+        numbered_lines = []
+        new_prompt_lines = []
+        for raw in q.prompt.split("\n"):
+            if m := re.match(r"(\d+)\s+(.*)", raw):
+                line_no = int(m.group(1))
+                text = m.group(2)
+                numbered_lines.append((line_no, text, raw))
+                if 1 <= line_no <= len(canto):
+                    canto_text = canto[line_no - 1][0]
+                    new_prompt_lines.append(f"{line_no} {canto_text}")
+                else:
+                    new_prompt_lines.append(raw)
+            else:
+                new_prompt_lines.append(raw)
+
         if not numbered_lines:
             error(q, "no numbered lines found in prompt for")
             continue
+
+        new_prompt = "\n".join(new_prompt_lines)
+        if new_prompt != q.prompt:
+            q.prompt = new_prompt
+            modified = True
 
         # Parse: read table from result
         parsed_table = common.read_table(q.result)
