@@ -229,6 +229,25 @@ Automatically retries with gradually increasing temperature from 0.1 to 1.0:
 
 This command automatically runs the `redo → replace → check` cycle and stops as soon as errors are cleared.
 
+## Compare Word Tables
+
+Compare word tables from different models (gemma3-it, gptoss-it, gemini1-it) line by line:
+
+```bash
+make compare
+```
+
+This command:
+- Runs `compare.py` for all cantos in inferno (01-34), purgatorio (01-33), and paradiso (01-33)
+- Generates comparison files in `word/comparison/{cantica}/{canto}.md`
+- Each line is followed by word table rows from all models
+- Uses Markdown table format with proper headers
+
+The comparison helps identify:
+- Lemmatization differences between models
+- Grammatical analysis variations
+- Common patterns in errors or unique analyses
+
 ## Differences from Translation Workflow
 
 The word table generation workflow differs from translation in several ways:
