@@ -349,14 +349,60 @@ def has_alpha(text):
     """
     return any(c.isalpha() for c in text)
 
-def split_table(info, lines, table, errors=None):
+def split_table(info, lines, table):
     """
     Split table rows into buckets based on which line in 'lines' each row's word belongs to.
 
-    Algorithm:
-        For each row in the table, use the first column as a search word 'w'.
-        Scan through 'lines' from left to right using two pointers (ln, start).
-        If 'w' is found in the current or next line, assign the row to that line's bucket.
+    This function is designed for LLM-produced word tables, where the "Word" column may
+    contain hallucinated duplicates or slightly transformed tokens (which won't match the
+    source line via exact substring search). Instead of failing hard or requiring external
+    correction, `split_table` resolves ambiguity internally using two commit rules:
+
+    Terms:
+        - Anchor: a table word `w` that can be found as an exact substring in the source.
+        - pending: a FIFO list of table rows whose word couldn't be matched ("not_found").
+
+    Commit rules:
+        (A) Line-end commit:
+            After committing a matched word on the current line, advance
+            `start = i + len(w)`. If the remaining tail `lines[ln][start:]` contains no
+            alphabetic characters, we consider the current line committed (A holds).
+
+        (B) Next-line transition commit:
+            If a word is not found in the current line but is found in the next line,
+            we transition to the next line (B event). At this moment we must resolve
+            `pending` deterministically:
+
+            - If we had A since the last commit on the previous line (A→B), `pending`
+              is treated as hallucination/extra and dropped.
+
+            - If A did NOT hold (B without prior A), `pending` is salvaged to the previous line
+              (`salvage_prev`). This covers the corner case where the last source token
+              of the previous line was transformed by the LLM, preventing A.
+
+            Additional corner case (next-line head transformed):
+                If A→B but the next line has an alphabetic prefix before the matched word
+                (i.e. `skipped_text = lines[next_ln][0:i]` has alpha), then we salvage
+                only the *most recent* pending row into the next line (`salvage_next`).
+                If multiple consecutive head tokens are transformed, we salvage only one
+                and drop the rest.
+
+        (Inline salvage on same-line anchor):
+            If we are still on the same line (no B transition) and an anchor match occurs,
+            any accumulated `pending` rows are assumed to belong to the current line
+            before the matched anchor word. They are salvaged in FIFO order *before*
+            appending the matched row. This recovers simple typos like "eterno" vs
+            source "etterno" while preserving table order.
+
+        (Final-line mode):
+            Once the cursor reaches the final source line, the remainder of the table is
+            deterministically assigned to that final line and processing stops (no further
+            searching / transitions). This avoids dropping leftovers when there is no
+            future line transition to trigger salvage decisions.
+
+    Observability:
+        Skips/drops/salvages are logged to stderr with a stable one-line format:
+            info | <event> | ln=<n> | word=<...> | evidence=<...>
 
     Example:
         lines = ["Nel mezzo del cammin di nostra vita", "mi ritrovai per una selva oscura"]
@@ -378,35 +424,60 @@ def split_table(info, lines, table, errors=None):
         info (str): Identifier for error messages.
         lines (list of str): List of text lines to search in.
         table (list of list): 2D list where table[0] is header.
-        errors (list, optional): If provided, error tuples are appended here.
-            Each tuple: (type, row_index, word, skipped_or_remaining)
 
     Returns:
         list of list: A list where ret[i] contains table rows assigned to lines[i].
     """
     ret = [[] for _ in lines]
 
-    # Skip the table header
-    rows = table[1:]
+    def log(event: str, ln: int | None = None, word: str | None = None, evidence: str | None = None, count: int | None = None):
+        parts = [str(info), "|", event]
+        if ln is not None:
+            parts.append(f"| ln={ln}")
+        if word is not None:
+            parts.append(f"| word={word!r}")
+        if count is not None:
+            parts.append(f"| count={count}")
+        if evidence is not None and evidence != "":
+            # Keep evidence short-ish for log readability
+            ev = evidence
+            if len(ev) > 120:
+                ev = ev[:117] + "..."
+            parts.append(f"| evidence={ev!r}")
+        print(" ".join(parts), file=sys.stderr)
 
-    # Skip the separator row (e.g., starts with "---") if it exists
-    if rows and rows[0][0].startswith("---"):
-        rows = rows[1:]
+    def pending_words(pending_rows: list[list[str]]) -> str:
+        # pending rows are table rows like [word, lemma, ...]
+        words = [r[0] for r in pending_rows if r]
+        return " ".join(words)
+
+    # Preprocess rows: skip header and non-alphabetic rows
+    rows = []
+    for row_idx, row in enumerate(table[1:]):
+        if row_idx == 0 and "---" in row[0]:
+            # Skip separator row
+            continue
+        elif has_alpha(row[0]):
+            rows.append([-1, *row])
+
+    last_ln = len(lines) - 1
+
+    # Fast path: single-line source => everything belongs to that line.
+    if len(lines) <= 1:
+        if len(lines) == 1:
+            assigned = [r[1:] for r in rows]
+            ret[0].extend(assigned)
+        return ret
 
     ln = 0
     start = 0
-
-    def report_error(err_type, row_idx, word, text):
-        if err_type == "not_found":
-            print(f"{info} | word not found: {repr(word)} in {repr(text)}", file=sys.stderr)
-        else:
-            print(f"{info} | possible skip: {repr(text)} before {repr(word)}", file=sys.stderr)
-        if errors is not None:
-            errors.append((err_type, row_idx, word, text))
+    pending: list[list[str]] = []
+    a_holds = False
 
     for row_idx, row in enumerate(rows):
-        w = row[0]
+        w = row[1]
         i = -1  # Found index (initialized to -1)
+        found_in_next = False
 
         # Main search logic
         if ln < len(lines):
@@ -417,28 +488,86 @@ def split_table(info, lines, table, errors=None):
             if i < 0 and ln + 1 < len(lines):
                 i = lines[ln + 1].find(w, 0)
                 if i >= 0:
-                    # Check for skipped content at the end of the previous line
-                    skipped_at_end = lines[ln][start:]
-                    if has_alpha(skipped_at_end):
-                        report_error("skip_line_end", row_idx, w, skipped_at_end)
+                    found_in_next = True
 
-                    # Move pointer to the next line since the word was found there
-                    ln += 1
-                    start = 0
+        # Handle next-line transition (B)
+        if found_in_next:
+            prev_ln = ln
+            next_ln = ln + 1
+
+            # Log/record source tail of previous line if it contains alphabetic text
+            skipped_at_end = lines[prev_ln][start:]
+            if has_alpha(skipped_at_end):
+                log("skip_line_end", ln=prev_ln, word=w, evidence=skipped_at_end)
+
+            # Decide how to resolve pending at the moment of B
+            next_prefix = lines[next_ln][0:i]
+            has_next_prefix_alpha = has_alpha(next_prefix)
+
+            if a_holds:
+                # A -> B: drop pending, but optionally salvage one into the next line
+                if pending and has_next_prefix_alpha:
+                    salvaged = pending.pop()  # salvage only the most recent one
+                    ret[next_ln].append(salvaged)
+                    log("salvage_next", ln=next_ln, word=salvaged[0] if salvaged else None, evidence=next_prefix)
+                if pending:
+                    log("drop", ln=prev_ln, count=len(pending), evidence=pending_words(pending))
+                    pending.clear()
+            else:
+                # B without prior A: salvage everything to the previous line
+                if pending:
+                    for p in pending:
+                        ret[prev_ln].append(p)
+                    log("salvage_prev", ln=prev_ln, count=len(pending), evidence=pending_words(pending))
+                    pending.clear()
+
+            # Transition to next line
+            ln = next_ln
+            start = 0
+            a_holds = False
+
+            # Log/record next-line prefix skip (source gap)
+            if has_next_prefix_alpha:
+                log("skip", ln=next_ln, word=w, evidence=next_prefix)
+
+            # Final-line mode: once we reach the final source line, assign the rest and stop.
+            if ln == last_ln:
+                assigned = [r[1:] for r in rows[row_idx:]]
+                ret[ln].extend(assigned)
+                break
 
         if i >= 0:
             # Check for skipped alphabetic characters between the last match and current match
+            # (in the current line after any B transition handling)
             skipped_text = lines[ln][start:i]
             if has_alpha(skipped_text):
-                report_error("skip", row_idx, w, skipped_text)
+                log("skip", ln=ln, word=w, evidence=skipped_text)
+
+            # Inline salvage: if we found an anchor on the current line, treat any pending
+            # as belonging to this line before the anchor, preserving order.
+            if pending:
+                for p in pending:
+                    ret[ln].append(p)
+                log("salvage_inline", ln=ln, count=len(pending), evidence=pending_words(pending))
+                pending.clear()
+
             # Word successfully found: add row to the corresponding bucket
-            ret[ln].append(row)
+            row[0] = ln
+            ret[ln].append(row[1:])
             # Update the start position for the next word search
             start = i + len(w)
+            # A: line-end commit check
+            a_holds = not has_alpha(lines[ln][start:])
         else:
-            # Word not found
+            # Word not found: keep as pending (may be dropped/salvaged at next B)
+            pending.append(row[1:])
             remaining = lines[ln][start:] if ln < len(lines) else ""
-            report_error("not_found", row_idx, w, remaining)
+            log("not_found", ln=ln if ln < len(lines) else None, word=w, evidence=remaining)
+
+    # End-of-input: drop any remaining pending (no future B to salvage against).
+    # Final-line mode stops processing as soon as the final line is reached.
+    if pending:
+        log("drop", ln=ln if ln < len(lines) else None, count=len(pending), evidence=pending_words(pending))
 
     return ret
 
