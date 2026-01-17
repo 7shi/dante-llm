@@ -2,9 +2,9 @@
 
 Side-by-side comparison of word tables for Dante's Divine Comedy showing grammatical analysis from multiple models:
 
+- **gemini1-it**: Gemini 1.0 Pro Italian word tables
 - **gemma3-it**: Gemma 3 27B Italian word tables
 - **gptoss-it**: GPT-OSS 120B Italian word tables
-- **gemini1-it**: Gemini 1.0 Pro Italian word tables
 
 Each comparison shows the original Italian line followed by word tables from all three models, enabling direct comparison of lemmatization, part-of-speech analysis, and grammatical annotations.
 
