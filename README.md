@@ -16,9 +16,11 @@ This project provides tools for translating Dante's Divine Comedy using various 
 
 This project aims to verify that locally-runnable models like Gemma 3 27B and GPT-OSS 120B can match the quality of Gemini 1.0 Pro, which was SOTA (state-of-the-art) at the time.
 
-Side-by-side comparison documents showing the original Italian text alongside translations from all models are available:
+Side-by-side comparison documents showing outputs from all models are available:
 
-- [translate/comparison](translate/comparison) - All 100 cantos (Inferno 34 + Purgatorio 33 + Paradiso 33)
+- [translate/comparison](translate/comparison) - Italian original with English translations from all models
+- [word/comparison](word/comparison) - Word tables with lemmas, parts of speech, and grammatical analysis from all models
+- [word-tr/comparison](word-tr/comparison) - Word tables with multi-language translations from all models
 
 This project is a rewrite of code from the Gemini 1.0 Pro era. The generated outputs labeled as "gemini1" are sourced from the following project:
 
