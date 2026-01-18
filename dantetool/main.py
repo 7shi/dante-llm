@@ -1,6 +1,6 @@
 import sys
 import argparse
-from .commands import concat, pickup, redo, replace, strip
+from .commands import compare, concat, pickup, redo, replace, strip
 
 def main():
     parser = argparse.ArgumentParser(
@@ -9,6 +9,11 @@ def main():
     )
 
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
+
+    # compare subcommand
+    compare_parser = subparsers.add_parser("compare", help="Compare word tables from different models")
+    compare.add_args(compare_parser)
+    compare_parser.set_defaults(func=compare.main_func)
 
     # concat subcommand
     concat_parser = subparsers.add_parser("concat", help="Concatenate XML query files")

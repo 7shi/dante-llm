@@ -9,4 +9,4 @@ check:
 	grep count */1-error.xml | grep -v '"0"'
 
 compare:
-	uv run compare.py inferno/{01..34} purgatorio/{01..33} paradiso/{01..33}
+	uv run dantetool compare inferno/{01..34} purgatorio/{01..33} paradiso/{01..33}

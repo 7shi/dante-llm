@@ -1,13 +1,15 @@
 """
 Compare word tables from different models
-Usage: uv run word/compare.py inferno/01
-Output: word/comparison/inferno/01.md
+Usage: uv run dantetool compare inferno/01
+Output: comparison/inferno/01.md (in current directory)
 """
 import sys
-import argparse
 from pathlib import Path
 from dantetool import common
 from dantetool.option import directories
+
+def add_args(parser):
+    parser.add_argument("rel_paths", nargs="+", help="relative path(s) without extension (e.g., inferno/01)")
 
 def process_one(base_dir, rel_path):
     """Process a single word table comparison"""
@@ -106,20 +108,19 @@ def process_one(base_dir, rel_path):
     print(f"Written: {output_file}")
     return True
 
-def main():
-    parser = argparse.ArgumentParser(
-        description="Compare word tables from different models",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="Examples:\n  uv run word/compare.py inferno/01\n  uv run word/compare.py inferno/01 inferno/02 purgatorio/01"
-    )
-    parser.add_argument("rel_paths", nargs="+", help="relative path(s) without extension (e.g., inferno/01)")
-    args = parser.parse_args()
-
-    base_dir = Path(__file__).resolve().parent.parent
+def main_func(args):
+    base_dir = Path(__file__).resolve().parent.parent.parent
     for rel_path in args.rel_paths:
         if not process_one(base_dir, rel_path):
             return 1
     return 0
+
+def main(argv=None):
+    import argparse
+    parser = argparse.ArgumentParser(description="Compare word tables from different models")
+    add_args(parser)
+    args = parser.parse_args(argv)
+    return main_func(args)
 
 if __name__ == "__main__":
     sys.exit(main())
