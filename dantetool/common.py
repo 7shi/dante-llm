@@ -85,7 +85,7 @@ def parse_info(info: str) -> tuple[str, int, int, int] | None:
 
 # table
 
-def read_table(src):
+def read_table(src, strict=False):
     ret = []
     rowlen = 0
     for line in src.splitlines():
@@ -93,10 +93,12 @@ def read_table(src):
             row = [t.strip() for t in line.split("|")[1:-1]]
             if not ret:
                 rowlen = len(row)
-            elif rowlen > len(row):
-                row += [""] * (rowlen - len(row))
-            elif rowlen < len(row):
-                if all(cell == "" for cell in row[rowlen:]):
+            elif rowlen != len(row):
+                if strict:
+                    return None  # strict モードでは列数不一致を許容しない
+                elif rowlen > len(row):
+                    row += [""] * (rowlen - len(row))
+                elif all(cell == "" for cell in row[rowlen:]):
                     row = row[:rowlen]
                 else:
                     return None
@@ -156,8 +158,8 @@ def fix_table_rows(table):
             rows.append([fix_cell(header[j], cell) for j, cell in enumerate(row)])
     return rows
 
-def fix_table(text):
-    table = read_table(text)
+def fix_table(text, strict=False):
+    table = read_table(text, strict=strict)
     if table:
         return table_to_string(fix_table_rows(table))
     else:

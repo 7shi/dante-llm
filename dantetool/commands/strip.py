@@ -5,13 +5,15 @@ from dantetool import common
 def add_args(parser):
     parser.add_argument("targets", nargs="+", type=str,
                         help="target XML files to strip")
+    parser.add_argument("--strict", action="store_true",
+                        help="disallow automatic column adjustment")
 
 def main_func(args):
     for target in args.targets:
         qs = common.read_queries(target)
         for q in qs:
             if q.result:
-                table = common.fix_table(q.result)
+                table = common.fix_table(q.result, strict=args.strict)
                 if table:
                     q.result = table
                     q.error = None
