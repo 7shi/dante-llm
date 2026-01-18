@@ -264,7 +264,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | ch' | che | that | quod | que | que | que | que | că | ke |
 | al | a+il | to the | ad | al | au | al | ao | la | al |
 | poco | poco | little | parvus | poco | peu | poco | pouco | puțin | iom |
-| il | il | the |  | le | le | el | o | el | la |
+| il | il | the | | le | le | el | o | el | la |
 | viso | viso | face | facies | facie | visage | rostro | rosto | față | vizaĝo |
 | riformossi | riformare | to reform | reformare | reformar | réformer | reformar | reformar | reforma | reformi |
 | e | e | and | et | e | et | y | e | și | kaj |
@@ -732,7 +732,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| La | il | the |  | le | la | la | a | la | la |
+| La | il | the | | le | la | la | a | la | la |
 | coma | coma | comma | comma | coma | virgule | coma | vírgula | virgulă | komo |
 | sua | suo | his/her | suus | suo | son/sa | su | seu | său | sia |
 | che | che | that | quod | que | que | que | que | că | ke |
@@ -746,7 +746,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | sù | su | up | sursum | sursum | en haut | arriba | em cima | sus | supre |
 | fora | forare | to bore | forare | forar | percer | perforar | perfurar | a perfora | perfori |
 | da | da | by | a | de | par | por | por | de | de |
-| l' | il | the |  | le | l' | el | o | l' | la |
+| l' | il | the | | le | l' | el | o | l' | la |
 | Indi | India | India | India | India | Inde | India | Índia | India | Barato |
 | ne' | in+le | in the | in | in le | dans le | en el | no | în | en la |
 | boschi | bosco | forests | silvae | boscos | forêts | bosques | bosques | păduri | arbaroj |
@@ -1251,7 +1251,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | vuol | volere | wants | vult | vult | veut | quiere | quer | vrea | volas |
 | sia | essere | be | sit | sia | soit | sea | seja | să fie | estu |
 | che | che | that | quod | que | que | que | que | că | ke |
-| l' | il | the |  | le | le | el | o | l' | la |
+| l' | il | the | | le | le | el | o | l' | la |
 | assonnar | assonnare | to lull | dormire | assonnar | assoupir | adormecer | adormecer | a adormi | endormi |
 | ben | ben | well | bene | ben | bien | bien | bem | bine | bone |
 | finga | fingere | to pretend | fingere | fingere | faire semblant | fingir | fingir | a pretinde | ŝajnigi |
@@ -1797,7 +1797,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | sette | sette | seven | septem | sept | sept | siete | sete | șapte | sep |
 | ninfe | ninfa | nymphs | nymphae | nympha | nymphe | ninfas | ninfas | nimfe | nymfoj |
 | con | con | with | cum | con | avec | con | com | cu | kun |
-| quei | quel | those | illii |queles | ces | esos | esses | aceia | tiuj |
+| quei | quel | those | illii | queles | ces | esos | esses | aceia | tiuj |
 | lumi | lume | lights | lumina | luminos | lumières | luces | luzes | lumini | lumoj |
 | in | in | in | in | in | dans | en | em | în | en |
 | mano | mano | hand | manus | mano | main | mano | mão | mână | mano |
@@ -2074,11 +2074,32 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| com' | come | as | ut | como | comme | como | como | ca | kiel |
+| com' | come | how | quomodo | como | comment | cómo | como | cum | kiel |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
-| vidi | vedere | saw | vidi | videva | vu | vi | vi | am văzut | vidis |
-| calar | calare | lower | deicere | calare | baisser | bajar | baixar | coborî | mallevi |
-| l' | il | the | ille | le | le | el
+| vidi | vedere | saw | vidi | videva | vit | vio | viu | a văzut | vidis |
+| calar | calare | lower | deicere | calare | abaisser | bajar | baixar | a coborî | mallevi |
+| l' | il | the | ille | le | le | el | o | cel | la |
+| uccel | uccello | bird | avis | ave | oiseau | pájaro | pássaro | pasăre | birdo |
+| di | di | of | de | de | de | de | de | de | de |
+| Giove | Giove | Jupiter | Iuppiter | Jupiter | Jupiter | Júpiter | Júpiter | Jupiter | Jupitero |
+| per | per | for | per | per | pour | por | por | pentru | por |
+| l' | il | the | ille | le | le | el | o | cel | la |
+| alber | albero | tree | arbor | arbore | arbre | árbol | árvore | arbore | arbo |
+| giù | giù | down | deorsum | deorsum | en bas | abajo | abaixo | jos | malsupre |
+| rompendo | rompere | breaking | frangens | ruptente | cassant | rompiendo | quebrando | ruptând | rompanta |
+| de | di | of | de | de | de | de | de | de | de |
+| la | la | the | illa | la | la | la | a | cea | la |
+| scorza | scorza | bark | cortex | corteccia | écorce | corteza | casca | coajă | korteko |
+| non | non | not | non | non | pas | no | não | nu | ne |
+| che | che | that | quod | que | que | que | que | că | ke |
+| d' | di | of | de | de | de | de | de | de | de |
+| i | i | the | ii | le | les | los | os | cei | la |
+| fiori | fiore | flowers | flores | flores | fleurs | flores | flores | flori | floroj |
+| e | e | and | et | e | et | y | e | și | kaj |
+| de | di | of | de | de | de | de | de | de | de |
+| le | le | the | eae | le | les | las | as | le | la |
+| foglie | foglia | leaves | folia | folios | feuilles | hojas | folhas | frunze | folioj |
+| nove | nuovo | new | novus | nove | nouveau | nuevo | novo | nou | nova |
 </result>
 </query>
 <query>

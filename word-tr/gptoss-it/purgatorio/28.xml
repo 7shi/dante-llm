@@ -39,7 +39,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | dentro | dentro | inside | intus | dentro | dedans | dentro | dentro | înăuntru | en interne |
 | e | e | and | et | e | et | y | e | și | kaj |
 | dintorno | dintorno | around | circum | intorno | autour | alrededor | ao redor | în jur | ĉirkaŭ |
-| la | il | the |  | le | la | la | a | la | la |
+| la | il | the | | le | la | la | a | la | la |
 | divina | divino | divine | divinus | divin | divin | divino | divino | divin | divina |
 | foresta | foresta | forest | silva | foresta | forêt | bosque | floresta | pădure | arbaro |
 | spessa | spesso | thick | spissus | densa | épais | espeso | espesso | dens | densa |
@@ -50,7 +50,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | li | il | them | eos | les | les | los | os | ei | ili |
 | occhi | occhio | eyes | oculi | oculos | yeux | ojos | olhos | ochi | okuloj |
 | temperava | temperare | tempered | temperabat | temperava | tempérait | templaba | temperava | temperă | temperis |
-| il | il | the |  | le | le | el | o |  | la |
+| il | il | the | | le | le | el | o | | la |
 | novo | nuovo | new | novus | novo | nouveau | nuevo | novo | nou | nova |
 | giorno | giorno | day | dies | giorno | jour | día | dia | zi | tago |
 </result>
@@ -907,7 +907,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | tempo | tempo | time | tempus | tempore | temps | tiempo | tempo | timp | tempo |
 | che | che | that | quod | que | que | que | que | că | ke |
 | perdette | perdere | lost | perdit | perdit | perdit | perdió | perdeu | a pierdut | perdis |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | madre | madre | mother | mater | madre | mère | madre | mãe | mamă | patrino |
 | lei | lei | she | ea | illa | elle | ella | ela | ea | ŝi |
 | ed | e | and | et | e | et | y | e | și | kaj |
@@ -1003,30 +1003,30 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | avvalli | avvallare | | | | | | | | |
 </prompt>
 <result>
-| Italian   | Lemma      | English      | Latin      | Interlingua | French      | Spanish            | Portuguese   | Romanian   | Esperanto |
-|-----------|------------|--------------|------------|-------------|-------------|--------------------|--------------|------------|-----------|
-| volsesi   | volgersi   | to wish      | velle      | voler       | vouloir     | querer             | querer       | a dori     | voli |
-| in        | in         | in           | in         | in          | dans        | en                 | em           | în         | en |
-| su        | su         | on           | super      | super       | sur         | sobre              | sobre        | pe         | sur |
-| i         | il         | the          |            | le          | les         | los                | os           | cei        | la |
-| vermigli  | vermiglio  | vermilion    | coccineus  | vermiglio   | vermillon   | vermellón          | vermelhão    | vermilion  | vermiljono |
-| e         | e          | and          | et         | e           | et          | y                  | e            | și         | kaj |
-| in        | in         | in           | in         | in          | dans        | en                 | em           | în         | en |
-| su        | su         | on           | super      | super       | sur         | sobre              | sobre        | pe         | sur |
-| i         | il         | the          |            | le          | les         | los                | os           | cei        | la |
-| gialli    | giallo     | yellow       | flavus     | giallo      | jaune       | amarillo           | amarelo      | galben     | flava |
-| fioretti  | fiore      | little flowers | floremuli | florinas   | petites fleurs | florecitas     | florzinhas   | flori mici | floretoj |
-| verso     | verso      | toward       | versus     | verso       | vers        | hacia              | para         | spre       | al |
-| me        | me         | me           | me         | me          | me          | me                 | me           | mă         | mi |
-| non       | non        | not          | non        | non         | non         | no                 | não          | nu         | ne |
-| altrimenti| altrimenti | otherwise    | aliter     | altrimenti  | sinon       | de lo contrario   | caso contrário| altfel    | alie |
-| che       | che        | that         | qui        | que         | que         | que                | que          | care       | ke |
-| vergine   | vergine    | virgin       | virgo      | virgine     | vierge      | virgen             | virgem       | fecioară   | virgulino |
-| che       | che        | that         | qui        | que         | que         | que                | que          | care       | ke |
-| li        | gli        | them         | eos        | los         | les         | los                | os           | îi         | ilin |
-| occhi     | occhio     | eyes         | oculi      | oculos      | yeux        | ojos               | olhos        | ochi       | okuloj |
-| onesti    | onesto     | honest       | honesti    | honeste     | honnêtes    | honestos           | honestos     | cinstiți   | honestaj |
-| avvalli   | avvallare  | to valley    | vallare    | vallar      | vallonner   | vallejar           | valear       | a valea    | valoni |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| volsesi | volgersi | to wish | velle | voler | vouloir | querer | querer | a dori | voli |
+| in | in | in | in | in | dans | en | em | în | en |
+| su | su | on | super | super | sur | sobre | sobre | pe | sur |
+| i | il | the | | le | les | los | os | cei | la |
+| vermigli | vermiglio | vermilion | coccineus | vermiglio | vermillon | vermellón | vermelhão | vermilion | vermiljono |
+| e | e | and | et | e | et | y | e | și | kaj |
+| in | in | in | in | in | dans | en | em | în | en |
+| su | su | on | super | super | sur | sobre | sobre | pe | sur |
+| i | il | the | | le | les | los | os | cei | la |
+| gialli | giallo | yellow | flavus | giallo | jaune | amarillo | amarelo | galben | flava |
+| fioretti | fiore | little flowers | floremuli | florinas | petites fleurs | florecitas | florzinhas | flori mici | floretoj |
+| verso | verso | toward | versus | verso | vers | hacia | para | spre | al |
+| me | me | me | me | me | me | me | me | mă | mi |
+| non | non | not | non | non | non | no | não | nu | ne |
+| altrimenti | altrimenti | otherwise | aliter | altrimenti | sinon | de lo contrario | caso contrário | altfel | alie |
+| che | che | that | qui | que | que | que | que | care | ke |
+| vergine | vergine | virgin | virgo | virgine | vierge | virgen | virgem | fecioară | virgulino |
+| che | che | that | qui | que | que | que | que | care | ke |
+| li | gli | them | eos | los | les | los | os | îi | ilin |
+| occhi | occhio | eyes | oculi | oculos | yeux | ojos | olhos | ochi | okuloj |
+| onesti | onesto | honest | honesti | honeste | honnêtes | honestos | honestos | cinstiți | honestaj |
+| avvalli | avvallare | to valley | vallare | vallar | vallonner | vallejar | valear | a valea | valoni |
 </result>
 </query>
 <query>
@@ -2632,7 +2632,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Qui | qui | here | hic | hic | ici | aquí | aqui | aici | ĉi tie |
 | fu | essere | was | erat | fuit | était | fue | foi | a fost | estis |
 | innocente | innocente | innocent | innocens | innocente | innocent | inocente | inocente | inocent | inocenta |
-| l' | il | the |  | le | le | el | o | cel | la |
+| l' | il | the | | le | le | el | o | cel | la |
 | umana | umano | human | humanus | human | humain | humano | humano | uman | homa |
 | radice | radice | root | radix | radice | racine | raíz | raiz | rădăcină | radiko |
 | qui | qui | here | hic | hic | ici | aquí | aqui | aici | ĉi tie |

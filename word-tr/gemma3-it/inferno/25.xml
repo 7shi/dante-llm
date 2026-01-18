@@ -441,7 +441,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Sovra | sopra | Over | Supra | Supra | Au-dessus | Sobre | Sobre | Peste | Super |
+| Sovra | sopra | over | supra | super | sur | sobre | sobre | peste | super |
 | le | la | the | la | le | la | la | a | pe | la |
 | spalle | spalla | shoulders | humeri | spallas | épaules | hombros | ombros | umeri | ŝultroj |
 | dietro | dietro | behind | post | post | derrière | detrás | atrás | în spatele | malantaŭ |
@@ -449,11 +449,19 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | la | la | the | la | le | la | la | a | pe | la |
 | coppa | coppa | cup | cupa | coppa | coupe | copa | copa | cupă | pokalo |
 | con | con | with | cum | con | avec | con | com | cu | kun |
-| l' | il | the | ille | le | le | el | o | pe | la |
+| l' | il | the | ille | lo | le | lo | o | îl | lin |
 | ali | ala | wings | alae | alas | ailes | alas | asas | aripi | flugiloj |
-| aperte | aperto | open | apertus | aperte | ouvertes | abiertas | abertas | deschise | malfermitaj |
-| li | lo | him | illum | lo | le | lo | o | pe el | lin |
-| giacea | giacere | lay | iacebat |
+| aperte | aperto | open | aperta | aperte | ouvertes | abiertas | abertas | deschise | malfermitaj |
+| li | lo | him | eum | lo | le | lo | o | îl | lin |
+| giacea | giacere | lay | iacebat | giaceva | gisait | yacía | jazia | zăcea | kuŝis |
+| un | uno | a | unus | un | un | un | um | un | unu |
+| draco | drago | dragon | draco | draco | dragon | dragón | dragão | dragon | drako |
+| e | e | and | et | e | et | y | e | și | kaj |
+| quello | quello | that | ille | quel | quel | aquel | aquele | acel | tiu |
+| affuoca | affuocare | inflamed | inflammabat | affogava | enflammait | inflamaba | inflamava | inflama | flamigis |
+| qualunque | qualunque | whatever | quicumque | qualque | quel que | cualquiera | qualquer | oricare | ĉiu |
+| s' | si | itself | se | se | se | se | se | se | si |
+| intoppa | intoppare | clogs | obstruere | intuppava | obstrue | obstruye | entope | astupă | blokas |
 </result>
 </query>
 <query>
@@ -943,19 +951,32 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Com' | come | As | Sicut | Como | Comme | Como | Como | Ca | Kiel |
-| io | io | I | ego | io | moi | yo | eu | eu | mi |
-| tenea | tenere | held | teneo | tener | tenais | tenía | segurava | țineam | tenis |
-| levate | levare | raised | levo | elevar | levais | levanté | levantei | ridicam | levis |
+| Com' | come | As | ut | como | comme | como | como | ca | Kiel |
+| io | io | I | ego | io | je | yo | eu | eu | mi |
+| tenea | tenere | held | teneo | teneva | tenais | tenía | segurava | țineam | tenis |
+| levate | levare | raised | levo | levate | levé | levantó | levantou | ridicat | levis |
 | in | in | in | in | in | dans | en | em | în | en |
-| lor | loro | their | eorum | lor | leur | sus | deles | lor | iliaj |
-| le | il | the | ille | le | les | el | o | pe | la |
-| ciglia | ciglio | eyelashes | cilia | cilia | cils | pestañas | cílios | gene | palpebroj |
+| lor | loro | them | illos | lor | eux | ellos | eles | lor | iluj |
+| le | il | the | ille | le | les | las | as | le | la |
+| ciglia | ciglio | eyelashes | cilia | cilios | cils | pestañas | cílios | gene | palpebroj |
 | e | e | and | et | e | et | y | e | și | kaj |
 | un | uno | a | unus | un | un | un | um | un | unu |
 | serpente | serpente | serpent | serpens | serpente | serpent | serpiente | serpente | șarpe | serpento |
 | con | con | with | cum | con | avec | con | com | cu | kun |
-| sei | sei | six | sex | sex | six | seis | seis
+| sei | sei | six | sex | sex | six | seis | seis | șase | ses |
+| piè | piede | feet | pedes | pedes | pieds | pies | pés | picioare | piedoj |
+| si | si | himself/herself | se | se | se | se | se | se | si |
+| lancia | lanciare | throws | mitto | lancear | lance | lanza | lança | aruncă | ĵetas |
+| dinanzi | dinanzi | before | ante | ante | devant | delante | diante | înaintea | antaŭ |
+| a | a | to | ad | a | à | a | a | la | al |
+| l' | il | the | ille | le | le | el | o | pe | la |
+| uno | uno | one | unus | un | un | uno | um | unu | unu |
+| e | e | and | et | e | et | y | e | și | kaj |
+| tutto | tutto | all | totus | toto | tout | todo | tudo | tot | ĉio |
+| a | a | to | ad | a | à | a | a | la | al |
+| lui | lui | him | eum | lui | lui | a él | a ele | lui | lin |
+| s' | sé | himself | se | se | s' | se | se | se | si |
+| appiglia | appigliare | clings | apprehendo | appigliar | s'accroche | se agarra | agarra-se | se agață | alkroĉas |
 </result>
 </query>
 <query>
@@ -1390,18 +1411,30 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Fersi | fare | To make | facere | facer | faire | hacer | fazer | face | fari |
-| le | il | the | ille | le | le | el | o | pe | la |
+| le | il | the | ille | le | les | las | as | le | la |
 | braccia | braccio | arms | brachia | bracia | bras | brazos | braços | brațe | brakoj |
 | due | due | two | duo | duo | deux | dos | dois | doi | du |
 | di | di | of | de | de | de | de | de | de | de |
 | quattro | quattro | four | quattuor | quattre | quatre | cuatro | quatro | patru | kvar |
-| liste | lista | lists | lista | lista | listes | listas | listas | liste | listoj |
-| le | il | the | ille | le | le | el | o | pe | la |
-| cosce | coscia | thighs | coxae | coscias | cuisses | muslos | coxas | coapse | femuroj |
+| liste | lista | lists | listae | listas | listes | listas | listas | liste | listoj |
+| le | il | the | ille | le | les | las | as | le | la |
+| cosce | coscia | thighs | cosciae | coscias | cuisses | muslos | coxas | coapse | femuroj |
 | con | con | with | cum | con | avec | con | com | cu | kun |
-| le | il | the | ille | le | le | el | o | pe | la |
-| gambe | gamba | legs | crura | gambas | jambes | piernas | pernas | picioare | gamboj |
-| e | e | and | et | e | et | y | e
+| le | il | the | ille | le | les | las | as | le | la |
+| gambe | gamba | legs | gambae | gambas | jambes | piernas | pernas | picioare | gamboj |
+| e | e | and | et | e | et | y | e | și | kaj |
+| 'l | il | the | ille | le | le | el | o | pe | la |
+| ventre | ventre | belly | venter | ventre | ventre | vientre | barriga | burtă | ventro |
+| e | e | and | et | e | et | y | e | și | kaj |
+| 'l | il | the | ille | le | le | el | o | pe | la |
+| casso | casso | chest | cassus | cassa | poitrine | pecho | peito | piept | brustkesto |
+| divenner | divenire | became | fio | devenir | devint | se convirtió | tornou-se | deveni | iĝis |
+| membra | membro | limb | membrum | membro | membre | miembro | membro | membru | membro |
+| che | che | that | quod | que | que | que | que | că | ke |
+| non | non | not | non | non | ne | no | não | nu | ne |
+| fuor | essere | out | foris | foras | dehors | fuera | fora | afară | ekstere |
+| mai | mai | ever | numquam | nunca | jamais | nunca | nunca | niciodată | iam |
+| viste | vedere | seen | visus | vidite | vues | vistas | vistas | văzute | viditaj |
 </result>
 </query>
 <query>

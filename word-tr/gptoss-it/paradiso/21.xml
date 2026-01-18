@@ -474,14 +474,14 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Dentro | dentro | inside | intra | dentro | dedans | dentro | dentro | înăuntru | en |
-| al | a+il | to the | - | al | au | al | ao | la | al |
+| al | a+il | to the | | al | au | al | ao | la | al |
 | cristallo | cristallo | crystal | crystallum | cristallo | cristal | cristal | cristal | cristal | kristalo |
 | che | che | that | quod | que | que | que | que | că | ke |
-| 'l | il | the | - | le | le | el | o | - | la |
+| 'l | il | the | | le | le | el | o | | la |
 | vocabol | vocabolo | word | verbum | vocabulo | mot | palabra | palavra | cuvânt | vorto |
 | porta | portare | door | porta | porta | porte | puerta | porta | ușă | pordo |
 | cerchiando | cercare | searching | quaerens | cercante | cherchant | buscando | buscando | căutând | serĉante |
-| il | il | the | - | le | le | el | o | - | la |
+| il | il | the | | le | le | el | o | | la |
 | mondo | mondo | world | mundus | mundo | monde | mundo | mundo | lume | mondo |
 | del | di+il | of the | de | del | du | del | do | al | de la |
 | suo | suo | his | suus | su | son | su | seu | al său | lia |
@@ -1398,7 +1398,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | basta | bastare | enough | satis | satis | assez | basta | basta | destul | sufiĉe |
 | a | a | to | ad | a | à | a | a | la | al |
 | seguir | seguire | follow | sequor | sequer | suivre | seguir | seguir | a urma | sekvi |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | provedenza | providenza | providence | providentia | providentia | providence | providencia | providência | providență | providenco |
 | etterna | eterno | eternal | aeterna | eterna | éternelle | eterna | eterna | eternă | eterna |
 </result>
@@ -1453,7 +1453,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | questo | questo | this | hic | isto | ce | este | este | acest | ĉi tiu |
 | officio | officio | duty | officium | officio | devoir | oficio | ofício | oficiu | devo |
 | tra | tra | among | inter | inter | entre | entre | entre | între | inter |
-| le | la | the |  | le | les | las | as | le | la |
+| le | la | the | | le | les | las | as | le | la |
 | tue | tuo | your | tua | tu | ta | tu | teu | tău | via |
 | consorte | consorte | spouse | consors | consorte | conjoint | consorte | consorte | consort | kunulino |
 </result>
@@ -2267,26 +2267,26 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | In | in | in | in | in | dans | en | em | în | en |
-| quel quello | that | ille | ille | ce | ese | esse | acel | tiu |
+| quel | quello | that | ille | ille | ce | ese | esse | acel | tiu |
 | loco | luogo | place | locus | loco | lieu | lugar | lugar | loc | loko |
-| fu' | essere | was | erat | fue | était | fue | foi | a fost | estis |
+| fu' | essere | was | erat | era | était | era | era | era | estis |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
 | Pietro | Pietro | Peter | Petrus | Pietro | Pierre | Pedro | Pedro | Petru | Petro |
-| Damiano | Damiano | Damian | Damianus | Damiano | Damien | Damian | Damiano | Damian | Damiano |
+| Damiano | Damiano | Damian | Damianus | Damiano | Damien | Damián | Damião | Damian | Damiano |
 | e | e | and | et | e | et | y | e | și | kaj |
 | Pietro | Pietro | Peter | Petrus | Pietro | Pierre | Pedro | Pedro | Petru | Petro |
-| Peccator | Peccatore | sinner | peccator | peccator | pécheur | pecador | pecador | păcătos | pĥulo |
-| fu' | essere | was | erat | fue | était | fue | foi | a fost | estis |
-| ne | in | of it | eius | de illo | en | de él | dele | de el | el ĝi |
-| la | la | the | illa | la | la | la | a | la | la |
+| Peccator | Peccatore | sinner | peccator | peccator | pécheur | pecador | pecador | păcătos | pekulo |
+| fu' | essere | was | erat | era | était | era | era | era | estis |
+| ne | in | of it | e | de | en | de él | de | de | de |
+| la | la | the | illa | la | la | la | a | a | la |
 | casa | casa | house | casa | casa | maison | casa | casa | casă | domo |
 | di | di | of | de | de | de | de | de | de | de |
-| Nostra | nostro | our | nostra | nostra | notre | nuestra | nossa | noastră | nia |
-| Donna | donna | woman | mulier | donna | femme | mujer | mulher | femeie | virino |
+| Nostra | nostro | our | nostra | nostre | notre | nuestra | nossa | noastră | nia |
+| Donna | donna | woman | femina | donna | femme | mujer | mulher | femeie | virino |
 | in | in | in | in | in | dans | en | em | în | en |
-| sul | su+il | on the | in | sur le | sur le | sobre el | sobre o | pe | sur la |
-| lito | lito | shore | litus | lito | rivage | litoral | litoral | litoral | bordo |
-| adriano | adriatico | Adriatic | Adriaticus | adriano | adriatique | adriático | adriático | adriatic | adriatika |
+| sul | su+il | on | super | super | sur | sobre | sobre | pe | sur |
+| lito | lito | shore | litus | lito | littoral | litoral | litoral | litoral | lito |
+| adriano | adriatico | Adriatic | Adriaticus | adriatic | adriatique | Adriático | Adriático | adriatic | adriatika |
 </result>
 </query>
 <query>

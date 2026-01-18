@@ -148,7 +148,29 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Io | io | I | ego | io | je | yo | eu | eu | mi |
-| volsi | volere | wanted | vol
+| volsi | volere | wanted | volui | voluer | voulu | quiso | quis | voia | volis |
+| 'l | il | the | – | le | le | el | o | (art.) | la |
+| viso | viso | face | facies | facie | visage | cara | cara | față | vizaĝo |
+| e | e | and | et | e | et | y | e | și | kaj |
+| 'l | il | the | – | le | le | el | o | (art.) | la |
+| passo | passo | step | passus | passo | pas | paso | passo | pas | paŝo |
+| non | non | not | non | non | non | no | não | nu | ne |
+| men | meno | less | minus | minus | moins | menos | menos | mai puțin | malpli |
+| tosto | tosto | soon | cito | presto | bientôt | pronto | logo | curând | baldaŭ |
+| appresso | appresso | after | post | post | après | después | depois | după | post |
+| i | il | the (pl.) | – | le | les | los | os | (art.) | la |
+| savi | savio | wise | sapiens | savio | sage | sabio | sábio | înțelept | saĝa |
+| che | che | that | quod | que | que | que | que | că | ke |
+| parlavan | parlare | spoke | loquebantur | parlava | parlaient | hablaban | falavam | vorbeau | parolis |
+| sìe | sì | yes | sic | si | oui | sí | sim | da | jes |
+| che | che | that | quod | que | que | que | que | că | ke |
+| l' | il | the | – | le | le | el | o | (art.) | la |
+| andar | andare | go | ire | ir | aller | ir | ir | merge | iri |
+| mi | io | I | ego | io | je | yo | eu | eu | mi |
+| facean | fare | made | faciebant | faceva | faisaient | hacían | faziam | făceau | faris |
+| di | di | of | de | de | de | de | de | de | de |
+| nullo | nullo | none | nullus | null | nul | nulo | nulo | nul | neniu |
+| costo | costo | cost | pretium | costo | coût | costo | custo | cost | kosto |
 </result>
 </query>
 <query>
@@ -1304,12 +1326,24 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | E | e | and | et | e | et | y | e | și | kaj |
-| non | non | not | non | non | non | no | não | nu | ne |
-| pur | pur | still | tamen | ancora | encore | aún | ainda | încă | ankoraŭ |
+| non | non | not | non | non | pas | no | não | nu | ne |
+| pur | pur | pure | purus | pur | pur | puro | puro | pur | pura |
 | una | uno | a | una | un | une | una | uma | o | unu |
-| volta | volta | time | volta | volta | fois | vez | vez | odată | fojo |
-| questo | questo | this | hic | isto | ce | esto | isto | acesta | ĉi tiu |
-| spazzo | spasso | sweep | scopa | spazzare | balayer
+| volta | volta | turn | volta | volta | tour | vuelta | volta | întoarcere | turno |
+| questo | questo | this | hic | isto | ce | este | este | acest | ĉi tiu |
+| spazzo | spasso | stroll | vagor | vagar | flâner | pasear | passear | plimba | promeni |
+| girando | girare | turning | gyrans | girante | tournant | girando | girando | întorcând | turniĝante |
+| si | si | himself | se | se | se | se | se | se | si |
+| rinfresca | rinfrescare | refreshes | reficit | refresca | rafraîchit | refresca | refresca | reîmprospătează | refreŝigas |
+| nostra | nostro | our | nostra | nostre | notre | nuestra | nossa | noastră | nia |
+| pena | pena | pain | dolor | pena | peine | pena | pena | durere | doloro |
+| io | io | I | ego | io | je | yo | eu | eu | mi |
+| dico | dire | say | dico | dico | dis | digo | digo | spun | diras |
+| pena | pena | pain | dolor | pena | peine | pena | pena | durere | doloro |
+| e | e | and | et | e | et | y | e | și | kaj |
+| dovria | dovere | should | debet | debe | devrait | debería | deveria | ar trebui | devus |
+| dir | dire | say | dicere | dicer | dire | decir | dizer | spune | diri |
+| sollazzo | sollazzo | amusement | ludus | divertimento | amusement | diversión | divertimento | distracție | amuzo |
 </result>
 </query>
 <query>
@@ -1695,30 +1729,30 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | soletta | solo | | | | | | | | |
 </prompt>
 <result>
-| Italian   | Lemma   | English      | Latin   | Interlingua | French      | Spanish   | Portuguese | Romanian | Esperanto |
-|-----------|---------|--------------|---------|-------------|-------------|-----------|------------|----------|-----------|
-| Tanto     | tanto   | so much      | tantum  | tanto       | tant        | tanto     | tanto      | atât     | tiom      |
-| è         | essere  | is           | est     | es          | est         | es        | é          | este     | estas     |
-| a         | a       | to           | ad      | a           | à           | a         | a          | la       | al        |
-| Dio       | Dio     | God          | Deus    | Deo         | Dieu        | Dios      | Deus       | Dumnezeu | Dio       |
-| più       | più     | more         | plus    | plus        | plus        | más       | mais       | mai      | pli       |
-| cara      | caro    | dear         | carus   | caro        | cher        | querido   | querido    | drag     | kara      |
-| e         | e       | and          | et      | e           | et          | y         | e          | și       | kaj       |
-| più       | più     | more         | plus    | plus        | plus        | más       | mais       | mai      | pli       |
-| diletta   | dilettare| beloved     | dilectus| dilettate   | chérie      | amada     | amada      | iubită   | amita     |
-| la        | la      | the          | —       | la          | la          | la        | a          | la       | la        |
-| vedovella | vedova  | young widow  | vidua   | vedova      | veuve       | viuda     | viúva      | văduvă   | veduko    |
-| mia       | mio     | my           | mea     | mi          | ma          | mi        | minha      | mea      | mia       |
-| che       | che     | that         | quod    | que         | que         | que       | que        | că       | ke        |
-| molto     | molto   | very         | multum  | multo       | très        | muy       | muito      | foarte   | tre       |
-| amai      | amare   | loved        | amavi   | amava       | aimai       | amé       | amei       | am iubit | amis      |
-| quanto    | quanto  | how much     | quantum | quanto      | combien     | cuánto    | quanto     | cât      | kiom      |
-| in        | in      | in           | in      | in          | dans        | en        | em         | în       | en        |
-| bene      | bene    | well         | bene    | bene        | bien        | bien      | bem        | bine     | bone      |
-| operare   | operare | to work      | operari | operar      | travailler  | operar    | operar     | a lucra  | labori    |
-| è         | essere  | is           | est     | es          | est         | es        | é          | este     | estas     |
-| più       | più     | more         | plus    | plus        | plus        | más       | mais       | mai      | pli       |
-| soletta   | solo    | only         | solum   | sol         | seulement   | solo      | só         | doar     | nur       |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| Tanto | tanto | so much | tantum | tanto | tant | tanto | tanto | atât | tiom |
+| è | essere | is | est | es | est | es | é | este | estas |
+| a | a | to | ad | a | à | a | a | la | al |
+| Dio | Dio | God | Deus | Deo | Dieu | Dios | Deus | Dumnezeu | Dio |
+| più | più | more | plus | plus | plus | más | mais | mai | pli |
+| cara | caro | dear | carus | caro | cher | querido | querido | drag | kara |
+| e | e | and | et | e | et | y | e | și | kaj |
+| più | più | more | plus | plus | plus | más | mais | mai | pli |
+| diletta | dilettare | beloved | dilectus | dilettate | chérie | amada | amada | iubită | amita |
+| la | la | the | — | la | la | la | a | la | la |
+| vedovella | vedova | young widow | vidua | vedova | veuve | viuda | viúva | văduvă | veduko |
+| mia | mio | my | mea | mi | ma | mi | minha | mea | mia |
+| che | che | that | quod | que | que | que | que | că | ke |
+| molto | molto | very | multum | multo | très | muy | muito | foarte | tre |
+| amai | amare | loved | amavi | amava | aimai | amé | amei | am iubit | amis |
+| quanto | quanto | how much | quantum | quanto | combien | cuánto | quanto | cât | kiom |
+| in | in | in | in | in | dans | en | em | în | en |
+| bene | bene | well | bene | bene | bien | bien | bem | bine | bone |
+| operare | operare | to work | operari | operar | travailler | operar | operar | a lucra | labori |
+| è | essere | is | est | es | est | es | é | este | estas |
+| più | più | more | plus | plus | plus | más | mais | mai | pli |
+| soletta | solo | only | solum | sol | seulement | solo | só | doar | nur |
 </result>
 </query>
 <query>

@@ -961,7 +961,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | che | che | that | quod | que | que | que | que | că | ke |
 | fore | essere | to be | esse | esser | être | ser | ser | fi | esti |
 | trasse | trarre | draw | traho | trar | tirer | tirar | tirar | trage | tiri |
-| le | la | the |  | le | les | las | as | le | la |
+| le | la | the | | le | les | las | as | le | la |
 | nove | nove | nine | novem | nove | neuf | nueve | nove | nouă | naŭ |
 | rime | rima | rhymes | rimae | rimas | rimes | rimas | rimas | rimă | rimoj |
 | cominciando | cominciare | starting | incipiens | comenciante | commençant | comenzando | começando | începând | komencante |
@@ -1413,9 +1413,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | ti | tu | | | | | | | | |
 | riveggia | rivedere | | | | | | | | |
 </prompt>
-<error result="true">
-Upstream error from OpenInference: Error from model endpoint
-</error>
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|

@@ -1018,7 +1018,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | non | non | not | non | non | non | no | não | nu | ne |
 | lece | lecere | read | legere | leger | lire | leer | ler | citi | legi |
 | a | a | to | ad | a | à | a | a | la | al |
-| le | le | the |  | le | les | las | as | le | la |
+| le | le | the | | le | les | las | as | le | la |
 | nostre | nostro | our | noster | nostre | notre | nuestro | nosso | nostru | nia |
 | virtù | virtù | virtue | virtus | virtute | vertu | virtud | virtude | virtute | virto |
 | mercé | mercé | thanks | gratia | gratia | merci | gracias | obrigado | mulțumesc | dankon |
@@ -1028,7 +1028,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | per | per | for | per | per | pour | por | por | pentru | por |
 | proprio | proprio | own | proprius | proprie | propre | propio | próprio | propriu | propra |
 | de | di | of | de | de | de | de | de | de | de |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | umana | umano | human | humanus | human | humain | humano | humano | uman | homa |
 | spece | spezie | species | species | specie | espèce | especie | espécie | specie | specio |
 </result>
@@ -1177,19 +1177,19 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Beatrice | Beatrice | Beatrice | Beatrix | Beatrice | Béatrice | Beatriz | Beatriz | Beatrice | Beatrico |
 | tutta | tutto | all | tota | tote | toute | toda | toda | toată | tuta |
 | ne | in | in | in | in | dans | en | em | în | en |
-| l' | il | the |  | le | le | el | o | l' | la |
+| l' | il | the | | le | le | el | o | l' | la |
 | etterne | eterno | eternal | aeternus | etern | éternel | eterno | eterno | etern | eterna |
 | rote | rota | wheel | rota | rota | roue | rueda | roda | roată | rado |
 | fissa | fissare | fixed | fixus | fixe | fixe | fijo | fixo | fix | fiksita |
 | con | con | with | cum | con | avec | con | com | cu | kun |
-| li | il | the |  | le | les | los | os | i | la |
+| li | il | the | | le | les | los | os | i | la |
 | occhi | occhio | eyes | oculi | oculos | yeux | ojos | olhos | ochi | okuloj |
 | stava | stare | was | erat | esseva | était | estaba | estava | era | estis |
 | e | e | and | et | e | et | y | e | și | kaj |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
 | in | in | in | in | in | dans | en | em | în | en |
 | lei | lei | she | ea | illa | elle | ella | ela | ea | ŝi |
-| le | il | the |  | le | les | las | as | le | la |
+| le | il | the | | le | les | las | as | le | la |
 | luci | luce | lights | luces | luces | lumières | luces | luzes | lumini | lumoj |
 | fissi | fissare | fixed | fixi | fixate | fixés | fijos | fixos | fixe | fiksita |
 | di | di | of | de | de | de | de | de | de | de |
@@ -2271,9 +2271,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | segno | segno | | | | | | | | |
 | lieto | lieto | | | | | | | | |
 </prompt>
-<error result="true">
-peer closed connection without sending complete message body (incomplete chunked read)
-</error>
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|

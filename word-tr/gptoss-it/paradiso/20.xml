@@ -858,7 +858,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | seguir | seguire | to follow | sequi | sequer | suivre | seguir | seguir | a urma | sekvi |
 | Cristo | Cristo | Christ | Christus | Christo | Christ | Cristo | Cristo | Christ | Kristo |
 | per | per | for | per | per | pour | por | por | pentru | por |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | esperïenza | esperienza | experience | experientia | experientia | expérience | experiencia | experiência | experiență | sperto |
 | di | di | of | de | de | de | de | de | de | de |
 | questa | questo | this | haec | ista | cette | esta | esta | aceasta | ĉi tiu |
@@ -866,7 +866,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | vita | vita | life | vita | vita | vie | vida | vida | viață | vivo |
 | e | e | and | et | e | et | y | e | și | kaj |
 | de | di | of | de | de | de | de | de | de | de |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | opposta | opposto | opposite | oppositus | opposite | opposé | opuesto | oposto | opus | opozita |
 </result>
 </query>
@@ -1768,31 +1768,31 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | beninanza | benignità | | | | | | | | |
 </prompt>
 <result>
-| Italian   | Lemma      | English   | Latin      | Interlingua   | French      | Spanish      | Portuguese   | Romanian      | Esperanto |
-|-----------|------------|-----------|------------|---------------|-------------|--------------|--------------|----------------|-----------|
-| non       | non        | not       | non        | non           | ne          | no           | não          | nu             | ne        |
-| a         | a          | to        | ad         | a             | à           | a            | a            | la             | al        |
-| guisa     | guisa      | manner    | modus      | modo          | manière     | manera       | maneira      | mod            | maniero   |
-| che       | che        | that      | quod       | que           | que         | que          | que          | că             | ke        |
-| l'        | il         | the       | ille       | le            | le          | el           | o            | cel            | la        |
-| omo       | uomo       | man       | homo       | homo          | homme       | hombre       | homem        | om             | homo      |
-| a         | a          | to        | ad         | a             | à           | a            | a            | la             | al        |
-| l'        | il         | the       | ille       | le            | le          | el           | o            | cel            | la        |
-| om        | uomo       | man       | homo       | homo          | homme       | hombre       | homem        | om             | homo      |
-| sobranza  | sobrietà   | sobriety  | sobrietas  | sobrietate    | sobriété    | sobriedad    | sobriedade   | sobrietate     | sobrio    |
-| ma        | ma         | but       | sed        | ma            | mais        | pero         | mas          | dar            | sed       |
-| vince     | vincere    | wins      | vincit     | vince         | gagne       | gana         | ganha        | câștigă        | venkas    |
-| lei       | lei        | she       | ea         | illa          | elle        | ella         | ela          | ea             | ŝi        |
-| perché    | perché     | because   | quod       | perque        | parce que   | porque       | porque       | pentru că     | ĉar       |
-| vuole     | volere     | wants     | vult       | vole          | veut        | quiere       | quer         | vrea           | volas     |
-| esser     | essere     | to be     | esse       | esser         | être        | ser          | ser          | a fi           | esti      |
-| vinta     | vincere    | won       | victa      | vinta         | gagnée      | ganada       | ganha        | câștigată      | venkita   |
-| e         | e          | and       | et         | e             | et          | y            | e            | și             | kaj       |
-| vinta     | vincere    | won       | victa      | vinta         | gagnée      | ganada       | ganha        | câștigată      | venkita   |
-| vince     | vincere    | wins      | vincit     | vince         | gagne       | gana         | ganha        | câștigă        | venkas    |
-| con       | con        | with      | cum        | con           | avec        | con          | com          | cu             | kun       |
-| sua       | suo        | his/her   | suus       | su            | son         | su           | seu          | al său         | lia       |
-| beninanza | benignità  | kindness  | benignitas | benignitate   | bienveillance| benignidad   | benignidade  | benignitate    | bonkoreco |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| non | non | not | non | non | ne | no | não | nu | ne |
+| a | a | to | ad | a | à | a | a | la | al |
+| guisa | guisa | manner | modus | modo | manière | manera | maneira | mod | maniero |
+| che | che | that | quod | que | que | que | que | că | ke |
+| l' | il | the | ille | le | le | el | o | cel | la |
+| omo | uomo | man | homo | homo | homme | hombre | homem | om | homo |
+| a | a | to | ad | a | à | a | a | la | al |
+| l' | il | the | ille | le | le | el | o | cel | la |
+| om | uomo | man | homo | homo | homme | hombre | homem | om | homo |
+| sobranza | sobrietà | sobriety | sobrietas | sobrietate | sobriété | sobriedad | sobriedade | sobrietate | sobrio |
+| ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
+| vince | vincere | wins | vincit | vince | gagne | gana | ganha | câștigă | venkas |
+| lei | lei | she | ea | illa | elle | ella | ela | ea | ŝi |
+| perché | perché | because | quod | perque | parce que | porque | porque | pentru că | ĉar |
+| vuole | volere | wants | vult | vole | veut | quiere | quer | vrea | volas |
+| esser | essere | to be | esse | esser | être | ser | ser | a fi | esti |
+| vinta | vincere | won | victa | vinta | gagnée | ganada | ganha | câștigată | venkita |
+| e | e | and | et | e | et | y | e | și | kaj |
+| vinta | vincere | won | victa | vinta | gagnée | ganada | ganha | câștigată | venkita |
+| vince | vincere | wins | vincit | vince | gagne | gana | ganha | câștigă | venkas |
+| con | con | with | cum | con | avec | con | com | cu | kun |
+| sua | suo | his/her | suus | su | son | su | seu | al său | lia |
+| beninanza | benignità | kindness | benignitas | benignitate | bienveillance | benignidad | benignidade | benignitate | bonkoreco |
 </result>
 </query>
 <query>

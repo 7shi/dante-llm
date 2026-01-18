@@ -324,26 +324,26 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | accesi | accendere | | | | | | | | |
 </prompt>
 <result>
-| Italian   | Lemma      | English   | Latin      | Interlingua | French   | Spanish   | Portuguese | Romanian | Esperanto |
-|-----------|------------|-----------|------------|-------------|----------|-----------|------------|----------|-----------|
-| In        | in         | in        | in         | in          | dans     | en        | em         | în       | en        |
-| su        | su         | on        | super      | super       | sur      | sobre     | sobre      | pe       | sur       |
-| le        | la         | the       | the        | le          | les      | las       | as         | le       | la        |
-| man       | mano       | hand      | manus      | mano        | main     | mano      | mão        | mână     | mano      |
-| commesse  | commettere | committed | commisit   | committite  | a commis | cometió   | cometeu    | a comis  | komitis   |
-| mi        | io         | me        | me         | me          | me       | me        | me         | mă       | min       |
-| protesi   | protendere | prostheses| prosthesis | prosthesis  | prothèses| prótesis  | próteses   | proteze  | protesoj  |
-| guardando | guardare   | watching  | spectans   | guardante   | regardant| mirando   | observando | privind  | observante|
-| il        | il         | the       | the        | le          | le       | el        | o          | cel      | la        |
-| foco      | fuoco      | fire      | focus      | foco        | feu      | fuego     | fogo       | foc      | fajro     |
-| e         | e          | and       | et         | e           | et       | y         | e          | și       | kaj       |
-| imaginando| immaginare | imagining | imaginans  | imaginante  | imaginant| imaginando| imaginando | imaginând| imagante  |
-| forte     | forte      | strong    | fortis     | forte       | fort     | fuerte    | forte      | puternic | forta     |
-| umani     | umano      | human     | humanus    | human       | humain   | humano    | humano     | uman     | homa      |
-| corpi     | corpo      | bodies    | corpora    | corpora     | corps    | cuerpos   | corpos     | corpuri  | korpoj    |
-| già       | già        | already   | iam        | ja          | déjà     | ya        | já         | deja     | jam       |
-| veduti    | vedere     | seen      | visus      | vidite      | vu       | visto     | visto      | văzut    | vidita    |
-| accesi    | accendere  | lit       | accensus   | accendite   | allumé   | encendido | aceso      | aprins   | ekbrulita |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| In | in | in | in | in | dans | en | em | în | en |
+| su | su | on | super | super | sur | sobre | sobre | pe | sur |
+| le | la | the | the | le | les | las | as | le | la |
+| man | mano | hand | manus | mano | main | mano | mão | mână | mano |
+| commesse | commettere | committed | commisit | committite | a commis | cometió | cometeu | a comis | komitis |
+| mi | io | me | me | me | me | me | me | mă | min |
+| protesi | protendere | prostheses | prosthesis | prosthesis | prothèses | prótesis | próteses | proteze | protesoj |
+| guardando | guardare | watching | spectans | guardante | regardant | mirando | observando | privind | observante |
+| il | il | the | the | le | le | el | o | cel | la |
+| foco | fuoco | fire | focus | foco | feu | fuego | fogo | foc | fajro |
+| e | e | and | et | e | et | y | e | și | kaj |
+| imaginando | immaginare | imagining | imaginans | imaginante | imaginant | imaginando | imaginando | imaginând | imagante |
+| forte | forte | strong | fortis | forte | fort | fuerte | forte | puternic | forta |
+| umani | umano | human | humanus | human | humain | humano | humano | uman | homa |
+| corpi | corpo | bodies | corpora | corpora | corps | cuerpos | corpos | corpuri | korpoj |
+| già | già | already | iam | ja | déjà | ya | já | deja | jam |
+| veduti | vedere | seen | visus | vidite | vu | visto | visto | văzut | vidita |
+| accesi | accendere | lit | accensus | accendite | allumé | encendido | aceso | aprins | ekbrulita |
 </result>
 </query>
 <query>
@@ -379,7 +379,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Volsersi | volgersi | to turn | vertere | verter | se tourner | volverse | virar‑se | a se întoarce | turniĝi |
 | verso | verso | towards | versus | verso | vers | hacia | em direção a | spre | al |
 | me | io | me | me | me | me | me | me | mă | mi |
-| le | la | the | the* | le | les | las | as | le | la |
+| le | la | the | the | le | les | las | as | le | la |
 | buone | buono | good | bonum | bon | bonnes | buenas | boas | bune | bonaj |
 | scorte | scorta | escorts | custodes | escortas | escorts | escorts | escoltas | escorte | eskortoj |
 | e | e | and | et | e | et | y | e | și | kaj |
@@ -395,8 +395,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
 | non | non | not | non | non | non | no | não | nu | ne |
 | morte | morte | death | mors | morte | mort | muerte | morte | moarte | mort |
-
-\*Latin has no definite article; “the” is rendered here for consistency.
 </result>
 </query>
 <query>
@@ -546,28 +544,30 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 |---|---|---|---|---|---|---|---|---|---|
 | E | e | and | et | e | et | y | e | și | kaj |
 | se | se | if | si | si | si | si | se | dacă | se |
-| tu | tu | you | tu | tu | tu | tú | tu | tu | vi |
-| forse | forse | perhaps | forsitan | forsan | peut‑être | quizá | talvez | poate | eble |
-| credi | credere | believe | credere | creder | croire | creer | crer | crede | kredi |
+| tu | tu | you (singular) | tu | tu | tu | tú | tu | tu | vi |
+| forse | forse | perhaps | forsitan | forse | peut‑être | quizás | talvez | poate | eble |
+| credi | credere | believe | credis | crede | crois | crees | crês | crezi | kredas |
 | ch' | che | that | quod | que | que | que | que | că | ke |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
-| t' | tu | you | te | te | te | te | te | te | vin |
-| inganni | ingannare | deceive | decipere | deceper | tromper | engañar | enganar | înșela | trompi |
+| t' | tu | you (object) | te | te | te | te | te | te | vin |
+| inganni | ingannare | deceive | fallere | ingannar | tromper | engañar | enganar | înșela | trompi |
 | fatti | fare | facts | facta | factos | faits | hechos | fatos | fapte | faktoj |
-| ver' | verso | towards | versus | verso | vers | hacia | para | spre | al |
-| lei | lei | she | ea | illa | elle | ella | ela | ea | ŝi |
+| ver' | verso | towards | versus | verso | vers | hacia | rumo a | spre | al |
+| lei | lei | she | illa | illa | elle | ella | ela | ea | ŝi |
 | e | e | and | et | e | et | y | e | și | kaj |
 | fatti | fare | facts | facta | factos | faits | hechos | fatos | fapte | faktoj |
-| far | fare | to do | facere | far | faire | hacer | fazer | a face | fari |
-| credenza | credenza | belief | credere | credenza | croyance | creencia | crença | credință | kredo |
+| far | fare | to do | facere | facer | faire | hacer | fazer | a face | fari |
+| credenza | credenza | belief | credentia | credentia | croyance | creencia | crença | credință | kredo |
 | con | con | with | cum | con | avec | con | com | cu | kun |
-| le | la | the | eas | le | les | las | as | le | la |
-| tue | tuo | your | tua | tu | tes | tus | tuas | tale | via |
-| mani | mano | hands | manus | manos | mains | manos | mãos | mâini | manoj |
+| le | la | the (feminine plural) | las | le | les | las | as | le | la |
+| tue | tuo | your (feminine plural) | tua | tu | tes | tus | teus | tale | viaj |
+| mani | mano | hands | manus | manus | mains | manos | mãos | mâini | manoj |
 | al | a+il | to the | ad | al | au | al | ao | la | al |
-| lembo | lembo | flap | limbus | lembo | languette | solapa | aba | banda | flapo |
+| lembo | lembo | flap | lamina | lembo | lambeau | solapa | aba | clapetă | flapo |
 | d' | di | of | de | de | de | de | de | de | de |
-| i | il | the | illos | le | les
+| i | il | the (masc. plural) | illi | le | les | los | os | îi | la |
+| tuoi | tuo | your (masc. plural) | tui | tu | tes | tus | teus | tăi | viaj |
+| panni | panno | clothes | vestimenta | vestimentos | vêtements | ropa | roupas | haine | vestoj |
 </result>
 </query>
 <query>
@@ -1498,11 +1498,11 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 |---|---|---|---|---|---|---|---|---|---|
 | tacite | tacito | silently | tacite | tacite | silencieusement | silenciosamente | silenciosamente | tăcut | silente |
 | a | a | to | ad | a | à | a | a | la | al |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | ombra | ombra | shadow | umbra | umbra | ombre | sombra | sombra | umbră | ombro |
 | mentre | mentre | while | dum | dum | pendant que | mientras | enquanto | în timp ce | dum |
 | che | che | that | quod | que | que | que | que | că | ke |
-| 'l | il | the |  | le | le | el | o |  | la |
+| 'l | il | the | | le | le | el | o | | la |
 | sol | sole | sun | sol | sol | soleil | sol | sol | soare | suno |
 | ferve | fervore | fervor | fervor | fervor | ferveur | fervor | fervor | fervor | fervoro |
 | guardate | guardare | watch | spectate | guardate | regardez | mirad | olhai | priviţi | rigardu |
@@ -1511,7 +1511,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | che | che | that | quod | que | que | que | que | că | ke |
 | 'n | in | in | in | in | dans | en | em | în | en |
 | su | su | on | super | super | sur | sobre | sobre | pe | sur |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | verga | verga | rod | virga | virga | verge | verga | verga | virgă | vergo |
 | poggiato | poggiare | leaning | appositus | appoggiato | appuyé | apoyado | apoiado | sprijinit | apogita |
 | s' | si | himself | se | se | se | se | se | se | si |
@@ -1555,13 +1555,13 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 |---|---|---|---|---|---|---|---|---|---|
 | e | e | and | et | e | et | y | e | și | kaj |
 | quale | quale | which | qui | qual | quel | qué | qual | care | kiu |
-| il | il | the |  | le | le | el | o | l | la |
+| il | il | the | | le | le | el | o | l | la |
 | mandrïan | mandriano | mandrake | mandragora | mandragora | mandragore | mandrágora | mandrágora | mandragoră | mandragoro |
 | che | che | that | quod | que | que | que | que | că | ke |
 | fori | fuori | outside | foris | foras | dehors | afuera | fora | afară | ekstere |
 | alberga | albergare | lodge | hospitari | albergare | loger | alojar | alojar | caza | loĝi |
 | lungo | lungo | long | longus | longo | long | largo | longo | lung | longa |
-| il | il | the |  | le | le | el | o | l | la |
+| il | il | the | | le | le | el | o | l | la |
 | pecuglio | pecuglio | kid (goat) | capreolus | pecuglio | chevreau | cabrito | cabrito | capră | kaproido |
 | suo | suo | his | suus | suo | son | su | seu | al său | lia |
 | queto | quieto | quiet | quietus | quieto | calme | quieto | quieto | liniștit | kvieta |

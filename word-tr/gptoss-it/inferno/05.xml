@@ -298,7 +298,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | vieni | venire | come | veni | veni | viens | vienes | vens | vii | venu |
 | al | a+il | to the | ad | al | au | al | ao | la | al |
 | doloroso | doloroso | painful | dolorosus | doloroso | douloureux | doloroso | doloroso | dureros | dolora |
-| ospizio | ospizio | asylum | asylum* | ospizio | asile | asilo | asilo | azil | asilo |
+| ospizio | ospizio | asylum | asylum | ospizio | asile | asilo | asilo | azil | asilo |
 | disse | dire | said | dixit | dixit | dit | dijo | disse | spuse | diris |
 | Minòs | Minòs | Minos | Minos | Minos | Minos | Minos | Minos | Minos | Minos |
 | a | a | to | ad | a | à | a | a | la | al |
@@ -307,7 +307,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | mi | mi | me | mihi | mi | me | me | me | mi | mi |
 | vide | vedere | saw | vidit | vidit | vit | vio | viu | a văzut | vidis |
 | lasciando | lasciare | leaving | relinquens | lasciante | en laissant | dejando | deixando | lăsând | lasante |
-| l' | il | the |  | le | le | el | o | l' | la |
+| l' | il | the | | le | le | el | o | l' | la |
 | atto | atto | act | actum | acto | acte | acto | ato | act | ago |
 | di | di | of | de | de | de | de | de | de | de |
 | cotanto | tanto | as much | tam | tanto | tant | tanto | tanto | atât | tiom |
@@ -2082,29 +2082,29 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | pio | pio | | | | | | | | |
 </prompt>
 <result>
-| Italian   | Lemma        | English | Latin      | Interlingua | French      | Spanish   | Portuguese | Romanian   | Esperanto |
-|-----------|--------------|---------|------------|-------------|-------------|-----------|------------|------------|-----------|
-| Poi       | poi          | then    | postea     | postea      | puis        | después   | depois     | apoi       | poste |
-| mi        | mi           | me      | mihi       | me          | me          | me        | me         | mie        | mi |
-| rivolsi   | rivolgersi   | turned  | converti   | converti    | tourné      | volví     | virei      | am întors  | turniĝis |
-| a         | a            | to      | ad         | a           | à           | a         | a          | la         | al |
-| loro      | loro         | them    | eos        | les         | eux         | ellos     | eles       | ei         | ili |
-| e         | e            | and     | et         | e           | et          | y         | e          | și         | kaj |
-| parla'    | parlare      | speak   | loqui      | parlar      | parler      | hablar    | falar      | vorbi      | paroli |
-| io        | io           | I       | ego        | io          | je          | yo        | eu         | eu         | mi |
-| e         | e            | and     | et         | e           | et          | y         | e          | și         | kaj |
-| cominciai | cominciare   | began   | coepi      | comenci     | commençai   | comencé   | comecei    | am început | komencis |
-| Francesca | Francesca    | Francesca| Francesca  | Francesca   | Francesca   | Francisca | Francisca  | Francesca  | Francesca |
-| i         | i            | the     | —          | le          | les         | los       | os         | i          | la |
-| tuoi      | tuo          | your    | tui        | tu          | tes         | tus       | teus       | tăi        | viaj |
-| martìri   | martirio     | martyrs | martyrēs   | martires    | martyrs     | mártires  | mártires   | martiri    | martiroj |
-| a         | a            | to      | ad         | a           | à           | a         | a          | la         | al |
-| lagrimar  | lagrimare    | weep    | lacrimare  | lagrimar    | pleurer     | llorar    | chorar     | plânge     | larmigi |
-| mi        | mi           | me      | mihi       | me          | me          | me        | me         | mie        | mi |
-| fanno     | fare         | make    | facere     | facer       | font        | hacen     | fazem      | fac        | faras |
-| tristo    | triste       | sad     | tristis    | tristo      | triste      | triste    | triste     | trist      | malĝoja |
-| e         | e            | and     | et         | e           | et          | y         | e          | și         | kaj |
-| pio       | pio          | pious   | pius       | pio         | pieux       | pío       | pío        | pios       | pia |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| Poi | poi | then | postea | postea | puis | después | depois | apoi | poste |
+| mi | mi | me | mihi | me | me | me | me | mie | mi |
+| rivolsi | rivolgersi | turned | converti | converti | tourné | volví | virei | am întors | turniĝis |
+| a | a | to | ad | a | à | a | a | la | al |
+| loro | loro | them | eos | les | eux | ellos | eles | ei | ili |
+| e | e | and | et | e | et | y | e | și | kaj |
+| parla' | parlare | speak | loqui | parlar | parler | hablar | falar | vorbi | paroli |
+| io | io | I | ego | io | je | yo | eu | eu | mi |
+| e | e | and | et | e | et | y | e | și | kaj |
+| cominciai | cominciare | began | coepi | comenci | commençai | comencé | comecei | am început | komencis |
+| Francesca | Francesca | Francesca | Francesca | Francesca | Francesca | Francisca | Francisca | Francesca | Francesca |
+| i | i | the | — | le | les | los | os | i | la |
+| tuoi | tuo | your | tui | tu | tes | tus | teus | tăi | viaj |
+| martìri | martirio | martyrs | martyrēs | martires | martyrs | mártires | mártires | martiri | martiroj |
+| a | a | to | ad | a | à | a | a | la | al |
+| lagrimar | lagrimare | weep | lacrimare | lagrimar | pleurer | llorar | chorar | plânge | larmigi |
+| mi | mi | me | mihi | me | me | me | me | mie | mi |
+| fanno | fare | make | facere | facer | font | hacen | fazem | fac | faras |
+| tristo | triste | sad | tristis | tristo | triste | triste | triste | trist | malĝoja |
+| e | e | and | et | e | et | y | e | și | kaj |
+| pio | pio | pious | pius | pio | pieux | pío | pío | pios | pia |
 </result>
 </query>
 <query>

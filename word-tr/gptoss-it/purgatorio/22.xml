@@ -585,7 +585,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | fossi | essere | were | esses | esser | fusse | fueras | fosses | ai fi | estus |
 | avaro | avaro | greedy | avarus | avaro | avare | avaro | avarento | avar | avara |
 | in | in | in | in | in | dans | en | em | în | en |
-| l' | il | the | illum* | le | le | el | o | (el) | la |
+| l' | il | the | illum | le | le | el | o | (el) | la |
 | altra | altro | other | alia | altere | autre | otra | outra | altă | alia |
 | vita | vita | life | vita | vita | vie | vida | vida | viață | vivo |
 | forse | forse | perhaps | fortasse | forse | peut‑être | quizá | talvez | poate | eble |
@@ -1591,21 +1591,27 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | E | e | and | et | e | et | y | e | și | kaj |
-| pria | prima | first | primum | prime | premier | primero | primeiro | primul | unua |
+| pria | prima | before | ante | ante | avant | antes | antes | înainte | antaŭ |
 | ch' | che | that | quod | que | que | que | que | că | ke |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
-| conducessi | condurre | lead | ducere | conducer | conduire | conducir | conduzir | conduce | konduki |
-| i | il | the | — | le | les | los | os | cei | la |
+| conducessi | condurre | lead | ducere | conducer | conduire | conducir | conduzir | a conduce | konduki |
+| i | il | the (pl.) | — | le | les | los | os | i | la |
 | Greci | greco | Greeks | Graeci | grecos | Grecs | griegos | gregos | greci | grekoj |
 | a' | a+i | to | ad | a | à | a | a | la | al |
-| fiumi | fiume | rivers | flumina | fluvios | rivières | ríos | rios | râuri | riveroj |
+| fiumi | fiume | rivers | flumina | fluvios | rivières | ríos | rios | fluvii | riveroj |
 | di | di | of | de | de | de | de | de | de | de |
-| Tebe | Tebe | Thebes | Thebae | Tebas | Thèbes | Tebas | Tebas | Teba | Tebo |
-| poetando | poetare | poetizing | poetare | poetizar | poétiser | poetizar | poetizar | poetiza | poetadi |
-| ebb' | avere | had | habuit | habebat | avait | tenía | tinha | avea | havis |
+| Tebe | Tebe | Thebes | Thebae | Tebes | Thèbes | Tebas | Tebas | Teba | Tebo |
+| poetando | poetare | poetizing | poetando | poetante | poétant | poetando | poetando | poetând | poetante |
+| ebb' | avere | had | habuit | habebate | avait | había | tinha | avea | havis |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
 | battesmo | battesimo | baptism | baptismus | baptismo | baptême | bautismo | batismo | botez | baptismo |
-| ma | ma | but | sed | ma | mais |
+| ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
+| per | per | for | per | per | pour | por | por | pentru | por |
+| paura | paura | fear | timor | timor | peur | miedo | medo | frică | timo |
+| chiuso | chiuso | closed | clausus | claus | fermé | cerrado | fechado | închis | ferma |
+| cristian | cristiano | Christian | Christianus | christian | chrétien | cristiano | cristão | creștin | kristano |
+| fu' | essere | was | erat | esseva | était | era | era | era | estis |
+| mi | mi | me | me | me | me | me | me | mă | mi |
 </result>
 </query>
 <query>
@@ -2709,11 +2715,11 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | e | e | and | et | e | et | y | e | și | kaj |
 | locuste | locusta | locusts | locustae | locustas | locustes | langostas | gafanhotos | lăcuste | lokustoj |
 | furon | essere | were | erant | fueron | étaient | fueron | foram | fuseau | estis |
-| le | il/la/lo/i/gli/le | the |  | le | le | la | o |  | la |
+| le | il/la/lo/i/gli/le | the | | le | le | la | o | | la |
 | vivande | vivanda | food | cibus | cibo | nourriture | alimentos | alimentos | alimente | nutraĵoj |
 | che | che | that | quod | que | que | que | que | că | ke |
-| nodriro | nutrire | I will nourish | nutriré* | nutrir | nourrirai | nutriré | nutrirei | voi hrăni | nutros |
-| il | il | the |  | le | le | el | o |  | la |
+| nodriro | nutrire | I will nourish | nutriré | nutrir | nourrirai | nutriré | nutrirei | voi hrăni | nutros |
+| il | il | the | | le | le | el | o | | la |
 | Batista | Battista | Baptist | Baptista | Baptista | Baptiste | Bautista | Baptista | Baptist | Baptisto |
 | nel | in+il | in the | in | in | dans le | en el | no | în | en la |
 | diserto | deserto | desert | desertum | deserto | désert | desierto | deserto | deșert | dezerto |

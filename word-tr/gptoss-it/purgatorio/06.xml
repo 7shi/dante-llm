@@ -338,7 +338,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Federigo | Federigo | Frederick | Fredericus | Federigo | Frédéric | Federico | Frederico | Frederic | Federiko |
 | Novello | Novello | Novello | Novellus | Novello | Novello | Novello | Novello | Novello | Novello |
 | e | e | and | et | e | et | y | e | și | kaj |
-| quel | quello | that | ille |quele| ce | ese | esse | acel | tiu |
+| quel | quello | that | ille | quele | ce | ese | esse | acel | tiu |
 | da | da | by | ab | de | de | de | de | de | de |
 | Pisa | Pisa | Pisa | Pisa | Pisa | Pise | Pisa | Pisa | Pisa | Pizo |
 | che | che | who | qui | qui | qui | que | que | care | kiu |
@@ -839,15 +839,15 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Veramente | veramente | truly | vere | vermente | vraiment | verdaderamente | verdadeiramente | adevărat | vere |
+| Veramente | veramente | truly | vere | vermente | vraiment | verdaderamente | verdadeiramente | cu adevărat | vere |
 | a | a | to | ad | a | à | a | a | la | al |
 | così | così | so | sic | sic | ainsi | así | assim | astfel | tiel |
 | alto | alto | high | altus | alto | haut | alto | alto | înalt | alta |
 | sospetto | sospetto | suspicion | suspectio | suspicion | suspicion | sospecha | suspeita | suspiciune | suspekto |
 | non | non | not | non | non | pas | no | não | nu | ne |
 | ti | tu | you | te | te | te | te | te | te | vin |
-| fermar | fermare | stop | sistere | stoppar | arrêter | parar | parar | opri | halti |
-| se | se | if | si | si | si | si | se | dacă | se |
+| fermar | fermare | stop | sistere | parar | arrêter | detener | parar | opri | halti |
+| se | se | oneself | se | se | se | se | se | se | si |
 | quella | quello | that | illa | ille | cette | esa | essa | aceea | tiu |
 | nol | non+lo | not it | non illud | non lo | ne le | no lo | não o | nu‑l | ne ĝin |
 | ti | tu | you | te | te | te | te | te | te | vin |
@@ -855,11 +855,11 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | che | che | that | quod | que | que | que | que | că | ke |
 | lume | lume | light | lumen | luce | lumière | luz | luz | lumină | lumo |
 | fia | essere | will be | erit | sera | sera | será | será | va fi | estos |
-| tra | tra | among | inter | inter | parmi | entre | entre | între | inter |
-| 'l | il | the | ille | le | le | el | o | cel | la |
+| tra | tra | between | inter | inter | entre | entre | entre | între | inter |
+| 'l | il | the | (—) | le | le | el | o | (—) | la |
 | vero | vero | true | verus | ver | vrai | verdadero | verdadeiro | adevărat | vera |
-| e | e | and | et | e | et | y | și | kaj |
-| lo | il | it | illum | lo | le | lo | o | îl | ĝin |
+| e | e | and | et | e | et | y | e | și | kaj |
+| lo | il | it | eum | lo | le | lo | o | îl | ĝin |
 | 'ntelletto | intelletto | intellect | intellectus | intellecto | intellect | intelecto | intelecto | intelect | intelekto |
 </result>
 </query>
@@ -1140,7 +1140,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | quella | quello | that | illa | illa | celle | esa | essa | acea | tiu |
 | ne | di+e | of it | eius | de illo | en | de él | dele | al său | de ĝi |
 | 'nsegnerà | insegnare | will teach | docebit | instruira | enseignera | enseñará | ensinará | va învăța | instruos |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | via | via | way | via | via | voie | vía | via | cale | vojo |
 | più | più | more | plus | plus | plus | más | mais | mai | pli |
 | tosta | tosto | tough | durus | dure | dur | duro | duro | dur | malmola |

@@ -559,12 +559,12 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Or | ora | now | nunc | ora | maintenant | ahora | agora | acum | nun |
 | qui | qui | here | hic | hic | ici | aquí | aqui | aici | ĉi tie |
 | a | a | to | ad | a | à | a | a | la | al |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | question | questione | question | quaestio | question | question | pregunta | pergunta | întrebare | demando |
 | prima | primo | first | primus | prime | premier | primero | primeiro | primul | unua |
 | s' | si | himself | se | se | se | se | se | se | si |
 | appunta | appuntare | notes | annotat | annota | note | anota | anota | notează | notas |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | mia | mio | my | meus | mi | ma | mi | meu | mea | mia |
 | risposta | risposta | answer | responsum | responsa | réponse | respuesta | resposta | răspuns | respondo |
 | ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
@@ -671,7 +671,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Vedi | vedere | see | vide | vide | voir | ver | ver | a vedea | vidi |
 | quanta | quanto | how much | quantum | quanto | combien | cuánta | quanto | cât | kiom |
 | virtù | virtù | virtue | virtus | virtute | vertu | virtud | virtude | virtute | virto |
-| l' | il | the |  | le | le | el | o | cel | la |
+| l' | il | the | | le | le | el | o | cel | la |
 | ha | avere | has | habet | ha | a | ha | há | are | havas |
 | fatto | fare | made | factum | facto | fait | hecho | feito | făcut | farita |
 | degno | degno | worthy | dignus | digno | digne | digno | digno | demn | digna |
@@ -680,7 +680,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | e | e | and | et | e | et | y | e | și | kaj |
 | cominciò | cominciare | began | coepit | comenciava | commença | comenzó | começou | începu | komencis |
 | da | da | from | ab | de | de | de | de | de | de |
-| l' | il | the |  | le | le | el | o | cel | la |
+| l' | il | the | | le | le | el | o | cel | la |
 | ora | ora | now | nunc | ora | maintenant | ahora | agora | acum | nun |
 | che | che | that | quod | que | que | que | que | că | ke |
 | Pallante | Pallante | Pallante | Pallante | Pallante | Pallante | Pallante | Pallante | Pallante | Pallante |
@@ -958,7 +958,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 |---|---|---|---|---|---|---|---|---|---|
 | Esso | esso | he | is | il | il | él | ele | el | li |
 | atterrò | atterrare | landed | appulsit | atterrava | a atterri | aterrizó | aterris​sou | a aterizat | surteriĝis |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | orgoglio | orgoglio | pride | superbia | orgolio | orgueil | orgullo | orgulho | mândrie | fiero |
 | de | di | of | de | de | de | de | de | de | de |
 | li | il | them | eos | los | les | los | os | îi | ilin |
@@ -969,7 +969,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | ad | a | to | ad | a | à | a | a | la | al |
 | Anibale | Annibale | Hannibal | Hannibal | Hannibal | Hannibal | Aníbal | Aníbal | Anibal | Hannibal |
 | passaro | passare | to pass | transire | passar | passer | pasar | passar | a trece | pasi |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | alpestre | alpestre | alpine | alpestris | alpestre | alpin | alpino | alpino | alpestru | alpa |
 | rocce | rocca | rocks | rupes | rocas | roches | rocas | rochas | stânci | rokoj |
 | Po | Po | Po | Po | Po | Po | Po | Po | Po | Po |
@@ -1122,21 +1122,28 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | E | e | and | et | e | et | y | e | și | kaj |
-| quel | quello | that | ille | quele | ce | ese | esse | acel | tiu |
-| che | che | that | qui | que | qui | que | que | care | ke |
-| fé | fare | did | fecit | fecit | fit | hizo | fez | am făcut | faris |
-| da | da | from | ab | de | de | de | de | de | de |
+| quel | quello | that | ille | ille | celui | ese | esse | acel | tiu |
+| che | che | that | quod | que | que | que | que | că | ke |
+| fé | fare | did | fecit | faci | fit | hizo | fez | a făcut | faris |
+| da | da | by | ab | per | par | por | por | de | per |
 | Varo | Varo | Varo | Varo | Varo | Varo | Varo | Varo | Varo | Varo |
-| infino | fino | until | usque | usque | jusqu'à | hasta | até | până la | ĝis |
+| infino | fino | until | usque ad | fino a | jusqu'à | hasta | até | până la | ĝis |
 | a | a | to | ad | a | à | a | a | la | al |
-| Reno | Reno | Rhine | Rhenus | Rheno | Rhin | Rin | Reno | Rin | Reno |
+| Reno | Reno | Rhine | Rhenus | Reno | Rhin | Rin | Reno | Rin | Reno |
 | Isara | Isara | Isara | Isara | Isara | Isara | Isara | Isara | Isara | Isara |
-| vide | vedere | sees | videt | vide | voit | ve | vê | vede | vidas |
+| vide | vedere | saw | vidit | videva | vit | vio | viu | a văzut | vidis |
 | ed | e | and | et | e | et | y | e | și | kaj |
-| Era | Era | was | erat | erat | était | era | era | era | estis |
+| Era | Era | was | erat | esseva | était | era | era | era | estis |
 | e | e | and | et | e | et | y | e | și | kaj |
-| vide | vedere | sees | videt | vide | voit | ve | vê | vede | vidas |
-| Senna | Senna | Senna | Senna | Senna | Sen
+| vide | vedere | saw | vidit | videva | vit | vio | viu | a văzut | vidis |
+| Senna | Senna | Senna | Senna | Senna | Senne | Sena | Sena | Sena | Senna |
+| e | e | and | et | e | et | y | e | și | kaj |
+| ogne | ogni | every | omnis | omne | tout | todo | todo | fiecare | ĉiu |
+| valle | valle | valley | vallis | valle | vallée | valle | vale | vale | vallejo |
+| onde | onde | waves | undae | ondas | vagues | ondas | ondas | valuri | ondoj |
+| Rodano | Rodano | Rhône | Rhodanus | Rodano | Rhône | Ródano | Ródano | Rodano | Rodano |
+| è | essere | is | est | es | est | es | é | este | estas |
+| pieno | pieno | full | plenus | pleno | plein | lleno | cheio | plin | plena |
 </result>
 </query>
 <query>

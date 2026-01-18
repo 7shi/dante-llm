@@ -981,25 +981,25 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | soggioga | soggiogare | | | | | | | | |
 </prompt>
 <result>
-| Italian   | Lemma        | English      | Latin      | Interlingua | French      | Spanish    | Portuguese | Romanian   | Esperanto |
-|-----------|--------------|--------------|------------|-------------|-------------|------------|------------|------------|-----------|
-| siede     | sedere       | sits         | sedet      | sede        | s'assied    | se sienta  | senta‑se   | stă        | sidas |
-| la        | la           | the          | illa       | le          | la | la         | a          | a          | la |
-| fortunata | fortunato    | fortunate    | fortunata  | fortunata   | fortunée    | afortunada | afortunada | norocoasă  | bonŝanca |
-| Calaroga  | Calaroga     | Calaroga     | Calaroga   | Calaroga    | Calaroga    | Calaroga   | Calaroga   | Calaroga   | Calaroga |
-| sotto     | sotto        | under        | sub        | sub         | sous        | bajo       | sob        | sub        | sub |
-| la        | la           | the          | illa       | le          | la          | la         | a          | a          | la |
-| protezion | protezione   | protection   | protectio  | protection  | protection  | protección | proteção   | protecție  | protekto |
-| del       | di+il        | of the       | de         | del         | du          | del        | do         | al         | de la |
-| grande    | grande       | big          | magnus     | grande      | grand       | grande     | grande     | mare       | granda |
-| scudo     | scudo        | shield       | scutum     | scudo       | bouclier    | escudo     | escudo     | scut       | ŝildo |
-| in        | in           | in           | in         | in          | en          | en         | em         | în         | en |
-| che       | che          | that         | quod       | que         | que         | que        | que        | că         | ke |
-| soggiace  | soggiacere   | lies         | iacet      | iace        | gît         | yace       | jaz        | zace       | kuŝas |
-| il        | il           | the          | ille       | le          | le          | el         | o          | cel        | la |
-| leone     | leone        | lion         | leo        | leone       | lion        | león       | leão       | leu        | leono |
-| e         | e            | and          | et         | e           | et          | y          | e          | și         | kaj |
-| soggioga  | soggiogare   | subjugates   | subjugat   | subjugare   | subjugue    | subyuga    | subjulga   | subjugă    | subjugas |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| siede | sedere | sits | sedet | sede | s'assied | se sienta | senta‑se | stă | sidas |
+| la | la | the | illa | le | la | la | a | a | la |
+| fortunata | fortunato | fortunate | fortunata | fortunata | fortunée | afortunada | afortunada | norocoasă | bonŝanca |
+| Calaroga | Calaroga | Calaroga | Calaroga | Calaroga | Calaroga | Calaroga | Calaroga | Calaroga | Calaroga |
+| sotto | sotto | under | sub | sub | sous | bajo | sob | sub | sub |
+| la | la | the | illa | le | la | la | a | a | la |
+| protezion | protezione | protection | protectio | protection | protection | protección | proteção | protecție | protekto |
+| del | di+il | of the | de | del | du | del | do | al | de la |
+| grande | grande | big | magnus | grande | grand | grande | grande | mare | granda |
+| scudo | scudo | shield | scutum | scudo | bouclier | escudo | escudo | scut | ŝildo |
+| in | in | in | in | in | en | en | em | în | en |
+| che | che | that | quod | que | que | que | que | că | ke |
+| soggiace | soggiacere | lies | iacet | iace | gît | yace | jaz | zace | kuŝas |
+| il | il | the | ille | le | le | el | o | cel | la |
+| leone | leone | lion | leo | leone | lion | león | leão | leu | leono |
+| e | e | and | et | e | et | y | e | și | kaj |
+| soggioga | soggiogare | subjugates | subjugat | subjugare | subjugue | subyuga | subjulga | subjugă | subjugas |
 </result>
 </query>
 <query>
@@ -1031,8 +1031,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | crudo | crudo | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | dentro | dentro | inside | intra | dentro | à l'intérieur | dentro | dentro | înăuntru | ene |
@@ -1095,7 +1093,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | fu | essere | was | fuit | fuit | fut | fue | foi | fost | estis |
 | repleta | riempire | filled | repleta | repleta | remplie | repleta | repleta | repleta | plenigita |
 | sì | sì | so | sic | sic | si | así | assim | așa | tiel |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | sua | suo | her | sua | sua | sa | su | sua | a ei | ŝia |
 | mente | mente | mind | mens | mente | esprit | mente | mente | minte | mens |
 | di | di | of | de | de | de | de | de | de | de |
@@ -1103,7 +1101,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | vertute | virtù | virtue | virtus | virtute | vertu | virtud | virtude | virtute | virto |
 | che | che | that | quod | que | que | que | que | că | ke |
 | ne | in+la | of | ex | de | de | de | de | de | de |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | madre | madre | mother | mater | madre | mère | madre | mãe | mamă | patrino |
 | lei | egli | she | ea | illa | elle | ella | ela | ea | ŝi |
 | fece | fare | made | fecit | fecit | fit | hizo | fez | fece | faris |
@@ -1195,22 +1193,20 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | rede | redo | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | donna | donna | woman | femina | donna | femme | mujer | mulher | femeie | virino |
 | che | che | that | quod | que | que | que | que | că | ke |
 | per | per | for | per | per | pour | por | por | pentru | por |
 | lui | lui | him | eum | le | lui | le | lhe | el | lin |
-| l' | il | the |  | le | le | el | o | l | la |
+| l' | il | the | | le | le | el | o | l | la |
 | assenso | assenso | assent | assensus | assenso | assentiment | asentimiento | assentimento | asentiment | asento |
 | diede | dare | gave | dedit | dava | donna | dio | deu | dăduse | donis |
 | vide | vedere | sees | videt | vide | voit | ve | vê | vede | vidas |
 | nel | in+il | in the | in | in | dans le | en el | no | în | en |
 | sonno | sonno | sleep | somnus | sono | sommeil | sueño | sono | somn | sono |
-| il | il | the |  | le | le | el | o | l | la |
+| il | il | the | | le | le | el | o | l | la |
 | mirabile | mirabile | wonderful | mirabile | mirabile | merveilleux | maravilloso | maravilhoso | mirabil | mirinda |
 | frutto | frutto | fruit | fructus | frutto | fruit | fruta | fruta | fruct | frukto |
 | ch' | che | that | quod | que | que | que | que | că | ke |
@@ -1220,7 +1216,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | lui | lui | him | eum | le | lui | le | lhe | el | lin |
 | e | e | and | et | e | et | y | e | și | kaj |
 | de | di | of | de | de | de | de | de | de | de |
-| le | la | the |  | le | les | las | as | le | la |
+| le | la | the | | le | les | las | as | le | la |
 | rede | redo | net | rete | rete | réseau | red | rede | rețea | reto |
 </result>
 </query>
@@ -1362,31 +1358,31 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Cristo | Cristo | | | | | | | | |
 </prompt>
 <result>
-.| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Ben | bene | well | bene | ben | bien | bien | bem | bine | bone |
-| parve | parere | seemed | videbant | semblava | paraissaient | parecían | pareciam | păreau | ŝajnis |
-| messo | mettere | put | positus | misso | mis | puesto | posto | pus | metita |
+| parve | parere | seemed | videbatur | pareva | semblait | parecía | parecia | părea | ŝajnis |
+| messo | mettere | put | posuit | misso | mis | puesto | posto | pus | metita |
 | e | e | and | et | e | et | y | e | și | kaj |
 | famigliar | familiare | familiar | familiaris | familiar | familier | familiar | familiar | familiar | familia |
 | di | di | of | de | de | de | de | de | de | de |
-| Cristo | Cristo | Christ | Christus | Christo | Christ | Cristo | Cristo | Cristos | Kristo |
-| che | che | that | qui | que | qui | que | que | care | ke |
-| 'l | il | the | — | le | le | el | o | — | la |
-| primo | primo | first | primus | prime | premier | primero | primeiro | primul | unua |
+| Cristo | Cristo | Christ | Christus | Cristo | Christ | Cristo | Cristo | Cristos | Kristo |
+| che | che | that | quod | que | que | que | que | că | ke |
+| 'l | il | the | ille | le | le | el | o | l | la |
+| primo | primo | first | primus | primo | premier | primero | primeiro | primul | unua |
 | amor | amore | love | amor | amor | amour | amor | amor | dragoste | amo |
-| che | che | that | qui | que | qui | que | que | care | ke |
+| che | che | that | quod | que | que | que | que | că | ke |
 | 'n | in | in | in | in | dans | en | em | în | en |
-| lui | lui | him | eum | lo | lui | él | ele | el | lin |
-| fu | essere | was | fuit | fuit | fut | fue | foi | fost | estis |
-| manifesto | manifesto | manifest | manifestus | manifesto | manifest | manifiesto | manifesto | manifest | manifesto |
-| fu | essere | was | fuit | fuit | fut | fue | foi | fost | estis |
-| al | a+il | to the | ad | al | au | al | ao | la | al la |
-| primo | primo | first | primus | prime | premier | primero | primeiro | primul | unua |
-| consiglio | consiglio | council | concilium | consilio | conseil | consejo | conselho | consiliu | konsilio |
-| che | che | that | qui | que | qui | que | que | care | ke |
-| diè | dare | gave | dedit | dava | donna | dio | deu | dădu | donis |
-| Cristo | Cristo | Christ | Christus | Christo | Christ | Cristo | Cristo | Cristos | Kristo |
+| lui | lui | him | eum | le | lui | él | ele | el | li |
+| fu | essere | was | fuit | esseva | fut | fue | foi | fu | estis |
+| manifesto | manifesto | manifest | manifestus | manifesto | manifeste | manifiesto | manifesto | manifest | manifesto |
+| fu | essere | was | fuit | esseva | fut | fue | foi | fu | estis |
+| al | a+il | to the | ad | al | au | al | ao | la | al |
+| primo | primo | first | primus | primo | premier | primero | primeiro | primul | unua |
+| consiglio | consiglio | council | consilium | consilio | conseil | consejo | conselho | consiliu | konsilio |
+| che | che | that | quod | que | que | que | que | că | ke |
+| diè | dare | gave | dedit | dedit | donna | dio | deu | dă | donis |
+| Cristo | Cristo | Christ | Christus | Cristo | Christ | Cristo | Cristo | Cristos | Kristo |
 </result>
 </query>
 <query>
@@ -1418,8 +1414,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | questo | questo | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Spesse | spesso | often | saepe | sovente | souvent | a menudo | frequentemente | adesea | ofte |
@@ -1469,8 +1463,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | dice | dire | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Oh | oh | oh | heu | oh | oh | oh | oh | oh | ho |
@@ -1640,8 +1632,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | traligna | tralignare | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | E | e | and | et | e | et | y | e | și | kaj |
@@ -1798,8 +1788,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | preme | premere | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Poi | poi | then | deinde | pois | puis | luego | então | apoi | poste |
@@ -1850,8 +1838,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | grosse | grosso | | | | | | | | |
 </prompt>
 <result>
-table.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | e | e | and | et | e | et | y | e | și | kaj |
@@ -1967,15 +1953,15 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Se | se | if | si | si | si | si | se | dacă | se |
 | tal | tale | such | talis | tal | tel | tal | tal | tal | tiel |
 | fu | essere | was | fuit | fuit | fut | fue | foi | fost | estis |
-| l' | il | the |  | le | le | el | o | l | la |
+| l' | il | the | | le | le | el | o | l | la |
 | una | uno | a | una | un | une | una | uma | o | unu |
 | rota | rota | wheel | rota | rota | roue | rueda | roda | roată | rado |
 | de | di | of | de | de | de | de | de | de | de |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | biga | biga | beam | biga | biga | poutre | viga | viga | bârnă | breto |
 | in | in | in | in | in | dans | en | em | în | en |
 | che | che | that | quod | que | que | que | que | că | ke |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | Santa | santo | holy | sancta | santa | sainte | santa | santa | sfântă | sankta |
 | Chiesa | chiesa | church | ecclesia | chiesa | église | iglesia | igreja | biserică | eklezio |
 | si | si | himself | se | se | se | se | se | se | si |
@@ -1984,7 +1970,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | vinse | vincere | won | vicit | vincite | gagna | ganó | ganhou | a câștigat | venkis |
 | in | in | in | in | in | dans | en | em | în | en |
 | campo | campo | field | campus | campo | champ | campo | campo | câmp | kampo |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | sua | suo | his | suus | suo | son | su | seu | al său | lia |
 | civil | civile | civil | civilis | civil | civil | civil | civil | civil | civila |
 | briga | briga | dispute | disputatio | disputa | dispute | disputa | disputa | dispută | disputo |
@@ -2194,30 +2180,30 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | tolta | tollere | | | | | | | | |
 </prompt>
 <result>
-.| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | e | e | and | et | e | et | y | e | și | kaj |
 | tosto | tosto | soon | cito | presto | bientôt | pronto | logo | curând | baldaŭ |
-| si | si | himself | se | se | se | se | se | se | si |
+| si | si | if | si | si | si | si | se | dacă | se |
 | vedrà | vedere | will see | videbit | videra | verra | verá | verá | va vedea | vidos |
 | de | di | of | de | de | de | de | de | de | de |
-| la | la | the | illa | la | la | la | a | cea | la |
+| la | la | the (fem.) | illa | la | la | la | a | la | la |
 | ricolta | ricolta | harvest | messis | racolta | récolte | cosecha | colheita | recoltă | rikolto |
 | de | di | of | de | de | de | de | de | de | de |
-| la | la | the | illa | la | la | la | a | cea | la |
-| mala | male | bad | malus | mal | mauvaise | mala | má | rău | malbona |
-| coltura | coltura | culture | cultura | cultura | culture | cultura | cultura | cultură | kulturo |
+| la | la | the (fem.) | illa | la | la | la | a | la | la |
+| mala | male | bad | malus | mal | mauvais | malo | mau | rău | malbona |
+| coltura | coltura | cultivation | cultura | cultura | culture | cultivo | cultura | cultură | kulturo |
 | quando | quando | when | quando | quando | quand | cuando | quando | când | kiam |
-| il | il | the | ille | il | le | el | o | cel | la |
+| il | il | the (masc.) | ille | il | le | el | o | cel | la |
 | loglio | loglio | loglio | loglio | loglio | loglio | loglio | loglio | loglio | loglio |
-| si | si | himself | se | se | se | se | se | se | si |
-| lagnerà | lamentare | will lament | lamentabit | lamentara | lamentera | lamentará | lamentará | va plânge | lamentos |
+| si | si | if | si | si | si | si | se | dacă | se |
+| lagnerà | lamentare | will lament | lamentabitur | lamentara | lamentera | lamentará | lamentará | va plânge | lamentos |
 | che | che | that | quod | que | que | que | que | că | ke |
-| l' | il | the | ille | il | l' | el | o | cel | la |
+| l' | il | the | ille | il | le | el | o | cel | la |
 | arca | arca | ark | arca | arca | arche | arca | arca | arca | arko |
-| li | a+li | to them | ad eos | a illos | à eux | a ellos | a eles | lor | al ili |
-| sia | essere | be | sit | sia | soit | sea | seja | fie | estu |
-| tolta | tollere | taken | tollita | tollita | prise | tomada | tomada | luată | prenita |
+| li | a+li | to them | illis | les | leur | les | lhes | lor | al ili |
+| sia | essere | may be | sit | sia | soit | sea | seja | fie | estu |
+| tolta | tollere | removed | tollita | tollita | enlevée | quitada | tirada | luată | forprenita |
 </result>
 </query>
 <query>
@@ -2362,8 +2348,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | cura | cura | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Io | io | I | ego | io | je | yo | eu | eu | mi |
@@ -2564,24 +2548,22 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | dotato | dotare | | | | | | | | |
 </prompt>
 <result>
-.
-
-| Italian      | Lemma      | English   | Latin          | Interlingua | French      | Spanish   | Portuguese | Romanian   | Esperanto |
-|--------------|------------|-----------|----------------|-------------|------------|-----------|------------|------------|-----------|
-| Rabano       | Rabano     | radish    | raphanus       | ravan       | radis      | rábano    | rabanete   | ridiche    | radizo |
-| è            | essere     | is        | est            | es          | est        | es        | é          | este       | estas |
-| qui          | qui        | here      | hic            | hic         | ici        | aquí      | aqui       | aici       | ĉi tie |
-| e            | e          | and       | et             | e           | et         | y         | e          | și         | kaj |
-| lucemi       | lucere     | I shine   | lucēo          | io lucio    | je brille  | brillo    | brilho     | strălucesc | mi brilas |
-| dallato      | dalare     | given     | datus          | dat         | donné      | dado      | dado       | dat        | donita |
-| il           | il         | the       | ille           | il          | le         | el        | o          | cel        | la |
-| calavrese    | calabrese  | Calabrian | Calabriensis   | calabrese   | calabrais  | calabrés  | calabrês   | calabrez   | kalabra |
-| abate        | abate      | abbot     | abbas          | abate       | abbé       | abad      | abade      | abate      | abato |
-| Giovacchino  | Giovacchino| Giovanni  | Ioannes        | Giovanni    | Jean       | Juan      | João       | Ioan       | Johano |
-| di           | di         | of        | de             | de          | de         | de        | de         | de         | de |
-| spirito      | spirito    | spirit    | spiritus       | spiritu     | esprit     | espíritu  | espírito   | spirit     | spirito |
-| profetico    | profetico  | prophetic | propheticus    | prophetic   | prophétique| profético | profético  | profetic   | profetia |
-| dotato       | dotare     | gifted    | dotatus        | dotate      | doué       | dotado    | dotado     | dotat      | dotita |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| Rabano | Rabano | radish | raphanus | ravan | radis | rábano | rabanete | ridiche | radizo |
+| è | essere | is | est | es | est | es | é | este | estas |
+| qui | qui | here | hic | hic | ici | aquí | aqui | aici | ĉi tie |
+| e | e | and | et | e | et | y | e | și | kaj |
+| lucemi | lucere | I shine | lucēo | io lucio | je brille | brillo | brilho | strălucesc | mi brilas |
+| dallato | dalare | given | datus | dat | donné | dado | dado | dat | donita |
+| il | il | the | ille | il | le | el | o | cel | la |
+| calavrese | calabrese | Calabrian | Calabriensis | calabrese | calabrais | calabrés | calabrês | calabrez | kalabra |
+| abate | abate | abbot | abbas | abate | abbé | abad | abade | abate | abato |
+| Giovacchino | Giovacchino | Giovanni | Ioannes | Giovanni | Jean | Juan | João | Ioan | Johano |
+| di | di | of | de | de | de | de | de | de | de |
+| spirito | spirito | spirit | spiritus | spiritu | esprit | espíritu | espírito | spirit | spirito |
+| profetico | profetico | prophetic | propheticus | prophetic | prophétique | profético | profético | profetic | profetia |
+| dotato | dotare | gifted | dotatus | dotate | doué | dotado | dotado | dotat | dotita |
 </result>
 </query>
 <query>
@@ -2609,8 +2591,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | latino | latino | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Ad | a | to | ad | ad | à | a | a | la | al |
@@ -2645,8 +2625,6 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | compagnia | compagnia | | | | | | | | |
 </prompt>
 <result>
-.
-
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | e | e | and | et | e | et | y | e | și | kaj |

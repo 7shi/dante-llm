@@ -661,10 +661,10 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | quant' | quanto | how much | quantum | quanto | combien | cuánto | quanto | cât | kiom |
 | è | essere | is | est | es | est | es | é | este | estas |
 | nascosa | nascondere | hide | celare | celar | cacher | esconder | esconder | ascunde | kaŝi |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | veritate | verità | truth | veritas | veritate | vérité | verdad | verdade | adevăr | vero |
 | a | a | to | ad | a | à | a | a | la | al |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | gente | gente | people | gentes | gente | gens | gente | gente | gente | popolo |
 | ch' | che | that | quod | que | que | que | que | că | ke |
 | avvera | avverare | happen | accidere | accader | se produire | suceder | acontecer | se întâmpla | okazi |
@@ -707,30 +707,30 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | cera | cera | | | | | | | | |
 </prompt>
 <result>
-| Italian | Lemma   | English      | Latin      | Interlingua | French      | Spanish   | Portuguese | Romanian      | Esperanto |
-|---------|---------|--------------|------------|-------------|-------------|-----------|------------|----------------|-----------|
-| però    | però    | however      | tamen      | tamen       | cependant   | pero      | porém      | totuși         | tamen |
-| che     | che     | that         | quod       | que         | que         | que       | que        | că             | ke |
-| forse   | forse   | perhaps      | fortasse   | forse       | peut‑être   | quizás    | talvez     | poate          | eble |
-| appar   | apparire| appear       | apparere   | apparir     | apparaître  | aparecer  | aparecer   | apărea         | aperi |
-| la      | la      | the          |            | la          | la          | la        | a          | la             | la |
-| sua     | suo     | his/her      | suus       | su          | son/sa      | su        | seu        | său            | lia |
-| matera  | materia | matter       | materia    | materia     | matière     | materia   | matéria    | materie        | materio |
-| sempre  | sempre  | always       | semper     | sempre      | toujours    | siempre   | sempre     | întotdeauna    | ĉiam |
-| esser   | essere  | be           | esse       | esser       | être        | ser/estar | ser/estar  | a fi           | esti |
-| buona   | buono   | good         | bona       | bon         | bon         | bueno     | bom        | bun            | bona |
-| ma      | ma      | but          | sed        | ma          | mais        | pero      | mas        | dar            | sed |
-| non     | non     | not          | non        | non         | pas         | no        | não        | nu             | ne |
-| ciascun | ciascuno| each         | quisque    | cata        | chaque      | cada      | cada       | fiecare        | ĉiu |
-| segno   | segno   | sign         | signum     | signo       | signe       | signo     | sinal      | semn           | signo |
-| è       | essere  | is           | est        | es          | est         | es        | é          | este           | estas |
-| buono   | buono   | good         | bonus      | bon         | bon         | bueno     | bom        | bun            | bona |
-| ancor   | ancora  | still        | adhuc      | ancora      | encore      | aún       | ainda      | încă           | ankoraŭ |
-| che     | che     | that         | quod       | que         | que         | que       | que        | că             | ke |
-| buona   | buono   | good         | bona       | bon         | bon         | bueno     | bom        | bun            | bona |
-| sia     | essere  | be (subj.)   | sit        | sia         | soit        | sea       | seja       | fie            | estu |
-| la      | la      | the          |            | la          | la          | la        | a          | la             | la |
-| cera    | cera    | wax          | cera       | cera        | cire        | cera      | cera       | ceară          | cera |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| però | però | however | tamen | tamen | cependant | pero | porém | totuși | tamen |
+| che | che | that | quod | que | que | que | que | că | ke |
+| forse | forse | perhaps | fortasse | forse | peut‑être | quizás | talvez | poate | eble |
+| appar | apparire | appear | apparere | apparir | apparaître | aparecer | aparecer | apărea | aperi |
+| la | la | the | | la | la | la | a | la | la |
+| sua | suo | his/her | suus | su | son/sa | su | seu | său | lia |
+| matera | materia | matter | materia | materia | matière | materia | matéria | materie | materio |
+| sempre | sempre | always | semper | sempre | toujours | siempre | sempre | întotdeauna | ĉiam |
+| esser | essere | be | esse | esser | être | ser/estar | ser/estar | a fi | esti |
+| buona | buono | good | bona | bon | bon | bueno | bom | bun | bona |
+| ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
+| non | non | not | non | non | pas | no | não | nu | ne |
+| ciascun | ciascuno | each | quisque | cata | chaque | cada | cada | fiecare | ĉiu |
+| segno | segno | sign | signum | signo | signe | signo | sinal | semn | signo |
+| è | essere | is | est | es | est | es | é | este | estas |
+| buono | buono | good | bonus | bon | bon | bueno | bom | bun | bona |
+| ancor | ancora | still | adhuc | ancora | encore | aún | ainda | încă | ankoraŭ |
+| che | che | that | quod | que | que | que | que | că | ke |
+| buona | buono | good | bona | bon | bon | bueno | bom | bun | bona |
+| sia | essere | be (subj.) | sit | sia | soit | sea | seja | fie | estu |
+| la | la | the | | la | la | la | a | la | la |
+| cera | cera | wax | cera | cera | cire | cera | cera | ceară | cera |
 </result>
 </query>
 <query>
@@ -1189,17 +1189,17 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | innata | innato | innate | innata | innate | innée | innata | innata | înnăscută | naskita |
 | v' | vi | you | vos | vos | vous | vos | vós | voi | vi |
 | è | essere | is | est | es | est | es | é | este | estas |
-| la | la | the |  | le | le | la | el | a | la |
+| la | la | the | | le | le | la | el | a | la |
 | virtù | virtù | virtue | virtus | virtute | vertu | virtud | virtude | virtute | virto |
 | che | che | that | qui | que | qui | que | que | care | ke |
 | consiglia | consigliare | advises | consilium dat | consilia | conseille | aconseja | aconselha | sfătuiește | konsilas |
 | e | e | and | et | e | et | y | e | și | kaj |
 | de | di | of | de | de | de | de | de | de | de |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | assenso | assenso | assent | assensus | assenso | assentiment | asentimiento | assentimento | consimțământ | konsento |
 | de' | di+i | of the | de | de | du | del | do | al | de la |
 | tener | tenere | to hold | tenere | tener | tenir | tener | ter | ține | teni |
-| la | la | the |  | le | le | la | el | a | la |
+| la | la | the | | le | le | la | el | a | la |
 | soglia | soglia | threshold | limen | soglia | seuil | umbral | soleira | prag | sojlo |
 </result>
 </query>
@@ -2349,7 +2349,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | intero | intero | whole | integer | integre | entier | entero | inteiro | întreg | tuta |
 | e | e | and | et | e | et | y | e | și | kaj |
 | de | di | of | de | de | de | de | de | de | de |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | mente | mente | mind | mens | mente | esprit | mente | mente | minte | mens |
 | peggio | peggio | worse | peius | pejor | pire | peor | pior | mai rău | pli malbona |
 | e | e | and | et | e | et | y | e | și | kaj |

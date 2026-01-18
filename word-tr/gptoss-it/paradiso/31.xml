@@ -85,25 +85,25 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | altra | altro | other | alter | alter | autre | otro | outro | alt | alia |
 | che | che | that | quod | que | que | que | que | că | ke |
 | volando | volare | flying | volans | volante | volant | volando | voando | zburând | fluganta |
 | vede | vedere | sees | videt | vide | voit | ve | vê | vede | vidas |
 | e | e | and | et | e | et | y | e | și | kaj |
 | canta | cantare | sings | cantat | canta | chante | canta | canta | cântă | kantas |
-| la | il | the |  | le | la | la | a |  | la |
+| la | il | the | | le | la | la | a | | la |
 | gloria | gloria | glory | gloria | gloria | gloire | gloria | glória | glorie | gloro |
 | di | di | of | de | de | de | de | de | de | de |
 | colui | colui | he who | qui | qui | celui | el que | aquele que | cel | tiu |
 | che | che | that | quod | que | que | que | que | că | ke |
-| la | il | the |  | le | la | la | a |  | la |
+| la | il | the | | le | la | la | a | | la |
 | 'nnamora | innamorare | loves | amat | ama | aime | ama | ama | iubește | amas |
 | e | e | and | et | e | et | y | e | și | kaj |
-| la | il | the |  | le | la | la | a |  | la |
+| la | il | the | | le | la | la | a | | la |
 | bontà | bontà | goodness | bonitas | bonitate | bonté | bondad | bondade | bunătate | boneco |
 | che | che | that | quod | que | que | que | que | că | ke |
-| la | il | the |  | le | la | la | a |  | la |
+| la | il | the | | le | la | la | a | | la |
 | fece | fare | did | fecit | fecit | fit | hizo | fez | făcu | faris |
 | cotanta | cotanto | so much | tantus | tant | tant | tanto | tanto | atât | tiom |
 </result>
@@ -539,11 +539,9 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | qua | qui | where | ubi | ubi | où | donde | onde | unde | kie |
 | giuso | giù | down | deorsum | de | bas | abajo | abaixo | jos | malsupre |
 | a | a | to | ad | a | à | a | a | la | al |
-| la | il | the | illa* | le | la | la | a | (def.) la | la |
+| la | il | the | illa | le | la | la | a | (def.) la | la |
 | nostra | nostro | our | nostra | nostre | notre | nuestra | nossa | noastră | nia |
 | procella | procella | storm | procella | procella | tempête | tormenta | tempestade | furtună | ŝtormo |
-
-\*Latin has no definite article; “illa” is a demonstrative pronoun used here as the closest equivalent.
 </result>
 </query>
 <query>
@@ -1040,26 +1038,26 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | glorïose | glorioso | | | | | | | | |
 </prompt>
 <result>
-| Italian   | Lemma    | English   | Latin      | Interlingua | French   | Spanish   | Portuguese | Romanian   | Esperanto |
-|-----------|----------|-----------|------------|-------------|----------|-----------|------------|------------|-----------|
-| Uno       | uno      | one       | unus       | un          | un       | uno       | um         | unu        | unu       |
-| intendëa  | intendere| intended  | intendebat | intendebat  | intentionnait | intentaba | intencionava | intenționa | intencis |
-| e         | e        | and       | et         | e           | et       | y         | e          | și         | kaj       |
-| altro     | altro    | other     | alter      | alter       | autre    | otro      | outro      | alt        | alia      |
-| mi        | mi       | me        | me         | me          | moi      | me        | me         | mă         | mi        |
-| rispuose  | rispondere| answered | respondit  | respondeva  | répondit | respondió | respondeu  | răspunse   | respondis |
-| credea    | credere  | believed  | credebat   | credeva     | croyait  | creía     | acreditava | credea     | kredis    |
-| veder     | vedere   | see       | videre     | vider       | voir     | ver       | ver        | vedea      | vidi      |
-| Beatrice  | Beatrice | Beatrice  | Beatrix    | Beatrice    | Béatrice | Beatriz   | Beatriz    | Beatrice   | Beatrico  |
-| e         | e        | and       | et         | e           | et       | y         | e          | și         | kaj       |
-| vidi      | vedere   | saw       | vidi       | vidi        | vit      | vio       | viu        | văzu       | vidis     |
-| un        | uno      | a         | unus       | un          | un       | un        | um         | un         | unu       |
-| sene      | segno    | sign      | signum     | signo       | signe    | signo     | sinal      | semn       | signo     |
-| vestito   | vestire  | dressed   | vestitus   | vestite     | vêtu     | vestido   | vestido    | îmbrăcat   | vestita   |
-| con       | con      | with      | cum        | con         | avec     | con       | com        | cu         | kun       |
-| le        | il       | the       | illas      | le          | les      | las       | as         | le         | la        |
-| genti     | gente    | people    | gens       | gente       | gens     | gente     | gente      | oameni     | homoj     |
-| glorïose  | glorioso | glorious  | gloriosus  | gloriose    | glorieux | glorioso  | glorioso   | glorios    | glora     |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| Uno | uno | one | unus | un | un | uno | um | unu | unu |
+| intendëa | intendere | intended | intendebat | intendebat | intentionnait | intentaba | intencionava | intenționa | intencis |
+| e | e | and | et | e | et | y | e | și | kaj |
+| altro | altro | other | alter | alter | autre | otro | outro | alt | alia |
+| mi | mi | me | me | me | moi | me | me | mă | mi |
+| rispuose | rispondere | answered | respondit | respondeva | répondit | respondió | respondeu | răspunse | respondis |
+| credea | credere | believed | credebat | credeva | croyait | creía | acreditava | credea | kredis |
+| veder | vedere | see | videre | vider | voir | ver | ver | vedea | vidi |
+| Beatrice | Beatrice | Beatrice | Beatrix | Beatrice | Béatrice | Beatriz | Beatriz | Beatrice | Beatrico |
+| e | e | and | et | e | et | y | e | și | kaj |
+| vidi | vedere | saw | vidi | vidi | vit | vio | viu | văzu | vidis |
+| un | uno | a | unus | un | un | un | um | un | unu |
+| sene | segno | sign | signum | signo | signe | signo | sinal | semn | signo |
+| vestito | vestire | dressed | vestitus | vestite | vêtu | vestido | vestido | îmbrăcat | vestita |
+| con | con | with | cum | con | avec | con | com | cu | kun |
+| le | il | the | illas | le | les | las | as | le | la |
+| genti | gente | people | gens | gente | gens | gente | gente | oameni | homoj |
+| glorïose | glorioso | glorious | gloriosus | gloriose | glorieux | glorioso | glorioso | glorios | glora |
 </result>
 </query>
 <query>
@@ -1540,14 +1538,14 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | vie | via | road | via | via | voie | vía | via | cale | vojo |
 | per | per | for | pro | per | pour | por | por | pentru | por |
 | tutt' | tutto | all | totus | tote | tout | todo | todo | tot | ĉio |
-| i | i | the |  | le | les | los | os | pe | la |
+| i | i | the | | le | les | los | os | pe | la |
 | modi | modo | ways | modi | modos | modes | modos | modos | moduri | manieroj |
 | che | che | that | quod | que | que | que | que | că | ke |
 | di | di | of | de | de | de | de | de | de | de |
 | ciò | ciò | that | id | isto | cela | eso | isso | acela | tio |
 | fare | fare | to do | facere | facer | faire | hacer | fazer | a face | fari |
 | avei | avere | to have | habere | haber | avoir | haber | haver | a avea | havi |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | potestate | potestà | power | potestas | potestate | puissance | poder | poder | putere | potenco |
 </result>
 </query>
@@ -1961,26 +1959,26 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | pace | pace | | | | | | | | |
 </prompt>
 <result>
-| Italian      | Lemma   | English      | Latin      | Interlingua | French   | Spanish   | Portuguese | Romanian | Esperanto |
-|--------------|---------|--------------|------------|-------------|----------|-----------|------------|----------|-----------|
-| tal          | tale    | such         | talis      | tal         | tel      | tal       | tal        | tal      | tia       |
-| era          | essere  | was          | erat       | esseva      | était    | era       | era        | era      | estis     |
-| io           | io      | I            | ego        | io          | je       | yo        | eu         | eu       | mi        |
-| mirando      | mirare  | looking      | mirans     | mirante     | regardant| mirando   | mirando    | privind  | rigardante|
-| la           | il      | the          | illa       | la          | la       | la        | a          | la       | la        |
-| vivace       | vivace  | lively       | vivax      | vivace      | vivace   | vivaz     | vivaz      | vivace   | vigla     |
-| carità       | carità  | charity      | caritas    | caritate    | charité  | caridad   | caridade   | caritate | karitato  |
-| di           | di      | of           | de         | de          | de       | de        | de         | de       | de        |
-| colui        | colui   | he who       | is qui     | celui       | celui    | el que    | aquele que| cel ce   | tiu, kiu  |
-| che          | che     | that         | quod       | que         | que      | que       | que        | că       | ke        |
-| 'n           | in      | in           | in         | in          | dans     | en        | em         | în       | en        |
-| questo       | questo  | this         | hic        | isto        | ce       | este      | este       | acest    | ĉi tiu    |
-| mondo        | mondo   | world        | mundus     | mundo       | monde    | mundo     | mundo      | lume     | mondo     |
+| Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
+|---|---|---|---|---|---|---|---|---|---|
+| tal | tale | such | talis | tal | tel | tal | tal | tal | tia |
+| era | essere | was | erat | esseva | était | era | era | era | estis |
+| io | io | I | ego | io | je | yo | eu | eu | mi |
+| mirando | mirare | looking | mirans | mirante | regardant | mirando | mirando | privind | rigardante |
+| la | il | the | illa | la | la | la | a | la | la |
+| vivace | vivace | lively | vivax | vivace | vivace | vivaz | vivaz | vivace | vigla |
+| carità | carità | charity | caritas | caritate | charité | caridad | caridade | caritate | karitato |
+| di | di | of | de | de | de | de | de | de | de |
+| colui | colui | he who | is qui | celui | celui | el que | aquele que | cel ce | tiu, kiu |
+| che | che | that | quod | que | que | que | que | că | ke |
+| 'n | in | in | in | in | dans | en | em | în | en |
+| questo | questo | this | hic | isto | ce | este | este | acest | ĉi tiu |
+| mondo | mondo | world | mundus | mundo | monde | mundo | mundo | lume | mondo |
 | contemplando | contemplare | contemplating | contemplans | contemplante | contemplant | contemplando | contemplando | contemplând | kontemplante |
-| gustò        | gustare | tasted       | gustavit   | gustava     | goûta    | gustó     | saboreou   | gustă    | gustis    |
-| di           | di      | of           | de         | de          | de       | de        | de         | de       | de        |
-| quella       | quello  | that         | illa       | illa        | celle    | esa       | aquela     | acea     | tiu       |
-| pace         | pace    | peace        | pax        | pace        | paix     | paz       | paz        | pace     | paco      |
+| gustò | gustare | tasted | gustavit | gustava | goûta | gustó | saboreou | gustă | gustis |
+| di | di | of | de | de | de | de | de | de | de |
+| quella | quello | that | illa | illa | celle | esa | aquela | acea | tiu |
+| pace | pace | peace | pax | pace | paix | paz | paz | pace | paco |
 </result>
 </query>
 <query>
@@ -2070,7 +2068,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 |---|---|---|---|---|---|---|---|---|---|
 | ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
 | guarda | guardare | look | vide | guarda | regarde | mira | olha | privește | rigardu |
-| i | il | the |  | i | les | los | os | cei | la |
+| i | il | the | | i | les | los | os | cei | la |
 | cerchi | cerchio | circles | circuli | circulos | cercles | círculos | círculos | cercuri | cirkloj |
 | infino | fino | until | usque | fino | jusqu'à | hasta | até | până | ĝis |
 | al | a+il | to the | ad | al | au | al | ao | la | al |
@@ -2080,7 +2078,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | che | che | that | quod | que | que | que | que | că | ke |
 | veggi | vedere | see | videas | vide | voie | veas | vejas | vezi | vidu |
 | seder | sedere | to sit | sedere | sedere | s'asseoir | sentarse | sentar | a sta | sidi |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | regina | regina | queen | regina | regina | reine | reina | rainha | regină | reĝino |
 | cui | cui | whom | cui | cui | à qui | cuyo | cui | cui | al kiu |
 | questo | questo | this | hic | isto | ce | este | este | acesta | ĉi tiu |

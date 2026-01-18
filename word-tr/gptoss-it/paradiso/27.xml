@@ -346,7 +346,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Se | se | if | si | si | si | si | se | dacă | se |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
 | mi | mi | me | me | me | me | me | me | mă | mi |
-| trascoloro | trascolorare | I recolor | recoloro* | recoloro | recolore | recoloreo | recoloro | recolorez | rekoloras |
+| trascoloro | trascolorare | I recolor | recoloro | recoloro | recolore | recoloreo | recoloro | recolorez | rekoloras |
 | non | non | not | non | non | pas | no | não | nu | ne |
 | ti | tu | you | te | tu | toi | te | te | te | vi |
 | maravigliar | maravigliare | to marvel | mirari | mir ar | s'émerveiller | maravillar | maravilhar | a se minuna | mirigi |
@@ -354,7 +354,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | dicend' | dire | saying | dicens | dicente | en disant | diciendo | dizendo | spunând | dirante |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
 | vedrai | vedere | you will see | videbis | tu videras | tu verras | verás | verás | vei vedea | vi vidos |
-| trascolorar | trascolorare | to recolor | recolorare* | recolorar | recolorer | recolorear | recolorir | a recolora | rekolori |
+| trascolorar | trascolorare | to recolor | recolorare | recolorar | recolorer | recolorear | recolorir | a recolora | rekolori |
 | tutti | tutto | all | omnes | tote | tout | todos | todos | toți | ĉiuoj |
 | costoro | costoro | these | hi | iste | ces | estos | estes | aceștia | ĉi tiuj |
 </result>
@@ -1269,7 +1269,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | addorno | addornare | adorn | ornare | ornar | orner | adornar | adornar | a împodobi | ornami |
 | farsi | fare+si | become | fieri | farsi | devenir | convertirse | tornar‑se | a deveni | iĝi |
 | e | e | and | et | e | et | y | e | și | kaj |
-| fioccar | fioccare | fluff | floccare* | floccar | floconner | floconear | floconar | a floca | floki |
+| fioccar | fioccare | fluff | floccare | floccar | floconner | floconear | floconar | a floca | floki |
 | di | di | of | de | de | de | de | de | de | de |
 | vapor | vapore | steam | vapor | vapor | vapeur | vapor | vapor | vapor | vaporo |
 | trïunfanti | trionfare | triumphing | triumphans | triumphante | triomphant | triunfante | triunfante | triumfător | triomfanta |
@@ -1279,9 +1279,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | con | con | with | cum | con | avec | con | com | cu | kun |
 | noi | noi | we | nos | nos | nous | nosotros | nós | noi | ni |
 | quivi | qui | there | ibi | ibi | là | allí | lá | acolo | tie |
-| soggiorno | soggiornare | stay | manere | manar* | séjourner | quedarse | permanecer | a sta | resti |
-
-\* *Note: “floccare” and “manar” are constructed forms used to convey the intended meaning in Latin and Interlingua where no exact classical term exists.*
+| soggiorno | soggiornare | stay | manere | manar | séjourner | quedarse | permanecer | a sta | resti |
 </result>
 </query>
 <query>
@@ -1834,7 +1832,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Le | il | the |  | the | les | las | as | le | la |
+| Le | il | the | | the | les | las | as | le | la |
 | parti | parte | parts | partes | partes | parties | partes | partes | părți | partoj |
 | sue | suo | her | eius | sua | ses | sus | suas | ale ei | ŝiaj |
 | vivissime | vivace | very lively | valde vivax | vivacissime | très vivant | muy vivaz | muito vivaz | foarte vioi | tre viva |
@@ -1936,17 +1934,17 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| La | il | the |  | le | la | la | a | la | la |
+| La | il | the | | le | la | la | a | la | la |
 | natura | natura | nature | natura | natura | nature | naturaleza | natureza | natură | naturo |
 | del | di+il | of the | de | de | du | del | do | al | de |
 | mondo | mondo | world | mundus | mundo | monde | mundo | mundo | lume | mondo |
 | che | che | that | qui | que | qui | que | que | care | ke |
 | quïeta | quietare | quiet | quieta | quieta | quiete | quieta | quieta | liniștită | kvieta |
-| il | il | the |  | le | le | el | o |  | la |
+| il | il | the | | le | le | el | o | | la |
 | mezzo | mezzo | middle | medium | media | milieu | medio | meio | mijloc | mezo |
 | e | e | and | et | e | et | y | e | și | kaj |
 | tutto | tutto | all | totus | toto | tout | todo | todo | tot | ĉio |
-| l' | il | the |  | le | le | el | o |  | la |
+| l' | il | the | | le | le | el | o | | la |
 | altro | altro | other | alter | alter | autre | otro | outro | alt | alia |
 | intorno | intorno | around | circum | intorno | autour | alrededor | ao redor | în jur | ĉirkaŭ |
 | move | muovere | moves | movet | move | bouge | mueve | move | mișcă | movas |
@@ -2296,10 +2294,8 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | in | in | in | in | in | dans | en | em | în | en |
 | bozzacchioni | bozzacchione | bushes | frutices | frutic | buissons | arbustos | arbustos | arbuşti | arbustoj |
 | le | le | the | illae | le | les | las | as | cele | la |
-| sosine | sosina | sosine* | sosina* | sosina* | sosine* | sosine* | sosine* | sosină* | sosine* |
+| sosine | sosina | sosine | sosina | sosina | sosine | sosine | sosine | sosină | sosine |
 | vere | vero | true | verus | ver | vrai | verdadero | verdadeiro | adevărat | vera |
-
-\*No standard translation found; retained the original form across languages.
 </result>
 </query>
 <query>

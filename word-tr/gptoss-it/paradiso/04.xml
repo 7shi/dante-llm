@@ -471,7 +471,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 |---|---|---|---|---|---|---|---|---|---|
 | Queste | questo | these | hae | iste | ces | estas | estas | acestea | ĉi tiuj |
 | son | essere | are | sunt | sunt | sont | son | são | sunt | estas |
-| le | il | the |  |  | les | las | as | le | la |
+| le | il | the | | | les | las | as | le | la |
 | question | questione | question | quaestio | question | question | pregunta | pergunta | întrebare | demando |
 | che | che | that | quod | que | que | que | que | că | ke |
 | nel | in+il | in the | in | in | dans le | en el | no | în | en la |
@@ -797,7 +797,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 |---|---|---|---|---|---|---|---|---|---|
 | Per | per | for | per | per | pour | por | por | pentru | por |
 | questo | questo | this | hic | isto | ce | este | este | acest | ĉi tiu |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | Scrittura | Scrittura | writing | scriptura | scriptura | écriture | escritura | escrita | scriere | skribo |
 | condescende | condescendere | condescends | condescendit | condescende | condescend | condescende | condescende | condescende | koncedas |
 | a | a | to | ad | a | à | a | a | la | al |
@@ -1495,13 +1495,13 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Lorenzo | Lorenzo | Lorenzo | Laurentius | Lorenzo | Lorenzo | Lorenzo | Lorenzo | Lorențiu | Lorenzo |
 | in | in | in | in | in | dans | en | em | în | en |
 | su | sopra | on | super | super | sur | sobre | sobre | pe | sur |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | grada | grada | steep | abruptus | abrupto | raide | empinado | íngreme | abrupt | klina |
 | e | e | and | et | e | et | y | e | și | kaj |
 | fece | fare | did | fecit | fecit | fit | hizo | fez | fece | faris |
 | Muzio | Muzio | Muzio | Mucius | Muzio | Muzio | Muzio | Muzio | Muzio | Muzio |
 | a | a | to | ad | a | à | a | a | la | al |
-| la | la | the |  | le | la | la | a | la | la |
+| la | la | the | | le | la | la | a | la | la |
 | sua | suo | his | suus | su | son | su | seu | său | lia |
 | man | mano | hand | manus | manu | main | mano | mão | mână | mano |
 | severo | severo | severe | severus | severo | sévère | severo | severo | sever | severa |
@@ -1539,11 +1539,11 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | così | così | thus | sic | sic | ainsi | así | assim | astfel | tiel |
-| l' | il | the |  | le | le | el/la | o/a |  | la |
+| l' | il | the | | le | le | el/la | o/a | | la |
 | avria | avere | would have | habuisset | habería | aurait | habría | teria | ar avea | havus |
 | ripinte | dipingere | repainted | repinxit | repinte | repeint | repintó | repintou | a repictat | re‑pentris |
 | per | per | for | per | per | pour | por | por | pentru | por |
-| la | la | the |  | le | la | la | a |  | la |
+| la | la | the | | le | la | la | a | | la |
 | strada | strada | street | via | strata | rue | calle | rua | stradă | strato |
 | ond' | onde | where | ubi | ubi | où | donde | onde | unde | kie |
 | eran | essere | were | erant | era | étaient | eran | eram | erau | estis |
@@ -1599,12 +1599,12 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | parole | parola | words | verba | parolas | mots | palabras | palavras | cuvinte | vortoj |
 | se | se | if | si | si | si | si | se | dacă | se |
 | ricolte | ricogliere | collected | collectae | collectate | collectées | recogidas | recolhidas | colectate | kolektitaj |
-| l' | il | the |  | le | le | el | o | cel | la |
+| l' | il | the | | le | le | el | o | cel | la |
 | hai | avere | you have | habes | ha | as | tienes | tens | ai | havas |
 | come | come | as | ut | como | comme | como | como | cum | kiel |
 | dei | dio | of the | de | del | des | de los | dos | ai | de la |
 | è | essere | is | est | es | est | es | é | este | estas |
-| l' | il | the |  | le | le | el | o | cel | la |
+| l' | il | the | | le | le | el | o | cel | la |
 | argomento | argomento | argument | argumentum | argumento | argument | argumento | argumento | argument | argumento |
 | casso | casso | I fall | cadō | cado | je tombe | caigo | caio | cad | mi falas |
 | che | che | that | quod | que | que | que | que | că | ke |
@@ -1671,9 +1671,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | usciresti | uscire | you would exit | exires | exirias | tu sortirais | saldrías | sairias | ai ieși | vi elirus |
 | pria | prima | before | prius | prima | avant | antes | antes | înainte | antaŭ |
 | saresti | essere | you would be | esses | sereas | tu serais | serías | serias | ai fi | vi estus |
-| lasso | lasso | lasso | lassus* | lasso | lasso | lazo | laço | lasso | lasso |
-
-\* “lassus” is a classical Latin adjective meaning “tired”; a precise classical noun for “lasso” does not exist, so the Italian form is retained.
+| lasso | lasso | lasso | lassus | lasso | lasso | lazo | laço | lasso | lasso |
 </result>
 </query>
 <query>
@@ -1881,7 +1879,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | dal | da+il | from the | ab | del | du | del | do | de la | de la |
 | padre | padre | father | pater | patre | père | padre | pai | tată | patro |
 | suo | suo | his | suus | suo | son | su | seu | său | lia |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | propria | proprio | own | proprius | propria | propre | propia | própria | propria | propra |
 | madre | madre | mother | mater | madre | mère | madre | mãe | mamă | patrino |
 | spense | spegnere | spent | expensum | spende | dépensé | gastó | gastou | cheltuit | eluzita |
@@ -1937,7 +1935,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | tu | tu | you | tu | tu | tu | tú | tu | tu | vi |
 | pense | pensare | think | cogito | pensar | penser | pensar | pensar | gândi | pensi |
 | che | che | that | quod | que | que | que | que | că | ke |
-| la | la | the |  | la | la | la | a | la | la |
+| la | la | the | | la | la | la | a | la | la |
 | forza | forza | strength | fortitudo | fortia | force | fuerza | força | forță | forto |
 | al | a+il | to the | ad | al | au | al | ao | la | al |
 | voler | volere | to want | velle | voler | vouloir | querer | querer | a vrea | voli |
@@ -1951,7 +1949,7 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | non | non | not | non | non | non | no | não | nu | ne |
 | si | si | if | si | si | si | si | se | dacă | se |
 | posson | potere | they can | possunt | poter | peuvent | pueden | podem | pot | povas |
-| l' | il | the |  | l' | l' | el | o | l' | la |
+| l' | il | the | | l' | l' | el | o | l' | la |
 | offense | offesa | offense | offensa | offensa | offense | ofensa | ofensa | ofensă | ofendo |
 </result>
 </query>
