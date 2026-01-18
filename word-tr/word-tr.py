@@ -68,6 +68,7 @@ if args.do_init:
     if not q.result:
         print("Abort.", file=sys.stderr)
         sys.exit(1)
+    q.result = common.fix_table(q.result)
     init_qs = [q]
     common.write_queries(option.init, init_qs, count=len(init_qs))
     print(f"{option.init} created successfully.")

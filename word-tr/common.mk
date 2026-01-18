@@ -25,6 +25,7 @@ run: init.xml
 ## Validate and extract errors
 check:
 	rm -f 1-error-{ok,ng}.xml
+	uv run dantetool strip --strict $(DIRSM)/*.xml
 	uv run dantetool pickup 1-error.xml $(DIRSM)/*.xml
 
 
