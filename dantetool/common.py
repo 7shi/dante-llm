@@ -72,14 +72,16 @@ def unzip(qs):
         ret.append(q.result)
     return ret
 
-def parse_cantica_and_canto(info: str) -> tuple[str, int] | None:
+def parse_info(info: str) -> tuple[str, int, int, int] | None:
     """Parse something like: "[Inferno Canto 7] 1/136"."""
-    m = re.search(r"\[(Inferno|Purgatorio|Paradiso)\s+Canto\s+(\d+)\]", info)
+    m = re.search(r"\[(Inferno|Purgatorio|Paradiso)\s+Canto\s+(\d+)\]\s+(\d+)/(\d+)", info)
     if not m:
         return None
     cantica = m.group(1).lower()
     canto_no = int(m.group(2))
-    return cantica, canto_no
+    line_no = int(m.group(3))
+    total_lines = int(m.group(4))
+    return cantica, canto_no, line_no, total_lines
 
 # table
 

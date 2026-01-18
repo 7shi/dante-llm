@@ -9,7 +9,7 @@ from pathlib import Path
 from dantetool import common
 from dantetool.option import directories
 
-def process_one(script_dir, rel_path):
+def process_one(base_dir, rel_path):
     """Process a single word table comparison"""
     # Parse path components
     parts = Path(rel_path).parts
@@ -27,16 +27,16 @@ def process_one(script_dir, rel_path):
     title = f"{cantica.title()} - Canto {int(canto_no)}"
 
     # Paths
-    base_dir = script_dir.parent
     tokenized_file = base_dir / "tokenize" / cantica / f"{canto_no}.txt"
-    output_file = script_dir / "comparison" / cantica / f"{canto_no}.md"
+    curdir = Path(".")
+    output_file = curdir / "comparison" / cantica / f"{canto_no}.md"
 
     # Read normalized lines from tokenized source
     normalized_lines = [data[0] for data in common.read_tokenized_source(tokenized_file)]
 
     # Collect word tables from all models
     models = {}
-    for subdir in sorted(script_dir.iterdir()):
+    for subdir in sorted(curdir.iterdir()):
         if subdir.is_dir() and subdir.name not in ("comparison", "__pycache__"):
             file = subdir / cantica / (canto_no + ".xml")
             if not file.exists():
@@ -54,27 +54,33 @@ def process_one(script_dir, rel_path):
             if not q.result:
                 continue
 
-            # Extract lines from prompt
-            numbered_lines = common.extract_numbered_lines(q.prompt)
-            if not numbered_lines:
-                print(f"Error [{model} {q.info}]: no numbered lines found in prompt", file=sys.stderr)
+            # Parse info
+            parsed = common.parse_info(q.info or "")
+            if not parsed:
+                print(f"Error [{model} {q.info}]: could not parse info", file=sys.stderr)
                 continue
+
+            # Extract line numbers
+            line_no, total_lines = parsed[2:]
+            line_numbers = list(range(line_no, min(line_no + 2, total_lines) + 1))
 
             # Read table from result
             table = common.read_table(q.result)
             if not table:
                 print(f"Error [{model} {q.info}]: could not parse table in result", file=sys.stderr)
                 continue
+            for row in table:
+                row[0] = row[0].replace("\u2019", "'")  # Normalize apostrophes
 
             # Split table into lines
-            lines = [raw for _, _, raw in numbered_lines]
+            lines = [normalized_lines[ln - 1] for ln in line_numbers]
             splitted_rows = common.split_table(f"{model} {q.info}", lines, table)
             if len(lines) != len(splitted_rows):
                 print(f"Error [{model} {q.info}]: mismatch in number of lines after split", file=sys.stderr)
                 continue
 
             # Map line number to (header, rows)
-            for (line_no, _, _), rows in zip(numbered_lines, splitted_rows):
+            for line_no, rows in zip(line_numbers, splitted_rows):
                 line_model_tables.setdefault(line_no, {})[model] = (table[0], rows)
 
     # Write output
@@ -93,6 +99,7 @@ def process_one(script_dir, rel_path):
             for model, (header, rows) in model_tables.items():
                 print(file=f)
                 print(f"**{model}**", file=f)
+                print(file=f)
                 table = [header, ["---"] * len(header)] + rows
                 print(common.table_to_string(table), file=f)
 
@@ -108,9 +115,9 @@ def main():
     parser.add_argument("rel_paths", nargs="+", help="relative path(s) without extension (e.g., inferno/01)")
     args = parser.parse_args()
 
-    script_dir = Path(__file__).resolve().parent
+    base_dir = Path(__file__).resolve().parent.parent
     for rel_path in args.rel_paths:
-        if not process_one(script_dir, rel_path):
+        if not process_one(base_dir, rel_path):
             return 1
     return 0
 

@@ -110,12 +110,12 @@ def main(argv: list[str] | None = None) -> int:
             error(q, "no numbered lines found in prompt")
             continue
 
-        parsed = common.parse_cantica_and_canto(q.info or "")
+        parsed = common.parse_info(q.info or "")
         if not parsed:
             error(q, f"could not parse cantica/canto from info: {q.info!r}")
             continue
 
-        cantica, canto_no = parsed
+        cantica, canto_no = parsed[:2]
         token_path = tokenize_dir / cantica / f"{canto_no:02d}.txt"
         try:
             tokenized_canto = read_tokenized_source(str(token_path))
