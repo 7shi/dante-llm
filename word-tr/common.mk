@@ -32,7 +32,7 @@ check:
 
 ## Retry errors (1-error.xml)
 redo:
-	uv run dantetool redo $(OPTIONS) -n 3 -s $(SUBDIR)/system.txt -m $(MODEL) 1-error.xml
+	uv run dantetool redo $(OPTIONS) -n 3 -m $(MODEL) 1-error.xml
 
 ## Apply fixes (1-error-ok.xml) to source
 replace:
