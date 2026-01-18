@@ -1,5 +1,5 @@
+MODEL   = google:gemini-pro --no-think
 LANG    = Italian
-LCODE   = it
-OPTIONS = -n 1
+LCODE   = gemini1-it
 
 include ../common.mk
