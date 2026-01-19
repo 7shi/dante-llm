@@ -10,8 +10,10 @@ from dantetool.option import directories
 
 def add_args(parser):
     parser.add_argument("rel_paths", nargs="+", help="relative path(s) without extension (e.g., inferno/01)")
+    parser.add_argument("--use-tokens", "-t", action="store_true",
+                        help="use tokenized words as first column for matching")
 
-def process_one(base_dir, rel_path):
+def process_one(base_dir, rel_path, use_tokens=False):
     """Process a single word table comparison"""
     # Parse path components
     parts = Path(rel_path).parts
@@ -33,8 +35,9 @@ def process_one(base_dir, rel_path):
     curdir = Path(".")
     output_file = curdir / "comparison" / cantica / f"{canto_no}.md"
 
-    # Read normalized lines from tokenized source
-    normalized_lines = [data[0] for data in common.read_tokenized_source(tokenized_file)]
+    # Read tokenized source (line, tokens...)
+    tokenized_data = common.read_tokenized_source(tokenized_file)
+    normalized_lines = [data[0] for data in tokenized_data]
 
     # Collect word tables from all models
     models = {}
@@ -71,6 +74,24 @@ def process_one(base_dir, rel_path):
             if not table:
                 print(f"Error [{model} {q.info}]: could not parse table in result", file=sys.stderr)
                 continue
+
+            # Prepend first column from tokenized data (if use_tokens is specified)
+            has_first_col = False
+            if use_tokens:
+                # Collect tokens from all lines in line_numbers
+                tokens = []
+                for ln in line_numbers:
+                    tokens.extend(tokenized_data[ln - 1][1:])
+                # Build first column: header, separator, tokens...
+                first_col = [table[0][0], "---"] + tokens
+                if len(first_col) != len(table):
+                    print(f"Error [{model} {q.info}]: row count mismatch "
+                          f"(tokens={len(first_col)}, table={len(table)})", file=sys.stderr)
+                    continue
+                for i, row in enumerate(table):
+                    row.insert(0, first_col[i])
+                has_first_col = True
+
             for row in table:
                 row[0] = row[0].replace("\u2019", "'")  # Normalize apostrophes
 
@@ -80,6 +101,13 @@ def process_one(base_dir, rel_path):
             if len(lines) != len(splitted_rows):
                 print(f"Error [{model} {q.info}]: mismatch in number of lines after split", file=sys.stderr)
                 continue
+
+            # Remove prepended column after split
+            if has_first_col:
+                for rows in splitted_rows:
+                    for row in rows:
+                        row.pop(0)
+                table[0].pop(0)
 
             # Map line number to (header, rows)
             for line_no, rows in zip(line_numbers, splitted_rows):
@@ -111,7 +139,7 @@ def process_one(base_dir, rel_path):
 def main_func(args):
     base_dir = Path(__file__).resolve().parent.parent.parent
     for rel_path in args.rel_paths:
-        if not process_one(base_dir, rel_path):
+        if not process_one(base_dir, rel_path, args.use_tokens):
             return 1
     return 0
 
