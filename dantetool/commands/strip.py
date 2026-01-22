@@ -113,8 +113,19 @@ def replace_prompt_in_query(q, canto):
             new_prompt_lines.append(raw)
 
     if not has_numbered_lines:
-        print(f"Error: no numbered lines found in prompt for {q.info}", file=sys.stderr)
-        return False
+        # Fallback: try to extract line numbers from query.info
+        parsed = common.parse_info(q.info or "")
+        if not parsed:
+            print(f"Error: no numbered lines found in prompt for {q.info}", file=sys.stderr)
+            return False
+        # Extract line numbers from info and build prompt with canonical text
+        _, _, line_no, total_lines = parsed
+        line_numbers = list(range(line_no, min(line_no + 2, total_lines) + 1))
+        new_prompt_lines = []
+        for ln in line_numbers:
+            if 1 <= ln <= len(canto):
+                canto_text = canto[ln - 1][0]
+                new_prompt_lines.append(f"{ln} {canto_text}")
 
     new_prompt = "\n".join(new_prompt_lines)
     if new_prompt != q.prompt:
@@ -200,8 +211,20 @@ def process_file_with_token_validation(target, canto, replace_prompt=False):
         # Extract numbered lines from prompt
         numbered_lines = common.extract_numbered_lines(q.prompt)
         if not numbered_lines:
-            error(q, "no numbered lines found in prompt for")
-            continue
+            # Fallback: try to extract line numbers from query.info
+            parsed = common.parse_info(q.info or "")
+            if not parsed:
+                error(q, "no numbered lines found in prompt for")
+                continue
+            # Extract line numbers from info: [Cantica Canto N] line_no/total_lines
+            _, _, line_no, total_lines = parsed
+            line_numbers = list(range(line_no, min(line_no + 2, total_lines) + 1))
+            # Build numbered_lines from canonical canto text
+            numbered_lines = []
+            for ln in line_numbers:
+                if 1 <= ln <= len(canto):
+                    canto_text = canto[ln - 1][0]
+                    numbered_lines.append((ln, canto_text, f"{ln} {canto_text}"))
 
         # Replace prompt with canonical canto text if requested
         if replace_prompt:
