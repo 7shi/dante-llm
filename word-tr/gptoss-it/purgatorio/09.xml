@@ -425,25 +425,25 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 </prompt>
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
-|---|---|---|---|---|---|---|---|---|---|
-| ed | e | and | et | e | et | y | e | și | kaj |
-| esser | essere | to be | esse | esser | être | ser | ser | a fi | esti |
-| mi | mi | me | mē | me | me | me | me | mă | mi |
-| parea | parere | seemed | videbatur | pareva | semblait | parecía | parecia | părea | ŝajnis |
+|---|---|---|---|---/---|---|---|---|---|---|
+| ed | e | and | et | e | et | y | e | şi | kaj |
+| esser | essere | to be | esse | esser | être | ser | ser | fi | esti |
+| mi | mi | me | me | me | me | me | me | mă | mi |
+| parea | parere | seemed | parebat | pareva | paraissait | parecía | parecia | părea | ŝajnis |
 | là | là | there | ibi | ibi | là | allí | lá | acolo | tie |
 | dove | dove | where | ubi | ubi | où | dónde | onde | unde | kie |
-| fuoro | essere | were | erant | fueron | étaient | fueron | foram | fuseau | estis |
+| fuoro | essere | were | erant | erant | étaient | eran | eram | erau | estis |
 | abbandonati | abbandonare | abandoned | abandonati | abandonate | abandonnés | abandonados | abandonados | abandonaţi | abandonitaj |
-| i | il | the | — | le | les | los | os | cei | la |
-| suoi | suo | his | sui | sui | ses | sus | seus | ai săi | liaj |
-| da | da | by | a | de | par | por | por | de | de |
-| Ganimede | Ganimede | Ganymede | Ganymedes | Ganimede | Ganymède | Ganímedes | Ganimedes | Ganimede | Ganimedo |
+| i | il | the | | le | les | los | os | cei | la |
+| suoi | suo | his | suus | su | son | su | seu | al său | lia |
+| da | da | by | ab | ab | par | por | por | de | de |
+| Ganimede | Ganimede | Ganymede | Ganymedes | Ganimede | Ganymède | Ganímedes | Ganimedes | Ganimed | Ganimedo |
 | quando | quando | when | quando | quando | quand | cuando | quando | când | kiam |
-| fu | essere | was | erat | fue | était | fue | foi | fost | estis |
+| fu | essere | was | erat | era | fut | fue | foi | a fost | estis |
 | ratto | rapido | quick | citus | rapide | rapide | rápido | rápido | rapid | rapida |
-| al | a+il | to the | ad | al | au | al | ao | la | al la |
-| sommo | sommo | highest | summus | sommo | suprême | supremo | supremo | suprem | supera |
-| consistorio | consistere | consistory | consistorium | consistorio | consistoire | consistorio | consistório | consistoriu | konsistorio |
+| al | a+il | to the | ad | al | au | al | ao | la | al |
+| sommo | sommo | supreme | summus | sumo | suprême | supremo | supremo | suprem | supera |
+| consistoro | consistere | consist | consistere | consistere | consister | consistir | consistir | consta | konsisti |
 </result>
 </query>
 <query>
@@ -1152,29 +1152,29 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Qui | qui | here | hic | hic | ici | aquí | aqui | aici | ĉi tie |
-| ti | tu | you | te | te | te | te | te | te | vin |
-| posò | posare | placed | posuit | posava | posa | puso | pôs | puse | metis |
+| ti | tu | you (obj.) | te | te | toi | te | te | te | vin |
+| posò | posare | placed | posuit | posava | posa | colocó | pôs | a pus | metis |
 | ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
-| prima | prima | first | prima | prima | première | primera | primeira | prima | unua |
-| mi | io | I | ego | io | je | yo | eu | eu | mi |
+| pria | prima | before | prius | prima | avant | antes | antes | înainte | antaŭ |
+| mi | io | me | me | me | me | me | me | mă | mi |
 | dimostraro | dimostrare | will demonstrate | demonstrabit | demonstrara | démontrera | demostrará | demonstrará | va demonstra | montrados |
-| li | il | them | eos | les | les | los | os | îi | ili |
+| li | il | them | eos | los | les | los | os | îi | ilin |
 | occhi | occhio | eyes | oculi | oculos | yeux | ojos | olhos | ochi | okuloj |
 | suoi | suo | his | sui | suo | son | su | seu | al său | lia |
 | belli | bello | beautiful | bellus | belle | beaux | bellos | belos | frumoși | belaj |
-| quella | quello | that | illa | illa | celle‑là | aquella | aquela | aceea | tiu |
-| intrata | entrata | entered | intravit | intrava | entrée | entró | entrou | intră | eniris |
-| aperta | aperto | open | aperta | aperte | ouverte | abierta | aberta | deschisă | malferma |
+| quella | quello | that | illa | illa | celle‑là | esa | essa | aceea | tiu |
+| intrata | entrata | entered | intravit | intrava | entrée | entró | entrou | a intrat | eniris |
+| aperta | aperto | open | aperta | aperta | ouverte | abierta | aberta | deschisă | malferma |
 | poi | poi | then | deinde | postea | puis | luego | então | apoi | poste |
 | ella | ella | she | ea | illa | elle | ella | ela | ea | ŝi |
 | e | e | and | et | e | et | y | e | și | kaj |
 | 'l | il | the | ille | le | le | el | o | cel | la |
-| sonno | sonno | sleep | somnus | sonno | sommeil | sueño | sono | somn | dormo |
+| sonno | sonno | sleep | somnus | sonno | sommeil | sueño | sono | somn | sono |
 | ad | a | to | ad | a | à | a | a | la | al |
 | una | uno | a | una | un | une | una | uma | o | unu |
 | se | se | if | si | si | si | si | se | dacă | se |
-| n' | ne | not | non | non | ne | no | não | nu | ne |
-| andaro | andare | to go | ire | ir | aller | ir | ir | a merge | iri |
+| n' | ne | not | non | non | pas | no | não | nu | ne |
+| andaro | andare | will go | ibit | iras | ira | irá | irá | va merge | iros |
 </result>
 </query>
 <query>
