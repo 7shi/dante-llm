@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""Fix prompts in 1-error.xml by replacing table columns 0,1 with current source data."""
+"""Fix prompts in 1-error.xml by replacing table columns with current source data."""
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+import argparse
 
 from dantetool import common
 
-def replace_table_columns(prompt, source_table, columns=(0, 1)):
-    """Replace specified columns in prompt table with source table data.
+def replace_table_columns(prompt, source_table, source_columns):
+    """Replace prompt table columns with source table data.
 
     Args:
         prompt: Original prompt containing a table
         source_table: Source table (list of rows) with correct data
-        columns: Tuple of column indices to replace
+        source_columns: List of source column indices to copy from.
+                       These will be written to destination columns 0, 1, 2, ... in order.
 
     Returns:
         Updated prompt with replaced columns
@@ -30,11 +31,11 @@ def replace_table_columns(prompt, source_table, columns=(0, 1)):
     if len(source_data) != len(prompt_data):
         return None
 
-    # Replace columns
+    # Replace columns: source_columns[i] -> destination column i
     for i, (prompt_row, source_row) in enumerate(zip(prompt_data, source_data)):
-        for col in columns:
-            if col < len(prompt_row) and col < len(source_row):
-                prompt_table[i + 2][col] = source_row[col]
+        for dest_col, src_col in enumerate(source_columns):
+            if dest_col < len(prompt_row) and src_col < len(source_row):
+                prompt_table[i + 2][dest_col] = source_row[src_col]
 
     # Find table start/end in original prompt and replace only table part
     lines = prompt.split('\n')
@@ -64,13 +65,21 @@ def replace_table_columns(prompt, source_table, columns=(0, 1)):
     return '\n'.join(parts)
 
 def main():
-    if len(sys.argv) < 3:
-        print("Usage: fix.py <error-file> <source-dir>", file=sys.stderr)
-        print("Example: fix.py 1-error.xml ../word/gemma3-it", file=sys.stderr)
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description="Fix prompts in error file by replacing table columns with source data."
+    )
+    parser.add_argument("error_file", help="Error file to fix (e.g., 1-error.xml)")
+    parser.add_argument("source_dir", help="Source directory (e.g., ../word/gemma3-it)")
+    parser.add_argument(
+        "-c", "--columns", required=True,
+        help="Source columns to copy (comma-separated, e.g., '0,1'). "
+             "These will fill destination columns starting from 0."
+    )
+    args = parser.parse_args()
 
-    error_file = sys.argv[1]
-    source_dir = sys.argv[2]
+    error_file = args.error_file
+    source_dir = args.source_dir
+    source_columns = [int(c.strip()) for c in args.columns.split(",")]
 
     # Read error queries
     error_qs = common.read_queries(error_file)
@@ -106,7 +115,7 @@ def main():
             print(f"Warning: Could not parse source table for {q.info}", file=sys.stderr)
             continue
 
-        new_prompt = replace_table_columns(q.prompt, source_table)
+        new_prompt = replace_table_columns(q.prompt, source_table, source_columns)
         if new_prompt is None:
             print(f"Warning: Could not update prompt for {q.info}", file=sys.stderr)
             continue

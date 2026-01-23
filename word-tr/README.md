@@ -161,17 +161,24 @@ A utility script to update prompts in `1-error.xml` by replacing table columns w
 
 ### Purpose
 
-When source word tables are updated after error collection, the prompts in `1-error.xml` may contain outdated table data (columns 0 and 1: "Italian" and "Lemma"). This script synchronizes those columns with the current source files.
+When source word tables are updated after error collection, the prompts in `1-error.xml` may contain outdated table data. This script synchronizes those columns with the current source files.
 
 ### Usage
 
 ```bash
-uv run fix.py <error-file> <source-dir>
+uv run fix.py -c <columns> <error-file> <source-dir>
 ```
 
-Example (in `gemma3-it` directory):
+Options:
+- `-c, --columns` (required): Source columns to copy (comma-separated). These fill destination columns starting from 0.
+
+Examples:
 ```bash
-uv run ../fix.py 1-error.xml ../../word/gemma3-it
+# For word-tr: copy source columns 0,1 to destination columns 0,1
+uv run ../fix.py -c 0,1 1-error.xml ../../word/gemma3-it
+
+# For etymology: copy source column 1 to destination column 0
+uv run ../fix.py -c 1 1-error.xml ../../word/gemma3-it
 ```
 
 ### How It Works
@@ -181,7 +188,7 @@ uv run ../fix.py 1-error.xml ../../word/gemma3-it
 3. For each error query:
    - Matches it to the corresponding source query by `info` field
    - Extracts the table from the source query
-   - Replaces columns 0 and 1 in the error prompt table with source data
+   - Copies specified source columns to destination columns (starting from 0)
 4. Writes back the updated error file
 
 ### When to Use
@@ -189,16 +196,16 @@ uv run ../fix.py 1-error.xml ../../word/gemma3-it
 Use this script when:
 - Source word tables have been updated after error collection
 - You want to retry errors with the latest source data
-- Columns 0 and 1 in error prompts are out of sync with source files
+- Columns in error prompts are out of sync with source files
 
 ### Integration with Workflow
 
 This script is typically used between error collection and retry:
 
 ```bash
-make check                                         # Extract errors to 1-error.xml
-uv run ../fix.py 1-error.xml ../../word/gemma3-it  # Sync with source
-make redo MODEL=model-name                         # Retry with updated prompts
+make check                                              # Extract errors to 1-error.xml
+uv run ../fix.py -c 0,1 1-error.xml ../../word/gemma3-it  # Sync with source
+make redo MODEL=model-name                              # Retry with updated prompts
 ```
 
 ## Compare Word Tables
