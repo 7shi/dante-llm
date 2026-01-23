@@ -11,6 +11,25 @@ uv sync
 
 ## Commands
 
+### compare - Compare Word Tables
+
+Compare word tables from different models and generate a markdown comparison file:
+
+```bash
+uv run dantetool compare <rel-paths...>
+```
+
+Options:
+- `-t, --use-tokens` - Use tokenized words as first column for matching
+
+Example:
+```bash
+uv run dantetool compare inferno/01 inferno/02
+```
+
+Output:
+- `comparison/inferno/01.md` - Markdown file with side-by-side comparison of word tables from all models
+
 ### concat - Concatenate XML Files
 
 Concatenate multiple XML query files into a single output file:
