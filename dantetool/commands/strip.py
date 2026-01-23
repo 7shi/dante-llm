@@ -17,10 +17,24 @@ def add_args(parser):
     validation_group.add_argument("--validate-source", type=str,
                         help="validate against source directory (e.g., '../word-tr/gemma3-it')")
 
-    parser.add_argument("--validate-column", type=int, default=0,
-                        help="column index to validate (0=Word, 1=Lemma, etc.)")
+    parser.add_argument("--validate-column", type=str, default=None,
+                        help="column index to validate (0=Word, 1=Lemma, etc.). Comma-separated for multiple columns (e.g., '0,1'). Only valid with --validate-source")
     parser.add_argument("--replace-prompt", action="store_true",
                         help="replace prompt numbered lines with canonical canto text from tokenize/")
+
+def parse_column_indices(column_spec):
+    """Parse column specification string into list of integers.
+
+    Args:
+        column_spec: Column specification (e.g., '0', '0,1', '0,1,2')
+
+    Returns:
+        list[int]: List of column indices
+    """
+    try:
+        return [int(c.strip()) for c in column_spec.split(',')]
+    except ValueError:
+        raise ValueError(f"Invalid column specification: {column_spec}")
 
 def extract_cantica_canto(target_path):
     """Extract cantica name and canto number from file path.
@@ -166,18 +180,20 @@ def replace_prompt_in_query(q, canto):
 
     return False
 
-def load_reference_data(target, canto=None, source_queries=None, column_index=0):
+def load_reference_data(target, canto=None, source_queries=None, column_indices=None):
     """Load reference data and convert to common format.
 
     Args:
         target: Path to XML file
         canto: Tokenized canto data (for --validate-tokens)
         source_queries: Dict mapping info -> source Query (for --validate-source)
-        column_index: Column index to validate (0=Word, 1=Lemma, etc.)
+        column_indices: List of column indices to validate (e.g., [0, 1])
 
     Returns:
-        dict[str, list[str]]: Mapping from query.info to reference tokens
+        dict[str, list[list[str]]]: Mapping from query.info to list of reference tokens for each column
     """
+    if column_indices is None:
+        column_indices = [0]
     # Read target queries to get all query.info
     qs = common.read_queries(target)
     reference_data = {}
@@ -186,10 +202,10 @@ def load_reference_data(target, canto=None, source_queries=None, column_index=0)
         if not q.result:
             continue
 
-        ref_tokens = []
+        ref_tokens_per_column = []
 
         if source_queries is not None:
-            # Extract from source query
+            # Extract from source query for each column
             source_q = source_queries.get(q.info)
             if not source_q:
                 continue
@@ -198,15 +214,19 @@ def load_reference_data(target, canto=None, source_queries=None, column_index=0)
             if not source_table or len(source_table) < 3:
                 continue
 
-            for row in source_table[2:]:  # Skip header and separator
-                if len(row) <= column_index:
-                    continue
-                token = fix_token(row[column_index])
-                if common.has_alpha(token):
-                    ref_tokens.append(token)
+            # Extract tokens for each column index
+            for column_index in column_indices:
+                col_tokens = []
+                for row in source_table[2:]:  # Skip header and separator
+                    if len(row) <= column_index:
+                        continue
+                    token = fix_token(row[column_index])
+                    if common.has_alpha(token):
+                        col_tokens.append(token)
+                ref_tokens_per_column.append(col_tokens)
 
         elif canto is not None:
-            # Extract from tokenize data
+            # Extract from tokenize data (single column only - always column 0)
             # First, get numbered lines from prompt
             numbered_lines = common.extract_numbered_lines(q.prompt)
             if not numbered_lines:
@@ -221,6 +241,7 @@ def load_reference_data(target, canto=None, source_queries=None, column_index=0)
                             canto_text = canto[ln - 1][0]
                             numbered_lines.append((ln, canto_text, f"{ln} {canto_text}"))
 
+            col_tokens = []
             if numbered_lines:
                 for line_no, _, _ in numbered_lines:
                     if not (1 <= line_no <= len(canto)):
@@ -229,34 +250,38 @@ def load_reference_data(target, canto=None, source_queries=None, column_index=0)
                     if not parts:
                         continue
                     # tokenize format: [original_line, token1, token2, ...]
-                    ref_tokens.extend(parts[1:])
+                    col_tokens.extend(parts[1:])
+            if col_tokens:
+                ref_tokens_per_column.append(col_tokens)
 
-        if ref_tokens:
-            reference_data[q.info] = ref_tokens
+        if ref_tokens_per_column:
+            reference_data[q.info] = ref_tokens_per_column
 
     return reference_data
 
-def validate_table_with_reference(table, ref_tokens):
-    """Validate a table against reference tokens.
+def validate_table_with_reference(table, ref_tokens_per_column):
+    """Validate a table against reference tokens for multiple columns.
 
     Args:
         table: The table to validate (including header rows)
-        ref_tokens: Reference tokens to compare against
+        ref_tokens_per_column: List of reference tokens for each column
 
     Returns:
         None if OK, otherwise a list of token mismatch errors.
     """
-    # Extract target tokens (first column values; header rows skipped)
-    target_tokens = [row[0] for row in table[2:]]
+    # Validate each column
+    for col_idx, ref_tokens in enumerate(ref_tokens_per_column):
+        # Extract target tokens for this column (header rows skipped)
+        target_tokens = [row[col_idx] for row in table[2:]]
 
-    # Step 1: length check
-    if len(target_tokens) != len(ref_tokens):
-        return [("len_mismatch", len(target_tokens), len(ref_tokens))]
+        # Step 1: length check
+        if len(target_tokens) != len(ref_tokens):
+            return [("len_mismatch", col_idx, len(target_tokens), len(ref_tokens))]
 
-    # Step 2: content check
-    for i, (a, b) in enumerate(zip(target_tokens, ref_tokens), start=1):
-        if a != b:
-            return [("mismatch", i, a, b)]
+        # Step 2: content check
+        for i, (a, b) in enumerate(zip(target_tokens, ref_tokens), start=1):
+            if a != b:
+                return [("mismatch", col_idx, i, a, b)]
 
     return None
 
@@ -374,6 +399,24 @@ def process_file_with_validation(target, reference_data, canto=None, replace_pro
 def main_func(args):
     error_count = 0
 
+    # Validate argument combinations
+    if args.validate_tokens and args.validate_column is not None:
+        print("Error: --validate-column cannot be used with --validate-tokens", file=sys.stderr)
+        return 1
+
+    if args.validate_source is not None and args.validate_column is None:
+        print("Error: --validate-column is required with --validate-source", file=sys.stderr)
+        return 1
+
+    # Parse column indices
+    column_indices = None
+    if args.validate_column is not None:
+        try:
+            column_indices = parse_column_indices(args.validate_column)
+        except ValueError as e:
+            print(f"Error: {e}", file=sys.stderr)
+            return 1
+
     for target in args.targets:
         # Determine operation mode
         validate_mode = args.validate_tokens or args.validate_source is not None
@@ -391,17 +434,19 @@ def main_func(args):
                           file=sys.stderr)
                     return 1
             elif args.validate_tokens:
-                # Load tokenized canto data
+                # Load tokenized canto data (always validates column 0 only)
                 canto = load_tokenized_canto(target)
                 if canto is None:
                     print(f"Error: --validate-tokens specified but no tokenized data for {target}",
                           file=sys.stderr)
                     return 1
+                # Always use column 0 for tokenize validation
+                column_indices = [0]
 
             # Convert to common reference data format
             reference_data = load_reference_data(
                 target, canto=canto, source_queries=source_queries,
-                column_index=args.validate_column)
+                column_indices=column_indices)
 
             # Process with validation
             errors = process_file_with_validation(
