@@ -245,17 +245,17 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Or | ora | now | nunc | ora | maintenant | ahora | agora | acum | nun |
-| discendiam | discendere | we went down | descendimus | nos descendiva | nous descendîmes | nosotros descendimos | nós descemos | noi coboram | ni malsupreniris |
-| qua | qua | here | hic | hic | ici | aquí | aqui | aici | ĉi tie |
-| giù | giù | down | deorsum | de | en bas | abajo | baixo | jos | malsupren |
-| nel | ne+il | in the | in | in le | dans le | en el | no | în | en la |
+| discendiam | discendere | we would descend | descenderemus | nos descenderi | nous descendrions | nosotros descenderíamos | nós desceríamos | noi am coborî | ni descendus |
+| qua | qua | where | ubi | ubi | où | donde | onde | unde | kie |
+| giù | giù | down | deorsum | deorsum | en bas | abajo | baixo | jos | malsupre |
+| nel | ne+il | in the | the | in le | dans le | en el | no | în | en la |
 | cieco | cieco | blind | caecus | cec | aveugle | ciego | cego | orb | blinda |
 | mondo | mondo | world | mundus | mundo | monde | mundo | mundo | lume | mondo |
-| cominciò | cominciare | began | coepit | comencèt | commença | comenzó | começou | începu | komencis |
-| il | il | the | ille | le | le | el | o | cel | la |
+| cominciò | cominciare | started | coepit | comencava | commença | comenzó | começou | începu | komencis |
+| il | il | the | the | le | le | el | o | cel | la |
 | poeta | poeta | poet | poeta | poeta | poète | poeta | poeta | poet | poeto |
 | tutto | tutto | all | totus | toto | tout | todo | todo | tot | ĉio |
-| smorto | smortire | dead | mortuus | mort | mort | muerto | morto | mort | mortita |
+| smorto | smorto | dead | mortuus | mort | mort | muerto | morto | mort | mort |
 | Io | io | I | ego | io | je | yo | eu | eu | mi |
 | sarò | essere | I will be | ero | io sera | je serai | seré | serei | voi fi | mi estos |
 | primo | primo | first | primus | prime | premier | primero | primeiro | primul | unua |
@@ -803,18 +803,18 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Gran | grande | great | magnus | grande | grand | gran | grande | mare | granda |
+| Gran | grande | great | magnus | grand | grand | gran | grande | mare | granda |
 | duol | dolore | pain | dolor | dolor | douleur | dolor | dor | durere | doloro |
-| mi | io | me | me | me | me | me | me | mă | mi |
+| mi | io | I | ego | io | je | yo | eu | eu | mi |
 | prese | prendere | took | cepit | prendeva | prit | tomó | tomou | luă | prenis |
 | al | a+il | to the | ad | al | au | al | ao | la | al |
 | cor | cuore | heart | cor | cor | cœur | corazón | coração | inimă | koro |
 | quando | quando | when | quando | quando | quand | cuando | quando | când | kiam |
-| lo | il | it | illum | lo | le | lo | o | îl | ĝin |
-| 'ntesi | intendere | understood | intellexit | intender | compris | entendí | entendi | înțeles | komprenis |
+| lo | il | the | ille | le | le | el | o | cel | la |
+| 'ntesi | in+intendere | I understood | intendi | intendeva | compris | entendí | entendi | am înțeles | komprenis |
 | però | però | but | sed | ma | mais | pero | mas | dar | sed |
 | che | che | that | quod | que | que | que | que | că | ke |
-| gente | gente | people | gens | gente | gens | gente | gente | popor | popolo |
+| gente | gente | people | populus | gente | gens | gente | gente | popor | popolo |
 | di | di | of | de | de | de | de | de | de | de |
 | molto | molto | much | multum | multo | beaucoup | mucho | muito | mult | multe |
 | valore | valore | value | valor | valor | valeur | valor | valor | valoare | valoro |
@@ -822,9 +822,9 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | che | che | that | quod | que | que | que | que | că | ke |
 | 'n | in | in | in | in | dans | en | em | în | en |
 | quel | quel | that | ille | quel | quel | ese | aquele | acel | tiu |
-| limbo | limbo | limbo | limbus | limbo | limbe | limbo | limbo | limbo | limbo |
+| limbo | limbo | limbo | limbus | limbo | limbe | limbo | limbo | limb | limbo |
 | eran | essere | were | erant | eran | étaient | eran | eram | erau | estis |
-| sospesi | sospendere | suspended | suspenditi | suspendite | suspendus | suspendidos | suspensos | suspendaţi | suspenditaj |
+| sospesi | sospendere | suspended | suspendi | suspendite | suspendus | suspendidos | suspensos | suspendați | suspenditaj |
 </result>
 </query>
 <query>
@@ -1093,48 +1093,48 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| e | – | | | | | | | | |
+| e | e | | | | | | | | |
 | altri | altro | | | | | | | | |
 | molti | molto | | | | | | | | |
-| e | – | | | | | | | | |
-| feceli | fare+li | | | | | | | | |
+| e | e | | | | | | | | |
+| feceli | fare | | | | | | | | |
 | beati | beato | | | | | | | | |
-| E | – | | | | | | | | |
+| E | e | | | | | | | | |
 | vo' | volere | | | | | | | | |
-| che | – | | | | | | | | |
+| che | che | | | | | | | | |
 | sappi | sapere | | | | | | | | |
-| che | – | | | | | | | | |
-| dinanzi | – | | | | | | | | |
-| ad | – | | | | | | | | |
+| che | che | | | | | | | | |
+| dinanzi | dinanzi | | | | | | | | |
+| ad | ad | | | | | | | | |
 | essi | esso | | | | | | | | |
 | spiriti | spirito | | | | | | | | |
 | umani | umano | | | | | | | | |
-| non | – | | | | | | | | |
+| non | non | | | | | | | | |
 | eran | essere | | | | | | | | |
 | salvati | salvare | | | | | | | | |
 </prompt>
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| e | – | and | et | e | et | y | e | și | kaj |
-| altri | altro | others | alii | altri | autres | otros | outros | alții | aliaj |
-| molti | molto | many | multi | multos | beaucoup | muchos | muitos | mulţi | multaj |
-| e | – | and | et | e | et | y | e | și | kaj |
-| feceli | fare+li | made them | fecit eos | facer los | les fit | los hizo | os fez | i-a făcut | faris ilin |
-| beati | beato | blessed | beati | beatos | béni | benditos | bem‑aventurados | binecuvântaţi | benitaj |
-| E | – | and | et | e | et | y | e | și | kaj |
-| vo' | volere | I want | volo | volo | je veux | quiero | quero | vreau | mi volas |
-| che | – | that | quod | que | que | que | que | că | ke |
-| sappi | sapere | know | scito | sape | sache | sabe | sabe | știi | sciu |
-| che | – | that | quod | que | que | que | que | că | ke |
-| dinanzi | – | before | ante | ante | devant | delante | diante | în fața | antaŭ |
-| ad | – | to | ad | ad | à | a | a | la | al |
-| essi | esso | them | eos | ellos | eux | ellos | eles | ei | ili |
-| spiriti | spirito | spirits | spiritus | spiritus | esprits | espíritus | espíritos | spiritelor | spiritoj |
+| e | e | and | et | e | et | y | e | și | kaj |
+| altri | altro | others | alii | alteres | autres | otros | outros | alții | aliaj |
+| molti | molto | many | multi | multos | beaucoup | muchos | muitos | mulți | multaj |
+| e | e | and | et | e | et | y | e | și | kaj |
+| feceli | fare | to do | facere | facer | faire | hacer | fazer | a face | fari |
+| beati | beato | blessed | beati | beatos | bénis | benditos | bem‑aventurados | binecuvântați | benitaj |
+| E | e | and | et | e | et | y | e | și | kaj |
+| vo' | volere | want | velle | voler | vouloir | querer | querer | a vrea | voli |
+| che | che | that | quod | que | que | que | que | că | ke |
+| sappi | sapere | know | scire | saper | savoir | saber | saber | a ști | scii |
+| che | che | that | quod | que | que | que | que | că | ke |
+| dinanzi | dinanzi | before | ante | ante | devant | delante de | diante de | în fața | antaŭ |
+| ad | ad | to | ad | a | à | a | a | la | al |
+| essi | esso | them | eos | los | les | los | os | ei | ilin |
+| spiriti | spirito | spirits | spiritus | spiritus | esprits | espíritus | espíritos | spirite | spiritoj |
 | umani | umano | human | humani | human | humains | humanos | humanos | umani | homaj |
-| non | – | not | non | non | pas | no | não | nu | ne |
-| eran | essere | were | erant | eran | étaient | eran | eram | erau | estis |
-| salvati | salvare | saved | salvati | salvate | sauvés | salvados | salvos | salvaţi | savitaj |
+| non | non | not | non | non | pas | no | não | nu | ne |
+| eran | essere | were | erant | era | étaient | eran | eram | erau | estis |
+| salvati | salvare | saved | salvati | salvate | sauvés | salvados | salvos | salvați | savitaj |
 </result>
 </query>
 <query>
@@ -1144,14 +1144,14 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Non | – | | | | | | | | |
+| Non | non | | | | | | | | |
 | lasciavam | lasciare | | | | | | | | |
-| l' | il | | | | | | | | |
+| l' | lo | | | | | | | | |
 | andar | andare | | | | | | | | |
 | perch' | perché | | | | | | | | |
 | ei | egli | | | | | | | | |
 | dicessi | dire | | | | | | | | |
-| ma | – | | | | | | | | |
+| ma | ma | | | | | | | | |
 | passavam | passare | | | | | | | | |
 | la | la | | | | | | | | |
 | selva | selva | | | | | | | | |
@@ -1166,24 +1166,24 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Non | – | not | non | non | pas | no | não | nu | ne |
-| lasciavam | lasciare | they left | abibant | lassar | laissaient | dejaban | deixavam | lăsau | lasis |
-| l' | il | the | — | le | le | el | o | (cel) | la |
+| Non | non | not | non | non | pas | no | não | nu | ne |
+| lasciavam | lasciare | they left | laxabant | laxar | laissaient | dejaban | deixavam | lăsau | lasis |
+| l' | lo | the | (none) | le | le | el | o | (none) | la |
 | andar | andare | to go | ire | andar | aller | ir | ir | a merge | iri |
-| perch' | perché | because | quia | perque | parce que | porque | porque | pentru că | ĉar |
-| ei | egli | he | is | il | il | él | ele | el | li |
-| dicessi | dire | I might say | dicerem | dicere | je dise | dijera | eu dissesse | aș spune | mi dirus |
-| ma | – | but | sed | ma | mais | pero | mas | dar | sed |
+| perch' | perché | because | quod | que | parce que | porque | porque | pentru că | ĉar |
+| ei | egli | he | is | ille | il | él | ele | el | li |
+| dicessi | dire | I might say | dicerem | dicer | je dirais | dijera | dizesse | aș spune | mi dirus |
+| ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
 | passavam | passare | they passed | transibant | passar | passaient | pasaban | passavam | treceau | pasis |
-| la | la | the | — | le | la | la | a | (cel) | la |
+| la | la | the | illa | le | la | la | a | (none) | la |
 | selva | selva | forest | silva | silva | forêt | selva | selva | pădure | arbaro |
 | tuttavia | tuttavia | however | tamen | tamen | toutefois | sin embargo | entretanto | totuși | tamen |
-| la | la | the | — | le | la | la | a | (cel) | la |
+| la | la | the | illa | le | la | la | a | (none) | la |
 | selva | selva | forest | silva | silva | forêt | selva | selva | pădure | arbaro |
 | dico | dire | I say | dico | dicer | je dis | digo | digo | spun | mi diras |
 | di | di | of | de | de | de | de | de | de | de |
 | spiriti | spirito | spirits | spiritus | spiritus | esprits | espíritus | espíritos | spirite | spiritoj |
-| spessi | spesso | often | saepe | saepe | souvent | a menudo | frequentemente | adesea | ofte |
+| spessi | spesso | often | saepe | sovente | souvent | a menudo | frequentemente | des | ofte |
 </result>
 </query>
 <query>
@@ -1193,11 +1193,11 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Non | – | | | | | | | | |
+| Non | non | | | | | | | | |
 | era | essere | | | | | | | | |
 | lunga | lungo | | | | | | | | |
 | ancor | ancora | | | | | | | | |
-| la | la | | | | | | | | |
+| la | il | | | | | | | | |
 | nostra | nostro | | | | | | | | |
 | via | via | | | | | | | | |
 | di | di | | | | | | | | |
@@ -1218,27 +1218,27 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Non | – | not | non | non | non | no | não | nu | ne |
+| Non | non | not | non | non | pas | no | não | nu | ne |
 | era | essere | was | erat | esseva | était | era | era | era | estis |
 | lunga | lungo | long | longus | longe | long | largo | longo | lung | longa |
 | ancor | ancora | still | adhuc | ancora | encore | todavía | ainda | încă | ankoraŭ |
-| la | la | the | — | le | la | la | a | la | la |
+| la | il | the | (none) | le | la | la | a | (none) | la |
 | nostra | nostro | our | noster | nostre | notre | nuestro | nosso | nostru | nia |
-| via | via | way | via | via | voie | vía | via | voie | vojo |
+| via | via | way | via | via | voie | vía | via | cale | vojo |
 | di | di | of | de | de | de | de | de | de | de |
 | qua | qua | here | hic | hic | ici | aquí | aqui | aici | ĉi tie |
-| dal | da+il | from the | ab | de le | du | del | do | de la | de la |
-| sonno | sonno | sleep | somnus | somno | sommeil | sueño | sono | somn | sono |
+| dal | da+il | from the | ab | de | du | del | do | de la | de la |
+| sonno | sonno | sleep | somnus | sonno | sommeil | sueño | sono | somn | sono |
 | quand' | quando | when | quando | quando | quand | cuando | quando | când | kiam |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
-| vidi | vedere | saw | vidi | videva | vu | vi | vi | am văzut | vidis |
+| vidi | vedere | saw | vidi | videva | vit | vio | vi | am văzut | vidis |
 | un | uno | a | unus | un | un | un | um | un | unu |
 | foco | fuoco | fire | focus | foco | feu | fuego | fogo | foc | fajro |
 | ch' | che | that | quod | que | que | que | que | că | ke |
-| emisperio | emisperio | midday | meridies | meridie | midi | mediodía | meio‑dia | amiază | tagmezo |
+| emisperio | emisperio | midday | meridies | meridian | midi | mediodía | meio‑dia | amiază | tagmezo |
 | di | di | of | de | de | de | de | de | de | de |
-| tenebre | tenebra | darkness | tenebrae | tenebras | ténèbres | tinieblas | trevas | întuneric | mallumo |
-| vincia | vincere | wins | vincit | vince | gagne | gana | ganha | câștigă | venkas |
+| tenebre | tenebra | darkness | tenebrae | tenebra | obscurité | tinieblas | trevas | întuneric | mallumo |
+| vincia | vincere | won | vinceret | vincerea | gagnait | ganaba | ganhava | câștiga | venkis |
 </result>
 </query>
 <query>
@@ -1248,21 +1248,21 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Di | – | | | | | | | | |
+| Di | di | | | | | | | | |
 | lungi | lungo | | | | | | | | |
 | n' | ne | | | | | | | | |
 | eravamo | essere | | | | | | | | |
-| ancora | – | | | | | | | | |
+| ancora | ancora | | | | | | | | |
 | un | uno | | | | | | | | |
 | poco | poco | | | | | | | | |
-| ma | – | | | | | | | | |
-| non | – | | | | | | | | |
-| sì | – | | | | | | | | |
+| ma | ma | | | | | | | | |
+| non | non | | | | | | | | |
+| sì | sì | | | | | | | | |
 | ch' | che | | | | | | | | |
 | io | io | | | | | | | | |
-| non | – | | | | | | | | |
+| non | non | | | | | | | | |
 | discernessi | discernere | | | | | | | | |
-| in | – | | | | | | | | |
+| in | in | | | | | | | | |
 | parte | parte | | | | | | | | |
 | ch' | che | | | | | | | | |
 | orrevol | orrevole | | | | | | | | |
@@ -1274,27 +1274,27 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Di | – | of | de | de | de | de | de | de | de |
+| Di | di | of | de | de | de | de | de | de | de |
 | lungi | lungo | long | longus | longe | long | largo | longo | lung | longa |
-| n' | ne | not | non | non | pas | no | não | nu | ne |
-| eravamo | essere | we were | eramus | eravamo | nous étions | éramos | éramos | eram | ni estis |
-| ancora | – | still | adhuc | ancora | encore | todavía | ainda | încă | ankoraŭ |
+| n' | ne | of it | eius | ne | en | de ello | ne | de el | de ĝi |
+| eravamo | essere | we were | eramus | nos esseva | nous étions | éramos | éramos | eram | ni estis |
+| ancora | ancora | still | adhuc | ancora | encore | todavía | ainda | încă | ankoraŭ |
 | un | uno | a | unus | un | un | un | um | un | unu |
 | poco | poco | little | parvus | poco | peu | poco | pouco | puțin | malmulte |
-| ma | – | but | sed | ma | mais | pero | mas | dar | sed |
-| non | – | not | non | non | pas | no | não | nu | ne |
-| sì | – | yes | sic | si | oui | sí | sim | da | jes |
+| ma | ma | but | sed | ma | mais | pero | mas | dar | sed |
+| non | non | not | non | non | non | no | não | nu | ne |
+| sì | sì | yes | sic | si | oui | sí | sim | da | jes |
 | ch' | che | that | quod | que | que | que | que | că | ke |
 | io | io | I | ego | io | je | yo | eu | eu | mi |
-| non | – | not | non | non | pas | no | não | nu | ne |
-| discernessi | discernere | you would discern | discerneres | discernirias | tu discernerais | tú discernirías | tu discernirias | ai discerne | vi discernus |
-| in | – | in | in | in | dans | en | em | în | en |
+| non | non | not | non | non | non | no | não | nu | ne |
+| discernessi | discernere | you might discern | discerneres | tu discerneres | tu discernerais | tú discernirías | tu discernirias | ai discerne | vi discernus |
+| in | in | in | in | in | dans | en | em | în | en |
 | parte | parte | part | pars | parte | partie | parte | parte | parte | parto |
 | ch' | che | that | quod | que | que | que | que | că | ke |
 | orrevol | orrevole | horrible | horribilis | horribile | horrible | horrible | horrível | oribil | horrora |
-| gente | gente | people | gens | gente | gens | gente | gente | gente | popolo |
+| gente | gente | people | populus | gente | gens | gente | gente | oameni | homoj |
 | possedea | possedere | possessed | possidebat | possedeva | possédait | poseía | possuía | poseda | posedis |
-| quel | quel | that | ille | quel | ce | ese | aquele | acel | tiu |
+| quel | quel | that | ille | quel | quel | ese | aquele | acel | tiu |
 | loco | luogo | place | locus | loco | lieu | lugar | lugar | loc | loko |
 </result>
 </query>

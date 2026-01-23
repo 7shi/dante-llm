@@ -882,55 +882,55 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | Io | io | | | | | | | | |
 | vidi | vedere | | | | | | | | |
 | un | uno | | | | | | | | |
-| fatto | fare | | | | | | | | |
-| a | | | | | | | | | |
+| fatto | fatto | | | | | | | | |
+| a | a | | | | | | | | |
 | guisa | guisa | | | | | | | | |
-| di | | | | | | | | | |
-| lëuto | lueto | | | | | | | | |
-| pur | | | | | | | | | |
+| di | di | | | | | | | | |
+| lëuto | lëuto | | | | | | | | |
+| pur | pur | | | | | | | | |
 | ch' | che | | | | | | | | |
 | elli | elli | | | | | | | | |
 | avesse | avere | | | | | | | | |
 | avuta | avere | | | | | | | | |
 | l' | la | | | | | | | | |
 | anguinaia | anguinaia | | | | | | | | |
-| tronca | troncato | | | | | | | | |
-| da | | | | | | | | | |
+| tronca | troncare | | | | | | | | |
+| da | da | | | | | | | | |
 | l' | il | | | | | | | | |
 | altro | altro | | | | | | | | |
 | che | che | | | | | | | | |
 | l' | il | | | | | | | | |
 | uomo | uomo | | | | | | | | |
 | ha | avere | | | | | | | | |
-| forcuto | forzare | | | | | | | | |
+| forcuto | forcere | | | | | | | | |
 </prompt>
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
 | Io | io | I | ego | io | je | yo | eu | eu | mi |
-| vidi | vedere | saw | vidi | videva | vis | vi | vi | am văzut | vidis |
+| vidi | vedere | saw | vidi | videva | vu | vi | vi | am văzut | vidis |
 | un | uno | a | unus | un | un | un | um | un | unu |
-| fatto | fare | done | factum | facite | fait | hecho | feito | făcut | farita |
-| a | | to | ad | a | à | a | a | la | al |
-| guisa | guisa | way | modus | modo | manière | modo | modo | mod | maniero |
-| di | | of | de | de | de | de | de | de | de |
-| lëuto | lueto | light | lux | luce | lumière | luz | luz | lumină | lumo |
-| pur | | pure | purus | puro | pur | puro | puro | pur | pura |
+| fatto | fatto | fact | factum | facto | fait | hecho | fato | fapt | fakto |
+| a | a | to/at | ad | a | à | a | a | la | al |
+| guisa | guisa | way | via | maniera | façon | manera | maneira | mod | maniero |
+| di | di | of | de | de | de | de | de | de | de |
+| lëuto | lëuto | place | locus | loco | lieu | lugar | lugar | loc | loko |
+| pur | pur | still | tamen | tamen | pourtant | aún | ainda | totuși | ankoraŭ |
 | ch' | che | that | quod | que | que | que | que | că | ke |
 | elli | elli | they | illi | illes | elles | ellas | elas | ele | ili |
-| avesse | avere | had | haberet | haberea | eût | hubiera | tivesse | ar fi avut | estus havinta |
-| avuta | avere | had | habita | habite | eu | tenido | tido | avută | havita |
-| l' | la | the | ille | le | le | el | o | l | la |
-| anguinaia | anguinaia | eel | anguilla | anguilla | anguille | anguila | enguia | anghilă | angilo |
-| tronca | troncato | cut | truncatus | truncate | tronqué | truncado | truncado | tăiat | tranĉita |
-| da | | by | a | de | de | de | de | de | de |
-| l' | il | the | ille | le | le | el | o | l | la |
+| avesse | avere | had | haberet | haber | eût | hubiera | tivesse | ar fi avut | havus |
+| avuta | avere | had | habita | habite | eu | tenido | tido | avut | havita |
+| l' | la | the | — | le | la | la | a | la | la |
+| anguinaia | anguinaia | snake | anguis | serpente | serpent | serpiente | serpente | șarpe | serpento |
+| tronca | troncare | cut | truncare | truncar | tronquer | truncar | truncar | tăia | tranĉi |
+| da | da | from | de | de | de | de | de | de | de |
+| l' | il | the | — | le | le | el | o | — | la |
 | altro | altro | other | alter | altere | autre | otro | outro | alt | alia |
 | che | che | that | quod | que | que | que | que | că | ke |
-| l' | il | the | ille | le | le | el | o | l | la |
-| uomo | uomo | man | homo | homo | homme | hombre | homem | om | viro |
+| l' | il | the | — | le | le | el | o | — | la |
+| uomo | uomo | man | homo | homine | homme | hombre | homem | om | homo |
 | ha | avere | has | habet | ha | a | ha | tem | are | havas |
-| forcuto | forzare | forced | coactus | forzate | forcé | forzado | forçado | forțat | devigita |
+| forcuto | forcere | forced | coactus | forzar | forcé | forzado | forçado | forțat | devigita |
 </result>
 </query>
 <query>
@@ -2600,12 +2600,12 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 <result>
 | Italian | Lemma | English | Latin | Interlingua | French | Spanish | Portuguese | Romanian | Esperanto |
 |---|---|---|---|---|---|---|---|---|---|
-| Qual | quale | which | qui | qual | quel | qué | qual | care | kiu |
+| Qual | quale | which | qui | qual | quel | cuál | qual | care | kiu |
 | è | essere | is | est | es | est | es | é | este | estas |
-| colui | colui | he who | qui | qui | celui qui | el que | aquele que | cel care | tiu, kiu |
+| colui | colui | he | is | ille | celui | él | ele | el | li |
 | che | che | that | quod | que | que | que | que | că | ke |
-| suo | nostro | his | suus | su | son | su | seu | său | lia |
-| dannaggio | dannaggio | damage | damnum | damno | dommage | daño | dano | daună | damago |
+| suo | suo | his | suus | su | son | su | seu | său | lia |
+| dannaggio | dannaggio | damage | damnum | damno | dommage | daño | dano | daună | damaĝo |
 | sogna | sognare | dreams | somniat | sonia | rêve | sueña | sonha | visează | sonĝas |
 | che | che | that | quod | que | que | que | que | că | ke |
 | sognando | sognare | dreaming | somnians | soniante | rêvant | soñando | sonhando | visând | sonĝante |
@@ -2613,13 +2613,13 @@ For each row in the table, fill in the 'English,Latin,Interlingua,French,Spanish
 | sognare | sognare | to dream | somniare | soniar | rêver | soñar | sonhar | a visa | sonĝi |
 | sì | sì | yes | sic | si | oui | sí | sim | da | jes |
 | che | che | that | quod | que | que | que | que | că | ke |
-| quel | quel | that | ille | quel | ce | ese | aquele | acel | tiu |
+| quel | quel | that | ille | ille | ce | ese | esse | acel | tiu |
 | ch' | che | that | quod | que | que | que | que | că | ke |
 | è | essere | is | est | es | est | es | é | este | estas |
 | come | come | how | quomodo | como | comment | cómo | como | cum | kiel |
 | non | non | not | non | non | pas | no | não | nu | ne |
-| fosse | essere | were | esset | esseva | fût | fuera | fosse | fost | estus |
-| agogna | agognare | to long for | desiderare | desirar | désirer | añorar | ansiar | a tânji | deziri |
+| fosse | essere | were | esset | fosse | fût | fuera | fosse | ar fi | estus |
+| agogna | agognare | long (for) | desiderare | desiderar | désirer | ansiar | ansiar | dori | sopiri |
 </result>
 </query>
 <query>
