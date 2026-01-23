@@ -155,6 +155,52 @@ make redo-sweep MODEL=model-name
 
 Automatically retries with gradually increasing temperature from 0.1 to 1.0.
 
+## fix.py
+
+A utility script to update prompts in `1-error.xml` by replacing table columns with current source data.
+
+### Purpose
+
+When source word tables are updated after error collection, the prompts in `1-error.xml` may contain outdated table data (columns 0 and 1: "Italian" and "Lemma"). This script synchronizes those columns with the current source files.
+
+### Usage
+
+```bash
+uv run fix.py <error-file> <source-dir>
+```
+
+Example (in `gemma3-it` directory):
+```bash
+uv run ../fix.py 1-error.xml ../../word/gemma3-it
+```
+
+### How It Works
+
+1. Reads error queries from the specified error file (e.g., `1-error.xml`)
+2. Loads source word tables from the source directory
+3. For each error query:
+   - Matches it to the corresponding source query by `info` field
+   - Extracts the table from the source query
+   - Replaces columns 0 and 1 in the error prompt table with source data
+4. Writes back the updated error file
+
+### When to Use
+
+Use this script when:
+- Source word tables have been updated after error collection
+- You want to retry errors with the latest source data
+- Columns 0 and 1 in error prompts are out of sync with source files
+
+### Integration with Workflow
+
+This script is typically used between error collection and retry:
+
+```bash
+make check                                         # Extract errors to 1-error.xml
+uv run ../fix.py 1-error.xml ../../word/gemma3-it  # Sync with source
+make redo MODEL=model-name                         # Retry with updated prompts
+```
+
 ## Compare Word Tables
 
 Compare translation tables from different models (gemini1-it, gemma3-it, gptoss-it) line by line:
