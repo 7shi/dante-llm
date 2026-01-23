@@ -830,6 +830,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | sole | | |
 | aguglia | | |
 | sì | | |
+| non | | |
 | lui | | |
 | si | | |
 | affissare | | |
@@ -841,21 +842,22 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | quando | Latin | quando |
 | Beatrice | Latin | Beatrix |
 | in | Latin | in |
-| su+il | Latin | super ille |
+| su+il | Latin | super + ille |
 | sinistro | Latin | sinister |
 | fianco | Germanic | \*flankō |
 | vedere | Latin | videre |
 | rivoltare | Latin | revolvere |
 | e | Latin | et |
-| riguardare | Latin | re-guardare |
+| riguardare | Latin | re + guardare |
 | in+il | Latin | ille |
 | sole | Latin | sol |
 | aguglia | Germanic | \*agula |
 | sì | Latin | sic |
-| lui | Latin | ille |
+| non | Latin | non |
+| lui | Germanic | \*hi |
 | si | Latin | se |
 | affissare | Latin | affixare |
-| unquanco | Latin | unquam |
+| unquanco | Latin | unum + quando |
 </result>
 </query>
 <query>
@@ -1553,14 +1555,14 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | io | | |
 | a | | |
 | dimandare | | |
-| la | | |
+| il | | |
 | bocca | | |
 | aprire | | |
 </prompt>
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| onde | Latin | undae |
+| onde | Latin | unde |
 | ella | Latin | illa |
 | che | Latin | quae |
 | vedere | Latin | videre |
@@ -1569,16 +1571,16 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | come | Latin | cum |
 | io | Latin | ego |
 | a | Latin | ad |
-| quietare+mi | Latin | quietare |
+| quietare+mi | Latin | quietus |
 | il | Latin | ille |
 | animo | Latin | animus |
-| commuovere | Latin | commovere |
+| commuovere | Latin | com- + movere |
 | prima | Latin | primus |
 | che | Latin | quae |
 | io | Latin | ego |
 | a | Latin | ad |
-| dimandare | Latin | demandare |
-| la | Latin | illa |
+| dimandare | Germanic | \*dōmjanan |
+| il | Latin | ille |
 | bocca | Latin | bucca |
 | aprire | Latin | aperire |
 </result>
@@ -1605,6 +1607,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | non | | |
 | vedere | | |
 | ciò | | |
+| che | | |
 | vedere | | |
 | se | | |
 | il | | |
@@ -1614,11 +1617,11 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| e | Germanic | *and |
-| cominciare | Germanic | \*kumanan |
-| tu | Indo-European | *tū |
-| stesso | Germanic | \*sati |
-| te | Indo-European | *té |
+| e | Germanic | *andā |
+| cominciare | Germanic | \*kumpa- |
+| tu | Germanic | \*tu |
+| stesso | Germanic | \*sat- |
+| te | Germanic | \*te |
 | fare | Germanic | \*farjanan |
 | grosso | Germanic | \*grōssaz |
 | con+il | Latin | cum + ille |
@@ -1629,6 +1632,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | non | Latin | non |
 | vedere | Germanic | \*weidan |
 | ciò | Latin | cic |
+| che | Latin | quae |
 | vedere | Germanic | \*weidan |
 | se | Latin | si |
 | il | Latin | ille |
@@ -1800,7 +1804,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| onda | | |
+| onde | | |
 | ella | | |
 | appresso | | |
 | di | | |
@@ -1825,15 +1829,15 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| onda | Germanic | *undō |
+| onde | Latin | undae |
 | ella | Latin | illa |
-| appresso | Latin | ad + pressus |
+| appresso | Germanic | \*ap-pressan |
 | di | Latin | de |
 | uno | Latin | unus |
 | pio | Latin | pius |
-| sospiro | Latin | suspirium |
+| sospiro | Germanic | \*suspan |
 | gli | Latin | illi |
-| occhio | Germanic | *augō |
+| occhio | Germanic | \*augon |
 | drizzare | Germanic | \*drīzan |
 | verso | Latin | versus |
 | me | Latin | me |
@@ -1841,10 +1845,10 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | quello | Latin | ille |
 | sembiante | Latin | semi- + habitans |
 | che | Latin | quae |
-| madre | Germanic | *mōdar |
-| fare | Germanic | *farjan |
-| sopra | Latin | supra |
-| figlio | Germanic | *filjaz |
+| madre | Germanic | \*mōdar |
+| fare | Germanic | \*farjanan |
+| sopra | Latin | super |
+| figlio | Germanic | \*filjaz |
 | delirio | Latin | delirium |
 </result>
 </query>

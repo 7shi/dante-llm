@@ -80,36 +80,6 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | Bruggia | | |
 | temere | | |
 | il | | |
-| uno | | |
-| di+gli | | |
-| duro | | |
-| margine | | |
-| e | | |
-| il | | |
-| fumo | | |
-| di+il | | |
-| ruscello | | |
-| di | | |
-| sopra | | |
-| aduggiare | | |
-| sì | | |
-| che | | |
-| di+il | | |
-| fuoco | | |
-| salvare | | |
-| il | | |
-| acqua | | |
-| e | | |
-| li | | |
-| argine | | |
-| qual | | |
-| fiammingo | | |
-| tra | | |
-| Guizzante | | |
-| e | | |
-| Bruggia | | |
-| temere | | |
-| il | | |
 | fiotto | | |
 | che | | |
 | in+ver | | |
@@ -123,61 +93,33 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | il | | |
 | mare | | |
 | si | | |
+| fuggire | | |
 </prompt>
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
 | qual | Latin | qualis |
-| fiammingo | Latin | Flandria |
+| fiammingo | French | flamand (from Latin *Flandria*) |
 | tra | Latin | inter |
-| Guizzante | | |
+| Guizzante | Italian | guizzare |
 | e | Latin | et |
 | Bruggia | | |
-| temere | Latin | timere |
-| il | Latin | ille |
-| uno | Latin | unus |
-| di+gli | Latin | de + illī |
-| duro | Latin | durus |
-| margine | Latin | marginis |
-| e | Latin | et |
-| il | Latin | ille |
-| fumo | Latin | fumus |
-| di+il | Latin | de + ille |
-| ruscello | | |
-| di | Latin | de |
-| sopra | Latin | super |
-| aduggiare | | |
-| sì | Latin | sic |
-| che | Latin | quod / quid |
-| di+il | Latin | de + ille |
-| fuoco | Latin | focus |
-| salvare | Latin | salvare |
-| il | Latin | ille |
-| acqua | Latin | aqua |
-| e | Latin | et |
-| li | Latin | illī |
-| argine | Latin | argīna |
-| qual | Latin | qualis |
-| fiammingo | Latin | Flandria |
-| tra | Latin | inter |
-| Guizzante | | |
-| e | Latin | et |
-| Bruggia | | |
-| temere | Latin | timere |
+| temere | Latin | temere |
 | il | Latin | ille |
 | fiotto | | |
-| che | Latin | quod / quid |
-| in+ver | | |
-| loro | Latin | illōrē |
+| che | Latin | quod / qui |
+| in+ver | Latin | in + vertere |
+| loro | Latin | illorum |
 | si | Latin | se |
-| avventare | Latin | advenire |
+| avventare | Latin | adventurus (future participle of *advenire*) |
 | fare | Latin | facere |
 | lo | Latin | illum |
-| schermo | Greek | skērma |
-| perché | Latin | per quod |
+| schermo | Germanic | Old High German *skerm* (shield) |
+| perché | Latin | per quod |
 | il | Latin | ille |
 | mare | Latin | mare |
 | si | Latin | se |
+| fuggire | Latin | fugere |
 </result>
 </query>
 <query>
@@ -680,7 +622,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | quanto | | |
 | potere | | |
 | venire | | |
-| pregare | | |
+| prendere | | |
 | e | | |
 | se | | |
 | volere | | |
@@ -689,7 +631,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | voi | | |
 | mi | | |
 | asseggiare | | |
-| fare+l' | | |
+| fare+lo | | |
 | se | | |
 | piacere | | |
 | a | | |
@@ -701,29 +643,29 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| io | Latin | *ego* |
-| dire | Latin | *dicere* |
-| lui | Latin | *ill(u)i* (oblique of *ille*) |
-| quanto | Latin | *quantum* |
-| potere | Latin | *potēre* |
-| venire | Latin | *venīre* |
-| pregare | Latin | *precārī* |
-| e | Latin | *et* |
-| se | Latin | *se* |
-| volere | Latin | *volēre* |
-| che | Latin | *quod* (relative pronoun) |
-| con | Latin | *cum* |
-| voi | Latin | *vos* |
-| mi | Latin | *me* |
-| asseggiare | Latin | *a‑* + *sedēre* (from *sedere*, “to sit”) |
-| fare+l' | Latin | *facere* + *ille* (elided article) |
-| se | Latin | *se* |
-| piacere | Latin | *placēre* |
-| a | Latin | *ad* |
-| costui | Latin | *cui* + *istum* (demonstrative) |
-| che | Latin | *quod* |
-| voi | Latin | *vos* |
-| seguire | Latin | *sequi* |
+| io | Latin | ego |
+| dire | Latin | dicere |
+| lui | Latin | illi (dative of *ille*) |
+| quanto | Latin | quantum |
+| potere | Latin | potēre |
+| venire | Latin | venire |
+| prendere | Latin | prēhendere |
+| e | Latin | et |
+| se | Latin | se |
+| volere | Latin | volēre |
+| che | Latin | quod |
+| con | Latin | cum |
+| voi | Latin | vos |
+| mi | Latin | me |
+| asseggiare | Latin | assēdere |
+| fare+lo | Latin | facere + illum |
+| se | Latin | se |
+| piacere | Latin | placere |
+| a | Latin | ad |
+| costui | Latin | cuius |
+| che | Latin | quod |
+| voi | Latin | vos |
+| seguire | Latin | sequi |
 </result>
 </query>
 <query>
@@ -1790,17 +1732,18 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | tanto | Latin | tantus |
 | volere | Latin | volēre |
 | io | Latin | ego |
-| che | Latin | quid |
+| che | Latin | quod / qui |
 | voi | Latin | vos |
 | essere | Latin | esse |
 | manifesto | Latin | manifestus |
 | pur | Latin | purus |
-| che | Latin | quid |
+| che | Latin | quod / qui |
 | mio | Latin | meus |
 | coscienza | Latin | conscientia |
 | non | Latin | non |
 | mi | Latin | mihi |
-| garrire | Latin | garrire (from garrulus) |
+| garrire | Latin | garrire |
+| che | Latin | quod / qui |
 | a | Latin | ad |
 | il | Latin | ille |
 | Fortuna | Latin | Fortuna |
@@ -2342,7 +2285,6 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | a | | |
 | Verona | | |
 | il | | |
-| mio | | |
 | drappo | | |
 | verde | | |
 | per | | |
@@ -2356,28 +2298,27 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| poi | Latin | post |
+| poi | Latin | postea |
 | si | Latin | se |
 | rivolgere | Latin | revolvere |
 | e | Latin | et |
 | parere | Latin | parere |
 | di | Latin | de |
-| colui | Latin | cuius |
+| colui | Latin | cuius + ille |
 | che | Latin | quid |
 | correre | Latin | currere |
 | a | Latin | ad |
-| Verona | Latin | Verona |
+| Verona | Celtic (Gaulish) | *Verūna |
 | il | Latin | ille |
-| mio | Latin | meus |
-| drappo | Germanic | *drappaz (via Latin *drappus) |
+| drappo | Latin (from Greek) | drappus (← Greek drappos) |
 | verde | Latin | viridis |
 | per | Latin | per |
 | la | Latin | illa |
-| campagna | Latin | campānia |
+| campagna | Latin | campania |
 | e | Latin | et |
 | parere | Latin | parere |
 | di | Latin | de |
-| costui | Latin | cuius |
+| costui | Latin | cui + iste (cuius iste) |
 </result>
 </query>
 <query>

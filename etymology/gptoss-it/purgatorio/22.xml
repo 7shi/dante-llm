@@ -450,7 +450,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | poco | | |
 | a | | |
 | riso | | |
-| così tanto | | |
+| prima | | |
 | poi | | |
 | rispondere | | |
 | ogni | | |
@@ -466,27 +466,27 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| questo | Latin | *ecce* + *iste* (Latin) |
-| parola | Latin | *parabola* (Latin ← Greek *parabolḗ*) |
-| Stazio | Latin | *Statius* (Latin) |
-| muovere | Latin | *movere* (Latin) |
-| fare | Latin | *facere* (Latin) |
-| uno | Latin | *unus* (Latin) |
-| poco | Latin | *paucus* (Latin) |
-| a | Latin | *ad* (Latin) |
-| riso (laughter) | Latin | *risus* (Latin) |
-| così tanto | Latin | *sic* + *tantum* (Latin) |
-| poi | Latin | *post* (Latin) |
-| rispondere | Latin | *respondere* (Latin) |
-| ogni | Latin | *omnis* (Latin) |
-| tuo | Latin | *tuus* (Latin) |
-| dire | Latin | *dicere* (Latin) |
-| di | Latin | *de* (Latin) |
-| amore | Latin | *amor* (Latin) |
-| mi | Latin | *me* (Latin) |
-| essere | Latin | *esse* (Latin) |
-| caro | Latin | *carus* (Latin) |
-| cenno | Latin | *cinnus* (Latin) *(etymology uncertain)* |
+| questo | Latin | *ecce iste* |
+| parola | Latin | *parabola* |
+| Stazio | Latin | *Statius* |
+| muovere | Latin | *movēre* |
+| fare | Latin | *facere* |
+| uno | Latin | *unus* |
+| poco | Latin | *paucus* |
+| a | Latin | *ad* |
+| riso | Latin | *risus* |
+| prima | Latin | *prima* (from *primus*) |
+| poi | Latin | *postea* |
+| rispondere | Latin | *respondēre* |
+| ogni | Latin | *omnis* |
+| tuo | Latin | *tuus* |
+| dire | Latin | *dicere* |
+| di | Latin | *de* |
+| amore | Latin | *amor* |
+| mi | Latin | *me* |
+| essere | Latin | *esse* |
+| caro | Latin | *carus* |
+| cenno | Latin | *cēnno* |
 </result>
 </query>
 <query>
@@ -681,18 +681,19 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | se | Latin | se |
 | non | Latin | non |
 | essere | Latin | esse |
-| che | Latin | quid |
+| che | Latin | quod |
 | io | Latin | ego |
 | drizzare | Latin | directus |
 | mio | Latin | meus |
 | cura | Latin | cura |
 | quando | Latin | quando |
+| io | Latin | ego |
 | intendere | Latin | intendere |
-| là | Latin | illa |
-| dove | Latin | de ubi |
+| là | Latin | illā |
+| dove | Latin | ubi |
 | tu | Latin | tu |
 | chiamare | Latin | clamare |
-| crucciarsi | Latin | crux |
+| crucciarsi | | |
 | quasi | Latin | quasi |
 | a | Latin | ad |
 | la | Latin | illa |
@@ -838,22 +839,22 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | vivere | | |
 | e | | |
 | ne | | |
-| i | | |
+| li | | |
 | stremo | | |
 </prompt>
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| quanto | Latin | quantus |
-| risorgere | Latin | resurgere (re‑ + surgere) |
-| con+il | Latin | cum + ille |
+| quanto | Latin | quantum |
+| risorgere | Latin | resurgere |
+| con+il | Latin | cum + ille |
 | crine | Latin | crinis |
-| scemo | Latin | scēmus |
+| scemo | Latin | |
 | per | Latin | per |
 | ignoranza | Latin | ignorantia |
-| che | Latin | quod / quid |
+| che | Latin | quid |
 | di | Latin | de |
-| questo | Latin | *ecce iste* |
+| questo | Latin | ecce iste |
 | pecca | Latin | peccatum |
 | togliere | Latin | tollere |
 | il | Latin | ille |
@@ -861,7 +862,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | vivere | Latin | vivere |
 | e | Latin | et |
 | ne | Latin | ne |
-| i | Latin | ii |
+| li | Latin | illos |
 | stremo | Latin | extremus |
 </result>
 </query>
@@ -1094,7 +1095,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | o | | |
 | quale | | |
 | candela | | |
-| tu (clitic) | | |
+| tu | | |
 | stenebrare | | |
 | sì | | |
 | che | | |
@@ -1111,25 +1112,25 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| se | Latin | si |
-| così | Latin | sic |
+| se | Latin | se |
+| così | Latin | cōsī |
 | essere | Latin | esse |
 | quale | Latin | qualis |
 | sole | Latin | sol |
 | o | Latin | aut |
 | quale | Latin | qualis |
 | candela | Latin | candēla |
-| tu (clitic) | Latin | tu |
-| stenebrare | Latin | tendere |
+| tu | Latin | tū |
+| stenebrare | | |
 | sì | Latin | sic |
-| che | Latin | quid |
-| tu | Latin | tu |
+| che | Latin | *quid |
+| tu | Latin | tū |
 | drizzare | Latin | directus |
 | poscia | Latin | postea |
 | di | Latin | de |
 | retro | Latin | retro |
 | a+il | Latin | ad + ille |
-| pescatore | Latin | piscator |
+| pescatore | Latin | piscātor |
 | le | Latin | illae |
 | vela | Latin | velum |
 </result>
@@ -2428,7 +2429,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | la | | |
 | alto | | |
 | roccia | | |
-| uno | | |
+| un | | |
 | liquore | | |
 | chiaro | | |
 | e | | |
@@ -2454,8 +2455,8 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | di | Latin | de |
 | la | Latin | illa |
 | alto | Latin | altus |
-| roccia | Germanic | *hrukka (via Lombardic *rocca) |
-| uno | Latin | unus |
+| roccia | Germanic | *hrukka* (via Late Latin *rocca*) |
+| un | Latin | unus |
 | liquore | Latin | liquor |
 | chiaro | Latin | clarus |
 | e | Latin | et |
@@ -2463,8 +2464,8 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | spandere | Latin | spargere |
 | per | Latin | per |
 | le | Latin | illae |
-| foglia | Latin | folium |
-| sopra | Latin | supra |
+| foglia | Latin | folia |
+| sopra | Latin | super |
 </result>
 </query>
 <query>
@@ -2558,21 +2559,21 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | poi | Latin | post |
 | dire | Latin | dicere |
 | più | Latin | plus |
-| pensare | Latin | pensare |
-| Maria | Hebrew | Miriam |
+| pensare | Latin | pensare (from *pensum*) |
+| Maria | Hebrew (via Greek) | Miriam |
 | onde | Latin | unda |
 | essere | Latin | esse |
 | la | Latin | illa |
 | nozze | Latin | nuptiae |
-| orribile | Latin | horribilis |
+| orrorevole | Latin | horror |
 | e | Latin | et |
 | intero | Latin | integer |
-| che | Latin | quid / qui |
+| che | Latin | quid |
 | a | Latin | ad |
 | la | Latin | illa |
 | suo | Latin | suus |
 | bocca | Latin | bucca |
-| che | Latin | quod / qui |
+| che | Latin | quid |
 | or | | |
 | per | Latin | per |
 | voi | Latin | vos |

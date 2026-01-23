@@ -407,7 +407,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | per | | |
 | il | | |
 | tenebra | | |
-| demasiado | | |
+| troppo | | |
 | da | | |
 | il | | |
 | lungo | | |
@@ -425,22 +425,22 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | ella | Latin | illa |
 | a | Latin | ad |
 | mi | Latin | me |
-| però | Latin | per + hoc |
-| che | Latin | quod / qui |
+| però | Latin | per hoc |
+| che | Latin | quid |
 | tu | Latin | tu |
 | trascorrere | Latin | transcurrere |
 | per | Latin | per |
 | il | Latin | ille |
 | tenebra | Latin | tenebrae |
-| demasiado | | |
+| troppo | Greek | τρόπος (tropos) |
 | da | Latin | de |
 | il | Latin | ille |
 | lungo | Latin | longus |
 | avvenire | Latin | advenire |
-| che | Latin | quod / qui |
+| che | Latin | quid |
 | poi | Latin | postea |
 | in+il | Latin | in + ille |
-| maginare | | |
+| maginare | Latin | imaginari |
 | abborrare | | |
 </result>
 </query>
@@ -1024,28 +1024,29 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| ché | Latin | quid |
-| dove | Latin | ubi |
+| ché | Latin | quod |
+| dove | Latin | de + ubi |
 | il | Latin | ille |
 | argomento | Latin | argumentum |
 | di | Latin | de |
 | la | Latin | illa |
 | mente | Latin | mens |
 | si | Latin | se |
-| aggiungere | Latin | adjungere |
+| aggiungere | Latin | adiungere |
 | a+il | Latin | ad + ille |
 | male | Latin | malus |
-| volere | Latin | volo |
+| volere | Latin | volēre |
 | e | Latin | et |
 | a | Latin | ad |
-| potere | Latin | posse |
-| nessuno | Latin | nec + homo |
+| la | Latin | illa |
+| potere | Latin | potēre |
+| nessuno | Latin | nec + unus |
 | riparo | Latin | reparare |
 | vi | Latin | vos |
-| potere | Latin | posse |
+| potere | Latin | potēre |
 | fare | Latin | facere |
 | la | Latin | illa |
-| gente | Latin | gens |
+| gente | Latin | gens (gentis) |
 </result>
 </query>
 <query>
@@ -1127,7 +1128,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | mezzo | | |
 | in | | |
 | giù | | |
-| di | | |
+| ne | | |
 | mostrare | | |
 | bene | | |
 | tanto | | |
@@ -1139,10 +1140,6 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | a | | |
 | il | | |
 | chioma | | |
-| essere | | |
-| le | | |
-| altro | | |
-| osso | | |
 </prompt>
 <result>
 | Italian | Derived | Etymology |
@@ -1153,12 +1150,12 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | ripa | Latin | ripa |
 | che | Latin | quid |
 | essere | Latin | esse |
-| perizoma | Greek | περίζωμα |
+| perizoma | Greek | περίζωμα (perízōma) |
 | da+il | Latin | de + ille |
 | mezzo | Latin | medius |
 | in | Latin | in |
-| giù | Latin | juxta |
-| di | Latin | de |
+| giù | Latin | iūs (south, downwards) |
+| ne | Latin | ne |
 | mostrare | Latin | monstrare |
 | bene | Latin | bene |
 | tanto | Latin | tantum |
@@ -1170,10 +1167,6 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | a | Latin | ad |
 | il | Latin | ille |
 | chioma | Latin | cima |
-| essere | Latin | esse |
-| le | Latin | illae |
-| altro | Latin | alter |
-| osso | Latin | os |
 </result>
 </query>
 <query>
@@ -1670,7 +1663,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | scoperto | | |
 | sé | | |
 | ravvolgere | | |
-| infine | | |
+| infino | | |
 | a+il | | |
 | giro | | |
 | quinto | | |
@@ -1684,22 +1677,22 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | che | Latin | quid |
 | il | Latin | ille |
 | tenere | Latin | tenēre |
-| avvinto | Latin | ad‑vīnctus |
+| avvinto | Latin | ad + vincere |
 | da+il | Latin | de + ille |
 | collo | Latin | collum |
 | in | Latin | in |
-| giù | | |
+| giù | Latin | juxta |
 | sì | Latin | sic |
 | che | Latin | quod |
 | in | Latin | in |
 | su | Latin | sub |
 | il | Latin | ille |
-| scoperto | Latin | ex + cooperīre (ex‑cooperitus) |
-| sé | Latin | sē |
-| ravvolgere | Latin | rē‑volvere |
-| infine | Latin | in fine |
+| scoperto | Latin | ex + operire |
+| sé | Latin | se |
+| ravvolgere | Latin | re + volvere |
+| infino | Latin | in + fine |
 | a+il | Latin | ad + ille |
-| giro | Greek | γῦρος (gûros) |
+| giro | Greek | γῦρος (gyros) |
 | quinto | Latin | quintus |
 </result>
 </query>
@@ -2690,7 +2683,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | Lucifero | | |
 | con | | |
 | Giuda | | |
-| io | | |
+| ci | | |
 | sposare | | |
 | né | | |
 | sì | | |
@@ -2702,7 +2695,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| ma | Latin | magis |
+| ma | Latin | ma |
 | lievemente | Latin | leviter |
 | a+il | Latin | ad + ille |
 | fondo | Latin | fundus |
@@ -2710,12 +2703,12 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | divorare | Latin | devorare |
 | Lucifero | Latin | Lucifer |
 | con | Latin | cum |
-| Giuda | Latin | Judas |
-| io | Latin | ego |
+| Giuda | Greek | Ioudas (Ἰούδας) |
+| ci | Latin | nos |
 | sposare | Latin | sponsare |
 | né | Latin | neque |
 | sì | Latin | sic |
-| chinato | Latin | cinuare |
+| chinato | Latin | cīnare |
 | lì | Latin | illī |
 | fare | Latin | facere |
 | dimora | Latin | dimorare |

@@ -256,53 +256,53 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 |---|---|---|
 | così | | |
 | senza | | |
-| andare | | |
-| – | | |
-| – | | |
+| dare | | |
+| e | | |
+| non | | |
 | credere | | |
-| – | | |
+| che | | |
 | essere | | |
 | lo | | |
 | decimo | | |
 | suo | | |
 | passo | | |
-| – | | |
+| in | | |
 | terra | | |
 | porre | | |
-| – | | |
-| – | | |
+| quando | | |
+| con | | |
 | li | | |
 | occhio | | |
 | li | | |
 | occhio | | |
-| mi | | |
+| io | | |
 | percuotere | | |
 </prompt>
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| così | Latin | quō sic |
+| così | Latin | cōsī |
 | senza | Latin | sine |
-| andare | Latin | ambulare |
-| – | | |
-| – | | |
+| dare | Latin | dare |
+| e | Latin | et |
+| non | Latin | non |
 | credere | Latin | credere |
-| – | | |
+| che | Latin | quid |
 | essere | Latin | esse |
 | lo | Latin | illum |
 | decimo | Latin | decimus |
 | suo | Latin | suus |
 | passo | Latin | passus |
-| – | | |
+| in | Latin | in |
 | terra | Latin | terra |
 | porre | Latin | ponere |
-| – | | |
-| – | | |
-| li | Latin | illi |
+| quando | Latin | quando |
+| con | Latin | cum |
+| li | Latin | illos |
 | occhio | Latin | oculus |
-| li | Latin | illi |
+| li | Latin | illos |
 | occhio | Latin | oculus |
-| mi | Latin | me |
+| io | Latin | ego |
 | percuotere | Latin | percutere |
 </result>
 </query>
@@ -313,8 +313,8 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
-| – | | |
+| e | | |
+| con | | |
 | tranquillo | | |
 | aspetto | | |
 | venire | | |
@@ -323,13 +323,13 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | mi | | |
 | dire | | |
 | tanto | | |
-| – | | |
+| che | | |
 | se | | |
 | io | | |
 | parlare | | |
-| teco | | |
-| – | | |
-| ascoltare+mi | | |
+| te+con | | |
+| a | | |
+| ascoltare | | |
 | tu | | |
 | essere | | |
 | bene | | |
@@ -338,8 +338,8 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
-| – | | |
+| e | Latin | et |
+| con | Latin | cum |
 | tranquillo | Latin | tranquillus |
 | aspetto | Latin | aspectus |
 | venire | Latin | venire |
@@ -348,13 +348,13 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | mi | Latin | me |
 | dire | Latin | dicere |
 | tanto | Latin | tantum |
-| – | | |
-| se | Latin | si |
+| che | Latin | quod |
+| se | Latin | se |
 | io | Latin | ego |
 | parlare | Latin | parabolare |
-| teco | Latin | tecum |
-| – | | |
-| ascoltare+mi | Latin | auscultare |
+| te+con | Latin | te + cum |
+| a | Latin | ad |
+| ascoltare | Latin | ascoltare |
 | tu | Latin | tu |
 | essere | Latin | esse |
 | bene | Latin | bene |
@@ -725,7 +725,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | e | | |
 | di | | |
 | ogni | | |
-| sbarrare | | |
+| sbarro | | |
 </prompt>
 <result>
 | Italian | Derived | Etymology |
@@ -735,7 +735,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | vedere | Latin | videre |
 | certamente | Latin | certus + -mente |
 | e | Latin | et |
-| però | Latin | per + hoc |
+| però | Latin | per hoc |
 | il | Latin | ille |
 | narrare | Latin | narrare |
 | a | Latin | ad |
@@ -751,7 +751,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | e | Latin | et |
 | di | Latin | de |
 | ogni | Latin | omnis |
-| sbarrare | Germanic (via Latin) | *barr‑ (bar) |
+| sbarro | Germanic | *barr |
 </result>
 </query>
 <query>
@@ -1567,12 +1567,12 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| perché | Latin | per quod |
+| perché | Latin | per + quod |
 | conoscere | Latin | cognoscere |
 | dire | Latin | dicere |
 | quello | Latin | ille |
-| scuola | Greek | σχολή |
-| ci | Latin | |
+| scuola | Greek | σχολή (scholē) |
+| ci | Latin | nos |
 | avere | Latin | habere |
 | seguire | Latin | sequi |
 | e | Latin | et |
@@ -1678,9 +1678,9 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | non | Latin | non |
 | mi | Latin | me |
 | ricordare | Latin | recordari |
-| che | Latin | quid |
+| che | Latin | quod |
 | io | Latin | ego |
-| straniare | Latin | extraneus |
+| straniare | Latin | extraneare |
 | me | Latin | me |
 | già | Latin | iam |
 | mai | Latin | mai |
@@ -1689,8 +1689,8 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | né | Latin | neque |
 | avere | Latin | habere |
 | coscienza | Latin | conscientia |
-| che | Latin | quid |
-| rimordere | Latin | remordere |
+| che | Latin | quod |
+| rimordare | Latin | remordere |
 </result>
 </query>
 <query>
@@ -2298,7 +2298,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | Eünoè | | |
 | che | | |
 | là | | |
-| derivare | | |
+| dirivare | | |
 | menare | | |
 | a | | |
 | esso | | |
@@ -2321,20 +2321,20 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | Eünoè | Greek | Εὐνόη |
 | che | Latin | quid |
 | là | Latin | illā |
-| derivare | Latin | derivare |
-| menare | Latin | mināre |
+| dirivare | Latin | derivare |
+| menare | Latin | minare |
 | a | Latin | ad |
 | esso | Latin | ipse |
 | e | Latin | et |
-| come | Latin | quōmodo |
-| tu | Latin | tū |
-| se | Latin | sē |
+| come | Latin | quomodo |
+| tu | Latin | tu |
+| se | Latin | se |
 | usare | Latin | usāre |
-| il | Latin | illĕ |
-| tramortire | Latin | trāmortīre |
+| il | Latin | ille |
+| tramortire | Latin | trāmortire |
 | suo | Latin | suus |
-| virtù | Latin | virtūs |
-| ravvivare | Latin | vivere |
+| virtù | Latin | virtus |
+| ravvivare | Latin | revivificare |
 </result>
 </query>
 <query>

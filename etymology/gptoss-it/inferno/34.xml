@@ -74,7 +74,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | uno | | |
 | molino | | |
 | che | | |
-| lo | | |
+| il | | |
 | vento | | |
 | girare | | |
 </prompt>
@@ -90,7 +90,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | o | Latin | aut |
 | quando | Latin | quando |
 | il | Latin | ille |
-| emisperio | Greek | ἡμισπέρων |
+| emisperio | | |
 | nostro | Latin | noster |
 | annotare | Latin | annotare |
 | parere | Latin | parere |
@@ -98,8 +98,8 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | lungo | Latin | longus |
 | uno | Latin | unus |
 | molino | Latin | molina |
-| che | Latin | quid |
-| lo | Latin | illum |
+| che | Latin | qui |
+| il | Latin | ille |
 | vento | Latin | ventus |
 | girare | Latin | gyrāre |
 </result>
@@ -811,25 +811,25 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| e | | |
 | il | | |
 | destra | | |
 | parere | | |
-| – | | |
+| tra | | |
 | bianco | | |
-| – | | |
+| e | | |
 | giallo | | |
 | il | | |
 | sinistra | | |
-| – | | |
+| a | | |
 | vedere | | |
 | essere | | |
-| tal | | |
+| tale | | |
 | quale | | |
 | venire | | |
-| – | | |
+| di | | |
 | là | | |
-| – | | |
+| onde | | |
 | il | | |
 | Nilo | | |
 | si | | |
@@ -838,27 +838,27 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| e | Latin | et |
 | il | Latin | ille |
-| destra | Latin | dextera (from *dexter*) |
+| destra | Latin | dextera (fem. of *dexter*) |
 | parere | Latin | parere |
-| – | | |
-| bianco | Germanic | *blank* (Old High German *blank*) |
-| – | | |
-| giallo | Latin | giallus (from Greek *khrasios*) |
+| tra | Latin | inter |
+| bianco | Germanic | *blankaz* (Old High German) |
+| e | Latin | et |
+| giallo | Latin | galbinus |
 | il | Latin | ille |
 | sinistra | Latin | sinistra |
-| – | | |
+| a | Latin | ad |
 | vedere | Latin | videre |
 | essere | Latin | esse |
-| tal | Latin | talis |
+| tale | Latin | talis |
 | quale | Latin | qualis |
 | venire | Latin | venire |
-| – | | |
-| là | Latin | illā |
-| – | | |
+| di | Latin | de |
+| là | Latin | illa |
+| onde | Latin | unde |
 | il | Latin | ille |
-| Nilo | Greek | Νεῖλος (Neilos) |
+| Nilo | Greek | Νεῖλος (Neîlos) |
 | si | Latin | se |
 | avvallare | Latin | vallis |
 </result>
@@ -870,7 +870,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| sotto | | |
 | ciascuno | | |
 | uscire | | |
 | due | | |
@@ -879,40 +879,40 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | quanto | | |
 | si | | |
 | convenire | | |
-| – | | |
+| a | | |
 | tanto | | |
 | uccello | | |
 | vela | | |
-| – | | |
+| di | | |
 | mare | | |
-| – | | |
+| non | | |
 | vedere | | |
 | io | | |
-| – | | |
+| mai | | |
 | cotale | | |
 </prompt>
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
-| ciascuno | Latin | ciscumque + unus |
-| uscire | Latin | ex‑ire |
+| sotto | Latin | subtus |
+| ciascuno | Latin | |
+| uscire | Latin | exire |
 | due | Latin | duo |
 | grande | Latin | grandis |
 | ala | Latin | ala |
 | quanto | Latin | quantum |
 | si | Latin | se |
 | convenire | Latin | convenire |
-| – | | |
+| a | Latin | ad |
 | tanto | Latin | tantum |
-| uccello | Latin | aviculus / aucellus |
+| uccello | Latin | avellus (aucellus) |
 | vela | Latin | velum |
-| – | | |
+| di | Latin | de |
 | mare | Latin | mare |
-| – | | |
+| non | Latin | non |
 | vedere | Latin | videre |
 | io | Latin | ego |
-| – | | |
+| mai | Latin | mai |
 | cotale | | |
 </result>
 </query>
@@ -1428,27 +1428,6 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| appigliare | | |
-| sé | | |
-| a | | |
-| le | | |
-| velluto | | |
-| costa | | |
-| di | | |
-| vello | | |
-| in | | |
-| vello | | |
-| giù | | |
-| discendere | | |
-| poscia | | |
-| tra | | |
-| il | | |
-| folto | | |
-| pelo | | |
-| e | | |
-| le | | |
-| gelato | | |
-| crosta | | |
 | quando | | |
 | noi | | |
 | essere | | |
@@ -1477,36 +1456,15 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| appigliare | Latin | applicare |
-| sé | Latin | se |
-| a | Latin | ad |
-| le | Latin | illae |
-| velluto | Latin | vellutus |
-| costa | Latin | costa |
-| di | Latin | de |
-| vello | Latin | vellus |
-| in | Latin | in |
-| vello | Latin | vellus |
-| giù | Latin | deorsum |
-| discendere | Latin | descendere |
-| poscia | Latin | postea |
-| tra | Latin | inter |
-| il | Latin | ille |
-| folto | Latin | fultus |
-| pelo | Latin | pilus |
-| e | Latin | et |
-| le | Latin | illae |
-| gelato | Latin | gelatus |
-| crosta | Latin | crusta |
 | quando | Latin | quando |
 | noi | Latin | nos |
 | essere | Latin | esse |
-| là | Latin | illa |
+| là | Latin | illā |
 | dove | Latin | de + ubi |
 | la | Latin | illa |
 | coscia | Latin | coxa |
 | si | Latin | se |
-| volgere | Latin | volvere |
+| volgere | Latin | volgere |
 | a | Latin | ad |
 | punto | Latin | punctum |
 | in | Latin | in |
@@ -1518,10 +1476,10 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | lo | Latin | illum |
 | duca | Latin | dux |
 | con | Latin | cum |
-| fatica | Greek | πάθεια (pathē) |
+| fatica | Greek | πάσχω |
 | e | Latin | et |
 | con | Latin | cum |
-| angoscia | Latin | angustia |
+| angoscia | Greek | ἀγῶν (angos) |
 </result>
 </query>
 <query>

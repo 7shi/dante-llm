@@ -232,7 +232,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | il | | |
 | poeta | | |
 | tutto | | |
-| smortire | | |
+| smorto | | |
 | io | | |
 | essere | | |
 | primo | | |
@@ -253,9 +253,9 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | mondo | Latin | mundus |
 | cominciare | Latin | cominitiare |
 | il | Latin | ille |
-| poeta | Greek | ποιητής (poietēs) |
+| poeta | Greek | ποιητής (poētēs) |
 | tutto | Latin | totus |
-| smortire | Latin | mortire |
+| smorto | Latin | mortuus |
 | io | Latin | ego |
 | essere | Latin | esse |
 | primo | Latin | primus |
@@ -785,7 +785,7 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | cuore | | |
 | quando | | |
 | il | | |
-| intendere | | |
+| in+intendere | | |
 | però | | |
 | che | | |
 | gente | | |
@@ -811,15 +811,15 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 | cuore | Latin | cor |
 | quando | Latin | quando |
 | il | Latin | ille |
-| intendere | Latin | intendere |
-| però | Latin | per + hoc |
-| che | Latin | quid |
-| gente | Latin | gens |
+| in+intendere | Latin | in + intendere |
+| però | Latin | per hoc |
+| che | Latin | quod |
+| gente | Latin | gens (gen. gentis) |
 | di | Latin | de |
 | molto | Latin | multum |
 | valore | Latin | valor |
 | conoscere | Latin | cognoscere |
-| che | Latin | quid |
+| che | Latin | quod |
 | in | Latin | in |
 | quel | Latin | ille |
 | limbo | Latin | limbus |
@@ -1093,48 +1093,48 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| e | | |
 | altro | | |
 | molto | | |
-| – | | |
-| fare+li | | |
+| e | | |
+| fare | | |
 | beato | | |
-| – | | |
+| e | | |
 | volere | | |
-| – | | |
+| che | | |
 | sapere | | |
-| – | | |
-| – | | |
-| – | | |
+| che | | |
+| dinanzi | | |
+| ad | | |
 | esso | | |
 | spirito | | |
 | umano | | |
-| – | | |
+| non | | |
 | essere | | |
 | salvare | | |
 </prompt>
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
-| altro | Latin | alter |
-| molto | Latin | multum |
-| – | | |
-| fare+li | Latin | facere + eōs |
-| beato | Latin | beatus |
-| – | | |
-| volere | Latin | volēre |
-| – | | |
-| sapere | Latin | sapere |
-| – | | |
-| – | | |
-| – | | |
-| esso | Latin | ipse |
-| spirito | Latin | spiritus |
-| umano | Latin | humanus |
-| – | | |
-| essere | Latin | esse |
-| salvare | Latin | salvare |
+| e | Latin | *et* |
+| altro | Latin | *alter* |
+| molto | Latin | *multum* |
+| e | Latin | *et* |
+| fare | Latin | *facere* |
+| beato | Latin | *beatus* |
+| e | Latin | *et* |
+| volere | Latin | *volēre* |
+| che | Latin | *quod* |
+| sapere | Latin | *sapere* |
+| che | Latin | *quod* |
+| dinanzi | Latin | *de ante* |
+| ad | Latin | *ad* |
+| esso | Latin | *ipse* |
+| spirito | Latin | *spiritus* |
+| umano | Latin | *humanus* |
+| non | Latin | *non* |
+| essere | Latin | *esse* |
+| salvare | Latin | *salvare* (from *salvus*) |
 </result>
 </query>
 <query>
@@ -1144,14 +1144,14 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| non | | |
 | lasciare | | |
-| il | | |
+| lo | | |
 | andare | | |
 | perché | | |
 | egli | | |
 | dire | | |
-| – | | |
+| ma | | |
 | passare | | |
 | la | | |
 | selva | | |
@@ -1166,18 +1166,18 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| non | Latin | non |
 | lasciare | Latin | laxare |
-| il | Latin | ille |
+| lo | Latin | illum |
 | andare | Latin | ambulare |
-| perché | Latin | per quod |
+| perché | Latin | per quod |
 | egli | Latin | ille |
 | dire | Latin | dicere |
-| – | | |
-| passare | Latin | passare |
+| ma | Latin | magis |
+| passare | Latin | passare (from *passus) |
 | la | Latin | illa |
 | selva | Latin | silva |
-| tuttavia | Latin | totus + via |
+| tuttavia | Latin | tuttavia |
 | la | Latin | illa |
 | selva | Latin | silva |
 | dire | Latin | dicere |
@@ -1193,11 +1193,11 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| non | | |
 | essere | | |
 | lungo | | |
 | ancora | | |
-| la | | |
+| il | | |
 | nostro | | |
 | via | | |
 | di | | |
@@ -1218,27 +1218,27 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
-| essere | Latin | *esse* |
-| lungo | Latin | *longus* |
-| ancora | Latin (via Greek) | Greek *ἀγκύρα* (ankura) → Latin *ancora* |
-| la | Latin | *illa* |
-| nostro | Latin | *noster* |
-| via | Latin | *via* |
-| di | Latin | *de* |
-| qua | Latin | *qua* |
-| da+il | Latin | *de* (preposition “da” from Latin *de*) |
-| sonno | Latin | *somnus* |
-| quando | Latin | *quando* |
-| io | Latin | *ego* |
-| vedere | Latin | *videre* |
-| uno | Latin | *unus* |
-| fuoco | Latin | *focus* |
-| che | Latin | *quid* (relative pronoun) |
-| emisperio | Greek | Greek *ἡμισπέρων* (hēmisperōn) |
-| di | Latin | *de* |
-| tenebra | Latin | *tenebrae* |
-| vincere | Latin | *vincere* |
+| non | Latin | non |
+| essere | Latin | esse |
+| lungo | Latin | longus |
+| ancora | Latin | ancora |
+| il | Latin | ille |
+| nostro | Latin | noster |
+| via | Latin | via |
+| di | Latin | de |
+| qua | Latin | qua |
+| da+il | Latin | de |
+| sonno | Latin | somnus |
+| quando | Latin | quando |
+| io | Latin | ego |
+| vedere | Latin | videre |
+| uno | Latin | unus |
+| fuoco | Latin | focus |
+| che | Latin | quid |
+| emisperio | Greek | ἡμισπέρων |
+| di | Latin | de |
+| tenebra | Latin | tenebrae |
+| vincere | Latin | vincere |
 </result>
 </query>
 <query>
@@ -1248,21 +1248,21 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| di | | |
 | lungo | | |
 | ne | | |
 | essere | | |
-| – | | |
+| ancora | | |
 | uno | | |
 | poco | | |
-| – | | |
-| – | | |
-| – | | |
+| ma | | |
+| non | | |
+| sì | | |
 | che | | |
 | io | | |
-| – | | |
+| non | | |
 | discernere | | |
-| – | | |
+| in | | |
 | parte | | |
 | che | | |
 | orrevole | | |
@@ -1274,24 +1274,24 @@ For each row in the table, look up the etymology of the word. In the "Derived" c
 <result>
 | Italian | Derived | Etymology |
 |---|---|---|
-| – | | |
+| di | Latin | de |
 | lungo | Latin | longus |
 | ne | Latin | ne |
 | essere | Latin | esse |
-| – | | |
+| ancora | Greek | ἀγκύρα |
 | uno | Latin | unus |
 | poco | Latin | paucus |
-| – | | |
-| – | | |
-| – | | |
-| che | Latin | quid |
+| ma | Latin | ma |
+| non | Latin | non |
+| sì | Latin | sic |
+| che | Latin | quod / quid |
 | io | Latin | ego |
-| – | | |
+| non | Latin | non |
 | discernere | Latin | discernere |
-| – | | |
+| in | Latin | in |
 | parte | Latin | pars (partem) |
-| che | Latin | quid |
-| orrevole | Latin | horrere |
+| che | Latin | quod / quid |
+| orrevole | Latin | horribilis |
 | gente | Latin | gens (gentis) |
 | possedere | Latin | possidere |
 | quel | Latin | ille |
