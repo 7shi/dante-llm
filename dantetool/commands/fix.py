@@ -7,7 +7,7 @@ from dantetool import common
 
 
 def replace_table_columns(prompt, source_table, source_columns):
-    """Replace prompt table columns with source table data.
+    """Replace prompt table data rows with source table data.
 
     Args:
         prompt: Original prompt containing a table
@@ -16,25 +16,25 @@ def replace_table_columns(prompt, source_table, source_columns):
                        These will be written to destination columns 0, 1, 2, ... in order.
 
     Returns:
-        Updated prompt with replaced columns
+        Updated prompt with replaced table data
     """
-    # Parse prompt table
+    # Parse prompt table (only need header structure)
     prompt_table = common.read_table(prompt)
-    if not prompt_table or len(prompt_table) < 3:
+    if not prompt_table or len(prompt_table) < 2:
         return None
 
-    # Skip header rows in source (rows 0,1 are header and separator)
+    # Keep header and separator from prompt, rebuild data from source
+    new_table = [prompt_table[0], prompt_table[1]]
+    num_columns = len(prompt_table[0])
+
+    # Build data rows from source columns
     source_data = source_table[2:]
-    prompt_data = prompt_table[2:]
-
-    if len(source_data) != len(prompt_data):
-        return None
-
-    # Replace columns: source_columns[i] -> destination column i
-    for i, (prompt_row, source_row) in enumerate(zip(prompt_data, source_data)):
+    for source_row in source_data:
+        new_row = [""] * num_columns
         for dest_col, src_col in enumerate(source_columns):
-            if dest_col < len(prompt_row) and src_col < len(source_row):
-                prompt_table[i + 2][dest_col] = source_row[src_col]
+            if dest_col < num_columns and src_col < len(source_row):
+                new_row[dest_col] = source_row[src_col]
+        new_table.append(new_row)
 
     # Find table start/end in original prompt and replace only table part
     lines = prompt.split('\n')
@@ -50,14 +50,14 @@ def replace_table_columns(prompt, source_table, source_columns):
         return None
 
     # Build new prompt preserving text before and after table
-    new_table = common.table_to_string(prompt_table)
+    new_table_str = common.table_to_string(new_table)
     before = '\n'.join(lines[:table_start])
     after = '\n'.join(lines[table_end:])
 
     parts = []
     if before:
         parts.append(before)
-    parts.append(new_table)
+    parts.append(new_table_str)
     if after:
         parts.append(after)
 
