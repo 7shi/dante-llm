@@ -307,16 +307,26 @@ def read_tables(word, word_tr, etymology, index=0):
         q2 = qi2.get(q0.info) if qi2 else None
         if qi2 and (not q2 or not q2.result):
             continue
-        if not (m := re.search(r"columns (\d+)", q1.prompt)):
-            print("no columns count:", q0.info, file=sys.stderr)
-            continue
-        col = int(m.group(1)) - 1
         ts0 = read_table(q0.result)
         tsp = read_table(q1.prompt)
         ts1 = read_table(q1.result)
         ts2 = read_table(q2.result) if q2 else None
-        if len(ts0) == 0 or len(ts1) == 0:
-            print(q0.info, "| empty table (error):", len(ts0), len(ts1), file=sys.stderr)
+        if m := re.search(r"columns (\d+)", q1.prompt):
+            col = int(m.group(1)) - 1
+        elif m := re.search(r"'([^']+)' columns", q1.prompt):
+            first_lang = m.group(1).split(",")[0]
+            if tsp and first_lang in tsp[0]:
+                col = tsp[0].index(first_lang)
+            else:
+                print("no columns count:", q0.info, file=sys.stderr)
+                continue
+        else:
+            print("no columns count:", q0.info, file=sys.stderr)
+            continue
+        if not ts0 or not ts1:
+            len0 = len(ts0) if ts0 else None
+            len1 = len(ts1) if ts1 else None
+            print(q0.info, "| empty table (error):", len0, len1, file=sys.stderr)
             continue
         fix_length(ts0, q0.info, "word")
         fix_length(tsp, q1.info, "word-tr.prompt")
@@ -344,7 +354,7 @@ def read_tables(word, word_tr, etymology, index=0):
             words = " ".join(r[0] for r in tsp[len(table):])
             print(q0.info, "| unused words (error):", words, file=sys.stderr)
             continue
-        lines = [line for line in q0.prompt.split("\n")[1:] if line]
+        lines = [line for line in q0.prompt.split("\n")[1:] if re.match(r"\d+ ", line)]
         yield q0.info, lines, table
 
 def has_alpha(text):
