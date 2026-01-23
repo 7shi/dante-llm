@@ -1,11 +1,10 @@
-#!/usr/bin/env python3
-"""Fix prompts in 1-error.xml by replacing table columns with current source data."""
+"""Fix prompts in error files by replacing table columns with current source data."""
 
 import sys
 import os
 import argparse
-
 from dantetool import common
+
 
 def replace_table_columns(prompt, source_table, source_columns):
     """Replace prompt table columns with source table data.
@@ -64,19 +63,16 @@ def replace_table_columns(prompt, source_table, source_columns):
 
     return '\n'.join(parts)
 
-def main():
-    parser = argparse.ArgumentParser(
-        description="Fix prompts in error file by replacing table columns with source data."
-    )
+
+def add_args(parser):
+    parser.add_argument("-c", "--columns", required=True,
+                        help="Source columns to copy (comma-separated, e.g., '0,1'). "
+                             "These will fill destination columns starting from 0.")
     parser.add_argument("error_file", help="Error file to fix (e.g., 1-error.xml)")
     parser.add_argument("source_dir", help="Source directory (e.g., ../word/gemma3-it)")
-    parser.add_argument(
-        "-c", "--columns", required=True,
-        help="Source columns to copy (comma-separated, e.g., '0,1'). "
-             "These will fill destination columns starting from 0."
-    )
-    args = parser.parse_args()
 
+
+def main_func(args):
     error_file = args.error_file
     source_dir = args.source_dir
     source_columns = [int(c.strip()) for c in args.columns.split(",")]
@@ -132,5 +128,17 @@ def main():
     else:
         print("No changes needed")
 
+    return 0
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Fix prompts in error file by replacing table columns with source data."
+    )
+    add_args(parser)
+    args = parser.parse_args(argv)
+    return main_func(args)
+
+
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

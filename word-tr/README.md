@@ -155,58 +155,17 @@ make redo-sweep MODEL=model-name
 
 Automatically retries with gradually increasing temperature from 0.1 to 1.0.
 
-## fix.py
+## Fixing Error Prompts
 
-A utility script to update prompts in `1-error.xml` by replacing table columns with current source data.
-
-### Purpose
-
-When source word tables are updated after error collection, the prompts in `1-error.xml` may contain outdated table data. This script synchronizes those columns with the current source files.
-
-### Usage
+When source word tables are updated after error collection, use `make fix` to sync prompts with current source data:
 
 ```bash
-uv run fix.py -c <columns> <error-file> <source-dir>
+make check               # Extract errors to 1-error.xml
+make fix                 # Sync columns 0,1 (Italian and Lemma) with source
+make redo MODEL=model-name  # Retry with updated prompts
 ```
 
-Options:
-- `-c, --columns` (required): Source columns to copy (comma-separated). These fill destination columns starting from 0.
-
-Examples:
-```bash
-# For word-tr: copy source columns 0,1 to destination columns 0,1
-uv run ../fix.py -c 0,1 1-error.xml ../../word/gemma3-it
-
-# For etymology: copy source column 1 to destination column 0
-uv run ../fix.py -c 1 1-error.xml ../../word/gemma3-it
-```
-
-### How It Works
-
-1. Reads error queries from the specified error file (e.g., `1-error.xml`)
-2. Loads source word tables from the source directory
-3. For each error query:
-   - Matches it to the corresponding source query by `info` field
-   - Extracts the table from the source query
-   - Copies specified source columns to destination columns (starting from 0)
-4. Writes back the updated error file
-
-### When to Use
-
-Use this script when:
-- Source word tables have been updated after error collection
-- You want to retry errors with the latest source data
-- Columns in error prompts are out of sync with source files
-
-### Integration with Workflow
-
-This script is typically used between error collection and retry:
-
-```bash
-make check                                              # Extract errors to 1-error.xml
-uv run ../fix.py -c 0,1 1-error.xml ../../word/gemma3-it  # Sync with source
-make redo MODEL=model-name                              # Retry with updated prompts
-```
+See `dantetool/README.md` for full documentation of the `fix` command.
 
 ## Compare Word Tables
 

@@ -1,6 +1,6 @@
 import sys
 import argparse
-from .commands import compare, concat, pickup, redo, replace, strip
+from .commands import compare, concat, fix, pickup, redo, replace, strip
 
 def main():
     parser = argparse.ArgumentParser(
@@ -19,6 +19,11 @@ def main():
     concat_parser = subparsers.add_parser("concat", help="Concatenate XML query files")
     concat.add_args(concat_parser)
     concat_parser.set_defaults(func=concat.main_func)
+
+    # fix subcommand
+    fix_parser = subparsers.add_parser("fix", help="Fix error prompts with source table data")
+    fix.add_args(fix_parser)
+    fix_parser.set_defaults(func=fix.main_func)
 
     # pickup subcommand
     pickup_parser = subparsers.add_parser("pickup", help="Pick up error queries from XML files")

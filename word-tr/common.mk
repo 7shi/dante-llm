@@ -50,3 +50,7 @@ redo-sweep:
 			break; \
 		fi; \
 	done
+
+## Fix error prompts with current source data
+fix:
+	uv run dantetool fix -c 0,1 1-error.xml $(SRCDIR)

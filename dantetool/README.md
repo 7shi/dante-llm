@@ -24,6 +24,32 @@ Example:
 uv run dantetool concat -o combined.xml file1.xml file2.xml file3.xml
 ```
 
+### fix - Fix Error Prompts with Source Data
+
+Update prompts in error files by replacing table columns with current source data:
+
+```bash
+uv run dantetool fix -c <columns> <error-file> <source-dir>
+```
+
+Options:
+- `-c, --columns` (required): Source columns to copy (comma-separated). These fill destination columns starting from 0.
+
+Examples:
+```bash
+# Copy source columns 0,1 to destination columns 0,1
+uv run dantetool fix -c 0,1 1-error.xml ../word/gemma3-it
+
+# Copy source column 1 to destination column 0
+uv run dantetool fix -c 1 1-error.xml ../word/gemma3-it
+```
+
+How it works:
+1. Reads error queries from the specified error file
+2. Loads source word tables from the source directory
+3. For each error query, matches by `info` field and copies specified source columns to destination columns (starting from 0)
+4. Writes back the updated error file
+
 ### pickup - Extract Error Queries
 
 Extract failed or incomplete queries from translation XML files:
