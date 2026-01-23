@@ -9,8 +9,16 @@ def add_args(parser):
                         help="target XML files to strip")
     parser.add_argument("--strict", action="store_true",
                         help="disallow automatic column adjustment")
-    parser.add_argument("--validate-tokens", action="store_true",
+
+    # Validation options (mutually exclusive)
+    validation_group = parser.add_mutually_exclusive_group()
+    validation_group.add_argument("--validate-tokens", action="store_true",
                         help="validate Word column against tokenize/ reference data")
+    validation_group.add_argument("--validate-source", type=str,
+                        help="validate against source directory (e.g., '../word-tr/gemma3-it')")
+
+    parser.add_argument("--validate-column", type=int, default=0,
+                        help="column index to validate (0=Word, 1=Lemma, etc.)")
     parser.add_argument("--replace-prompt", action="store_true",
                         help="replace prompt numbered lines with canonical canto text from tokenize/")
 
@@ -70,6 +78,30 @@ def load_tokenized_canto(target_path):
         return common.read_tokenized_source(str(token_path))
     except FileNotFoundError:
         return None
+
+def load_source_queries(target_path, source_dir):
+    """Load source queries from a source directory (e.g., word-tr).
+
+    Args:
+        target_path: Path to the target XML file
+        source_dir: Source directory containing reference data
+
+    Returns:
+        dict[str, Query] | None: Mapping from query.info to Query object
+    """
+    location = extract_cantica_canto(target_path)
+    if not location:
+        return None
+
+    cantica, canto_no = location
+    source_file = Path(source_dir) / cantica / f"{canto_no:02d}.xml"
+
+    if not source_file.exists():
+        return None
+
+    # Read source queries and build info -> query mapping
+    qs = common.read_queries(str(source_file))
+    return {q.info: q for q in qs if q.result}
 
 def fix_token(token):
     """Normalize token text for comparison.
@@ -134,39 +166,88 @@ def replace_prompt_in_query(q, canto):
 
     return False
 
-def validate_table_with_tokens(numbered_lines, table, canto):
-    """Validate a fixed word table against tokenized reference data.
+def load_reference_data(target, canto=None, source_queries=None, column_index=0):
+    """Load reference data and convert to common format.
 
     Args:
-        numbered_lines:
-            Output of common.extract_numbered_lines(q.prompt): a list of
-            (line_no, text, raw_line) for the prompt's numbered Italian lines.
-        table:
-            The cleaned table rows (including header rows) that will be validated.
-            In the current pipeline this is the filtered result of fix_table_rows.
-        canto:
-            Tokenized reference for a single canto (already selected by caller).
-            It is a list of lines; each line is split('|'):
-                [original_line, token1, token2, ...]
+        target: Path to XML file
+        canto: Tokenized canto data (for --validate-tokens)
+        source_queries: Dict mapping info -> source Query (for --validate-source)
+        column_index: Column index to validate (0=Word, 1=Lemma, etc.)
+
+    Returns:
+        dict[str, list[str]]: Mapping from query.info to reference tokens
+    """
+    # Read target queries to get all query.info
+    qs = common.read_queries(target)
+    reference_data = {}
+
+    for q in qs:
+        if not q.result:
+            continue
+
+        ref_tokens = []
+
+        if source_queries is not None:
+            # Extract from source query
+            source_q = source_queries.get(q.info)
+            if not source_q:
+                continue
+
+            source_table = common.read_table(source_q.result)
+            if not source_table or len(source_table) < 3:
+                continue
+
+            for row in source_table[2:]:  # Skip header and separator
+                if len(row) <= column_index:
+                    continue
+                token = fix_token(row[column_index])
+                if common.has_alpha(token):
+                    ref_tokens.append(token)
+
+        elif canto is not None:
+            # Extract from tokenize data
+            # First, get numbered lines from prompt
+            numbered_lines = common.extract_numbered_lines(q.prompt)
+            if not numbered_lines:
+                # Fallback: extract from query.info
+                parsed = common.parse_info(q.info or "")
+                if parsed:
+                    _, _, line_no, total_lines = parsed
+                    line_numbers = list(range(line_no, min(line_no + 2, total_lines) + 1))
+                    numbered_lines = []
+                    for ln in line_numbers:
+                        if 1 <= ln <= len(canto):
+                            canto_text = canto[ln - 1][0]
+                            numbered_lines.append((ln, canto_text, f"{ln} {canto_text}"))
+
+            if numbered_lines:
+                for line_no, _, _ in numbered_lines:
+                    if not (1 <= line_no <= len(canto)):
+                        continue
+                    parts = canto[line_no - 1]
+                    if not parts:
+                        continue
+                    # tokenize format: [original_line, token1, token2, ...]
+                    ref_tokens.extend(parts[1:])
+
+        if ref_tokens:
+            reference_data[q.info] = ref_tokens
+
+    return reference_data
+
+def validate_table_with_reference(table, ref_tokens):
+    """Validate a table against reference tokens.
+
+    Args:
+        table: The table to validate (including header rows)
+        ref_tokens: Reference tokens to compare against
 
     Returns:
         None if OK, otherwise a list of token mismatch errors.
     """
-    # Extract target tokens (Word column values; header rows skipped)
-    # Tokens are expected to be normalized already by fix_token().
+    # Extract target tokens (first column values; header rows skipped)
     target_tokens = [row[0] for row in table[2:]]
-
-    # Build a flattened reference token list for the prompt's numbered lines.
-    # Each canto line is split('|'):
-    #   [original_line, token1, token2, ...]
-    ref_tokens = []
-    for line_no, _, _ in numbered_lines:
-        if not (1 <= line_no <= len(canto)):
-            continue
-        parts = canto[line_no - 1]
-        if not parts:
-            continue
-        ref_tokens.extend(parts[1:])
 
     # Step 1: length check
     if len(target_tokens) != len(ref_tokens):
@@ -179,17 +260,17 @@ def validate_table_with_tokens(numbered_lines, table, canto):
 
     return None
 
-def process_file_with_token_validation(target, canto, replace_prompt=False):
-    """Process a single XML file: normalize tables and validate against tokens.
+def process_file_with_validation(target, reference_data, canto=None, replace_prompt=False):
+    """Process a single XML file: normalize tables and validate against reference.
 
     Args:
         target: Path to XML file
-        canto: Tokenized canto data
+        reference_data: Dict mapping query.info -> reference tokens
+        canto: Tokenized canto data (only for --replace-prompt)
         replace_prompt: Whether to replace prompts with canonical text
 
     Returns:
         A list of (q.info, errors) tuples.
-        - errors is a list of TokenError records returned by validate_table_with_tokens().
     """
     qs = common.read_queries(target)
     all_errors = []
@@ -208,42 +289,38 @@ def process_file_with_token_validation(target, canto, replace_prompt=False):
         if not q.result:
             continue
 
-        # Extract numbered lines from prompt
-        numbered_lines = common.extract_numbered_lines(q.prompt)
-        if not numbered_lines:
-            # Fallback: try to extract line numbers from query.info
-            parsed = common.parse_info(q.info or "")
-            if not parsed:
-                error(q, "no numbered lines found in prompt for")
-                continue
-            # Extract line numbers from info: [Cantica Canto N] line_no/total_lines
-            _, _, line_no, total_lines = parsed
-            line_numbers = list(range(line_no, min(line_no + 2, total_lines) + 1))
-            # Build numbered_lines from canonical canto text
-            numbered_lines = []
-            for ln in line_numbers:
-                if 1 <= ln <= len(canto):
-                    canto_text = canto[ln - 1][0]
-                    numbered_lines.append((ln, canto_text, f"{ln} {canto_text}"))
-
         # Replace prompt with canonical canto text if requested
-        if replace_prompt:
-            new_prompt_lines = []
-            for raw in q.prompt.split("\n"):
-                if m := re.match(r"(\d+)\s+(.*)", raw):
-                    line_no = int(m.group(1))
-                    if 1 <= line_no <= len(canto):
-                        canto_text = canto[line_no - 1][0]
-                        new_prompt_lines.append(f"{line_no} {canto_text}")
+        if replace_prompt and canto is not None:
+            numbered_lines = common.extract_numbered_lines(q.prompt)
+            if not numbered_lines:
+                # Fallback: extract from query.info
+                parsed = common.parse_info(q.info or "")
+                if parsed:
+                    _, _, line_no, total_lines = parsed
+                    line_numbers = list(range(line_no, min(line_no + 2, total_lines) + 1))
+                    numbered_lines = []
+                    for ln in line_numbers:
+                        if 1 <= ln <= len(canto):
+                            canto_text = canto[ln - 1][0]
+                            numbered_lines.append((ln, canto_text, f"{ln} {canto_text}"))
+
+            if numbered_lines:
+                new_prompt_lines = []
+                for raw in q.prompt.split("\n"):
+                    if m := re.match(r"(\d+)\s+(.*)", raw):
+                        line_no = int(m.group(1))
+                        if 1 <= line_no <= len(canto):
+                            canto_text = canto[line_no - 1][0]
+                            new_prompt_lines.append(f"{line_no} {canto_text}")
+                        else:
+                            new_prompt_lines.append(raw)
                     else:
                         new_prompt_lines.append(raw)
-                else:
-                    new_prompt_lines.append(raw)
 
-            new_prompt = "\n".join(new_prompt_lines)
-            if new_prompt != q.prompt:
-                q.prompt = new_prompt
-                modified = True
+                new_prompt = "\n".join(new_prompt_lines)
+                if new_prompt != q.prompt:
+                    q.prompt = new_prompt
+                    modified = True
 
         # Parse table
         parsed_table = common.read_table(q.result)
@@ -273,8 +350,17 @@ def process_file_with_token_validation(target, canto, replace_prompt=False):
         if q.result != orig_result or q.error != orig_error:
             modified = True
 
-        # Validate tokens
-        errors = validate_table_with_tokens(numbered_lines, table, canto)
+        # Validate against reference data
+        errors = None
+        ref_tokens = reference_data.get(q.info)
+
+        if ref_tokens is None:
+            # No reference data for this query
+            errors = [("no_reference", f"No reference data for {q.info}")]
+        else:
+            # Validate
+            errors = validate_table_with_reference(table, ref_tokens)
+
         if errors is not None:
             error(q)
             all_errors.append((q.info, errors))
@@ -289,36 +375,59 @@ def main_func(args):
     error_count = 0
 
     for target in args.targets:
-        # Check if tokenize data is needed
-        needs_tokenize = args.validate_tokens or args.replace_prompt
+        # Determine operation mode
+        validate_mode = args.validate_tokens or args.validate_source is not None
 
-        if needs_tokenize:
-            # Load tokenized reference data
+        if validate_mode:
+            # Validation mode: load reference data
+            canto = None
+            source_queries = None
+
+            if args.validate_source:
+                # Load source queries for validation
+                source_queries = load_source_queries(target, args.validate_source)
+                if source_queries is None:
+                    print(f"Error: --validate-source specified but no source data for {target}",
+                          file=sys.stderr)
+                    return 1
+            elif args.validate_tokens:
+                # Load tokenized canto data
+                canto = load_tokenized_canto(target)
+                if canto is None:
+                    print(f"Error: --validate-tokens specified but no tokenized data for {target}",
+                          file=sys.stderr)
+                    return 1
+
+            # Convert to common reference data format
+            reference_data = load_reference_data(
+                target, canto=canto, source_queries=source_queries,
+                column_index=args.validate_column)
+
+            # Process with validation
+            errors = process_file_with_validation(
+                target, reference_data, canto=canto, replace_prompt=args.replace_prompt)
+
+            for info, token_errors in errors:
+                for token_error in token_errors:
+                    print(f"{target} {info}: {token_error}", file=sys.stderr)
+                error_count += len(token_errors)
+
+        elif args.replace_prompt:
+            # Prompt replacement only (no validation)
             canto = load_tokenized_canto(target)
             if canto is None:
-                # User preference: error if tokenize-dependent flag specified but data not found
-                flag_name = "--validate-tokens" if args.validate_tokens else "--replace-prompt"
-                print(f"Error: {flag_name} specified but no tokenized data for {target}",
+                print(f"Error: --replace-prompt specified but no tokenized data for {target}",
                       file=sys.stderr)
-                return 1  # Exit with error
+                return 1
 
-            if args.validate_tokens:
-                # Token validation mode (may also include prompt replacement)
-                errors = process_file_with_token_validation(target, canto,
-                                                           replace_prompt=args.replace_prompt)
-                for info, token_errors in errors:
-                    for token_error in token_errors:
-                        print(f"{target} {info}: {token_error}", file=sys.stderr)
-                    error_count += len(token_errors)
-            elif args.replace_prompt:
-                # Prompt replacement only (no token validation)
-                qs = common.read_queries(target)
-                modified = False
-                for q in qs:
-                    if q.result and replace_prompt_in_query(q, canto):
-                        modified = True
-                if modified:
-                    common.write_queries(target, qs, count=len(qs))
+            qs = common.read_queries(target)
+            modified = False
+            for q in qs:
+                if q.result and replace_prompt_in_query(q, canto):
+                    modified = True
+            if modified:
+                common.write_queries(target, qs, count=len(qs))
+
         else:
             # Basic format validation (existing behavior)
             qs = common.read_queries(target)
