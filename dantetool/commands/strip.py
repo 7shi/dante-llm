@@ -19,6 +19,8 @@ def add_args(parser):
 
     parser.add_argument("--validate-column", type=str, default=None,
                         help="column index to validate (0=Word, 1=Lemma, etc.). Comma-separated for multiple columns (e.g., '0,1'). Only valid with --validate-source")
+    parser.add_argument("--italian-lemma", type=int, default=None,
+                        help="validate Italian lemma column (must have alpha and no apostrophe)")
     parser.add_argument("--replace-prompt", action="store_true",
                         help="replace prompt numbered lines with canonical canto text from tokenize/")
 
@@ -259,6 +261,33 @@ def load_reference_data(target, canto=None, source_queries=None, column_indices=
 
     return reference_data
 
+def has_apostrophe(token):
+    """Check if token contains apostrophe (ASCII or Unicode)."""
+    return "'" in token or "\u2019" in token
+
+def validate_italian_lemma(table, column_index):
+    """Validate Italian lemma column.
+
+    Lemmas must:
+    - Contain alphabetic characters (has_alpha)
+    - Not contain apostrophes (ASCII ' or Unicode U+2019)
+
+    Args:
+        table: The table to validate (including header rows)
+        column_index: Column index to validate
+
+    Returns:
+        None if OK, otherwise a list of errors.
+    """
+    errors = []
+    for i, row in enumerate(table[2:], start=1):  # Skip header rows
+        if len(row) <= column_index:
+            continue
+        token = row[column_index]
+        if not common.has_alpha(token) or has_apostrophe(token):
+            errors.append(("italian_lemma", column_index, i, token))
+    return errors if errors else None
+
 def validate_table_with_reference(table, ref_tokens_per_column):
     """Validate a table against reference tokens for multiple columns.
 
@@ -285,7 +314,7 @@ def validate_table_with_reference(table, ref_tokens_per_column):
 
     return None
 
-def process_file_with_validation(target, reference_data, canto=None, replace_prompt=False):
+def process_file_with_validation(target, reference_data, canto=None, replace_prompt=False, italian_lemma_col=None):
     """Process a single XML file: normalize tables and validate against reference.
 
     Args:
@@ -293,6 +322,7 @@ def process_file_with_validation(target, reference_data, canto=None, replace_pro
         reference_data: Dict mapping query.info -> reference tokens
         canto: Tokenized canto data (only for --replace-prompt)
         replace_prompt: Whether to replace prompts with canonical text
+        italian_lemma_col: Column index for Italian lemma validation (or None)
 
     Returns:
         A list of (q.info, errors) tuples.
@@ -377,14 +407,24 @@ def process_file_with_validation(target, reference_data, canto=None, replace_pro
 
         # Validate against reference data
         errors = None
-        ref_tokens = reference_data.get(q.info)
+        if reference_data is not None:
+            ref_tokens = reference_data.get(q.info)
 
-        if ref_tokens is None:
-            # No reference data for this query
-            errors = [("no_reference", f"No reference data for {q.info}")]
-        else:
-            # Validate
-            errors = validate_table_with_reference(table, ref_tokens)
+            if ref_tokens is None:
+                # No reference data for this query
+                errors = [("no_reference", f"No reference data for {q.info}")]
+            else:
+                # Validate
+                errors = validate_table_with_reference(table, ref_tokens)
+
+        # Validate Italian lemma column
+        if italian_lemma_col is not None:
+            lemma_errors = validate_italian_lemma(table, italian_lemma_col)
+            if lemma_errors:
+                if errors is None:
+                    errors = lemma_errors
+                else:
+                    errors.extend(lemma_errors)
 
         if errors is not None:
             error(q)
@@ -450,7 +490,8 @@ def main_func(args):
 
             # Process with validation
             errors = process_file_with_validation(
-                target, reference_data, canto=canto, replace_prompt=args.replace_prompt)
+                target, reference_data, canto=canto, replace_prompt=args.replace_prompt,
+                italian_lemma_col=args.italian_lemma)
 
             for info, token_errors in errors:
                 for token_error in token_errors:
@@ -476,16 +517,40 @@ def main_func(args):
         else:
             # Basic format validation (existing behavior)
             qs = common.read_queries(target)
+            modified = False
+
+            def error(q, message=None):
+                nonlocal modified
+                if message:
+                    print(f"Error: {message} {q.info}")
+                q.error = q.result
+                q.result = None
+                modified = True
+
             for q in qs:
                 if q.result:
-                    table = common.fix_table(q.result, strict=args.strict)
-                    if table:
-                        q.result = table
-                        q.error = None
-                    else:
-                        print(f"Error: could not parse table in {q.info}")
-                        q.error = q.result
-                        q.result = None
+                    parsed_table = common.read_table(q.result)
+                    if not parsed_table:
+                        error(q, "could not parse table in")
+                        continue
+
+                    table = common.fix_table_rows(table=parsed_table)
+                    if not table:
+                        error(q, "could not parse table in")
+                        continue
+
+                    q.result = common.table_to_string(table)
+                    q.error = None
+
+                    # Validate Italian lemma if requested
+                    if args.italian_lemma is not None:
+                        lemma_errors = validate_italian_lemma(table, args.italian_lemma)
+                        if lemma_errors:
+                            error(q)
+                            for lemma_error in lemma_errors:
+                                print(f"{target} {q.info}: {lemma_error}", file=sys.stderr)
+                            error_count += len(lemma_errors)
+
             common.write_queries(target, qs, count=len(qs))
 
     if error_count:

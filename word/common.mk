@@ -28,7 +28,7 @@ run: init.xml
 ## Validate and extract errors
 check:
 	rm -f 1-error-{ok,ng}.xml
-	uv run dantetool strip --validate-tokens --replace-prompt $(DIRSM)/*.xml
+	uv run dantetool strip --validate-tokens --replace-prompt --italian-lemma 1 $(DIRSM)/*.xml
 	uv run dantetool pickup 1-error.xml $(DIRSM)/*.xml
 
 
