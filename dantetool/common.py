@@ -594,7 +594,7 @@ def write_md(line, header, table):
             continue
         row = "".join(f"<td>{td}</td>" for td in cells)
         if h == "Etymology":
-            row = row.replace("<td>*", "<td><sup>*</sup>").replace("*</td>", "</td>")
+            row = row.replace("<td>\\*", "<td>*").replace("<td>*", "<td><sup>*</sup>").replace("*</td>", "</td>")
         ret += f"<tr><th>{h}</th>{row}</tr>\n"
     ret += "</table>\n"
     return ret
