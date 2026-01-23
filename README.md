@@ -22,6 +22,7 @@ Side-by-side comparison documents showing outputs from all models are available:
 - [word/comparison](word/comparison) - Word tables with lemmas, parts of speech, and grammatical analysis from all models
 - [word-tr/comparison](word-tr/comparison) - Word tables with multi-language translations from all models
 - [etymology/comparison](etymology/comparison) - Etymology tables with word origins and etymological roots from all models
+- [gallery](gallery) - Combined view with translations, word tables, and etymology from all models
 
 This project is a rewrite of code from the Gemini 1.0 Pro era. The generated outputs labeled as "gemini1" are sourced from the following project:
 
@@ -74,6 +75,7 @@ This project uses the following library for XML parsing:
 - [word/](word/): Word table generation workflow. Provides `init.py` and `word.py` for creating linguistic analysis tables with lemmas, parts of speech, and grammatical information for Italian text.
 - [word-tr/](word-tr/): Word table translation workflow. Provides `word-tr.py` for translating word tables into multiple languages (English, Latin, Interlingua, French, Spanish, Portuguese, Romanian, Esperanto).
 - [etymology/](etymology/): Etymology lookup workflow. Provides `etymology.py` for looking up word origins (Latin, Greek, Germanic) and their etymological roots from word translation tables.
+- [gallery/](gallery/): Model comparison gallery. Provides `gallery.py` for generating combined comparison files with word tables, etymology, and translations from all models side by side.
 
 ## License
 
