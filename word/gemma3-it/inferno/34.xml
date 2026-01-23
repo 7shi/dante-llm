@@ -119,28 +119,56 @@ Output format (fill in blank cells):
 <query>
 <info>[Inferno Canto 34] 7/139</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 7 veder mi parve un tal dificio allotta;
 8 poi per lo vento mi ristrinsi retro
 9 al duca mio, ché non lì era altra grotta.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| veder | | | | | | | | |
+| mi | | | | | | | | |
+| parve | | | | | | | | |
+| un | | | | | | | | |
+| tal | | | | | | | | |
+| dificio | | | | | | | | |
+| allotta | | | | | | | | |
+| poi | | | | | | | | |
+| per | | | | | | | | |
+| lo | | | | | | | | |
+| vento | | | | | | | | |
+| mi | | | | | | | | |
+| ristrinsi | | | | | | | | |
+| retro | | | | | | | | |
+| al | | | | | | | | |
+| duca | | | | | | | | |
+| mio | | | | | | | | |
+| ché | | | | | | | | |
+| non | | | | | | | | |
+| lì | | | | | | | | |
+| era | | | | | | | | |
+| altra | | | | | | | | |
+| grotta | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| veder | vedere | verb | | sg. | 1 | infinitive | | |
-| mi | io | pronoun | | sg. | 1 | | | enclitic |
-| parve | parere | verb | | sg. | 3 | past | indicative | impersonal |
+| veder | vedere | verb | | | | infinitive | | |
+| mi | me | pronoun | | sg. | 1 | | | reflexive |
+| parve | parere | verb | | sg. | 3 | imperfect | indicative | |
 | un | uno | article | m. | sg. | | | | indefinite |
-| tal | tale | adjective | m. | sg. | | | | |
-| dificio | difficile | noun | m. | sg. | | | | |
-| allotta | all’otta | adverb | | | | | | archaic |
+| tal | tale | adjective | | sg. | | | | |
+| dificio | difficile | adjective | | sg. | | | | |
+| allotta | allotta | noun | f. | sg. | | | | archaic |
 | poi | poi | adverb | | | | | | |
 | per | per | preposition | | | | | | |
 | lo | il | article | m. | sg. | | | | |
 | vento | vento | noun | m. | sg. | | | | |
-| mi | io | pronoun | | sg. | 1 | | | enclitic |
-| ristrinsi | ristringersi | verb | | sg. | 1 | past | indicative | reflexive |
+| mi | me | pronoun | | sg. | 1 | | | reflexive |
+| ristrinsi | ristringere | verb | | sg. | 1 | remote past | indicative | |
 | retro | retro | adverb | | | | | | |
 | al | a+il | preposition+article | m. | sg. | | | | contraction |
 | duca | duca | noun | m. | sg. | | | | |
@@ -148,7 +176,7 @@ Create a word table.
 | ché | che | conjunction | | | | | | |
 | non | non | adverb | | | | | | |
 | lì | lì | adverb | | | | | | |
-| era | essere | verb | | sg. | 3 | past | indicative | auxiliary |
+| era | essere | verb | | sg. | 3 | imperfect | indicative | |
 | altra | altro | adjective | f. | sg. | | | | |
 | grotta | grotta | noun | f. | sg. | | | | |
 </result>

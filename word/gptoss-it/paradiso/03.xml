@@ -201,42 +201,75 @@ Create a word table.
 <query>
 <info>[Paradiso Canto 3] 16/130</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 16 tali vid' io più facce a parlar pronte;
 17 per ch'io dentro a l'error contrario corsi
 18 a quel ch'accese amor tra l'omo e 'l fonte.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| tali | | | | | | | | |
+| vid' | | | | | | | | |
+| io | | | | | | | | |
+| più | | | | | | | | |
+| facce | | | | | | | | |
+| a | | | | | | | | |
+| parlar | | | | | | | | |
+| pronte | | | | | | | | |
+| per | | | | | | | | |
+| ch' | | | | | | | | |
+| io | | | | | | | | |
+| dentro | | | | | | | | |
+| a | | | | | | | | |
+| l' | | | | | | | | |
+| error | | | | | | | | |
+| contrario | | | | | | | | |
+| corsi | | | | | | | | |
+| a | | | | | | | | |
+| quel | | | | | | | | |
+| ch' | | | | | | | | |
+| accese | | | | | | | | |
+| amor | | | | | | | | |
+| tra | | | | | | | | |
+| l' | | | | | | | | |
+| omo | | | | | | | | |
+| e | | | | | | | | |
+| 'l | | | | | | | | |
+| fonte | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| tali | tale | adjective/pronoun | | pl. | | | | |
+| tali | tale | adjective | | pl. | | | | |
 | vid' | vedere | verb | | | 1 | remote past | indicative | archaic |
 | io | io | pronoun | | sg. | 1 | | | |
 | più | più | adverb | | | | | | |
 | facce | faccia | noun | f. | pl. | | | | |
-| a | – | preposition | | | | | | |
-| parlar | parlare | verb (infinitive) | | | | | | |
+| a | a | preposition | | | | | | |
+| parlar | parlare | verb (infinitive) | | | | | | archaic |
 | pronte | pronto | adjective | f. | pl. | | | | |
-| per | – | preposition | | | | | | |
-| ch' | che | conjunction | | | | | | elision |
+| per | per | preposition | | | | | | |
+| ch' | che | conjunction | | | | | | |
 | io | io | pronoun | | sg. | 1 | | | |
 | dentro | dentro | adverb | | | | | | |
-| a | – | preposition | | | | | | |
-| l' | il | article | m. | sg. | | | | contraction |
+| a | a | preposition | | | | | | |
+| l' | il | article (definite) | m. | sg. | | | | elision |
 | error | errore | noun | m. | sg. | | | | |
 | contrario | contrario | adjective | m. | sg. | | | | |
 | corsi | correre | verb | | | 1 | remote past | indicative | archaic |
-| a | – | preposition | | | | | | |
-| quel | quel | demonstrative adjective | m. | sg. | | | | |
-| ch' | che | conjunction | | | | | | elision |
-| accese | accendere | verb | | | 3 | remote past | indicative | |
+| a | a | preposition | | | | | | |
+| quel | quel | adjective (demonstrative) | m. | sg. | | | | |
+| ch' | che | conjunction | | | | | | |
+| accese | accendere | verb | | | 3 | remote past | indicative | archaic |
 | amor | amore | noun | m. | sg. | | | | |
-| tra | – | preposition | | | | | | |
-| l' | il | article | m. | sg. | | | | contraction |
+| tra | tra | preposition | | | | | | |
+| l' | il | article (definite) | m. | sg. | | | | elision |
 | omo | uomo | noun | m. | sg. | | | | |
-| e | – | conjunction | | | | | | |
-| 'l | il | article | m. | sg. | | | | contraction |
+| e | e | conjunction | | | | | | |
+| 'l | il | article (definite) | m. | sg. | | | | elision |
 | fonte | fonte | noun | f. | sg. | | | | |
 </result>
 </query>

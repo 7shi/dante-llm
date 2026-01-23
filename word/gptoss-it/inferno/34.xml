@@ -615,72 +615,125 @@ Create a word table.
 <query>
 <info>[Inferno Canto 34] 43/139</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 43 e la destra parea tra bianca e gialla;
 44 la sinistra a vedere era tal, quali
 45 vegnon di là onde 'l Nilo s'avvalla.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| e | | | | | | | | |
+| la | | | | | | | | |
+| destra | | | | | | | | |
+| parea | | | | | | | | |
+| tra | | | | | | | | |
+| bianca | | | | | | | | |
+| e | | | | | | | | |
+| gialla | | | | | | | | |
+| la | | | | | | | | |
+| sinistra | | | | | | | | |
+| a | | | | | | | | |
+| vedere | | | | | | | | |
+| era | | | | | | | | |
+| tal | | | | | | | | |
+| quali | | | | | | | | |
+| vegnon | | | | | | | | |
+| di | | | | | | | | |
+| là | | | | | | | | |
+| onde | | | | | | | | |
+| 'l | | | | | | | | |
+| Nilo | | | | | | | | |
+| s' | | | | | | | | |
+| avvalla | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| e | – | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
 | la | il | article | f. | sg. | | | | |
 | destra | destra | noun | f. | sg. | | | | |
-| parea | parere | verb | | sg. | 3 | imperfect | indicative | archaic |
-| tra | – | preposition | | | | | | |
+| parea | parere | verb | | | 3 | imperfect | indicative | archaic |
+| tra | tra | preposition | | | | | | |
 | bianca | bianco | adjective | f. | sg. | | | | |
-| e | – | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
 | gialla | giallo | adjective | f. | sg. | | | | |
 | la | il | article | f. | sg. | | | | |
 | sinistra | sinistra | noun | f. | sg. | | | | |
-| a | – | preposition | | | | | | |
-| vedere | vedere | verb (infinitive) | | | | | | |
-| era | essere | verb | | sg. | 3 | imperfect | indicative | |
-| tal | tal | adjective | m. | sg. | | | | archaic |
-| quali | quale | pronoun/determiner | | pl. | | | | |
+| a | a | preposition | | | | | | |
+| vedere | vedere | verb | | | | infinitive | infinitive | |
+| era | essere | verb | | | 3 | imperfect | indicative | |
+| tal | tale | adjective | m. | sg. | | | | archaic |
+| quali | quale | adjective | m. | pl. | | | | |
 | vegnon | venire | verb | | pl. | 3 | present | indicative | archaic |
-| di | – | preposition | | | | | | |
+| di | di | preposition | | | | | | |
 | là | là | adverb | | | | | | |
-| onde | – | conjunction | | | | | | |
+| onde | onde | conjunction | | | | | | |
 | 'l | il | article | m. | sg. | | | | elision |
-| Nilo | Nilo | proper noun | m. | sg. | | | | |
-| s' | si | pronoun (reflexive) | | | | | | contraction |
-| avvalla | avvallare | verb | | sg. | 3 | present | indicative | |
+| Nilo | Nilo | noun (proper) | m. | sg. | | | | |
+| s' | si | pronoun | | | | | | elision |
+| avvalla | avvallare | verb | | sg. | 3 | present | indicative | archaic |
 </result>
 </query>
 <query>
 <info>[Inferno Canto 34] 46/139</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 46 Sotto ciascuna uscivan due grand' ali,
 47 quanto si convenia a tanto uccello:
 48 vele di mar non vid' io mai cotali.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Sotto | | | | | | | | |
+| ciascuna | | | | | | | | |
+| uscivan | | | | | | | | |
+| due | | | | | | | | |
+| grand' | | | | | | | | |
+| ali | | | | | | | | |
+| quanto | | | | | | | | |
+| si | | | | | | | | |
+| convenia | | | | | | | | |
+| a | | | | | | | | |
+| tanto | | | | | | | | |
+| uccello | | | | | | | | |
+| vele | | | | | | | | |
+| di | | | | | | | | |
+| mar | | | | | | | | |
+| non | | | | | | | | |
+| vid' | | | | | | | | |
+| io | | | | | | | | |
+| mai | | | | | | | | |
+| cotali | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Sotto | – | preposition | | | | | | |
-| ciascuna | ciascuno | adjective | f. | sg. | | | | |
+| Sotto | sotto | preposition | | | | | | |
+| ciascuna | ciascuno | adjective/pronoun | f. | sg. | | | | |
 | uscivan | uscire | verb | | pl. | 3 | imperfect | indicative | |
-| due | due | numeral | | | | | | |
+| due | due | numeral | | pl. | | | | |
 | grand' | grande | adjective | f. | pl. | | | | apocope |
 | ali | ala | noun | f. | pl. | | | | |
 | quanto | quanto | adverb | | | | | | |
-| si | si | pronoun (refl.) | | | | | | |
-| convenia | convenire | verb | | | 3 | imperfect | indicative | |
-| a | – | preposition | | | | | | |
+| si | si | pronoun (clitic) | | | | | | |
+| convenia | convenire | verb | | sg. | 3 | imperfect | indicative | archaic |
+| a | a | preposition | | | | | | |
 | tanto | tanto | adjective | m. | sg. | | | | |
 | uccello | uccello | noun | m. | sg. | | | | |
 | vele | vela | noun | f. | pl. | | | | |
-| di | – | preposition | | | | | | |
-| mar | mare | noun | m. | sg. | | | | archaic |
-| non | – | adverb | | | | | | |
-| vid' | vedere | verb | | | 3 | remote past | indicative | contraction |
-| io | io | pronoun | | | 1 | | | |
-| mai | – | adverb | | | | | | |
-| cotali | cotale | adjective | f. | pl. | | | | |
+| di | di | preposition | | | | | | |
+| mar | mare | noun | m. | sg. | | | | |
+| non | non | adverb | | | | | | |
+| vid' | vedere | verb | | sg. | 1 | remote past | indicative | apostrophe |
+| io | io | pronoun | | sg. | 1 | | | |
+| mai | mai | adverb | | | | | | |
+| cotali | cotale | adjective | m./f. | pl. | | | | archaic |
 </result>
 </query>
 <query>

@@ -71,37 +71,65 @@ Create a word table.
 <query>
 <info>[Paradiso Canto 11] 7/139</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 7 e chi rubare e chi civil negozio,
 8 chi nel diletto de la carne involto
 9 s'affaticava e chi si dava a l'ozio,
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| e | | | | | | | | |
+| chi | | | | | | | | |
+| rubare | | | | | | | | |
+| e | | | | | | | | |
+| chi | | | | | | | | |
+| civil | | | | | | | | |
+| negozio | | | | | | | | |
+| chi | | | | | | | | |
+| nel | | | | | | | | |
+| diletto | | | | | | | | |
+| de | | | | | | | | |
+| la | | | | | | | | |
+| carne | | | | | | | | |
+| involto | | | | | | | | |
+| s' | | | | | | | | |
+| affaticava | | | | | | | | |
+| e | | | | | | | | |
+| chi | | | | | | | | |
+| si | | | | | | | | |
+| dava | | | | | | | | |
+| a | | | | | | | | |
+| l' | | | | | | | | |
+| ozio | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| e | – | conjunction | | | | | | |
-| chi | chi | pronoun | | | | | | |
-| rubare | rubare | verb | | | | infinitive | infinitive | |
-| e | – | conjunction | | | | | | |
-| chi | chi | pronoun | | | | | | |
-| civil | civile | adjective | | | | | | |
+| e | e | conjunction | | | | | | |
+| chi | chi | pronoun (indefinite) | | | | | | |
+| rubare | rubare | verb (infinitive) | | | | | infinitive | |
+| e | e | conjunction | | | | | | |
+| chi | chi | pronoun (indefinite) | | | | | | |
+| civil | civile | adjective | m. | sg. | | | | archaic |
 | negozio | negozio | noun | m. | sg. | | | | |
-| chi | chi | pronoun | | | | | | |
-| nel | in+il | preposition+article | m. | sg. | | | | contraction |
+| chi | chi | pronoun (indefinite) | | | | | | |
+| nel | in+il | preposition + article | m. | sg. | | | | contraction |
 | diletto | diletto | noun | m. | sg. | | | | |
 | de | di | preposition | | | | | | archaic |
-| la | la | article | f. | sg. | | | | |
+| la | la | article (definite) | f. | sg. | | | | |
 | carne | carne | noun | f. | sg. | | | | |
-| involto | involgere | verb (participle) | m. | sg. | | past participle | | |
-| s' | si | pronoun (reflexive) | | | | | | elision |
-| affaticava | affaticare | verb | | sg. | 3 | imperfect | indicative | |
-| e | – | conjunction | | | | | | |
-| chi | chi | pronoun | | | | | | |
-| si | si | pronoun (reflexive) | | | | | | |
-| dava | dare | verb | | sg. | 3 | imperfect | indicative | |
-| a | – | preposition | | | | | | |
-| l' | il | article | m. | sg. | | | | elision |
+| involto | involgere | adjective (past participle) | m. | sg. | | | | participle used adjectivally |
+| s' | si | pronoun (reflexive clitic) | | | | | | elision |
+| affaticava | affaticare | verb | | | 3 | imperfect | indicative | |
+| e | e | conjunction | | | | | | |
+| chi | chi | pronoun (indefinite) | | | | | | |
+| si | si | pronoun (reflexive clitic) | | | | | | |
+| dava | dare | verb | | | 3 | imperfect | indicative | |
+| a | a | preposition | | | | | | |
+| l' | il | article (definite) | m. | sg. | | | | elision |
 | ozio | ozio | noun | m. | sg. | | | | |
 </result>
 </query>
@@ -218,30 +246,52 @@ Output format (fill in blank cells):
 <query>
 <info>[Paradiso Canto 11] 16/139</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 16 E io senti' dentro a quella lumera
 17 che pria m'avea parlato, sorridendo
 18 incominciar, faccendosi più mera:
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| E | | | | | | | | |
+| io | | | | | | | | |
+| senti' | | | | | | | | |
+| dentro | | | | | | | | |
+| a | | | | | | | | |
+| quella | | | | | | | | |
+| lumera | | | | | | | | |
+| che | | | | | | | | |
+| pria | | | | | | | | |
+| m' | | | | | | | | |
+| avea | | | | | | | | |
+| parlato | | | | | | | | |
+| sorridendo | | | | | | | | |
+| incominciar | | | | | | | | |
+| faccendosi | | | | | | | | |
+| più | | | | | | | | |
+| mera | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| E | – | conjunction | | | | | | |
-| io | io | pronoun | | | 1 | | | |
-| senti' | sentire | verb | | | 1 | remote past | indicative | apostrophe for accent |
+| E | e | conjunction | | | | | | |
+| io | io | pronoun | | sg. | 1 | | | |
+| senti' | sentire | verb | | | 1 | remote past | indicative | archaic |
 | dentro | dentro | adverb | | | | | | |
 | a | a | preposition | | | | | | |
-| quella | quello | adjective | f. | sg. | | | | demonstrative |
-| lumera | lumera | noun | f. | sg. | | | | archaic |
+| quella | quello | demonstrative adjective | f. | sg. | | | | |
+| lumera | lumera | noun | f. | sg. | | | | |
 | che | che | conjunction | | | | | | |
-| pria | prima | adverb | | | | | | archaic spelling |
+| pria | prima | adverb | | | | | | archaic |
 | m' | mi | pronoun (clitic) | | | | | | elision |
-| avea | avere | verb | | | 3 | imperfect | indicative | archaic spelling |
-| parlato | parlare | verb (participle) | m. | sg. | | past part. | | |
-| sorridendo | sorridere | verb (gerund) | | | | | | |
-| incominciar | incominciare | verb (infinitive) | | | | | | archaic spelling |
-| faccendosi | farsi | verb (gerund) | | | | | | |
+| avea | avere | verb | | | 3 | imperfect | indicative | archaic |
+| parlato | parlare | verb (past participle) | m. | sg. | | past | participle | |
+| sorridendo | sorridere | verb (gerund) | | | | | gerund | |
+| incominciar | incominciare | verb (infinitive) | | | | | infinitive | archaic |
+| faccendosi | farsi | verb (infinitive) | | | | | infinitive | archaic, reflexive |
 | più | più | adverb | | | | | | |
 | mera | mero | adjective | f. | sg. | | | | |
 </result>

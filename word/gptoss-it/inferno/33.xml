@@ -724,98 +724,175 @@ Output format (fill in blank cells):
 <query>
 <info>[Inferno Canto 33] 43/157</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 43 Già eran desti, e l'ora s'appressava
 44 che 'l cibo ne solëa essere addotto,
 45 e per suo sogno ciascun dubitava;
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Già | | | | | | | | |
+| eran | | | | | | | | |
+| desti | | | | | | | | |
+| e | | | | | | | | |
+| l' | | | | | | | | |
+| ora | | | | | | | | |
+| s' | | | | | | | | |
+| appressava | | | | | | | | |
+| che | | | | | | | | |
+| 'l | | | | | | | | |
+| cibo | | | | | | | | |
+| ne | | | | | | | | |
+| solëa | | | | | | | | |
+| essere | | | | | | | | |
+| addotto | | | | | | | | |
+| e | | | | | | | | |
+| per | | | | | | | | |
+| suo | | | | | | | | |
+| sogno | | | | | | | | |
+| ciascun | | | | | | | | |
+| dubitava | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
 | Già | già | adverb | | | | | | |
-| eran | essere | verb | | pl. | 3 | imperfect | indicative | |
+| eran | essere | verb | | pl. | 3 | imperfect | indicative | archaic (3 pl.) |
 | desti | destino | noun | m. | pl. | | | | |
-| e | | conjunction | | | | | | |
-| l' | la | article | f. | sg. | | | | elision |
+| e | e | conjunction | | | | | | |
+| l' | la | article (definite) | f. | sg. | | | | elision |
 | ora | ora | noun | f. | sg. | | | | |
-| s' | si | pronoun | | | | | | elision |
+| s' | si | pronoun (reflexive) | | | | | | elision |
 | appressava | appressare | verb | | sg. | 3 | imperfect | indicative | |
-| che | | conjunction | | | | | | |
-| 'l | il | article | m. | sg. | | | | elision |
+| che | che | conjunction | | | | | | |
+| 'l | il | article (definite) | m. | sg. | | | | elision |
 | cibo | cibo | noun | m. | sg. | | | | |
-| ne | ne | pronoun | | | | | | |
-| solëa | solere | verb | | sg. | 3 | imperfect | indicative | archaic |
-| essere | essere | verb | | | | | | infinitive |
-| addotto | addurre | verb (participle) | m. | sg. | | | | past participle |
-| e | | conjunction | | | | | | |
-| per | | preposition | | | | | | |
-| suo | suo | adjective (possessive) | m. | sg. | | | | |
+| ne | ne | pronoun (partitive) | | | | | | |
+| solëa | solere | verb | | sg. | 3 | imperfect | indicative | archaic spelling |
+| essere | essere | verb | | | | | infinitive | |
+| addotto | addurre | participle (adj.) | m. | sg. | | | | agrees with *cibo* |
+| e | e | conjunction | | | | | | |
+| per | per | preposition | | | | | | |
+| suo | suo | possessive adjective | m. | sg. | | | | |
 | sogno | sogno | noun | m. | sg. | | | | |
-| ciascun | ciascuno | adjective/pronoun | m. | sg. | | | | |
+| ciascun | ciascuno | pronoun/determinative | m. | sg. | | | | |
 | dubitava | dubitare | verb | | sg. | 3 | imperfect | indicative | |
 </result>
 </query>
 <query>
 <info>[Inferno Canto 33] 46/157</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 46 e io senti' chiavar l'uscio di sotto
 47 a l'orribile torre; ond' io guardai
 48 nel viso a' mie' figliuoi sanza far motto.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| e | | | | | | | | |
+| io | | | | | | | | |
+| senti' | | | | | | | | |
+| chiavar | | | | | | | | |
+| l' | | | | | | | | |
+| uscio | | | | | | | | |
+| di | | | | | | | | |
+| sotto | | | | | | | | |
+| a | | | | | | | | |
+| l' | | | | | | | | |
+| orribile | | | | | | | | |
+| torre | | | | | | | | |
+| ond' | | | | | | | | |
+| io | | | | | | | | |
+| guardai | | | | | | | | |
+| nel | | | | | | | | |
+| viso | | | | | | | | |
+| a' | | | | | | | | |
+| mie' | | | | | | | | |
+| figliuoi | | | | | | | | |
+| sanza | | | | | | | | |
+| far | | | | | | | | |
+| motto | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| e | – | conjunction | | | | | | |
-| io | io | pronoun | | sg. | 1 | | | |
-| senti' | sentire | verb | | sg. | 1 | remote past | indicative | elision |
-| chiavar | chiavare | verb | | | | infinitive | | elision |
-| l' | il | article | m. | sg. | | | | elision |
+| e | e | conjunction | | | | | | |
+| io | io | pronoun (personal) | | | 1 | | | |
+| senti' | sentire | verb | | | 1 | remote past | indicative | |
+| chiavar | chiavare | verb | | | | | | infinitive |
+| l' | il | article (definite) | m. | sg. | | | | elision |
 | uscio | uscio | noun | m. | sg. | | | | |
 | di | di | preposition | | | | | | |
-| sotto | sotto | adverb | | | | | | |
+| sotto | sotto | adverb/preposition | | | | | | |
 | a | a | preposition | | | | | | |
-| l' | il | article | m. | sg. | | | | elision |
-| orribile | orribile | adjective | | sg. | | | | |
+| l' | la | article (definite) | f. | sg. | | | | elision |
+| orribile | orribile | adjective | f. | sg. | | | | |
 | torre | torre | noun | f. | sg. | | | | |
-| ond' | onde | conjunction | | | | | | elision |
-| io | io | pronoun | | sg. | 1 | | | |
-| guardai | guardare | verb | | sg. | 1 | remote past | indicative | |
-| nel | in+il | preposition + article | m. | sg. | | | | contraction |
+| ond' | quando | conjunction | | | | | | elision |
+| io | io | pronoun (personal) | | | 1 | | | |
+| guardai | guardare | verb | | | 1 | remote past | indicative | |
+| nel | in+il | preposition+article | m. | sg. | | | | contraction |
 | viso | viso | noun | m. | sg. | | | | |
-| a' | a+le | preposition + article | f. | pl. | | | | contraction |
+| a' | a | preposition | | | | | | elision |
 | mie' | mio | possessive adjective | f. | pl. | | | | elision |
 | figliuoi | figliuolo | noun | m. | pl. | | | | archaic |
-| sanza | senza | preposition | | | | | | archaic |
-| far | fare | verb | | | | infinitive | | elision |
+| sanza | senza | preposition | | | | | | |
+| far | fare | verb | | | | | | infinitive |
 | motto | motto | noun | m. | sg. | | | | |
 </result>
 </query>
 <query>
 <info>[Inferno Canto 33] 49/157</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 49 Io non piangëa, sì dentro impetrai:
 50 piangevan elli; e Anselmuccio mio
 51 disse: “Tu guardi sì, padre! che hai?”.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Io | | | | | | | | |
+| non | | | | | | | | |
+| piangëa | | | | | | | | |
+| sì | | | | | | | | |
+| dentro | | | | | | | | |
+| impetrai | | | | | | | | |
+| piangevan | | | | | | | | |
+| elli | | | | | | | | |
+| e | | | | | | | | |
+| Anselmuccio | | | | | | | | |
+| mio | | | | | | | | |
+| disse | | | | | | | | |
+| Tu | | | | | | | | |
+| guardi | | | | | | | | |
+| sì | | | | | | | | |
+| padre | | | | | | | | |
+| che | | | | | | | | |
+| hai | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
 | Io | io | pronoun | | sg. | 1 | | | |
-| non | non | adverb | | | | | | |
-| piangëa | piangere | verb | | sg. | 3 | imperfect | indicative | archaic |
+| non | non | adverb (negation) | | | | | | |
+| piangëa | piangere | verb | | sg. | 1 | imperfect | indicative | archaic spelling (ë) |
 | sì | sì | adverb | | | | | | |
 | dentro | dentro | adverb | | | | | | |
-| impetrai | impetrare | verb | | sg. | 1 | remote past | indicative | archaic |
+| impetrai | impetrare | verb | | sg. | 1 | remote past | indicative | archaic spelling |
 | piangevan | piangere | verb | | pl. | 3 | imperfect | indicative | |
-| elli | egli | pronoun | m. | sg. | 3 | | | archaic |
-| e | – | conjunction | | | | | | |
+| elli | elli | pronoun (archaic “essi”) | m. | pl. | 3 | | | |
+| e | e | conjunction | | | | | | |
 | Anselmuccio | Anselmuccio | proper noun | m. | sg. | | | | |
-| mio | mio | adjective (possessive) | m. | sg. | | | | |
+| mio | mio | possessive adjective | m. | sg. | | | | |
 | disse | dire | verb | | sg. | 3 | remote past | indicative | |
 | Tu | tu | pronoun | | sg. | 2 | | | |
 | guardi | guardare | verb | | sg. | 2 | present | indicative | |
@@ -889,34 +966,60 @@ Output format (fill in blank cells):
 <query>
 <info>[Inferno Canto 33] 55/157</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 55 Come un poco di raggio si fu messo
 56 nel doloroso carcere, e io scorsi
 57 per quattro visi il mio aspetto stesso,
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Come | | | | | | | | |
+| un | | | | | | | | |
+| poco | | | | | | | | |
+| di | | | | | | | | |
+| raggio | | | | | | | | |
+| si | | | | | | | | |
+| fu | | | | | | | | |
+| messo | | | | | | | | |
+| nel | | | | | | | | |
+| doloroso | | | | | | | | |
+| carcere | | | | | | | | |
+| e | | | | | | | | |
+| io | | | | | | | | |
+| scorsi | | | | | | | | |
+| per | | | | | | | | |
+| quattro | | | | | | | | |
+| visi | | | | | | | | |
+| il | | | | | | | | |
+| mio | | | | | | | | |
+| aspetto | | | | | | | | |
+| stesso | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Come | come | adverb | | | | | | |
-| un | uno | article (indefinite) | m. | sg. | | | | |
-| poco | poco | noun | m. | sg. | | | | |
+| Come | come | conjunction (comparative) | | | | | | |
+| un | uno | article | m. | sg. | | | | |
+| poco | poco | adjective (quantifier) | m. | sg. | | | | |
 | di | di | preposition | | | | | | |
 | raggio | raggio | noun | m. | sg. | | | | |
-| si | si | pronoun (reflexive) | | | 3 | | | |
-| fu | essere | verb | | sg. | 3 | remote past | indicative | |
-| messo | mettere | verb (participle) | m. | sg. | | | | past participle |
-| nel | in+il | preposition + article | m. | sg. | | | | contraction |
+| si | si | pronoun (reflexive) | | | | | | |
+| fu | essere | verb | | | 3 | remote past | indicative | |
+| messo | mettere | participle | m. | sg. | | | | agrees with “raggio” |
+| nel | in+il | preposition+article | m. | sg. | | | | contraction |
 | doloroso | doloroso | adjective | m. | sg. | | | | |
 | carcere | carcere | noun | m. | sg. | | | | |
-| e | – | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
 | io | io | pronoun | | sg. | 1 | | | |
-| scorsi | scorgere | verb | | sg. | 1 | remote past | indicative | |
+| scorsi | scorgere | verb | | | 1 | remote past | indicative | |
 | per | per | preposition | | | | | | |
 | quattro | quattro | numeral | | pl. | | | | |
 | visi | viso | noun | m. | pl. | | | | |
 | il | il | article | m. | sg. | | | | |
-| mio | mio | adjective (possessive) | m. | sg. | | | | |
+| mio | mio | possessive adjective | m. | sg. | | | | |
 | aspetto | aspetto | noun | m. | sg. | | | | |
 | stesso | stesso | adjective | m. | sg. | | | | |
 </result>
@@ -1439,34 +1542,59 @@ Output format (fill in blank cells):
 <query>
 <info>[Inferno Canto 33] 88/157</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 88 Innocenti facea l'età novella,
 89 novella Tebe, Uguiccione e 'l Brigata
 90 e li altri due che 'l canto suso appella.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Innocenti | | | | | | | | |
+| facea | | | | | | | | |
+| l' | | | | | | | | |
+| età | | | | | | | | |
+| novella | | | | | | | | |
+| novella | | | | | | | | |
+| Tebe | | | | | | | | |
+| Uguiccione | | | | | | | | |
+| e | | | | | | | | |
+| 'l | | | | | | | | |
+| Brigata | | | | | | | | |
+| e | | | | | | | | |
+| li | | | | | | | | |
+| altri | | | | | | | | |
+| due | | | | | | | | |
+| che | | | | | | | | |
+| 'l | | | | | | | | |
+| canto | | | | | | | | |
+| suso | | | | | | | | |
+| appella | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Innocenti | Innocenti | proper noun | m. | pl. | | | | |
-| facea | fare | verb | | | 3 | imperfect | indicative | |
+| Innocenti | innocente | adjective (substantive) | m. | pl. | | | | |
+| facea | fare | verb | | | 3 | imperfect | indicative | archaic spelling (facea) |
 | l' | il | article | m. | sg. | | | | elision |
 | età | età | noun | f. | sg. | | | | |
 | novella | novello | adjective | f. | sg. | | | | |
 | novella | novello | adjective | f. | sg. | | | | |
-| Tebe | Tebe | proper noun | m. | sg. | | | | |
-| Uguiccione | Uguiccione | proper noun | m. | sg. | | | | |
-| e | – | conjunction | | | | | | |
+| Tebe | Tebe | proper noun | | sg. | | | | |
+| Uguiccione | Uguiccione | proper noun | | sg. | | | | |
+| e | e | conjunction | | | | | | |
 | 'l | il | article | m. | sg. | | | | elision |
 | Brigata | brigata | noun | f. | sg. | | | | |
-| e | – | conjunction | | | | | | |
-| li | i | article | m. | pl. | | | | contraction |
+| e | e | conjunction | | | | | | |
+| li | i | article | m. | pl. | | | | elision before vowel |
 | altri | altro | adjective | m. | pl. | | | | |
-| due | due | numeral | | | | | | |
-| che | che | pronoun (relative) | | | | | | |
+| due | due | numeral | | pl. | | | | |
+| che | che | conjunction (relative) | | | | | | |
 | 'l | il | article | m. | sg. | | | | elision |
 | canto | canto | noun | m. | sg. | | | | |
-| suso | – | adverb | | | | | | |
+| suso | sopra | adverb | | | | | | |
 | appella | appellare | verb | | | 3 | present | indicative | |
 </result>
 </query>
@@ -1634,29 +1762,53 @@ Create a word table.
 <query>
 <info>[Inferno Canto 33] 100/157</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 100 E avvegna che, sì come d'un callo,
 101 per la freddura ciascun sentimento
 102 cessato avesse del mio viso stallo,
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| E | | | | | | | | |
+| avvegna | | | | | | | | |
+| che | | | | | | | | |
+| sì | | | | | | | | |
+| come | | | | | | | | |
+| d' | | | | | | | | |
+| un | | | | | | | | |
+| callo | | | | | | | | |
+| per | | | | | | | | |
+| la | | | | | | | | |
+| freddura | | | | | | | | |
+| ciascun | | | | | | | | |
+| sentimento | | | | | | | | |
+| cessato | | | | | | | | |
+| avesse | | | | | | | | |
+| del | | | | | | | | |
+| mio | | | | | | | | |
+| viso | | | | | | | | |
+| stallo | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| E | – | conjunction | | | | | | |
-| avvegna | avvenire | verb | | | 3 | present | subjunctive | archaic |
+| E | e | conjunction | | | | | | |
+| avvegna | avvenire | verb | | | 3 | present | subjunctive | archaic spelling |
 | che | che | conjunction | | | | | | |
 | sì | sì | adverb | | | | | | |
 | come | come | conjunction | | | | | | |
 | d' | di | preposition | | | | | | elision |
-| un | uno | article | m. | sg. | | | | |
+| un | uno | article (indefinite) | m. | sg. | | | | |
 | callo | callo | noun | m. | sg. | | | | |
 | per | per | preposition | | | | | | |
-| la | il | article | f. | sg. | | | | |
+| la | la | article (definite) | f. | sg. | | | | |
 | freddura | freddura | noun | f. | sg. | | | | |
-| ciascun | ciascuno | adjective | m. | sg. | | | | |
+| ciascun | ciascuno | adjective/pronoun | m. | sg. | | | | |
 | sentimento | sentimento | noun | m. | sg. | | | | |
-| cessato | cessare | verb | m. | sg. | | past participle | participle | |
+| cessato | cessare | participle | m. | sg. | | | | |
 | avesse | avere | verb | | | 3 | imperfect | subjunctive | |
 | del | di+il | preposition+article | m. | sg. | | | | contraction |
 | mio | mio | possessive adjective | m. | sg. | | | | |

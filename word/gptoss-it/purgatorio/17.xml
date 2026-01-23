@@ -1647,39 +1647,68 @@ Create a word table.
 <query>
 <info>[Purgatorio Canto 17] 121/139</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 121 ed è chi per ingiuria par ch'aonti,
 122 sì che si fa de la vendetta ghiotto,
 123 e tal convien che 'l male altrui impronti.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| ed | | | | | | | | |
+| è | | | | | | | | |
+| chi | | | | | | | | |
+| per | | | | | | | | |
+| ingiuria | | | | | | | | |
+| par | | | | | | | | |
+| ch' | | | | | | | | |
+| aonti | | | | | | | | |
+| sì | | | | | | | | |
+| che | | | | | | | | |
+| si | | | | | | | | |
+| fa | | | | | | | | |
+| de | | | | | | | | |
+| la | | | | | | | | |
+| vendetta | | | | | | | | |
+| ghiotto | | | | | | | | |
+| e | | | | | | | | |
+| tal | | | | | | | | |
+| convien | | | | | | | | |
+| che | | | | | | | | |
+| 'l | | | | | | | | |
+| male | | | | | | | | |
+| altrui | | | | | | | | |
+| impronti | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| ed | – | conjunction | | | | | | variant of “e” |
+| ed | e | conjunction | | | | | | elision |
 | è | essere | verb | | | 3 | present | indicative | |
 | chi | chi | pronoun (relative) | | | | | | |
 | per | per | preposition | | | | | | |
-| ingiuria | ingiuria | noun | f. | sg. | | | | |
-| par | parere | verb | | | 3 | present | indicative | |
+| ingiuria | ingiuria | noun | f | sg | | | | |
+| par | parere | verb | | | 3 | present | indicative | archaic |
 | ch' | che | conjunction | | | | | | elision |
-| aonti | aontare | verb | | | 2 | present | indicative | archaic |
+| aonti | aontare | verb | | | 3 | present | indicative | archaic |
 | sì | sì | adverb | | | | | | |
 | che | che | conjunction | | | | | | |
-| si | si | pronoun (reflexive) | | | | | | |
+| si | si | pronoun (reflexive) | | | 3 | | | |
 | fa | fare | verb | | | 3 | present | indicative | |
 | de | di | preposition | | | | | | archaic |
-| la | il | article | f. | sg. | | | | |
-| vendetta | vendetta | noun | f. | sg. | | | | |
-| ghiotto | ghiotto | adjective | m. | sg. | | | | |
+| la | la | article | f | sg | | | | |
+| vendetta | vendetta | noun | f | sg | | | | |
+| ghiotto | ghiotto | adjective | m | sg | | | | |
 | e | e | conjunction | | | | | | |
-| tal | tale | adjective (demonstrative) | m. | sg. | | | | contraction |
-| convien | convenire | verb (impersonal) | | | 3 | present | indicative | archaic spelling |
+| tal | tal | adjective/determiner | m | sg | | | | |
+| convien | convenire | verb | | | 3 | present | indicative | archaic spelling |
 | che | che | conjunction | | | | | | |
-| 'l | il | article | m. | sg. | | | | elision |
-| male | male | noun | m. | sg. | | | | |
-| altrui | altrui | adjective (indefinite) | | | | | | |
-| impronti | improntare | verb | | | 3 | present | subjunctive | |
+| 'l | il | article | m | sg | | | | elision |
+| male | male | noun | m | sg | | | | |
+| altrui | altrui | adjective | | | | | | |
+| impronti | improntare | verb | | | 3 | present | indicative | |
 </result>
 </query>
 <query>

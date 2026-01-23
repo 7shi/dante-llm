@@ -733,37 +733,64 @@ Create a word table.
 <query>
 <info>[Purgatorio Canto 13] 52/154</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 52 Non credo che per terra vada ancoi
 53 omo sì duro, che non fosse punto
 54 per compassion di quel ch'i' vidi poi;
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Non | | | | | | | | |
+| credo | | | | | | | | |
+| che | | | | | | | | |
+| per | | | | | | | | |
+| terra | | | | | | | | |
+| vada | | | | | | | | |
+| ancoi | | | | | | | | |
+| omo | | | | | | | | |
+| sì | | | | | | | | |
+| duro | | | | | | | | |
+| che | | | | | | | | |
+| non | | | | | | | | |
+| fosse | | | | | | | | |
+| punto | | | | | | | | |
+| per | | | | | | | | |
+| compassion | | | | | | | | |
+| di | | | | | | | | |
+| quel | | | | | | | | |
+| ch' | | | | | | | | |
+| i' | | | | | | | | |
+| vidi | | | | | | | | |
+| poi | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Non | | adverb | | | | | | |
+| Non | non | adverb | | | | | | |
 | credo | credere | verb | | | 1 | present | indicative | |
 | che | che | conjunction | | | | | | |
 | per | per | preposition | | | | | | |
 | terra | terra | noun | f. | sg. | | | | |
 | vada | andare | verb | | | 3 | present | subjunctive | |
-| ancoi | | adverb | | | | | | archaic |
-| omo | uomo | noun | m. | sg. | | | | archaic spelling |
-| sì | | adverb | | | | | | |
-| duro | duro | adjective | m. | sg. | | | | archaic |
+| ancoi | ancora | adverb | | | | | | archaic |
+| omo | uomo | noun | m. | sg. | | | | archaic |
+| sì | sì | adverb | | | | | | |
+| duro | duro | adjective | m. | sg. | | | | |
 | che | che | conjunction | | | | | | |
-| non | | adverb | | | | | | |
+| non | non | adverb | | | | | | |
 | fosse | essere | verb | | | 3 | imperfect | subjunctive | |
 | punto | punto | noun | m. | sg. | | | | |
 | per | per | preposition | | | | | | |
-| compassion | compassione | noun | f. | sg. | | | | archaic spelling |
+| compassion | compassione | noun | f. | sg. | | | | archaic |
 | di | di | preposition | | | | | | |
-| quel | quel | demonstrative adjective | m. | sg. | | | | |
+| quel | quel | adjective (demonstrative) | m. | sg. | | | | |
 | ch' | che | conjunction | | | | | | elision |
 | i' | io | pronoun | | | 1 | | | elision |
 | vidi | vedere | verb | | | 1 | remote past | indicative | |
-| poi | | adverb | | | | | | |
+| poi | poi | adverb | | | | | | |
 </result>
 </query>
 <query>

@@ -1824,35 +1824,60 @@ Output format (fill in blank cells):
 <query>
 <info>[Purgatorio Canto 32] 133/160</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 133 e come vespa che ritragge l'ago,
 134 a sé traendo la coda maligna,
 135 trasse del fondo, e gissen vago vago.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| e | | | | | | | | |
+| come | | | | | | | | |
+| vespa | | | | | | | | |
+| che | | | | | | | | |
+| ritragge | | | | | | | | |
+| l' | | | | | | | | |
+| ago | | | | | | | | |
+| a | | | | | | | | |
+| sé | | | | | | | | |
+| traendo | | | | | | | | |
+| la | | | | | | | | |
+| coda | | | | | | | | |
+| maligna | | | | | | | | |
+| trasse | | | | | | | | |
+| del | | | | | | | | |
+| fondo | | | | | | | | |
+| e | | | | | | | | |
+| gissen | | | | | | | | |
+| vago | | | | | | | | |
+| vago | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| e | – | conjunction | | | | | | |
-| come | – | adverb (comparative) | | | | | | |
-| vespa | vespa | noun | f | sg | | | | |
-| che | che | pronoun (relative) | | | | | | |
-| ritragge | ritrarre | verb | | | 3 | present | indicative | archaic |
-| l' | il | article | m | sg | | | | elision |
-| ago | ago | noun | m | sg | | | | |
-| a | – | preposition | | | | | | |
-| sé | sé | pronoun (reflexive) | | sg | 3 | | | |
-| traendo | trarre | verb | | | | | gerund | archaic |
-| la | la | article | f | sg | | | | |
-| coda | coda | noun | f | sg | | | | |
-| maligna | maligno | adjective | f | sg | | | | |
-| trasse | trarre | verb | | | 3 | remote past | indicative | |
-| del | di + il | preposition + article | m | sg | | | | contraction |
-| fondo | fondo | noun | m | sg | | | | |
-| e | – | conjunction | | | | | | |
-| gissen | gisser | verb | | | 3 | present | indicative | archaic |
-| vago | vago | adjective | m | sg | | | | |
-| vago | vago | adjective | m | sg | | | | |
+| e | e | conjunction | | | | | | |
+| come | come | adverb/comparative | | | | | | |
+| vespa | vespa | noun | f. | sg. | | | | |
+| che | che | relative pronoun | | | | | | |
+| ritragge | ritrarre | verb | | sg. | 3 | present | indicative | dialect |
+| l' | il | article (definite) | m. | sg. | | | | elision |
+| ago | ago | noun | m. | sg. | | | | |
+| a | a | preposition | | | | | | |
+| sé | sé | pronoun (reflexive) | | sg. | 3 | | | |
+| traendo | trarre | verb (gerund) | | | | | | |
+| la | la | article (definite) | f. | sg. | | | | |
+| coda | coda | noun | f. | sg. | | | | |
+| maligna | maligno | adjective | f. | sg. | | | | |
+| trasse | trarre | verb | | sg. | 3 | remote past | indicative | |
+| del | di+il | preposition+article | m. | sg. | | | | contraction |
+| fondo | fondo | noun | m. | sg. | | | | |
+| e | e | conjunction | | | | | | |
+| gissen | gissare | verb | | pl. | 3 | present | indicative | dialect/archaic |
+| vago | vago | adjective | m. | sg. | | | | |
+| vago | vago | adjective | m. | sg. | | | | |
 </result>
 </query>
 <query>
@@ -2114,26 +2139,26 @@ Output format (fill in blank cells):
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| e | – | conjunction | | | | | | |
-| come | – | conjunction / adverb | | | | | | |
-| perché | – | adverb (conj.) | | | | | | |
-| non | – | adverb | | | | | | |
-| li | lui | pronoun (clitic) | m. | pl. | 3 | | | |
+| e | e | conjunction | | | | | | |
+| come | come | conjunction/comparative adverb | | | | | | |
+| perché | perché | conjunction | | | | | | |
+| non | non | adverb | | | | | | |
+| li | loro | pronoun (clitic, direct object) | m | pl | 3 | | | clitic |
 | fosse | essere | verb | | | 3 | imperfect | subjunctive | |
-| tolta | togliere | adjective (past participle) | f. | sg. | | | | |
+| tolta | togliere | adjective (past participle) | f | sg | | | | past participle |
 | vidi | vedere | verb | | | 1 | remote past | indicative | |
-| di | – | preposition | | | | | | |
-| costa | costa | noun | f. | sg. | | | | |
-| a | – | preposition | | | | | | |
-| lei | lei | pronoun | f. | sg. | 3 | | | |
-| dritto | dritto | adjective (used adverbially) | m. | sg. | | | | |
-| un | uno | article (indefinite) | m. | sg. | | | | |
-| gigante | gigante | noun | m. | sg. | | | | |
-| e | – | conjunction | | | | | | |
-| basciavansi | baciare | verb | | | 3 | imperfect | indicative | enclitic “si” (reflexive) |
+| di | di | preposition | | | | | | |
+| costa | costa | noun | f | sg | | | | |
+| a | a | preposition | | | | | | |
+| lei | lei | pronoun (subject) | f | sg | 3 | | | |
+| dritto | dritto | adverb | | | | | | |
+| un | un | article (indefinite) | m | sg | | | | |
+| gigante | gigante | noun | m | sg | | | | |
+| e | e | conjunction | | | | | | |
+| basciavansi | baciarsi | verb (reflexive) | | | 3 | imperfect | indicative | archaic spelling |
 | insieme | insieme | adverb | | | | | | |
-| alcuna | alcuno | adjective (indefinite) | f. | sg. | | | | |
-| volta | volta | noun | f. | sg. | | | | |
+| alcuna | alcuno | adjective/determiner | f | sg | | | | |
+| volta | volta | noun | f | sg | | | | |
 </result>
 </query>
 <query>

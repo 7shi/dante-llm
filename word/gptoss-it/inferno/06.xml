@@ -39,73 +39,127 @@ Create a word table.
 <query>
 <info>[Inferno Canto 6] 4/115</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 4 novi tormenti e novi tormentati
 5 mi veggio intorno, come ch'io mi mova
 6 e ch'io mi volga, e come che io guati.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| novi | | | | | | | | |
+| tormenti | | | | | | | | |
+| e | | | | | | | | |
+| novi | | | | | | | | |
+| tormentati | | | | | | | | |
+| mi | | | | | | | | |
+| veggio | | | | | | | | |
+| intorno | | | | | | | | |
+| come | | | | | | | | |
+| ch' | | | | | | | | |
+| io | | | | | | | | |
+| mi | | | | | | | | |
+| mova | | | | | | | | |
+| e | | | | | | | | |
+| ch' | | | | | | | | |
+| io | | | | | | | | |
+| mi | | | | | | | | |
+| volga | | | | | | | | |
+| e | | | | | | | | |
+| come | | | | | | | | |
+| che | | | | | | | | |
+| io | | | | | | | | |
+| guati | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| novi | nuovo | adjective | m. | pl. | | | | |
+| novi | nuovo | adjective | m. | pl. | | | | archaic |
 | tormenti | tormento | noun | m. | pl. | | | | |
-| e | | conjunction | | | | | | |
-| novi | nuovo | adjective | m. | pl. | | | | |
-| tormentati | tormentare | adjective (participle) | m. | pl. | | | | participle |
-| mi | | pronoun (reflexive) | | sg. | 1 | | | |
-| veggio | vedere | verb | | sg. | 1 | present | indicative | |
-| intorno | | adverb | | | | | | |
-| come | | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
+| novi | nuovo | adjective | m. | pl. | | | | archaic |
+| tormentati | tormentare | verb (past participle) | m. | pl. | | past participle | | |
+| mi | mi | pronoun (clitic) | | | 1 | | | |
+| veggio | vedere | verb | | | 1 | present | indicative | |
+| intorno | intorno | adverb | | | | | | |
+| come | come | adverb | | | | | | |
 | ch' | che | conjunction | | | | | | elision |
-| io | io | pronoun | | sg. | 1 | | | |
-| mi | | pronoun (reflexive) | | sg. | 1 | | | |
-| mova | muovere | verb | | sg. | 3 | present | subjunctive | |
-| e | | conjunction | | | | | | |
+| io | io | pronoun | | | 1 | | | |
+| mi | mi | pronoun (clitic) | | | | | | |
+| mova | muovere | verb | | | 1 | present | subjunctive | |
+| e | e | conjunction | | | | | | |
 | ch' | che | conjunction | | | | | | elision |
-| io | io | pronoun | | sg. | 1 | | | |
-| mi | | pronoun (reflexive) | | sg. | 1 | | | |
-| volga | volgere | verb | | sg. | 3 | present | subjunctive | |
-| e | | conjunction | | | | | | |
-| come | | conjunction | | | | | | |
-| che | | conjunction | | | | | | |
-| io | io | pronoun | | sg. | 1 | | | |
-| guati | guare | verb | | sg. | 3 | present | subjunctive | |
+| io | io | pronoun | | | 1 | | | |
+| mi | mi | pronoun (clitic) | | | | | | |
+| volga | volgere | verb | | | 1 | present | subjunctive | |
+| e | e | conjunction | | | | | | |
+| come | come | adverb | | | | | | |
+| che | che | conjunction | | | | | | |
+| io | io | pronoun | | | 1 | | | |
+| guati | guare | verb (past participle) | m. | pl. | | past participle | | archaic |
 </result>
 </query>
 <query>
 <info>[Inferno Canto 6] 7/115</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 7 Io sono al terzo cerchio, de la piova
 8 etterna, maladetta, fredda e greve;
 9 regola e qualità mai non l'è nova.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Io | | | | | | | | |
+| sono | | | | | | | | |
+| al | | | | | | | | |
+| terzo | | | | | | | | |
+| cerchio | | | | | | | | |
+| de | | | | | | | | |
+| la | | | | | | | | |
+| piova | | | | | | | | |
+| etterna | | | | | | | | |
+| maladetta | | | | | | | | |
+| fredda | | | | | | | | |
+| e | | | | | | | | |
+| greve | | | | | | | | |
+| regola | | | | | | | | |
+| e | | | | | | | | |
+| qualità | | | | | | | | |
+| mai | | | | | | | | |
+| non | | | | | | | | |
+| l' | | | | | | | | |
+| è | | | | | | | | |
+| nova | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
 | Io | io | pronoun | | sg. | 1 | | | |
 | sono | essere | verb | | sg. | 1 | present | indicative | |
-| al | a+il | preposition+article | m. | sg. | | | | contraction |
-| terzo | terzo | adjective | m. | sg. | | | | |
+| al | a+il | preposition + article | m. | sg. | | | | contraction |
+| terzo | terzo | adjective (ordinal) | m. | sg. | | | | |
 | cerchio | cerchio | noun | m. | sg. | | | | |
 | de | di | preposition | | | | | | archaic |
-| la | la | article | f. | sg. | | | | |
-| piova | pioggia | noun | f. | sg. | | | | archaic |
+| la | il | article (definite) | f. | sg. | | | | |
+| piova | pioggia | noun | f. | sg. | | | | archaic form |
 | etterna | eterno | adjective | f. | sg. | | | | |
 | maladetta | maledetto | adjective | f. | sg. | | | | |
 | fredda | freddo | adjective | f. | sg. | | | | |
-| e | | conjunction | | | | | | |
-| greve | greve | adjective | | sg. | | | | |
+| e | e | conjunction | | | | | | |
+| greve | greve | adjective | | | | | | |
 | regola | regola | noun | f. | sg. | | | | |
-| e | | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
 | qualità | qualità | noun | f. | sg. | | | | |
-| mai | | adverb | | | | | | |
-| non | | adverb | | | | | | |
-| l' | la | article | f. | sg. | | | | elision |
+| mai | mai | adverb | | | | | | |
+| non | non | adverb (negation) | | | | | | |
+| l' | lui | pronoun (clitic) | m. | sg. | 3 | | | archaic contraction |
 | è | essere | verb | | sg. | 3 | present | indicative | |
-| nova | nuovo | adjective | f. | sg. | | | | archaic |
+| nova | nuovo | adjective | f. | sg. | | | | archaic spelling |
 </result>
 </query>
 <query>
@@ -1182,78 +1236,137 @@ Output format (fill in blank cells):
 <query>
 <info>[Inferno Canto 6] 82/115</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 82 dimmi ove sono e fa ch'io li conosca;
 83 ché gran disio mi stringe di savere
 84 se 'l ciel li addolcia o lo 'nferno li attosca».
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| dimmi | | | | | | | | |
+| ove | | | | | | | | |
+| sono | | | | | | | | |
+| e | | | | | | | | |
+| fa | | | | | | | | |
+| ch' | | | | | | | | |
+| io | | | | | | | | |
+| li | | | | | | | | |
+| conosca | | | | | | | | |
+| ché | | | | | | | | |
+| gran | | | | | | | | |
+| disio | | | | | | | | |
+| mi | | | | | | | | |
+| stringe | | | | | | | | |
+| di | | | | | | | | |
+| savere | | | | | | | | |
+| se | | | | | | | | |
+| 'l | | | | | | | | |
+| ciel | | | | | | | | |
+| li | | | | | | | | |
+| addolcia | | | | | | | | |
+| o | | | | | | | | |
+| lo | | | | | | | | |
+| 'nferno | | | | | | | | |
+| li | | | | | | | | |
+| attosca | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
 | dimmi | dire+mi | verb | | | 2 | present | imperative | enclitic pronoun |
-| ove | ove | adverb | | | | | | |
-| sono | essere | verb | | | 1 | present | indicative | |
-| e | | conjunction | | | | | | |
-| fa | fare | verb | | | 2 | present | imperative | |
-| ch' | che | pronoun (relative) | | | | | | elision |
+| ove | dove | adverb (rel.) | | | | | | |
+| sono | essere | verb | | pl. | 3 | present | indicative | |
+| e | e | conjunction | | | | | | |
+| fa | fare | verb | | sg. | 3 | present | indicative | |
+| ch' | che | conjunction | | | | | | elision |
 | io | io | pronoun | | sg. | 1 | | | |
-| li | li | pronoun (direct object) | m. | pl. | | | | |
-| conosca | conoscere | verb | | | 1 | present | subjunctive | |
-| ché | che | conjunction | | | | | | |
-| gran | grande | adjective | m. | sg. | | | | apocopated |
-| disio | desiderio | noun | m. | sg. | | | | |
-| mi | mi | pronoun | | sg. | 1 | | | |
-| stringe | stringere | verb | | | 3 | present | indicative | |
+| li | li | pronoun (clitic) | m. | pl. | 3 | | | |
+| conosca | conoscere | verb | | sg. | 1 | present | subjunctive | |
+| ché | che | conjunction | | | | | | archaic |
+| gran | grande | adjective | m. | sg. | | | | |
+| disio | desio | noun | m. | sg. | | | | |
+| mi | mi | pronoun (clitic) | | | | | | |
+| stringe | stringere | verb | | sg. | 3 | present | indicative | |
 | di | di | preposition | | | | | | |
-| savere | sapere | verb | | | | | | infinitive |
+| savere | sapere | verb | | | | | infinitive | archaic spelling |
 | se | se | conjunction | | | | | | |
-| 'l | il | article | m. | sg. | | | | contraction |
-| ciel | cielo | noun | m. | sg. | | | | |
-| li | li | pronoun (direct object) | m. | pl. | | | | |
-| addolcia | addolcire | verb | | | 3 | present | indicative | |
+| 'l | il | article (def.) | m. | sg. | | | | elision |
+| ciel | cielo | noun | m. | sg. | | | | archaic form |
+| li | li | pronoun (clitic) | m. | pl. | 3 | | | |
+| addolcia | addolcire | verb | | sg. | 3 | present | indicative | |
 | o | o | conjunction | | | | | | |
-| lo | lo | article | m. | sg. | | | | |
+| lo | lo | pronoun (clitic) | m. | sg. | 3 | | | |
 | 'nferno | inferno | noun | m. | sg. | | | | elision |
-| li | li | pronoun (direct object) | m. | pl. | | | | |
-| attosca | attoscare | verb | | | 3 | present | indicative | |
+| li | li | pronoun (clitic) | m. | pl. | 3 | | | |
+| attosca | attoscare | verb | | sg. | 3 | present | indicative | archaic |
 </result>
 </query>
 <query>
 <info>[Inferno Canto 6] 85/115</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 85 E quelli: «Ei son tra l'anime più nere;
 86 diverse colpe giù li grava al fondo:
 87 se tanto scendi, là i potrai vedere.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| E | | | | | | | | |
+| quelli | | | | | | | | |
+| Ei | | | | | | | | |
+| son | | | | | | | | |
+| tra | | | | | | | | |
+| l' | | | | | | | | |
+| anime | | | | | | | | |
+| più | | | | | | | | |
+| nere | | | | | | | | |
+| diverse | | | | | | | | |
+| colpe | | | | | | | | |
+| giù | | | | | | | | |
+| li | | | | | | | | |
+| grava | | | | | | | | |
+| al | | | | | | | | |
+| fondo | | | | | | | | |
+| se | | | | | | | | |
+| tanto | | | | | | | | |
+| scendi | | | | | | | | |
+| là | | | | | | | | |
+| i | | | | | | | | |
+| potrai | | | | | | | | |
+| vedere | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| E | | conjunction | | | | | | |
-| quelli | quello | pronoun (demonstrative) | m. | pl. | | | | |
+| E | e | conjunction | | | | | | |
+| quelli | quello | demonstrative pronoun/adjective | m. | pl. | | | | |
 | Ei | egli | pronoun | m. | sg. | 3 | | | archaic |
-| son | essere | verb | | pl. | 3 | present | indicative | archaic |
-| tra | | preposition | | | | | | |
-| l' | il | article | m. | sg. | | | | contraction |
+| son | essere | verb | | pl. | 3 | present | indicative | contraction of *sono* |
+| tra | tra | preposition | | | | | | |
+| l' | le | article (definite) | f. | pl. | | | | elision |
 | anime | anima | noun | f. | pl. | | | | |
-| più | più | adverb | | | | | | |
+| più | più | adverb (comparative) | | | | | | |
 | nere | nero | adjective | f. | pl. | | | | |
 | diverse | diverso | adjective | f. | pl. | | | | |
 | colpe | colpa | noun | f. | pl. | | | | |
 | giù | giù | adverb | | | | | | |
-| li | li | pronoun (direct object) | m. | pl. | | | | |
+| li | li | pronoun (clitic) | m. | pl. | 3 | | | |
 | grava | gravare | verb | | sg. | 3 | present | indicative | |
-| al | a+il | preposition+article | m. | sg. | | | | contraction |
+| al | a+il | preposition + article | m. | sg. | | | | contraction |
 | fondo | fondo | noun | m. | sg. | | | | |
-| se | | conjunction | | | | | | |
+| se | se | conjunction | | | | | | |
 | tanto | tanto | adverb | | | | | | |
 | scendi | scendere | verb | | sg. | 2 | present | indicative | |
 | là | là | adverb | | | | | | |
-| i | il | article | m. | pl. | | | | |
+| i | il | article (definite) | m. | pl. | | | | |
 | potrai | potere | verb | | sg. | 2 | future | indicative | |
-| vedere | vedere | verb | | | | | | infinitive |
+| vedere | vedere | verb | | | | | infinitive | |
 </result>
 </query>
 <query>
@@ -1297,39 +1410,68 @@ Create a word table.
 <query>
 <info>[Inferno Canto 6] 91/115</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 91 Li diritti occhi torse allora in biechi;
 92 guardommi un poco e poi chinò la testa:
 93 cadde con essa a par de li altri ciechi.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Li | | | | | | | | |
+| diritti | | | | | | | | |
+| occhi | | | | | | | | |
+| torse | | | | | | | | |
+| allora | | | | | | | | |
+| in | | | | | | | | |
+| biechi | | | | | | | | |
+| guardommi | | | | | | | | |
+| un | | | | | | | | |
+| poco | | | | | | | | |
+| e | | | | | | | | |
+| poi | | | | | | | | |
+| chinò | | | | | | | | |
+| la | | | | | | | | |
+| testa | | | | | | | | |
+| cadde | | | | | | | | |
+| con | | | | | | | | |
+| essa | | | | | | | | |
+| a | | | | | | | | |
+| par | | | | | | | | |
+| de | | | | | | | | |
+| li | | | | | | | | |
+| altri | | | | | | | | |
+| ciechi | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Li | il | article | m. | pl. | | | | contraction of *li* |
+| Li | il | article | m. | pl. | | | | |
 | diritti | diritto | adjective | m. | pl. | | | | |
 | occhi | occhio | noun | m. | pl. | | | | |
-| torse | torcere | verb | | | 3 | remote past | indicative | |
+| torse | torcere | verb | | sg. | 3 | remote past | indicative | archaic |
 | allora | allora | adverb | | | | | | |
 | in | in | preposition | | | | | | |
-| biechi | bieco | adjective | m. | pl. | | | | |
-| guardommi | guardare | verb | | | 1 | present | indicative | enclitic pronoun *mi* |
-| un | uno | article | m. | sg. | | | | indefinite |
+| biechi | cieco | adjective | m. | pl. | | | | archaic spelling |
+| guardommi | guardare+mi | verb | | sg. | 1 | present | indicative | enclitic pronoun |
+| un | uno | article | m. | sg. | | | | |
 | poco | poco | adverb | | | | | | |
-| e | | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
 | poi | poi | adverb | | | | | | |
-| chinò | chinare | verb | | | 3 | remote past | indicative | |
+| chinò | chinare | verb | | sg. | 3 | remote past | indicative | |
 | la | la | article | f. | sg. | | | | |
 | testa | testa | noun | f. | sg. | | | | |
-| cadde | cadere | verb | | | 3 | remote past | indicative | |
+| cadde | cadere | verb | | sg. | 3 | remote past | indicative | |
 | con | con | preposition | | | | | | |
 | essa | essa | pronoun | f. | sg. | | | | |
 | a | a | preposition | | | | | | |
-| par | pari | noun | m. | sg. | | | | archaic form |
-| de | di | preposition | | | | | | archaic |
-| li | il | article | m. | pl. | | | | contraction of *li* |
+| par | pari | adjective | | | | | | archaic/fixed form |
+| de | di | preposition | | | | | | archaic spelling |
+| li | il | article | m. | pl. | | | | |
 | altri | altro | adjective | m. | pl. | | | | |
-| ciechi | cieco | adjective | m. | pl. | | | | |
+| ciechi | cieco | adjective | m. | pl. | | | | archaic spelling |
 </result>
 </query>
 <query>

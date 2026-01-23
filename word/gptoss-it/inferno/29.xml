@@ -1919,11 +1919,40 @@ Create a word table.
 <query>
 <info>[Inferno Canto 29] 136/139</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 136 sì vedrai ch'io son l'ombra di Capocchio,
 137 che falsai li metalli con l'alchìmia;
 138 e te dee ricordar, se ben t'adocchio,
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| sì | | | | | | | | |
+| vedrai | | | | | | | | |
+| ch' | | | | | | | | |
+| io | | | | | | | | |
+| son | | | | | | | | |
+| l' | | | | | | | | |
+| ombra | | | | | | | | |
+| di | | | | | | | | |
+| Capocchio | | | | | | | | |
+| che | | | | | | | | |
+| falsai | | | | | | | | |
+| li | | | | | | | | |
+| metalli | | | | | | | | |
+| con | | | | | | | | |
+| l' | | | | | | | | |
+| alchìmia | | | | | | | | |
+| e | | | | | | | | |
+| te | | | | | | | | |
+| dee | | | | | | | | |
+| ricordar | | | | | | | | |
+| se | | | | | | | | |
+| ben | | | | | | | | |
+| t' | | | | | | | | |
+| adocchio | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
@@ -1931,27 +1960,27 @@ Create a word table.
 | sì | sì | adverb | | | | | | |
 | vedrai | vedere | verb | | | 2 | future | indicative | |
 | ch' | che | conjunction | | | | | | elision |
-| io | io | pronoun | | sg | 1 | | | |
-| son | essere | verb | | | 1 | present | indicative | archaic |
-| l' | la | article | f | sg | | | | elision |
-| ombra | ombra | noun | f | sg | | | | |
+| io | io | pronoun | | sg. | 1 | | | |
+| son | essere | verb | | | 1 | present | indicative | archaic form of *sono* |
+| l' | la | article (definite) | f. | sg. | | | | elision |
+| ombra | ombra | noun | f. | sg. | | | | |
 | di | di | preposition | | | | | | |
-| Capocchio | Capocchio | proper noun | m | sg | | | | |
+| Capocchio | Capocchio | proper noun | m. | sg. | | | | |
 | che | che | conjunction | | | | | | |
 | falsai | falsare | verb | | | 1 | remote past | indicative | |
-| li | li | pronoun | m | pl | 3 | | | |
-| metalli | metallo | noun | m | pl | | | | |
+| li | i | article (definite) | m. | pl. | | | | elision (pronoun “them” in older spelling) |
+| metalli | metallo | noun | m. | pl. | | | | |
 | con | con | preposition | | | | | | |
-| l' | la | article | f | sg | | | | elision |
-| alchìmia | alchimia | noun | f | sg | | | | accent, archaic |
-| e | – | conjunction | | | | | | |
-| te | tu | pronoun | | sg | 2 | | | object pronoun |
-| dee | dovere | verb | | | 2 | present | indicative | archaic |
-| ricordar | ricordare | verb | | | | | | apocope (inf.) |
+| l' | la | article (definite) | f. | sg. | | | | elision |
+| alchìmia | alchimia | noun | f. | sg. | | | | |
+| e | e | conjunction | | | | | | |
+| te | tu | pronoun (object) | | sg. | 2 | | | |
+| dee | devere | verb | | | 2 | present | indicative | archaic |
+| ricordar | ricordare | verb | | | | | infinitive | |
 | se | se | conjunction | | | | | | |
-| ben | bene | adverb | | | | | | archaic |
-| t' | ti | pronoun | | | 2 | | | elision |
-| adocchio | adocchiare | verb | | | 1 | present | indicative | |
+| ben | bene | adverb | | | | | | |
+| t' | ti | pronoun (object) | | sg. | 2 | | | elision |
+| adocchio | adocchiare | verb | | sg. | 1 | present | indicative | |
 </result>
 </query>
 <query>

@@ -243,29 +243,29 @@ Output format (fill in blank cells):
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| e | – | conjunction | – | – | – | – | – | – |
-| disse | dire | verb | – | – | 3 | remote past | indicative | – |
-| l' | il | article | m. | sg. | – | – | – | elision |
-| uno | uno | numeral/pronoun | m. | sg. | – | – | – | – |
-| O | O | interjection | – | – | – | – | – | – |
-| anima | anima | noun | f. | sg. | – | – | – | – |
-| che | che | pronoun (relative) | – | – | – | – | – | – |
-| fitta | fittare | verb | – | – | 3 | present | indicative | – |
-| nel | in+il | preposition+article | m. | sg. | – | – | – | contraction |
-| corpo | corpo | noun | m. | sg. | – | – | – | – |
-| ancora | ancora | adverb | – | – | – | – | – | – |
-| inver' | invero | adverb | – | – | – | – | – | archaic, elision |
-| lo | lo | article | m. | sg. | – | – | – | – |
-| ciel | cielo | noun | m. | sg. | – | – | – | – |
-| ten | tenere | verb | – | – | 2 | present | imperative | – |
-| vai | andare | verb | – | – | 2 | present | indicative | – |
-| per | per | preposition | – | – | – | – | – | – |
-| carità | carità | noun | f. | sg. | – | – | – | – |
-| ne | ne | pronoun (clitic) | – | – | – | – | – | – |
-| consola | consolare | verb | – | – | 3 | present | indicative | – |
-| e | – | conjunction | – | – | – | – | – | – |
-| ne | ne | pronoun (clitic) | – | – | – | – | – | – |
-| ditta | dire | verb (participle) | f. | sg. | – | past participle | participle | archaic |
+| e | e | conjunction | | | | | | |
+| disse | dire | verb | | | 3 | remote past | indicative | |
+| l' | il | article | m. | sg. | | | | elision |
+| uno | uno | noun | m. | sg. | | | | |
+| O | o | interjection | | | | | | |
+| anima | anima | noun | f. | sg. | | | | |
+| che | che | relative pronoun | | | | | | |
+| fitta | fittare | verb | | | 3 | present | indicative | |
+| nel | in+il | preposition+article | m. | sg. | | | | contraction |
+| corpo | corpo | noun | m. | sg. | | | | |
+| ancora | ancora | adverb | | | | | | |
+| inver' | invero | adverb | | | | | | archaic |
+| lo | lo | article | m. | sg. | | | | |
+| ciel | cielo | noun | m. | sg. | | | | |
+| ten | tenere | verb | | | 2 | | imperative | |
+| vai | andare | verb | | | 2 | present | indicative | |
+| per | per | preposition | | | | | | |
+| carità | carità | noun | f. | sg. | | | | |
+| ne | ne | pronoun (clitic) | | | | | | |
+| consola | consolare | verb | | | 3 | present | indicative | |
+| e | e | conjunction | | | | | | |
+| ne | ne | pronoun (clitic) | | | | | | |
+| ditta | dire | verb (past participle) | f. | sg. | | | | archaic |
 </result>
 </query>
 <query>
@@ -308,25 +308,25 @@ Output format (fill in blank cells):
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| onde | onde | adverb | | | | | | archaic |
+| onde | onde | adverb / conjunction | | | | | | archaic |
 | vieni | venire | verb | | | 2 | present | indicative | |
-| e | – | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
 | chi | chi | pronoun (interrogative) | | | | | | |
-| se' | essere | verb | | | 2 | present | indicative | elision |
+| se' | se | pronoun (reflexive) | | | | | | elision |
 | ché | che | conjunction | | | | | | archaic |
-| tu | tu | pronoun (personal) | | sg. | 2 | | | |
+| tu | tu | pronoun | | | 2 | | | |
 | ne | ne | pronoun (clitic) | | | | | | |
 | fai | fare | verb | | | 2 | present | indicative | |
 | tanto | tanto | adverb | | | | | | |
-| maravigliar | maravigliare | verb | | | | | | infinitive |
+| maravigliar | maravigliare | verb | | | | infinitive | | archaic |
 | de | di | preposition | | | | | | archaic |
-| la | il | article (definite) | f. | sg. | | | | |
+| la | il | article | f. | sg. | | | | |
 | tua | tuo | adjective (possessive) | f. | sg. | | | | |
 | grazia | grazia | noun | f. | sg. | | | | |
-| quanto | quanto | adverb | | | | | | |
-| vuol | volere | verb | | | 3 | present | indicative | |
+| quanto | quanto | adverb / conjunction | | | | | | |
+| vuol | volere | verb | | | 3 | present | indicative | archaic |
 | cosa | cosa | noun | f. | sg. | | | | |
-| che | che | pronoun (relative) | | | | | | |
+| che | che | conjunction | | | | | | |
 | non | non | adverb | | | | | | |
 | fu | essere | verb | | | 3 | remote past | indicative | |
 | più | più | adverb | | | | | | comparative |
@@ -1645,26 +1645,26 @@ Output format (fill in blank cells):
 |---|---|---|---|---|---|---|---|---|
 | le | il | article | f. | pl. | | | | |
 | donne | donna | noun | f. | pl. | | | | |
-| e | | conjunction | | | | | | |
-| cavalier | cavaliere | noun | m. | sg. | | | | |
-| li | | pronoun (clitic) | m. | pl. | | | | |
+| e | e | conjunction | | | | | | |
+| cavalier | cavaliere | noun | m. | sg. | | | | archaic spelling |
+| li | il | article | m. | pl. | | | | |
 | affanni | affanno | noun | m. | pl. | | | | |
-| e | | conjunction | | | | | | |
-| li | | pronoun (clitic) | m. | pl. | | | | |
-| agi | ago | noun | m. | pl. | | | | |
-| che | | pronoun / conjunction | | | | | | |
-| ne | | pronoun (partitive) | | | | | | |
-| 'nvogliava | involgere | verb | | sg. | 3 | imperfect | indicative | contraction |
+| e | e | conjunction | | | | | | |
+| li | il | article | m. | pl. | | | | |
+| agi | agio | noun | m. | pl. | | | | |
+| che | che | conjunction | | | | | | |
+| ne | ne | pronoun (clitic) | | | | | | |
+| 'nvogliava | volgere | verb | | | 3 | imperfect | indicative | elision of “in‑”; archaic “nvogliare” = “desire” |
 | amore | amore | noun | m. | sg. | | | | |
-| e | | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
 | cortesia | cortesia | noun | f. | sg. | | | | |
-| là | | adverb | | | | | | |
-| dove | | adverb (relative) | | | | | | |
+| là | là | adverb | | | | | | |
+| dove | dove | adverb / relative pronoun | | | | | | |
 | i | il | article | m. | pl. | | | | |
-| cuor | cuore | noun | m. | sg. | | | | archaic |
-| son | essere | verb | | pl. | 3 | present | indicative | |
-| fatti | fare | verb (participle) | m. | pl. | | past participle | | |
-| sì | | adverb | | | | | | |
+| cuor | cuore | noun | m. | sg. | | | | |
+| son | essere | verb | | pl. | 3 | present | indicative | contraction of “sono” |
+| fatti | fare | verb (past participle) | m. | pl. | | | | used as adjective |
+| sì | sì | adverb | | | | | | |
 | malvagi | malvagio | adjective | m. | pl. | | | | |
 </result>
 </query>

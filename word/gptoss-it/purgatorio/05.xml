@@ -528,68 +528,119 @@ Output format (fill in blank cells):
 <query>
 <info>[Purgatorio Canto 5] 28/136</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 28 e due di loro, in forma di messaggi,
 29 corsero incontr' a noi e dimandarne:
 30 «Di vostra condizion fatene saggi».
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| e | | | | | | | | |
+| due | | | | | | | | |
+| di | | | | | | | | |
+| loro | | | | | | | | |
+| in | | | | | | | | |
+| forma | | | | | | | | |
+| di | | | | | | | | |
+| messaggi | | | | | | | | |
+| corsero | | | | | | | | |
+| incontr' | | | | | | | | |
+| a | | | | | | | | |
+| noi | | | | | | | | |
+| e | | | | | | | | |
+| dimandarne | | | | | | | | |
+| Di | | | | | | | | |
+| vostra | | | | | | | | |
+| condizion | | | | | | | | |
+| fatene | | | | | | | | |
+| saggi | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| e | – | conjunction | | | | | | |
-| due | due | numeral/adjective | | pl. | | | | |
+| e | e | conjunction | | | | | | |
+| due | due | numeral | | pl | | | | |
 | di | di | preposition | | | | | | |
-| loro | loro | pronoun (personal) | | pl. | 3 | | | |
+| loro | loro | pronoun | | pl | 3 | | | |
 | in | in | preposition | | | | | | |
-| forma | forma | noun | f. | sg. | | | | |
+| forma | forma | noun | f. | sg | | | | |
 | di | di | preposition | | | | | | |
-| messaggi | messaggio | noun | m. | pl. | | | | |
-| corsero | correre | verb | | | 3 | remote past | indicative | |
-| incontr' | incontrò | verb | | | 3 | remote past | indicative | contraction (elision) |
+| messaggi | messaggio | noun | m. | pl | | | | |
+| corsero | correre | verb | | pl | 3 | remote past | indicative | |
+| incontr' | incontrare | verb (infinitive) | | | | | | apostrophe (elision) |
 | a | a | preposition | | | | | | |
-| noi | noi | pronoun (personal) | | pl. | 1 | | | |
-| e | – | conjunction | | | | | | |
-| dimandarne | dimandare | verb | | | | infinitive | infinitive | enclitic “ne” |
+| noi | noi | pronoun | | pl | 1 | | | |
+| e | e | conjunction | | | | | | |
+| dimandarne | dimandare | verb (infinitive) | | | | | | enclitic “ne” |
 | Di | di | preposition | | | | | | |
-| vostra | vostro | adjective (possessive) | f. | sg. | | | | |
-| condizion | condizione | noun | f. | sg. | | | | |
-| fatene | fare | verb | | | 2 | – | imperative | enclitic “ne” |
-| saggi | saggio | adjective | m. | pl. | | | | |
+| vostra | vostro | adjective (possessive) | f. | sg | | | | |
+| condizion | condizione | noun | f. | sg | | | | |
+| fatene | fare | verb (imperative) | | | 2 | | imperative | enclitic “ne” |
+| saggi | saggio | noun | m. | pl | | | | |
 </result>
 </query>
 <query>
 <info>[Purgatorio Canto 5] 31/136</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 31 E 'l mio maestro: «Voi potete andarne
 32 e ritrarre a color che vi mandaro
 33 che 'l corpo di costui è vera carne.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| E | | | | | | | | |
+| 'l | | | | | | | | |
+| mio | | | | | | | | |
+| maestro | | | | | | | | |
+| Voi | | | | | | | | |
+| potete | | | | | | | | |
+| andarne | | | | | | | | |
+| e | | | | | | | | |
+| ritrarre | | | | | | | | |
+| a | | | | | | | | |
+| color | | | | | | | | |
+| che | | | | | | | | |
+| vi | | | | | | | | |
+| mandaro | | | | | | | | |
+| che | | | | | | | | |
+| 'l | | | | | | | | |
+| corpo | | | | | | | | |
+| di | | | | | | | | |
+| costui | | | | | | | | |
+| è | | | | | | | | |
+| vera | | | | | | | | |
+| carne | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| E | – | conjunction | | | | | | |
-| 'l | il | article | m. | sg. | | | | contraction (elision) |
+| E | e | conjunction | | | | | | |
+| 'l | il | article | m. | sg. | | | | elision |
 | mio | mio | adjective (possessive) | m. | sg. | | | | |
 | maestro | maestro | noun | m. | sg. | | | | |
-| Voi | voi | pronoun (personal) | | pl. | 2 | | | |
-| potete | potere | verb | | | 2 | present | indicative | |
-| andarne | andare | verb | | | | infinitive | infinitive | enclitic ne |
-| e | – | conjunction | | | | | | |
-| ritrarre | ritrarre | verb | | | | infinitive | infinitive | |
+| Voi | voi | pronoun | | pl. | 2 | | | |
+| potete | potere | verb | | pl. | 2 | present | indicative | |
+| andarne | andare | verb (infinitive) | | | | | | enclitic “ne” |
+| e | e | conjunction | | | | | | |
+| ritrarre | ritrarre | verb (infinitive) | | | | | | |
 | a | a | preposition | | | | | | |
-| color | colore | noun | m. | sg. | | | | archaic |
-| che | che | relative pronoun | | | | | | |
-| vi | voi | pronoun (clitic) | | pl. | 2 | | | clitic |
-| mandaro | mandare | verb | | | 3 | remote past | indicative | archaic |
-| che | che | conjunction | | | | | | |
-| 'l | il | article | m. | sg. | | | | contraction (elision) |
+| color | colore | noun | m. | sg. | | | | archaic spelling |
+| che | che | conjunction (relative) | | | | | | |
+| vi | vi | pronoun (clitic) | | | 2 | | | |
+| mandaro | mandare | verb | | pl. | 3 | remote past | indicative | archaic spelling |
+| che | che | conjunction (relative) | | | | | | |
+| 'l | il | article | m. | sg. | | | | elision |
 | corpo | corpo | noun | m. | sg. | | | | |
 | di | di | preposition | | | | | | |
 | costui | costui | pronoun (demonstrative) | m. | sg. | 3 | | | |
-| è | essere | verb | | | 3 | present | indicative | |
+| è | essere | verb | | sg. | 3 | present | indicative | |
 | vera | vero | adjective | f. | sg. | | | | |
 | carne | carne | noun | f. | sg. | | | | |
 </result>

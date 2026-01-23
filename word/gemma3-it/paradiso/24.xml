@@ -350,20 +350,44 @@ Create a word table.
 <query>
 <info>[Paradiso Canto 24] 31/154</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 31 Poscia fermato, il foco benedetto
 32 a la mia donna dirizzò lo spiro,
 33 che favellò così com' i' ho detto.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Poscia | | | | | | | | |
+| fermato | | | | | | | | |
+| il | | | | | | | | |
+| foco | | | | | | | | |
+| benedetto | | | | | | | | |
+| a | | | | | | | | |
+| la | | | | | | | | |
+| mia | | | | | | | | |
+| donna | | | | | | | | |
+| dirizzò | | | | | | | | |
+| lo | | | | | | | | |
+| spiro | | | | | | | | |
+| che | | | | | | | | |
+| favellò | | | | | | | | |
+| così | | | | | | | | |
+| com' | | | | | | | | |
+| i' | | | | | | | | |
+| ho | | | | | | | | |
+| detto | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Poscia | poscia | adverb | | | | | | archaic |
-| fermato | fermare | verb | m. | sg. | | past | participle | |
+| Poscia | poscia | adverb | | | | | | |
+| fermato | fermare | verb | | | | past | participle | |
 | il | il | article | m. | sg. | | | | |
 | foco | fuoco | noun | m. | sg. | | | | |
-| benedetto | benedire | verb | m. | sg. | | past | participle | |
+| benedetto | benedire | verb | | | | past | participle | |
 | a | a | preposition | | | | | | |
 | la | la | article | f. | sg. | | | | |
 | mia | mio | adjective | f. | sg. | | | | possessive |
@@ -374,10 +398,10 @@ Create a word table.
 | che | che | pronoun | | | | | | relative |
 | favellò | favellare | verb | | sg. | 3 | remote past | indicative | |
 | così | così | adverb | | | | | | |
-| com' | come+i’ | conjunction+pronoun | | | | | | contraction, elision |
+| com' | come | adverb | | | | | | elision |
 | i' | io | pronoun | | sg. | 1 | | | elision |
 | ho | avere | verb | | sg. | 1 | present | indicative | auxiliary |
-| detto | dire | verb | m. | sg. | | past | participle | |
+| detto | dire | verb | | | | past | participle | |
 </result>
 </query>
 <query>

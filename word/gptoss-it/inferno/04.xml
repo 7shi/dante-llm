@@ -798,61 +798,108 @@ Output format (fill in blank cells):
 <query>
 <info>[Inferno Canto 4] 61/151</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 61 e altri molti, e feceli beati.
 62 E vo' che sappi che, dinanzi ad essi,
 63 spiriti umani non eran salvati».
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| e | | | | | | | | |
+| altri | | | | | | | | |
+| molti | | | | | | | | |
+| e | | | | | | | | |
+| feceli | | | | | | | | |
+| beati | | | | | | | | |
+| E | | | | | | | | |
+| vo' | | | | | | | | |
+| che | | | | | | | | |
+| sappi | | | | | | | | |
+| che | | | | | | | | |
+| dinanzi | | | | | | | | |
+| ad | | | | | | | | |
+| essi | | | | | | | | |
+| spiriti | | | | | | | | |
+| umani | | | | | | | | |
+| non | | | | | | | | |
+| eran | | | | | | | | |
+| salvati | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| e | – | conjunction | | | | | | |
+| e | e | conjunction | | | | | | |
 | altri | altro | adjective | m. | pl. | | | | |
 | molti | molto | adjective | m. | pl. | | | | |
-| e | – | conjunction | | | | | | |
-| feceli | fare+li | verb | | | 3 | remote past | indicative | enclitic pronoun |
+| e | e | conjunction | | | | | | |
+| feceli | fare | verb | | | 3 | remote past | indicative | enclitic pronoun *li* |
 | beati | beato | adjective | m. | pl. | | | | |
-| E | – | conjunction | | | | | | |
-| vo' | volere | verb | | | 1 | present | indicative | contraction |
-| che | – | conjunction | | | | | | |
+| E | e | conjunction | | | | | | |
+| vo' | volere | verb | | | 1 | present | indicative | contraction, archaic |
+| che | che | conjunction | | | | | | |
 | sappi | sapere | verb | | | 2 | present | subjunctive | |
-| che | – | conjunction | | | | | | |
-| dinanzi | – | adverb | | | | | | |
-| ad | – | preposition | | | | | | |
+| che | che | conjunction | | | | | | |
+| dinanzi | dinanzi | preposition | | | | | | |
+| ad | ad | preposition | | | | | | |
 | essi | esso | pronoun | m. | pl. | 3 | | | |
 | spiriti | spirito | noun | m. | pl. | | | | |
 | umani | umano | adjective | m. | pl. | | | | |
-| non | – | adverb | | | | | | |
-| eran | essere | verb | | pl. | 3 | imperfect | indicative | contraction |
-| salvati | salvare | participle | m. | pl. | | | participle | |
+| non | non | adverb | | | | | | |
+| eran | essere | verb | | | 3 | imperfect | indicative | archaic spelling |
+| salvati | salvare | verb (participle) | m. | pl. | | past | participle | |
 </result>
 </query>
 <query>
 <info>[Inferno Canto 4] 64/151</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 64 Non lasciavam l'andar perch' ei dicessi,
 65 ma passavam la selva tuttavia,
 66 la selva, dico, di spiriti spessi.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Non | | | | | | | | |
+| lasciavam | | | | | | | | |
+| l' | | | | | | | | |
+| andar | | | | | | | | |
+| perch' | | | | | | | | |
+| ei | | | | | | | | |
+| dicessi | | | | | | | | |
+| ma | | | | | | | | |
+| passavam | | | | | | | | |
+| la | | | | | | | | |
+| selva | | | | | | | | |
+| tuttavia | | | | | | | | |
+| la | | | | | | | | |
+| selva | | | | | | | | |
+| dico | | | | | | | | |
+| di | | | | | | | | |
+| spiriti | | | | | | | | |
+| spessi | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Non | – | adverb | | | | | | |
-| lasciavam | lasciare | verb | | | 1 | imperfect | indicative | apocope |
-| l' | il | article | m. | sg. | | | | elision |
-| andar | andare | verb (inf.) | | | | infinitive | | apocope |
-| perch' | perché | conjunction | | | | | | contraction |
-| ei | egli | pronoun | m. | sg. | 3 | | | archaic |
-| dicessi | dire | verb | | sg. | 3 | imperfect | subjunctive | |
-| ma | – | conjunction | | | | | | |
-| passavam | passare | verb | | | 1 | imperfect | indicative | apocope |
-| la | la | article | f. | sg. | | | | |
+| Non | non | adverb | | | | | | |
+| lasciavam | lasciare | verb | | pl. | 1 | imperfect | indicative | archaic spelling (lasciavamo) |
+| l' | lo | article (definite) | m. | sg. | | | | elision |
+| andar | andare | verb (infinitive) | | | | | infinitive | |
+| perch' | perché | conjunction / adverb | | | | | | contraction of *per che* |
+| ei | egli | pronoun | m. | sg. | 3 | | | |
+| dicessi | dire | verb | | sg. | 1 | imperfect | subjunctive | |
+| ma | ma | conjunction | | | | | | |
+| passavam | passare | verb | | pl. | 1 | imperfect | indicative | archaic spelling (passavamo) |
+| la | la | article (definite) | f. | sg. | | | | |
 | selva | selva | noun | f. | sg. | | | | |
 | tuttavia | tuttavia | adverb | | | | | | |
-| la | la | article | f. | sg. | | | | |
+| la | la | article (definite) | f. | sg. | | | | |
 | selva | selva | noun | f. | sg. | | | | |
 | dico | dire | verb | | sg. | 1 | present | indicative | |
 | di | di | preposition | | | | | | |
@@ -863,70 +910,123 @@ Create a word table.
 <query>
 <info>[Inferno Canto 4] 67/151</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 67 Non era lunga ancor la nostra via
 68 di qua dal sonno, quand' io vidi un foco
 69 ch'emisperio di tenebre vincia.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Non | | | | | | | | |
+| era | | | | | | | | |
+| lunga | | | | | | | | |
+| ancor | | | | | | | | |
+| la | | | | | | | | |
+| nostra | | | | | | | | |
+| via | | | | | | | | |
+| di | | | | | | | | |
+| qua | | | | | | | | |
+| dal | | | | | | | | |
+| sonno | | | | | | | | |
+| quand' | | | | | | | | |
+| io | | | | | | | | |
+| vidi | | | | | | | | |
+| un | | | | | | | | |
+| foco | | | | | | | | |
+| ch' | | | | | | | | |
+| emisperio | | | | | | | | |
+| di | | | | | | | | |
+| tenebre | | | | | | | | |
+| vincia | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Non | – | adverb | | | | | | |
+| Non | non | adverb (negation) | | | | | | |
 | era | essere | verb | | | 3 | imperfect | indicative | |
-| lunga | lungo | adjective | f. | sg. | | | | |
-| ancor | ancora | adverb | | | | | | archaic |
-| la | la | article | f. | sg. | | | | |
-| nostra | nostro | adjective | f. | sg. | | | | |
+| lunga | lungo | adjective | f. | sg. | | | | agrees with *via* |
+| ancor | ancora | adverb | | | | | | archaic spelling |
+| la | il | article (definite) | f. | sg. | | | | |
+| nostra | nostro | adjective (possessive) | f. | sg. | | | | |
 | via | via | noun | f. | sg. | | | | |
 | di | di | preposition | | | | | | |
-| qua | qua | adverb | | | | | | |
-| dal | da+il | preposition+article | m. | sg. | | | | contraction |
+| qua | qua | adverb (locative) | | | | | | |
+| dal | da+il | preposition + article | m. | sg. | | | | contraction |
 | sonno | sonno | noun | m. | sg. | | | | |
-| quand' | quando | conjunction | | | | | | contraction |
-| io | io | pronoun | | sg. | 1 | | | |
-| vidi | vedere | verb | | sg. | 3 | remote past | indicative | |
-| un | uno | article | m. | sg. | | | | indefinite |
-| foco | fuoco | noun | m. | sg. | | | | archaic |
-| ch' | che | conjunction | | | | | | contraction |
-| emisperio | emisperio | noun | m. | sg. | | | | archaic |
+| quand' | quando | adverb / conjunction | | | | | | contraction (elision) |
+| io | io | pronoun | | | 1 | | | |
+| vidi | vedere | verb | | | 1 | remote past | indicative | |
+| un | uno | article (indefinite) | m. | sg. | | | | |
+| foco | fuoco | noun | m. | sg. | | | | archaic spelling |
+| ch' | che | conjunction | | | | | | contraction (elision) |
+| emisperio | emisperio | noun | m. | sg. | | | | |
 | di | di | preposition | | | | | | |
-| tenebre | tenebra | noun | f. | pl. | | | | |
-| vincia | vincere | verb | | sg. | 3 | imperfect | subjunctive | |
+| tenebre | tenebra | noun | f. | pl. | | | | plural form |
+| vincia | vincere | verb | | | 3 | present | subjunctive | archaic form (present subjunctive) |
 </result>
 </query>
 <query>
 <info>[Inferno Canto 4] 70/151</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 70 Di lungi n'eravamo ancora un poco,
 71 ma non sì ch'io non discernessi in parte
 72 ch'orrevol gente possedea quel loco.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Di | | | | | | | | |
+| lungi | | | | | | | | |
+| n' | | | | | | | | |
+| eravamo | | | | | | | | |
+| ancora | | | | | | | | |
+| un | | | | | | | | |
+| poco | | | | | | | | |
+| ma | | | | | | | | |
+| non | | | | | | | | |
+| sì | | | | | | | | |
+| ch' | | | | | | | | |
+| io | | | | | | | | |
+| non | | | | | | | | |
+| discernessi | | | | | | | | |
+| in | | | | | | | | |
+| parte | | | | | | | | |
+| ch' | | | | | | | | |
+| orrevol | | | | | | | | |
+| gente | | | | | | | | |
+| possedea | | | | | | | | |
+| quel | | | | | | | | |
+| loco | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Di | – | preposition | | | | | | |
-| lungi | lungo | adjective | m. | pl. | | | | |
-| n' | ne | pronoun | | | | | | elision |
-| eravamo | essere | verb | | pl. | 1 | imperfect | indicative | |
-| ancora | – | adverb | | | | | | |
-| un | uno | article | m. | sg. | | | | indefinite |
-| poco | poco | adverb | | | | | | |
-| ma | – | conjunction | | | | | | |
-| non | – | adverb | | | | | | |
-| sì | – | adverb | | | | | | |
-| ch' | che | conjunction | | | | | | contraction |
-| io | io | pronoun | | sg. | 1 | | | |
-| non | – | adverb | | | | | | |
-| discernessi | discernere | verb | | sg. | 1 | imperfect | subjunctive | |
-| in | – | preposition | | | | | | |
+| Di | di | preposition | | | | | | |
+| lungi | lungo | adjective (adverbial) | | | | | | archaic |
+| n' | ne | pronoun (clitic) | | | | | | elision |
+| eravamo | essere | verb | | | 1 | imperfect | indicative | |
+| ancora | ancora | adverb | | | | | | |
+| un | uno | article (indefinite) | m. | sg. | | | | |
+| poco | poco | adjective/adverb | | | | | | |
+| ma | ma | conjunction | | | | | | |
+| non | non | adverb (negation) | | | | | | |
+| sì | sì | adverb (affirmative) | | | | | | |
+| ch' | che | conjunction | | | | | | elision |
+| io | io | pronoun | | | 1 | | | |
+| non | non | adverb (negation) | | | | | | |
+| discernessi | discernere | verb | | | 1 | imperfect | subjunctive | |
+| in | in | preposition | | | | | | |
 | parte | parte | noun | f. | sg. | | | | |
-| ch' | che | conjunction | | | | | | contraction |
-| orrevol | orrevole | adjective | f. | sg. | | | | |
+| ch' | che | conjunction | | | | | | elision |
+| orrevol | orrevole | adjective | m. | sg. | | | | archaic |
 | gente | gente | noun | f. | sg. | | | | |
-| possedea | possedere | verb | | sg. | 3 | imperfect | indicative | |
+| possedea | possedere | verb | | | 3 | imperfect | indicative | |
 | quel | quel | demonstrative adjective | m. | sg. | | | | |
 | loco | luogo | noun | m. | sg. | | | | archaic |
 </result>

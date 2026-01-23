@@ -1841,33 +1841,57 @@ Create a word table.
 <query>
 <info>[Inferno Canto 18] 133/136</info>
 <prompt>
-Create a word table.
+Create a word table for the text below:
 
 133 Taïde è, la puttana che rispuose
 134 al drudo suo quando disse “Ho io grazie
 135 grandi apo te?”: “Anzi maravigliose!”.
+
+Output format (fill in blank cells):
+
+| Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
+|---|---|---|---|---|---|---|---|---|
+| Taïde | | | | | | | | |
+| è | | | | | | | | |
+| la | | | | | | | | |
+| puttana | | | | | | | | |
+| che | | | | | | | | |
+| rispuose | | | | | | | | |
+| al | | | | | | | | |
+| drudo | | | | | | | | |
+| suo | | | | | | | | |
+| quando | | | | | | | | |
+| disse | | | | | | | | |
+| Ho | | | | | | | | |
+| io | | | | | | | | |
+| grazie | | | | | | | | |
+| grandi | | | | | | | | |
+| apo | | | | | | | | |
+| te | | | | | | | | |
+| Anzi | | | | | | | | |
+| maravigliose | | | | | | | | |
 </prompt>
 <result>
 | Word | Lemma | Part of Speech | Gender | Number | Person | Tense | Mood | Note |
 |---|---|---|---|---|---|---|---|---|
-| Taïde | Taïde | proper noun | | sg. | | | | proper name |
+| Taïde | Taïde | proper noun | | sg. | | | | archaic spelling |
 | è | essere | verb | | sg. | 3 | present | indicative | |
-| la | la | article | f. | sg. | | | | |
+| la | il | article | f. | sg. | | | | |
 | puttana | puttana | noun | f. | sg. | | | | |
-| che | che | pronoun (rel.) | | | | | | relative |
-| rispuose | rispondere | verb | | sg. | 3 | remote past | indicative | |
-| al | a+il | prep + article | m. | sg. | | | | contraction |
+| che | che | pronoun (rel.) | | | | | | |
+| rispuose | rispondere | verb | | sg. | 3 | remote past | indicative | archaic spelling |
+| al | a+il | prep.+article | m. | sg. | | | | contraction |
 | drudo | drudo | noun | m. | sg. | | | | |
-| suo | suo | possessive adj | m. | sg. | | | | |
+| suo | suo | possessive adj. | m. | sg. | | | | agrees with *drudo* |
 | quando | quando | conjunction | | | | | | |
 | disse | dire | verb | | sg. | 3 | remote past | indicative | |
-| Ho | avere | verb | | sg. | 1 | present | indicative | auxiliary |
-| io | io | pronoun | | sg. | 1 | | | |
-| grazie | grazia | noun | f. | pl. | | | | |
-| grandi | grande | adjective | | pl. | | | | |
-| apo | a+po’ | adverb | | | | | | contraction, archaic |
-| te | te | pronoun | | sg. | 2 | | | |
-| Anzi | anzi | adverb | | | | | | archaic |
+| Ho | avere | verb | | sg. | 1 | present | indicative | capitalised (quote start) |
+| io | io | pronoun (pers.) | | sg. | 1 | | | |
+| grazie | grazie | noun (pl.) | f. | pl. | | | | |
+| grandi | grande | adjective | | pl. | | | | used as noun/adjective |
+| apo | avere | verb | | sg. | 1 | present | indicative | archaic form of *ho* |
+| te | te | pronoun (obj.) | | sg. | 2 | | | |
+| Anzi | anzi | adverb | | | | | | |
 | maravigliose | maraviglioso | adjective | f. | pl. | | | | |
 </result>
 </query>
