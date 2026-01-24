@@ -69,7 +69,7 @@ if do_init:
     option.canto = 1
     file = os.path.join(option.srcdir, option.directory, f"01.txt")
     with open(file, "r", encoding="utf-8") as f:
-        text = [l for line in f if (l := line.strip())]
+        text = [l.split("|")[0] for line in f if (l := line.strip())]
     init_qs = []
     for length in [3, 3, 3] if always3 else [3, 6]:
         q = send_lines(length, prompt)
@@ -94,7 +94,7 @@ history = common.unzip(init_qs)
 def proc(src, xml):
     global text, current
     with open(src, "r", encoding="utf-8") as f:
-        text = [l for line in f if (l := line.strip())]
+        text = [l.split("|")[0] for line in f if (l := line.strip())]
     current = 0
     qs = []
     while current < len(text):
