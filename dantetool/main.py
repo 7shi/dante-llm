@@ -1,6 +1,6 @@
 import sys
 import argparse
-from .commands import compare, concat, fix, pickup, redo, replace, strip
+from .commands import compare, concat, fix, pickup, redo, replace, show, strip
 
 def main():
     parser = argparse.ArgumentParser(
@@ -39,6 +39,11 @@ def main():
     replace_parser = subparsers.add_parser("replace", help="Replace queries in target files with fixes")
     replace.add_args(replace_parser)
     replace_parser.set_defaults(func=replace.main_func)
+
+    # show subcommand
+    show_parser = subparsers.add_parser("show", help="Show translation from XML file")
+    show.add_args(show_parser)
+    show_parser.set_defaults(func=show.main_func)
 
     # strip subcommand
     strip_parser = subparsers.add_parser("strip", help="Strip table content from XML files")

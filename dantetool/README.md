@@ -122,6 +122,21 @@ Example:
 uv run dantetool replace 1-error-ok.xml inferno/*.xml purgatorio/*.xml paradiso/*.xml
 ```
 
+### show - Show Translation
+
+Display translation lines from XML files:
+
+```bash
+uv run dantetool show <file.xml>
+```
+
+Example:
+```bash
+uv run dantetool show translate/gemini1-en/inferno/01.xml
+```
+
+Output: Lines starting with line numbers from the `<result>` tags are printed to stdout.
+
 ### strip - Clean Up and Validate Word Tables
 
 Strip and validate table content from XML files. This command parses table results, validates their format, and cleans up any malformed entries:
